@@ -7976,8 +7976,8 @@ Inst61Quest6name3_HORDE = "Stillward Amulet" -- 61662
 --------------- INST62 - Lower Karazhan Halls (LKH) ---------------
 Inst62Story = ""
 Inst62Caption = "Lower Karazhan Halls"
-Inst62QAA = "17 Quest"
-Inst62QAH = "17 Quest"
+Inst62QAA = "18 Quest"
+Inst62QAH = "18 Quest"
 
 --Quest 1 Alliance
 Inst62Quest1 = "1. Suitable Accomodations" -- 41083
@@ -8106,7 +8106,7 @@ Inst62Quest12_Level = "60"
 Inst62Quest12_Attain = "55"
 Inst62Quest12_Aim = "Speak with Doorman Montigue in Karazhan"
 Inst62Quest12_Location = "The Cook near ("..YELLOW.."[Karazhan - e]"..WHITE..")"
-Inst62Quest12_Note = "Doorman Montigue "..BLUE.." "..WHITE.." at the beginning of the dungeon in front of the stairs."
+Inst62Quest12_Note = "Doorman Montigue"..BLUE.." "..WHITE.."at the beginning of the dungeon in front of the stairs."
 Inst62Quest12_Prequest = "The Secret Recipe" -- 41001
 Inst62Quest12_Folgequest = "Charge of Karazhan" -- 41003
 -- No Rewards for this quest
@@ -8116,7 +8116,7 @@ Inst62Quest13 = "13. Charge of Karazhan" -- 41003
 Inst62Quest13_Level = "60"
 Inst62Quest13_Attain = "55"
 Inst62Quest13_Aim = "Bring 10 Essence of Undeath, 10 Living Essence, and 25 Gold to Doorman Montique in Karazhan."
-Inst62Quest13_Location = "Doorman Montigue "..BLUE.." "..WHITE.."."
+Inst62Quest13_Location = "Doorman Montigue"..BLUE.." "..WHITE.."at the beginning of the dungeon in front of the stairs."
 Inst62Quest13_Note = "All can be bought from Auction House. livimg 10-15 silver each, undeath - 1-3 gold each."
 Inst62Quest13_Prequest = "The Doorman of Karazhan" -- 41002
 Inst62Quest13_Folgequest = "Le Fishe Au Chocolat" -- 41004
@@ -8127,7 +8127,7 @@ Inst62Quest14 = "14. Le Fishe Au Chocolat" -- 41004
 Inst62Quest14_Level = "60"
 Inst62Quest14_Attain = "55"
 Inst62Quest14_Aim = "Bring the Charge of Karazhan to The Cook near"..YELLOW.."[Karazhan - e]"..WHITE.." in Karazhan."
-Inst62Quest14_Location = "Doorman Montigue "..BLUE.." "..WHITE.."."
+Inst62Quest14_Location = "Doorman Montigue"..BLUE.." "..WHITE.."at the beginning of the dungeon in front of the stairs."
 Inst62Quest14_Note = ""
 Inst62Quest14_Prequest = "Charge of Karazhan" -- 41003
 Inst62Quest14_Folgequest = ""
@@ -8140,7 +8140,7 @@ Inst62Quest15 = "15. Scythe of the Goddess" -- 41062
 Inst62Quest15_Level = "60"
 Inst62Quest15_Attain = "60"
 Inst62Quest15_Aim = "Slay Clawlord Howlfang "..YELLOW.."[4]"..WHITE.." and report to Lord Ebonlocke "..YELLOW.."[Karazhan - d]"..WHITE.."."
-Inst62Quest15_Location = "The Scythe of Elune [5]"
+Inst62Quest15_Location = "The Scythe of Elune "..YELLOW.."[5]"..WHITE.."."
 Inst62Quest15_Note = "Questline starts with legendary item 'The Scythe of Elune' that drops from Lord Blackwald II "..YELLOW.."[5]"..WHITE.." (low chance)."
 Inst62Quest15_Prequest = "No"
 Inst62Quest15_Folgequest = "Scythe of the Goddess" -- 41063
@@ -8151,7 +8151,7 @@ Inst62Quest16 = "16. Contribution to the Church" -- 41078
 Inst62Quest16_Level = "60"
 Inst62Quest16_Attain = "55"
 Inst62Quest16_Aim = "Gather 15 Arcane Essence, 20 Illusion Dust, and 10 Greater Eternal Essence for Heirophant Nerseus at the church outside Karazhan."
-Inst62Quest16_Location = "Heirophant Nerseus (Deadwind Pass, in front of the church next to Karazhan"..YELLOW.."[40.3,77.2]"..WHITE..")."
+Inst62Quest16_Location = "Heirophant Nerseus (Deadwind Pass, in front of the church next to Karazhan "..YELLOW.."[40.3,77.2]"..WHITE..")."
 Inst62Quest16_Note = "15x Arcane Essence - random trash loot;\n20x Illusion Dust - Enchanters or Auction House;\n10x Greater Eternal Essence - Enchanters or Auction House;\nAfter finishing this quest you will be able to get a quest for head/leg enchants. For each of them you will need:\n 1x Overcharged Ley Energy - random rare item loot from trash/boss in Karazhan;\n6x Arcane Essence - random trash loot."
 Inst62Quest16_Prequest = "No"
 Inst62Quest16_Folgequest = "Invocation of Shattering, Invocation of Greater Protection, Invocation of Expansive Mind, Invocation of Greater Arcane Fortitude"
@@ -8160,6 +8160,30 @@ Inst62Quest16name1 = "Invocation of Shattering" -- 92005
 Inst62Quest16name2 = "Invocation of Greater Protection" -- 92006
 Inst62Quest16name3 = "Invocation of Expansive Mind" -- 92007
 Inst62Quest16name4 = "Invocation of Greater Arcane Fortitude" -- 92008
+
+--Quest 17 Alliance
+Inst62Quest17 = "17. Comically Large Candle" -- 41344
+Inst62Quest17_Level = "61"
+Inst62Quest17_Attain = "60"
+Inst62Quest17_Aim = "Recover the Comically Large Candle from Grizikil and return to Big Whiskers in Upper Karazhan."
+Inst62Quest17_Location = "Doorman Montigue"..BLUE.." "..WHITE.."at the beginning of the dungeon in front of the stairs."
+Inst62Quest17_Note = "Mage only: \nGrizikil "..YELLOW.."[3]"..WHITE.." drops 'Comically Large Candle'.\nThe quest line starts from Big Whiskers in "..YELLOW.."[Tower of Karazhan]"..WHITE.."."
+Inst62Quest17_Prequest = "I Am No Rat"  -- 41343
+Inst62Quest17_Folgequest = "No"
+--
+Inst62Quest17name1 = "Tome of Polymorph: Rodent"
+
+--Quest 18 Alliance
+Inst62Quest18 = "18. No Honor Among Chefs" -- 41374
+Inst62Quest18_Level = "61"
+Inst62Quest18_Attain = "60"
+Inst62Quest18_Aim = "Slay the Ravenous Strigoi in Karazhan Crypts and return to The Cook in Lower Karazhan Halls."
+Inst62Quest18_Location = "The Cook near ("..YELLOW.."[Karazhan - e]"..WHITE..")"
+Inst62Quest18_Note = "Drop from [Ravenous Strigoi] in Karazhan Crypt.\nThe quest line starts [Recipes of Kezan] drop in "..YELLOW.."[Tower of Karazhan]"..WHITE.."."
+Inst62Quest18_Prequest = "A Chef's Majesty"  -- 41373
+Inst62Quest18_Folgequest = "No"
+--
+Inst62Quest18name1 = "Recipe: Empowering Herbal Salad" -- 92045
 
 --Quest 1 Horde (same as Quest 1 Alliance)
 Inst62Quest1_HORDE = Inst62Quest1
@@ -8343,6 +8367,30 @@ Inst62Quest16name2_HORDE = Inst62Quest16name2
 Inst62Quest16name3_HORDE = Inst62Quest16name3
 Inst62Quest16name4_HORDE = Inst62Quest16name4
 
+--Quest 17 Horde (same as Quest 17 Alliance)
+Inst62Quest17_HORDE = Inst62Quest17
+Inst62Quest17_HORDE_Level = Inst62Quest17_Level
+Inst62Quest17_HORDE_Attain = Inst62Quest17_Attain
+Inst62Quest17_HORDE_Aim = Inst62Quest17_Aim
+Inst62Quest17_HORDE_Location = Inst62Quest17_Location
+Inst62Quest17_HORDE_Note = Inst62Quest17_Note
+Inst62Quest17_HORDE_Prequest = Inst62Quest17_Prequest
+Inst62Quest17_HORDE_Folgequest = Inst62Quest17_Folgequest
+-- 
+Inst62Quest17name1_HORDE = Inst62Quest17name1
+
+--Quest 18 Horde (same as Quest 18 Alliance)
+Inst62Quest18_HORDE = Inst62Quest18
+Inst62Quest18_HORDE_Level = Inst62Quest18_Level
+Inst62Quest18_HORDE_Attain = Inst62Quest18_Attain
+Inst62Quest18_HORDE_Aim = Inst62Quest18_Aim
+Inst62Quest18_HORDE_Location = Inst62Quest18_Location
+Inst62Quest18_HORDE_Note = Inst62Quest18_Note
+Inst62Quest18_HORDE_Prequest = Inst62Quest18_Prequest
+Inst62Quest18_HORDE_Folgequest = Inst62Quest18_Folgequest
+--
+Inst62Quest18name1_HORDE = Inst62Quest18name1
+
 --------------- INST63 - Emerald Sanctum (ES) ---------------
 Inst63Story = "Emerald Sanctum is an instance raid located in Hyjal. A fog of corruption has descended upon the Emerald Dream, twisting the morals and intentions of even the noblest and purest. The corrupted Wakener is preparing to send a premature call of awakening; if not stopped, his kin will arise and go on a frenzied rampage across Azeroth."
 Inst63Caption = "Emerald Sanctum"
@@ -8421,8 +8469,8 @@ Inst63Quest3name3_HORDE = Inst63Quest3name3
 --------------- INST64 - Tower of Karazhan (K40) ---------------
 Inst64Story = ""
 Inst64Caption = "Tower of Karazhan"
-Inst64QAA = "3 Quest"
-Inst64QAH = "3 Quest"
+Inst64QAA = "5 Quest"
+Inst64QAH = "5 Quest"
 
 --Quest 1 Alliance
 Inst64Quest1 = "1. The Scepter Rod of Medivh" --41369
@@ -8460,6 +8508,26 @@ Inst64Quest3_Folgequest = "The Power of the Goddess"
 --
 Inst64Quest3name1 = "The Scythe of Elune" --55505
 
+--Quest 4 Alliance
+Inst64Quest4 = "4. I Am No Rat" --41343
+Inst64Quest4_Level = "61"
+Inst64Quest4_Attain = "60"
+Inst64Quest4_Aim = "Speak to Doorman Montigue in Lower Karazhan Halls."
+Inst64Quest4_Location = "Big Whiskers (Tower of Karazhan; "..YELLOW.."0, 0"..WHITE..")" --61990
+Inst64Quest4_Note = "Mage only:\nDoorman Montigue at Lower Karazhan Halls at the beginning of the dungeon in front of the stairs."
+Inst64Quest4_Prequest = "No"
+Inst64Quest4_Folgequest = "Comically Large Candle" --41344
+
+--Quest 5 Alliance
+Inst64Quest5 = "5. A Chef's Majesty" --41373
+Inst64Quest5_Level = "60"
+Inst64Quest5_Attain = "60"
+Inst64Quest5_Aim = "Find The Cook in Lower Karazhan Halls."
+Inst64Quest5_Location = "Recipes of Kezan (Tower of Karazhan drop "..YELLOW.."0, 0"..WHITE..")" --2020111
+Inst64Quest5_Note = "The Cook near ("..YELLOW.."[Lower Karazhan Halls - e]. A quest to obtain a cooking recipe."
+Inst64Quest5_Prequest = "No"
+Inst64Quest5_Folgequest = "No Honor Among Chefs" --41374
+--
 --Quest 1 Horde (same as Quest 1 Alliance)
 Inst64Quest1_HORDE = Inst64Quest1
 Inst64Quest1_HORDE_Level = Inst64Quest1_Level
@@ -8496,6 +8564,26 @@ Inst64Quest3_HORDE_Folgequest = Inst64Quest3_Folgequest
 --
 Inst64Quest3name1_HORDE = Inst64Quest3name1
 
+--Quest 4 Horde (same as Quest 4 Alliance)
+Inst64Quest4_HORDE = Inst64Quest4
+Inst64Quest4_HORDE_Level = Inst64Quest4_Level
+Inst64Quest4_HORDE_Attain = Inst64Quest4_Attain
+Inst64Quest4_HORDE_Aim = Inst64Quest4_Aim
+Inst64Quest4_HORDE_Location = Inst64Quest4_Location
+Inst64Quest4_HORDE_Note = Inst64Quest4_Note
+Inst64Quest4_HORDE_Prequest = Inst64Quest4_Prequest
+Inst64Quest4_HORDE_Folgequest = Inst64Quest4_Folgequest
+
+--Quest 5 Horde (same as Quest 5 Alliance)
+Inst64Quest5_HORDE = Inst64Quest5
+Inst64Quest5_HORDE_Level = Inst64Quest5_Level
+Inst64Quest5_HORDE_Attain = Inst64Quest5_Attain
+Inst64Quest5_HORDE_Aim = Inst64Quest5_Aim
+Inst64Quest5_HORDE_Location = Inst64Quest5_Location
+Inst64Quest5_HORDE_Note = Inst64Quest5_Note
+Inst64Quest5_HORDE_Prequest = Inst64Quest5_Prequest
+Inst64Quest5_HORDE_Folgequest = Inst64Quest5_Folgequest
+--
 ---------------------------
 --- AQ Instance Numbers ---
 ---------------------------

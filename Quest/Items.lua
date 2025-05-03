@@ -4967,6 +4967,19 @@ Inst62Quest16ITC4 = Itemc4;
 Inst62Quest16description4 = AQITEM_ENCHANT
 Inst62Quest16ID4 = "92008"
 
+--Quest 17 Alliance
+Inst62Quest17Rewardtext = AQDiscription_REWARD..WHITE.."1"
+--ITEM1
+Inst62Quest17ITC1 = Itemc4;
+Inst62Quest17description1 = AQITEM_ITEM
+Inst62Quest17ID1 = "92025"
+
+--Quest 18 Alliance
+Inst62Quest18Rewardtext = AQDiscription_REWARD..WHITE.."1"
+--ITEM1
+Inst62Quest18ITC1 = Itemc4;
+Inst62Quest18description1 = AQITEM_PATTERN
+Inst62Quest18ID1 = "92045"
 
 --Quest 1 Horde
 Inst62Quest1Rewardtext_HORDE = AQNoReward
@@ -5039,6 +5052,20 @@ Inst62Quest16ID3_HORDE = "92007"
 Inst62Quest16ITC4_HORDE = Itemc4;
 Inst62Quest16description4_HORDE = AQITEM_ENCHANT
 Inst62Quest16ID4_HORDE = "92008"
+
+--Quest 17 Horde
+Inst62Quest17Rewardtext_HORDE = AQDiscription_REWARD..WHITE.."1"
+--ITEM1
+Inst62Quest17ITC1_HORDE = Itemc4;
+Inst62Quest17description1_HORDE = AQITEM_ITEM
+Inst62Quest17ID1_HORDE = "92025"
+
+--Quest 18 Horde
+Inst62Quest18Rewardtext_HORDE = AQDiscription_REWARD..WHITE.."1"
+--ITEM1
+Inst62Quest18ITC1_HORDE = Itemc4;
+Inst62Quest18description1_HORDE = AQITEM_PATTERN
+Inst62Quest18ID1_HORDE = "92045"
 
 --------------- INST63 - Emerald Sanctum (ES) ---------------
 --Quest 1 Alliance
@@ -5131,6 +5158,12 @@ Inst64Quest3ITC1 = Itemc1
 Inst64Quest3description1 = AQITEM_TRINKET
 Inst64Quest3ID1 = "55505"
 
+--Quest 4 Alliance
+Inst64Quest4Rewardtext = AQNoReward
+
+--Quest 5 Alliance
+Inst64Quest5Rewardtext = AQNoReward
+
 --Quest 1 Horde
 Inst64Quest1Rewardtext_HORDE = AQDiscription_REWARD..WHITE.."1"
 --ITEM1
@@ -5149,6 +5182,10 @@ Inst64Quest3Rewardtext_HORDE = AQDiscription_REWARD..WHITE.."1"
 Inst64Quest3ITC1_HORDE = Itemc1
 Inst64Quest3description1_HORDE = AQITEM_TRINKET
 Inst64Quest3ID1_HORDE = "55505"
+--Quest 4 Horde
+Inst64Quest4Rewardtext_HORDE = AQNoReward
+--Quest 5 Horde
+Inst64Quest5Rewardtext_HORDE = AQNoReward
 ---------------------------------------------------
 ---------------- OUTDOOR RAIDS --------------------
 ---------------------------------------------------

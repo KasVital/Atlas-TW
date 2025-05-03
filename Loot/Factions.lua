@@ -51,6 +51,7 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 19203, "INV_Scroll_03", "=q1=Plans: Girdle of the Dawn", "=ds=#p2# #m18#" },
 		{ 19442, "INV_Scroll_03", "=q1=Formula: Powerful Anti-Venom", "=ds=#p6# #m14#" },
 		{ 19446, "INV_Misc_Note_01", "=q1=Formula: Enchant Bracer - Mana Regeneration", "=ds=#p4# #m18#" },
+		{ 70216, "INV_Misc_Note_01", "=q3=Plans: Orb of Clairvoyance", "=ds=#p20# #m20#" },
 	},
 
 	Argent3 = {
@@ -141,7 +142,6 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 0, "", "", "" },
 		{ 0, "INV_Ingot_Mithril", "=q6=#r3#", "" },
 		{ 17059, "INV_Scroll_03", "=q3=Plans: Dark Iron Reaver", "=ds=#p2# #m14#" },
 		{ 17060, "INV_Scroll_03", "=q3=Plans: Dark Iron Destroyer", "=ds=#p2# #m14#" },
@@ -169,7 +169,7 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 19209, "INV_Scroll_03", "=q1=Plans: Blackfury", "=ds=#p2# #m14#" },
 		{ 19449, "INV_Scroll_03", "=q1=Formula: Enchant Weapon - Mighty Intellect", "=ds=#p4# #m14#" },
 		{ 0, "", "", "" },
-		{ 0, "", "", "" },
+		{ 70178, "INV_Misc_Note_01", "=q3=Plans: Dark Iron Signet Ring", "=ds=#p20# #m18#" }, -- TODO Check reputation requires
 		{ 0, "", "", "" },
 		{ 0, "INV_Ingot_Mithril", "=q6=#r5#", "" },
 		{ 20040, "INV_Scroll_03", "=q1=Plans: Dark Iron Boots", "=ds=#p2# #m14#" },

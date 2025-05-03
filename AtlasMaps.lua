@@ -2152,7 +2152,7 @@ AtlasMaps = {
 		{ GREY.."7) ".."Feathermoon Stronghold"..", "..BLUE..BZ["Feralas"], ZONE, 331 },
 		{ GREY.."8) "..BZ["Theramore Isle"]..", "..BLUE..BZ["Dustwallow Marsh"], ZONE, 14 },
 		{ GREY.."9) ".."Alah'Thalas"..", "..BLUE..BZ["Thalassian Highlands"], ZONE, 406 },
-		{ GREY.."12) ".."Menethil Harbor"..", "..BLUE..BZ["Wetlands"], ZONE, 405 },
+		{ GREY.."12) "..BZ["Menethil Harbor"]..", "..BLUE..BZ["Wetlands"], ZONE, 405 },
 		{ GREY.."13) "..BZ["Ironforge"]..", "..BLUE..BZ["Dun Morogh"], ZONE, 215 },
 		{ GREY.."15) "..BZ["Stormwind City"]..", "..BLUE..BZ["Elwynn Forest"], ZONE, 15 },
 		{ "" },	
@@ -2164,7 +2164,7 @@ AtlasMaps = {
 		{ GREY.."14) ".."Kargath"..", ".._RED..BZ["Badlands"], ZONE, 17 },
 		{ GREY.."16) ".."Grom'Gol Base Camp"..", ".._RED..BZ["Stranglethorn Vale"], ZONE, 440 },
 		{ "" },	
-		{ GREY.."5) ".."Ratchet"..", "..ORNG..BZ["The Barrens"], ZONE, 331 },
+		{ GREY.."5) "..BZ["Ratchet"]..", "..ORNG..BZ["The Barrens"], ZONE, 331 },
 		{ GREY.."17) "..BZ["Booty Bay"]..", "..ORNG..BZ["Stranglethorn Vale"], ZONE, 357 },
 	},
 }
