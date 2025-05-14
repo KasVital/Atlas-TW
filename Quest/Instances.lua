@@ -169,34 +169,12 @@ function AtlasQuest_Instanzenchecken()
 		AQINSTANCE = 45
 	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\HateforgeQuarry" then
 		AQINSTANCE = 46
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Zareth" then
-		AQINSTANCE = 47
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Xalvic" then
-		AQINSTANCE = 48
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\WanderingKnight" then
-		AQINSTANCE = 49
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Tarangos" then
-		AQINSTANCE = 50
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Mallon" then
-		AQINSTANCE = 51
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Kargron" then
-		AQINSTANCE = 52
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Jalakar" then
-		AQINSTANCE = 53
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Grugthok" then
-		AQINSTANCE = 54
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\CrusaderLarsarius" then
-		AQINSTANCE = 55
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Ashbeard" then
-		AQINSTANCE = 56
 	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\StormwindVault" then
 		AQINSTANCE = 57
 	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Ostarius" then
 		AQINSTANCE = 58
 	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\CowKing" then
 		AQINSTANCE = 59
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\AdmiralBareanWestwind" then
-		AQINSTANCE = 60
 	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\GilneasCity" or AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\GilneasCityEnt" then
 		AQINSTANCE = 61
 	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\LowerKarazhan" then
@@ -221,16 +199,8 @@ function AtlasQuest_Instanzenchecken()
 		AQINSTANCE = 71
 	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\FPHordeWest" then
 		AQINSTANCE = 72
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Other" then
+	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\RareMobs" then
 		AQINSTANCE = 73
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\Letashaz" then
-		AQINSTANCE = 74
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\ProfessorLysander" then
-		AQINSTANCE = 75
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\MargontheMighty" then
-		AQINSTANCE = 76
-	elseif AQATLASMAP == "Interface\\AddOns\\Atlas-TW\\Images\\Maps\\KinTozo" then
-		AQINSTANCE = 77
 		-- Default
 		
 	else --added for newer atlas version until i update atlasquest and for the flight pass maps

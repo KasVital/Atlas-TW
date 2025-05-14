@@ -12,7 +12,7 @@
 	<Script file="AtlasLoot.lua"/>
 	<Script file="WishList.lua"/>
 	<Script file="Search.lua"/>
-	<Script file="WorldBoss.lua"/>
+	<Script file="World.lua"/>
 	<Script file="Dungeons.lua"/>
 	<Script file="Tooltip.lua"/>
 

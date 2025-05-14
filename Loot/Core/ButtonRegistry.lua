@@ -3019,15 +3019,15 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "DUNGEONSMENU2",
 		Back_Title = L["Dungeons & Raids"],
 	},
-	-- World Bosses
+	-- World
 	["AAzuregos"] = {
 		Title = "Azuregos",
 		Next_Page = "DEmeriss",
 		Next_Title = "Emeriss",
 		Prev_Page = "Clackora",
-		Prev_Title = "Cla'ckora",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Prev_Title = BB["Cla'ckora"],
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["DEmeriss"] = {
 		Title = "Emeriss",
@@ -3035,8 +3035,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = "Lethon",
 		Prev_Page = "AAzuregos",
 		Prev_Title = "Azuregos",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["DLethon"] = {
 		Title = "Lethon",
@@ -3044,8 +3044,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = "Taerar",
 		Prev_Page = "DEmeriss",
 		Prev_Title = "Emeriss",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["DTaerar"] = {
 		Title = "Taerar",
@@ -3053,8 +3053,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = "Ysondre",
 		Prev_Page = "DLethon",
 		Prev_Title = "Lethon",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["DYsondre"] = {
 		Title = "Ysondre",
@@ -3062,8 +3062,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = "Lord Kazzak",
 		Prev_Page = "DTaerar",
 		Prev_Title = "Taerar",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["KKazzak"] = {
 		Title = "Lord Kazzak",
@@ -3071,8 +3071,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = "Turtlhu, the Black Turtle of Doom",
 		Prev_Page = "DYsondre",
 		Prev_Title = "Ysondre",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["Turtlhu"] = {
 		Title = "Turtlhu, the Black Turtle of Doom",
@@ -3080,8 +3080,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = "Nerubian Overseer",
 		Prev_Page = "KKazzak",
 		Prev_Title = "Lord Kazzak",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["Nerubian"] = {
 		Title = "Nerubian Overseer",
@@ -3089,8 +3089,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = "Dark Reaver of Karazhan",
 		Prev_Page = "Turtlhu",
 		Prev_Title = "Turtlhu, the Black Turtle of Doom",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["Reaver"] = {
 		Title = "Dark Reaver of Karazhan",
@@ -3098,8 +3098,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = "Ostarius",
 		Prev_Page = "Nerubian",
 		Prev_Title = "Nerubian Overseer",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["Ostarius"] = {
 		Title = "Ostarius",
@@ -3107,8 +3107,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = "Concavius",
 		Prev_Page = "Reaver",
 		Prev_Title = "Dark Reaver of Karazhan",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["Concavius"] = {
 		Title = "Concavius",
@@ -3116,26 +3116,26 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = BB["Moo"],
 		Prev_Page = "Ostarius",
 		Prev_Title = "Ostarius",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["CowKing"] = {
 		Title = BB["Moo"],
 		Next_Page =	"Clackora",
-		Next_Title = "Clackora",
+		Next_Title = "Cla'ckora",
 		Prev_Page = "Concavius",
 		Prev_Title = "Concavius",
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	["Clackora"] = {
 		Title = "Cla'ckora",
-		Next_Page =	"AAzuregos",
+		Next_Page =	"Azuregos",
 		Next_Title = BB["Azuregos"],
 		Prev_Page = "CowKing",
 		Prev_Title = BB["Moo"],
-		Back_Page = "WORLDBOSSMENU",
-		Back_Title = L["World Bosses"]
+		Back_Page = "WORLDMENU",
+		Back_Title = L["World"]
 	},
 	--WoW Factions
 	["Argent1"] = {

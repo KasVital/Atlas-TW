@@ -172,8 +172,8 @@ Atlas_OutdoorZoneToAtlas = {
 	["Ashenvale"] =					"BlackfathomDeepsEnt",
 	["Badlands"] =					"UldamanEnt",
 	["Blackrock Mountain"] =		"BlackrockMountainEnt",
-	["Burning Steppes"] = "HateforgeQuarry", -- TurtleWOW
-	["Deadwind Pass"] = "KarazhanCrypt",    -- TurtleWOW
+	["Burning Steppes"] = 			"HateforgeQuarry", -- TurtleWOW
+	["Deadwind Pass"] = 			"KarazhanCrypt",    -- TurtleWOW
 	["Desolace"] =					"MaraudonEnt",
 	["Dun Morogh"] =				"GnomereganEnt",
 	["Feralas"] =					"DireMaulEnt",
@@ -335,7 +335,7 @@ function Atlas_PopulateDropdowns()
 			table.insert(ATLAS_DROPDOWNS[n], v)
 		end
 
-		if subcatOrder[n] ~= ATLAS_DDL_ALL_MENU1 and subcatOrder[n] ~= ATLAS_DDL_ALL_MENU2 and subcatOrder[n] ~= ATLAS_DDL_WORLDBOSSES and subcatOrder[n] ~= ATLAS_DDL_RAREMOBS then 
+		if subcatOrder[n] ~= ATLAS_DDL_ALL_MENU1 and subcatOrder[n] ~= ATLAS_DDL_ALL_MENU2 and subcatOrder[n] ~= ATLAS_DDL_WORLD then 
 			table.sort(ATLAS_DROPDOWNS[n], Atlas_SortZonesAlpha)
 		end
 
@@ -399,43 +399,6 @@ function Atlas_Init()
 	AtlasFrame:SetClampedToScreen(AtlasOptions.AtlasClamped)
 	AtlasButton_UpdatePosition()
 	AtlasOptions_Init()
-
-	--Cosmos integration
-	if(EarthFeature_AddButton) then
-		EarthFeature_AddButton(
-			{
-				id = "Atlas",
-				name = "Atlas",
-				subtext = ATLAS_SUBTITLE,
-				tooltip = ATLAS_DESC,
-				icon = "Interface\\AddOns\\Atlas-TW\\Images\\AtlasIcon",
-				callback = Atlas_Toggle,
-				test = nil
-			}
-		)
-	elseif(Cosmos_RegisterButton) then
-		Cosmos_RegisterButton(
-			"Atlas",
-			ATLAS_SUBTITLE,
-			ATLAS_DESC,
-			"Interface\\AddOns\\Atlas-TW\\Images\\AtlasIcon",
-			Atlas_Toggle
-		)
-	end
-	
-	--CTMod integration
-	if(CT_RegisterMod) then
-		CT_RegisterMod(
-			"Atlas",
-			ATLAS_SUBTITLE,
-			5,
-			"Interface\\AddOns\\Atlas-TW\\Images\\AtlasIcon",
-			ATLAS_DESC,
-			"switch",
-			"",
-			Atlas_Toggle
-		)
-	end
 end
 
 --Simple function to toggle the Atlas frame's lock status and update it's appearance
@@ -509,6 +472,7 @@ function Atlas_Refresh()
 	AtlasMap:SetWidth(512)
 	AtlasMap:SetHeight(512)
 	AtlasMap:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84)
+	if not zoneID then zoneID = ATLAS_DROPDOWNS[1][1] end
 	local builtIn = AtlasMap:SetTexture("Interface\\AddOns\\Atlas-TW\\Images\\Maps\\"..zoneID)
 
 	if not builtIn then

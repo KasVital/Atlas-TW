@@ -93,8 +93,7 @@ ATLAS_DDL_ALL_MENU2 = "Showing all instances_2"
 ATLAS_DDL_TYPE = "Type"
 ATLAS_DDL_TYPE_DUNGEONS = "Dungeons"
 ATLAS_DDL_TYPE_RAIDS = "Raids"
-ATLAS_DDL_RAREMOBS = "Rare Mobs"
-ATLAS_DDL_WORLDBOSSES = "World Bosses"
+ATLAS_DDL_WORLD = "World"
 ATLAS_DDL_TYPE_ENTRANCE = "Entrances"
 ATLAS_DDL_BGS = "Battlegrounds"
 ATLAS_DDL_DUNGEON_LOCATIONS = "Dungeon Locations"
@@ -585,7 +584,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Elder Mistwalker"] = true,
 	["Griniblix the Spectator"] = true,
 	
-	--World Bosses
+	--World
 	["Emerald Dragons"] = true,
 	["Spirit of Azuregos"] = true,
 	["Emerald Dragons Trash"] = true,

@@ -1,13 +1,13 @@
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local L = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
 local BB = AceLibrary("Babble-Boss-2.2a")
 local BZ = AceLibrary("Babble-Zone-2.2a")
 
 local WHITE = "|cffFFFFFF";
 
-function AtlasLoot_WorldBossMenu()
-	AtlasLoot_PrepMenu(nil, AL["World Bosses"])
-	AtlasLootCharDB.LastBoss = "WORLDBOSSMENU"
-	AtlasLootCharDB.LastBossText = AL["World Bosses"]
+function AtlasLoot_WorldMenu()
+	AtlasLoot_PrepMenu(nil, L["World"])
+	AtlasLootCharDB.LastBoss = "WORLDMENU"
+	AtlasLootCharDB.LastBossText = L["World"]
 	--Azuregos
 	AtlasLootMenuItem_1_Name:SetText(BB["Azuregos"]);
 	AtlasLootMenuItem_1_Extra:SetText(WHITE..BZ["Azshara"]);
@@ -16,25 +16,25 @@ function AtlasLoot_WorldBossMenu()
 	AtlasLootMenuItem_1:Show();
 	--Emeriss
 	AtlasLootMenuItem_2_Name:SetText(BB["Emeriss"]);
-	AtlasLootMenuItem_2_Extra:SetText(WHITE..AL["Various Locations"]);
+	AtlasLootMenuItem_2_Extra:SetText(WHITE..L["Various Locations"]);
 	AtlasLootMenuItem_2_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Dragon_Green");
 	AtlasLootMenuItem_2.lootpage="DEmeriss";
 	AtlasLootMenuItem_2:Show();
 	--Lethon
 	AtlasLootMenuItem_3_Name:SetText(BB["Lethon"]);
-	AtlasLootMenuItem_3_Extra:SetText(WHITE..AL["Various Locations"]);
+	AtlasLootMenuItem_3_Extra:SetText(WHITE..L["Various Locations"]);
 	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Dragon_Green");
 	AtlasLootMenuItem_3.lootpage="DLethon";
 	AtlasLootMenuItem_3:Show();
 	--Taerar
 	AtlasLootMenuItem_4_Name:SetText(BB["Taerar"]);
-	AtlasLootMenuItem_4_Extra:SetText(WHITE..AL["Various Locations"]);
+	AtlasLootMenuItem_4_Extra:SetText(WHITE..L["Various Locations"]);
 	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Dragon_Green");
 	AtlasLootMenuItem_4.lootpage="DTaerar";
 	AtlasLootMenuItem_4:Show();
 	--Ysondre
 	AtlasLootMenuItem_5_Name:SetText(BB["Ysondre"]);
-	AtlasLootMenuItem_5_Extra:SetText(WHITE..AL["Various Locations"]);
+	AtlasLootMenuItem_5_Extra:SetText(WHITE..L["Various Locations"]);
 	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Dragon_Green");
 	AtlasLootMenuItem_5.lootpage="DYsondre";
 	AtlasLootMenuItem_5:Show();
@@ -80,4 +80,10 @@ function AtlasLoot_WorldBossMenu()
 	AtlasLootMenuItem_14_Icon:SetTexture("Interface\\Icons\\INV_Misc_Birdbeck_02");
 	AtlasLootMenuItem_14.lootpage="Clackora";
 	AtlasLootMenuItem_14:Show();
+	--Rare Mobs
+	AtlasLootMenuItem_15_Name:SetText(L["Rare Mobs"]);
+	AtlasLootMenuItem_15_Extra:SetText(WHITE..L["Various Locations"]);
+	AtlasLootMenuItem_15_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Dragon_Green");
+	AtlasLootMenuItem_15.lootpage="ShadeMage";
+	AtlasLootMenuItem_15:Show();
 end

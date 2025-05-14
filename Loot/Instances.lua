@@ -8105,12 +8105,12 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55081, "INV_Boots_05", "=q4=Manadrenched Feather Slippers", "=ds=#s12#, #a1#", "25%" },
 		{ 55285, "INV_Gauntlets_05", "=q4=Crite's Holy Hands", "=ds=#s9#, #a1#", "25%" },
 		{ 0, "", "", "" },
-		{ 55079, "INV_Chest_Leather_04", "=q4=Ravenkeeper’s Frenzied Embrace", "=ds=#s5#, #a2#", "25%" },
+		{ 55079, "INV_Chest_Leather_04", "=q4=Ravenkeeper's Frenzied Embrace", "=ds=#s5#, #a2#", "25%" },
 		{ 55080, "INV_Bloodmoon", "=q4=Bloodmoon, Sickle of the Murderous Flight", "=ds=#h1#, #w1#", "25%" },
 		{ 55082, "INV_QirajIdol_War", "=q4=Idol of Laceration", "=ds=#s16#, #e16#", "25%" },
 		{ 55083, "inv_helmet_24", "=q4=Crown of the Wildpack", "=ds=#s1#, #a3#", "25%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=#m3#", "3.25%" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
 	},
 	K40Incantagos = {
 		{ 55086, "INV_Belt_22", "=q4=Magehunter Belt", "=ds=#s10#, #a3# ", "25%" },
@@ -8133,8 +8133,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55134, "Inv_Wand_05", "=q4=Rod of Permafrost", "=q1=#m4# =ds=#w12#" },
 		{ 55135, "Inv_misc_monsterscales_09", "=q4=Shard of Leyflow", "=q1=#m4# =ds=#s14#" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=#m3#", "3.25%" },
-		{ 41373, "INV_Misc_EngGizmos_08", "=q4=Draconic Focus", "=ds=#m3#" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
+		{ 41373, "INV_Misc_EngGizmos_08", "=q4=Draconic Focus", "=ds=#m3#", "100%", },
 	},
 	K40Anomalus = {
 		{ 55092, "INV_Boots_Plate_06", "=q4=Manahide Slippers", "=ds=#s12#, #a2#", "25%" },
@@ -8147,8 +8147,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55097, "INV_Jewelry_Necklace_08", "=q4=Choker of Chromatic Power", "=ds=#s2#", "25%" },
 		{ 55098, "INV_Gauntlets_05", "=q4=Gloves of Nourishment", "=ds=#s9#, #a2#", "25%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=#m3#", "3.25%" },
-		{ 41412, "INV_Enchant_DustSoul", "=q4=Cosmic Residue", "=ds=#m3#" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
+		{ 41412, "INV_Enchant_DustSoul", "=q4=Cosmic Residue", "=ds=#m3#", "100%", },
 	},
 	K40EchoofMedivh = {
 		{ 55108, "INV_DemonhornShoulders", "=q4=Dreadslayer Shoulderblades", "=ds=#s3#, #a4#", "25%" },
@@ -8161,8 +8161,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55112, "INV_Jewelry_Talisman_Health", "=q4=Pendant of Forgiven Mistakes", "=ds=#s2#", "25%" },
 		{ 55094, "INV_Jewelry_Ring_Jade", "=q4=Medivh's Hindsight", "=ds=#s13#", "25%" },
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=#m3#", "3.25%" },
-		{ 41414, "INV_Enchant_EssenceMysticalSmall", "=q1=Anima of the Guardian", "=ds=#m3#" },
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
+		{ 41414, "INV_Enchant_EssenceMysticalSmall", "=q1=Anima of the Guardian", "=ds=#m3#", "100%", },
 	},
 	K40King = {
 		{ 55088, "INV_Gauntlets_05", "=q4=Dragonclaw Gauntlets", "=ds=#s9#, #a4#", "12.5%" },
@@ -8196,8 +8196,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 		},
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=#m3#", "100%" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#m3#", "4%", "", "", "", "", "", "", "", "", "", "", {
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "100%" },
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "4%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
@@ -8242,8 +8242,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 		},
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=#m3#", "100%" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#m3#", "4%", "", "", "", "", "", "", "", "", "", "", {
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "100%" },
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "4%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
@@ -8288,8 +8288,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 		},
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=#m3#", "100%" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#m3#", "4%", "", "", "", "", "", "", "", "", "", "", {
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "100%" },
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "4%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
@@ -8334,8 +8334,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 		},
 		{ 0, "", "", "" },
-		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Lay Crytstal", "=ds=#m3#", "100%" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#m3#", "10%", "", "", "", "", "", "", "", "", "", "", {
+		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "100%" },
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "10%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock
@@ -8349,19 +8349,19 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		},
 	},
 	K40Mephistroth = {
-		{ 55351, "INV_Belt_22", "=q4=Turalyon's Hope", "=ds=#s10#, #a4#" },
-		{ 55353, "INV_Jewelry_Ring_Nightbreaker", "=q4=Mephistroth's Cunning", "=ds=#s13#" },
-		{ 55356, "INV_Bracer_18", "=q4=Netherwrought Bracers", "=ds=#s8#, #a4#" },
-		{ 55513, "INV_Chest_Chain_07", "=q4=Tunic of Demonic Deception", "=ds=#s5#, #a2#", },
-		{ 55357, "INV_Belt_26", "=q4=Sash of the Grand Betrayal", "=ds=#s10#, #a2#", },
-		{ 55346, "INV_Weapon_BoneBow2", "=q4=Rain of Spiders", "=ds=#w2#" },
-		{ 55347, "INV_Thunderfall", "=q4=Thunderfall, Stormhammer of the Chief Thane", "=ds=#h1#, #w6#" },
+		{ 55351, "INV_Belt_22", "=q4=Turalyon's Hope", "=ds=#s10#, #a4#", "19%", },
+		{ 55353, "INV_Jewelry_Ring_Nightbreaker", "=q4=Mephistroth's Cunning", "=ds=#s13#", "19%", },
+		{ 55356, "INV_Bracer_18", "=q4=Netherwrought Bracers", "=ds=#s8#, #a4#", "19%", },
+		{ 55513, "INV_Chest_Chain_07", "=q4=Tunic of Demonic Deception", "=ds=#s5#, #a2#", "19%", },
+		{ 55357, "INV_Belt_26", "=q4=Sash of the Grand Betrayal", "=ds=#s10#, #a2#", "8%", },
+		{ 55346, "INV_Weapon_BoneBow2", "=q4=Rain of Spiders", "=ds=#w2#", "8%", },
+		{ 55347, "INV_Thunderfall", "=q4=Thunderfall, Stormhammer of the Chief Thane", "=ds=#h1#, #w6#", "8%", },
 		{ 55348, "INV_Kirel", "=q4=Kirel'narak, the Death Sentence", "=ds=#w9#", "" },
 		{ 55349, "INV_Nethraka", "=q4=Nethraka, Wing of Oblivion", "=ds=#w8#", "" },
-		{ 55350, "Inv_Censer", "=q4=Censer of Soulwarding", "=ds=#s15#" },
-		{ 55352, "INV_Misc_Cape_20", "=q4=Cloak of Rapid Regeneration", "=ds=#s4#" },
-		{ 55354, "INV_Gauntlets_05", "=q4=Khadgar's Guidance", "=ds=#s9#, #a1#" },
-		{ 55355, "INV_Belt_03", "=q4=Memory of the Last Guardian", "=ds=#s10#, #a1#" },
+		{ 55350, "Inv_Censer", "=q4=Censer of Soulwarding", "=ds=#s15#", "" },
+		{ 55352, "INV_Misc_Cape_20", "=q4=Cloak of Rapid Regeneration", "=ds=#s4#", "" },
+		{ 55354, "INV_Gauntlets_05", "=q4=Khadgar's Guidance", "=ds=#s9#, #a1#", "" },
+		{ 55355, "INV_Belt_03", "=q4=Memory of the Last Guardian", "=ds=#s10#, #a1#", ""},
 		{ 55512, "inv_shoulder_01", "=q4=Forgotten Hide Pauldrons", "=ds=#s3#, #a2#", "" }, --check
 		--{ 0, "INV_Misc_QuestionMark", "=q4=Netherclaw Gauntlets", "=ds=#s9#" },
 		{ 0, "", "", "" },
@@ -8373,7 +8373,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 55516, "BTNGoldMysticRing", "=q4=Felforged Nathrezan Circlet", "=q1=#m4# =ds=#s13#" },
 		{ 55517, "INV_Jewelry_Ring_Emerald", "=q4=Felforged Nathrezan Aureole", "=q1=#m4# =ds=#s13#" },
 		{ 0, "", "", "" },
-		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#m3#", "10%", "", "", "", "", "", "", "", "", "", "", {
+		{ 55482, "INV_Jewelry_Necklace_29", "=q4=Ephemeral Pendant", "=ds=#s2#", "10%", "", "", "", "", "", "", "", "", "", "", {
 			{ { 47275, "=ds=#s3#, #a4#" }, }, -- war
 			{ { 47233, "=ds=#s3#, #a1#" }, { 47239, "=ds=#s3#, #a1#" }, }, -- priest
 			{ { 47311, "=ds=#s3#, #a1#" }, { 47317, "=ds=#s3#, #a1#" }, }, -- lock

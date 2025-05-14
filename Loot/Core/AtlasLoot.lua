@@ -112,7 +112,7 @@ AtlasLoot_MenuList = {
 	"TAILORINGMENU",
 	"CRAFTSET",
 	"COOKINGMENU",
-	"WORLDBOSSMENU",
+	"WORLDMENU",
 	"JEWELCRAFTMENU",
 	"WORLDBLUES",
 	"SURVIVALMENU",
@@ -464,10 +464,6 @@ function AtlasLoot_AtlasScrollBar_Update()
 					bossLine:Enable()
 					loot:Show()
 					selected:Hide()
-				elseif AtlasLootRareMobsButtons[zoneID]~=nil and AtlasLootRareMobsButtons[zoneID][lineplusoffset] ~= nil and AtlasLootRareMobsButtons[zoneID][lineplusoffset] ~= "" then
-					bossLine:Enable()
-					loot:Show()
-					selected:Hide()
 				elseif AtlasLootBattlegrounds[zoneID]~=nil and AtlasLootBattlegrounds[zoneID][lineplusoffset] ~= nil and AtlasLootBattlegrounds[zoneID][lineplusoffset] ~= "" then
 					bossLine:Enable()
 					loot:Show()
@@ -727,15 +723,6 @@ function AtlasLootBoss_OnClick(name)
 					AtlasLootItemsFrame_PREV:Hide()
 				end]]
 			end
-		elseif AtlasLootRareMobsButtons[zoneID] ~= nil and AtlasLootRareMobsButtons[zoneID][id] ~= nil and AtlasLootRareMobsButtons[zoneID][id] ~= "" then
-			if AtlasLoot_IsLootTableAvailable(AtlasLootRareMobsButtons[zoneID][id]) then
-				_G[name.."_Selected"]:Show()
-				_G[name.."_Loot"]:Hide()
-				local _,_,boss = string.find(_G[name.."_Text"]:GetText(), "|c%x%x%x%x%x%x%x%x%s*[%dX]*[%) ]*(.*[^%,])[%,]?$")
-				AtlasLoot_ShowBossLoot(AtlasLootRareMobsButtons[zoneID][id], boss, AtlasFrame)
-				AtlasLootItemsFrame.activeBoss = id
-				AtlasLoot_AtlasScrollBar_Update()
-			end
 		elseif AtlasLootWBBossButtons[zoneID] ~= nil and AtlasLootWBBossButtons[zoneID][id] ~= nil and AtlasLootWBBossButtons[zoneID][id] ~= "" then
 			if AtlasLoot_IsLootTableAvailable(AtlasLootWBBossButtons[zoneID][id]) then
 				_G[name.."_Selected"]:Show()
@@ -745,10 +732,6 @@ function AtlasLootBoss_OnClick(name)
 				AtlasLootItemsFrame.activeBoss = id
 				AtlasLoot_AtlasScrollBar_Update()
 				AtlasLootCharDB.LastBoss = AtlasLootWBBossButtons[zoneID][id]
-				--dont show navigation buttons
-				AtlasLootItemsFrame_BACK:Hide()
-				AtlasLootItemsFrame_NEXT:Hide()
-				AtlasLootItemsFrame_PREV:Hide()
 			end
 		elseif AtlasLootBattlegrounds[zoneID] ~= nil and AtlasLootBattlegrounds[zoneID][id] ~= nil and AtlasLootBattlegrounds[zoneID][id] ~= "" then
 			if AtlasLoot_IsLootTableAvailable(AtlasLootBattlegrounds[zoneID][id]) then
@@ -1065,8 +1048,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		AtlasLoot_CookingMenu()
 	elseif(dataID=="SURVIVALMENU") then
 		AtlasLoot_SurvivalMenu()
-	elseif(dataID=="WORLDBOSSMENU") then
-		AtlasLoot_WorldBossMenu()
+	elseif(dataID=="WORLDMENU") then
+		AtlasLoot_WorldMenu()
 	elseif(dataID=="DUNGEONSMENU1") then
 		AtlasLoot_DungeonsMenu1()
 	elseif(dataID=="DUNGEONSMENU2") then
@@ -1730,8 +1713,8 @@ function AtlasLoot_OpenMenu(menuName)
 		AtlasLoot_ShowItemsFrame("SETMENU", "dummy", "dummy", pFrame)
 	elseif menuName == L["Factions"] then
 		AtlasLoot_ShowItemsFrame("REPMENU", "dummy", "dummy", pFrame)
-	elseif menuName == L["World Bosses"] then
-		AtlasLoot_ShowItemsFrame("WORLDBOSSMENU", "dummy", "dummy", pFrame)
+	elseif menuName == L["World"] then
+		AtlasLoot_ShowItemsFrame("WORLDMENU", "dummy", "dummy", pFrame)
 	elseif menuName == L["Dungeons & Raids"] then
 		AtlasLoot_ShowItemsFrame("DUNGEONSMENU1", "dummy", "dummy", pFrame)
 	end
@@ -2150,353 +2133,174 @@ end
 --This is a multi-layer table defining the main loot listing.
 --Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
 AtlasLoot_HewdropDown = {
-	[1] = {
-		[L["Dungeons & Raids"]] = {
-			[1] = { 
-				{ BZ["Ragefire Chasm"], "RagefireChasm", "Submenu" },
-			},
-			[2] = { 
-				{ BZ["Wailing Caverns"], "WailingCaverns", "Submenu" },
-			},
-			[3] = { 
-				{ BZ["The Deadmines"], "Deadmines", "Submenu" },
-			},
-			[4] = { 
-				{ BZ["Shadowfang Keep"], "ShadowfangKeep", "Submenu" },
-			},
-			[5] = { 
-				{ BZ["Blackfathom Deeps"], "BlackfathomDeeps", "Submenu" },
-			},
-			[6] = { 
-				{ BZ["The Stockade"], "TheStockade", "Submenu" },
-			},
-			[7] = { 
-				{ BZ["Gnomeregan"], "Gnomeregan", "Submenu" },
-			},			
-			[8] = { 
-				{ BZ["Razorfen Kraul"], "RazorfenKraul", "Submenu" },
-			},
-			[9] = { 
-				{ BZ["The Crescent Grove"], "TheCrescentGrove", "Submenu" },
-			},
-			[10] = {
-				[BZ["Scarlet Monastery"]] = {
-					{ BZ["Scarlet Monastery"].." "..L["Graveyard"], "SMGraveyard", "Submenu" },
-					{ BZ["Scarlet Monastery"].." "..L["Library"], "SMLibrary", "Submenu" },
-					{ BZ["Scarlet Monastery"].." "..L["Armory"], "SMArmory", "Submenu" },
-					{ BZ["Scarlet Monastery"].." "..L["Cathedral"], "SMCathedral", "Submenu" },
-				},
-			},
-			[11] = { 
-				{ BZ["Razorfen Downs"], "RazorfenDowns", "Submenu" },
-			},
-			[12] = { 
-				{ BZ["Uldaman"], "Uldaman", "Submenu" },
-			},
-			[13] = {
-				{ BZ["Gilneas City"], "GilneasCity", "Submenu" },
-			},
-			[14] = { 
-				{ BZ["Maraudon"], "Maraudon", "Submenu" },
-			},
-			[15] = { 
-				{ BZ["Zul'Farrak"], "ZulFarrak", "Submenu" },
-			},
-			[16] = { 
-				{ BZ["The Sunken Temple"], "SunkenTemple", "Submenu" },
-			},
-			[17] = { 
-				{ BZ["Hateforge Quarry"], "HateforgeQuarry", "Submenu" },
-			},
-			[18] = { 
-				{ BZ["Blackrock Depths"], "BlackrockDepths", "Submenu" },
-			},
-			[19] = { 
-				[BZ["Dire Maul"]] = {
-					{ BZ["Dire Maul"].." "..L["East"], "DireMaulEast", "Submenu" },
-					{ BZ["Dire Maul"].." "..L["West"], "DireMaulWest", "Submenu" },
-					{ BZ["Dire Maul"].." "..L["North"], "DireMaulNorth", "Submenu" },
-				},
-			},
-			[20] = { 
-				{ BZ["Scholomance"], "Scholomance", "Submenu" },
-			},
-			[21] = { 
-				{ BZ["Stratholme"], "Stratholme", "Submenu" },
-			},
-			[22] = { 
-				{ BZ["Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },
-			},
-			[23] = { 
-				{ BZ["Upper Blackrock Spire"], "UpperBlackrock", "Submenu" },
-			},
-			[24] = { 
-				{ BZ["Karazhan Crypt"], "KarazhanCrypt", "Submenu" },
-			},
-			[25] = { 
-				{ BZ["Caverns of Time: Black Morass"], "CavernsOfTimeBlackMorass", "Submenu" },
-			},
-			[26] = { 
-				{ BZ["Stormwind Vault"], "StormwindVault", "Submenu" },
-			},
-			[27] = { 
-				{ BZ["Zul'Gurub"], "ZulGurub", "Submenu" },
-			},
-			[28] = { 
-				{ BZ["Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },
-			},
-			[29] = { 
-				{ BZ["Molten Core"], "MoltenCore", "Submenu" },
-			},
-			[30] = { 
-				{ BZ["Onyxia's Lair"], "Onyxia", "Submenu" },
-			},
-			[31] = {
-				{ BZ["Lower Karazhan Halls"], "LowerKarazhan", "Submenu" },
-			},
-			[32] = { 
-				{ BZ["Blackwing Lair"], "BlackwingLair", "Submenu" },
-			},
-			[33] = {
-				{ BZ["Emerald Sanctum"], "EmeraldSanctum", "Submenu" },
-			},
-			[34] = { 
-				{ BZ["Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },
-			},
-			[35] = { 
-				{ BZ["Naxxramas"], "Naxxramas", "Submenu" },
-			},
-			[36] = {
-				{ BZ["Tower of Karazhan"], "TowerofKarazhan", "Submenu" },
-			},
-		},
-	},
-	[2] = { [L["World Bosses"]] = {
-		[1] = {{BB["Azuregos"], "AAzuregos", "Table" },},
-		[2] = {{BB["Emeriss"], "DEmeriss", "Table" },},
-		[3] = {{BB["Lethon"], "DLethon", "Table" },},
-		[4] = {{BB["Taerar"], "DTaerar", "Table" },},
-		[5] = {{BB["Ysondre"], "DYsondre", "Table" },},
-		[6] = {{BB["Lord Kazzak"], "KKazzak", "Table" },},
-		[7] = {{BB["Nerubian Overseer"], "Nerubian", "Table" },},
-		[8] = {{BB["Dark Reaver of Karazhan"], "Reaver", "Table" },},
-		[9] = {{BB["Ostarius"], "Ostarius", "Table" },},
-		[10] = {{BB["Concavius"], "Concavius", "Table" },},
-		[11] = {{BB["Moo"], "CowKing", "Table" },},
-		[12] = {{BB["Cla'ckora"], "Clackora", "Table"},},
-		},
-	},
-	[3] = {
-		{ L["Rare Mobs"], "Raremobs", "Submenu" },
-	},
-	[4] = {
-		[L["PvP Rewards"]] = {
-			[1] = { 
-				{ L["PvP Armor Sets"], "PVPSET", "Table" },
-			},
-			[2] = { 
-				{ L["PvP Accessories"], "PvP60Accessories1", "Table" },
-			},
-			[3] = { 
-				{ L["Rank 14 Weapons"], "PVPWeapons1", "Table" },
-			},
-			[4] = { 
-				{ L["PvP Mounts"], "PvPMountsPvP", "Table" },
-			},
-			[5] = { 
-				{ BZ["Blood Ring"], "BRRepMenu", "Table" },
-			},
-			[6] = { 
-				{ BZ["Alterac Valley"], "AVRepMenu", "Table" },
-			},
-			[7] = { 
-				{ BZ["Arathi Basin"], "ABRepMenu", "Table" },
-			},
-			[8] = { 
-				{ BZ["Warsong Gulch"], "WSGRepMenu", "Table" },
-			},
-		},
-	},
-	[5] = {
-		[L["Sets"]] = {
-			[1] = { 
-				{ L["Pre 60 Sets"], "PRE60SET", "Table" },
-			},
-			[2] = {
-				{ "|cffffffff"..L["Priest Sets"], "PriestSet", "Table" },
-			},
-			[3] = {
-				{ "|cff68ccef"..L["Mage Sets"], "MageSet", "Table" },
-			},
-			[4] = {
-				{  "|cff9382c9"..L["Warlock Sets"], "WarlockSet", "Table" },
-			},
-			[5] = {
-				{  "|cfffff468"..L["Rogue Sets"], "RogueSet", "Table" },
-			},
-			[6] = {
-				{ "|cffff7c0a"..L["Druid Sets"], "DruidSet", "Table" },
-			},
-			[7] = {
-				{ "|cffaad372"..L["Hunter Sets"], "HunterSet", "Table" },
-			},
-			[8] = {
-				{ "|cff2773ff"..L["Shaman Sets"], "ShamanSet", "Table" },
-			},
-			[9] = {
-				{ "|cfff48cba"..L["Paladin Sets"], "PaladinSet", "Table" },
-			},
-			[10] = {
-				{ "|cffc69b6d"..L["Warrior Sets"], "WarriorSet", "Table" },
-			},
-			[11] = { 
-				{ L["Tier 0/0.5 Sets"], "T0SET", "Table" },
-			},
-			[12] = { 
-				{ L["Ruins of Ahn'Qiraj Sets"], "AQ20SET", "Table" },
-			},
-			[13] = { 
-				{ L["Temple of Ahn'Qiraj Sets"], "AQ40SET", "Table" },
-			},
-			[14] = { 
-				{ L["Zul'Gurub Sets"], "ZGSET", "Table" },
-			},
-			[15] = { 
-				{ L["Tier 1 Sets"], "T1SET", "Table" },
-			},
-			[16] = { 
-				{ L["Tier 2 Sets"], "T2SET", "Table" },
-			},
-			[17] = { 
-				{ L["Tier 3 Sets"], "T3SET", "Table" },
-			},
-			[18] = {
-				{ L["Tower of Karazhan Sets"], "K40SET", "Table" },
-			},
-		},
-	},
-	[6] = {
-		[L["Collections"]] = {
-			[1] = {
-				{ L["Legendary Items"], "Legendaries", "Table" },
-			},
-			[2] = {
-				{ L["Rare Pets"], "RarePets1", "Table" },
-			},
-			[3] = {
-				{ L["Rare Mounts"], "RareMounts", "Table" },
-			},
-			[4] = {
-				{ L["Old Mounts"], "OldMounts", "Table" },
-			},
-			[5] = {
-				{ L["Unobtainable Mounts"], "UnobMounts", "Table" },
-			},
-			[6] = {
-				{ L["Tabards"], "Tabards", "Table" },
-			},
-			[7] = {
-				{ L["World Epics"], "WORLDEPICS", "Table" },
-			},
-			[8] = {
-				{ L["World Blues"], "WORLDBLUES", "Table" },
-			},
-		},
-	},
-	[7] = {
-		 [L["Factions"]] = {
-			[1] = {{ BF["Argent Dawn"], "Argent1" , "Table" },},
-			[2] = {{ BF["Bloodsail Buccaneers"], "Bloodsail1", "Table" },},
-			[3] = {{ BF["Brood of Nozdormu"], "AQBroodRings", "Table" },},
-			[4] = {{ BF["Cenarion Circle"], "Cenarion1", "Table" }},
-			[5] = {{ BZ["Dalaran"], "Dalaran", "Table" },},
-			[6] = {{ BF["Darkmoon Faire"], "Darkmoon", "Table" },},
-			[7] = {{ BF["Darkspear Trolls"], "DarkspearTrolls", "Table" },},
-			[8] = {{ BZ["Darnassus"], "Darnassus", "Table" },},
-			[9] = {{ BF["Durotar Labor Union"], "DurotarLaborUnion", "Table" },},
-			[10] = {{ BF["Frostwolf Clan"], "Frostwolf1", "Table" },},
-			[11] = {{ BF["Gelkis Clan Centaur"], "GelkisClan1", "Table" },},
-			[12] = {{ BF["Gnomeregan Exiles"], "GnomereganExiles", "Table" },},
-			[13] = {{ BF["Hydraxian Waterlords"], "WaterLords1", "Table" },},
-			[14] = {{ BZ["Ironforge"], "Ironforge", "Table" },},
-			[15] = {{ BF["Magram Clan Centaur"], "MagramClan1", "Table" },},
-			[16] = {{ BZ["Orgrimmar"], "Orgrimmar", "Table" },},
-			[17] = {{ BF["Revantusk Trolls"], "Revantusk", "Table" },},
-			[18] = {{ BF["Silvermoon Remnant"], "Helf", "Table" },},
-			[19] = {{ BF["Stormpike Guard"], "Stormpike1", "Table" },},
-			[20] = {{ BF["Stormwind"], "Stormwind", "Table" },},
-			[21] = {{ BF["Thorium Brotherhood"], "Thorium1", "Table" },},
-			[22] = {{ BZ["Thunder Bluff"], "ThunderBluff", "Table" },},
-			[23] = {{ BF["Timbermaw Hold"], "Timbermaw", "Table" },},
-			[24] = {{ BZ["Undercity"], "Undercity", "Table" },},
-			[25] = {{ BF["Wardens of Time"], "Wardens1", "Table" },},
-			[26] = {{ BF["Wildhammer Clan"], "Wildhammer", "Table" },},
-			[27] = {{ BF["Wintersaber Trainers"], "Wintersaber1", "Table" },},
-			[28] = {{ BF["Zandalar Tribe"], "Zandalar1", "Table" },},
-		 	},
-	},
-	[8] = {
-		[L["World Events"]] = {
-			[1] = { 
-				{ L["Abyssal Council"], "AbyssalTemplars", "Table" },
-			},
-			[2] = { 
-				{ L["Children's Week"], "ChildrensWeek", "Table" },
-			},
-			[3] = { 
-				{ L["Elemental Invasion"], "ElementalInvasion", "Table" },
-			},
-			[4] = { 
-				{ L["Feast of Winter Veil"], "Winterviel1", "Table" },
-			},
-			[5] = { 
-				{ L["Gurubashi Arena"], "GurubashiArena", "Table" },
-			},
-			[6] = { 
-				{ L["Hallow's End"], "Halloween1", "Table" },
-			},
-			[7] = { 
-				{ L["Harvest Festival"], "HarvestFestival", "Table" },
-			},
-			[8] = { 
-				{ L["Love is in the Air"], "Valentineday", "Table" },
-			},
-			[9] = { 
-				{ L["Lunar Festival"], "LunarFestival1", "Table" },
-			},
-			[10] = { 
-				{ L["Midsummer Fire Festival"], "MidsummerFestival", "Table" },
-			},
-			[11] = { 
-				{ L["Noblegarden"], "Noblegarden", "Table" },
-			},
-			[12] = { 
-				{ L["Scourge Invasion"], "ScourgeInvasionEvent1", "Table" },
-			},
-			[13] = { 
-				{ L["Stranglethorn Fishing Extravaganza"], "FishingExtravaganza", "Table" },
-			},
-		},
-	},
-	[9] = {
-		[L["Crafting"]] = {
-			[1] = { { BS["Alchemy"], "ALCHEMYMENU", "Table" }, },
-			[2] = { { (BS["Blacksmithing"]), "SMITHINGMENU", "Table" }, },
-			[3] = { { (BS["Enchanting"]), "ENCHANTINGMENU", "Table" }, },
-			[4] = { { (BS["Engineering"]), "ENGINEERINGMENU", "Table" }, },
-			[5] = { { (BS["Herbalism"]), "Herbalism1", "Table" }, },
-			[6] = { { (BS["Leatherworking"]), "LEATHERWORKINGMENU", "Table" }, },
-			[7] = { { (BS["Mining"]), "MININGMENU", "Table" }, },
-			[8] = { { (BS["Tailoring"]), "TAILORINGMENU", "Table" }, },
-			[9] = { { (BS["Jewelcrafting"]), "JEWELCRAFTMENU", "Table" }, },
-			[10] = { { (BS["Cooking"]), "COOKINGMENU", "Table" }, },
-			[11] = { { (BS["First Aid"]), "FirstAid1", "Table" }, },
-			[12] = { { (BS["Survival"]), "SURVIVALMENU", "Table" }, },
-			[13] = { { (BS["Poisons"]), "Poisons1", "Table" }, },
-			[14] = { { L["Crafted Sets"], "CRAFTSET", "Table" },},
-			[15] = { { L["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
-		},
-	},
+{[L["Dungeons & Raids"]] = {
+	{ { BZ["Ragefire Chasm"], "RagefireChasm", "Submenu" }, },
+	{ { BZ["Wailing Caverns"], "WailingCaverns", "Submenu" }, },
+	{ { BZ["The Deadmines"], "Deadmines", "Submenu" }, },
+	{ { BZ["Shadowfang Keep"], "ShadowfangKeep", "Submenu" }, },
+	{ { BZ["Blackfathom Deeps"], "BlackfathomDeeps", "Submenu" }, },
+	{ { BZ["The Stockade"], "TheStockade", "Submenu" }, },
+	{ { BZ["Gnomeregan"], "Gnomeregan", "Submenu" }, },
+	{ { BZ["Razorfen Kraul"], "RazorfenKraul", "Submenu" }, },
+	{ { BZ["The Crescent Grove"], "TheCrescentGrove", "Submenu" }, },
+	{ [BZ["Scarlet Monastery"]] = {
+		{ BZ["Scarlet Monastery"].." "..L["Graveyard"], "SMGraveyard", "Submenu" },
+		{ BZ["Scarlet Monastery"].." "..L["Library"], "SMLibrary", "Submenu" },
+		{ BZ["Scarlet Monastery"].." "..L["Armory"], "SMArmory", "Submenu" },
+		{ BZ["Scarlet Monastery"].." "..L["Cathedral"], "SMCathedral", "Submenu" },
+	}, },
+	{ { BZ["Razorfen Downs"], "RazorfenDowns", "Submenu" }, },
+	{ { BZ["Uldaman"], "Uldaman", "Submenu" }, },
+	{ { BZ["Gilneas City"], "GilneasCity", "Submenu" }, },
+	{ { BZ["Maraudon"], "Maraudon", "Submenu" }, },
+	{ { BZ["Zul'Farrak"], "ZulFarrak", "Submenu" }, },
+	{ { BZ["The Sunken Temple"], "SunkenTemple", "Submenu" }, },
+	{ { BZ["Hateforge Quarry"], "HateforgeQuarry", "Submenu" }, },
+	{ { BZ["Blackrock Depths"], "BlackrockDepths", "Submenu" }, },
+	{ [BZ["Dire Maul"]] = {
+		{ BZ["Dire Maul"].." "..L["East"], "DireMaulEast", "Submenu" },
+		{ BZ["Dire Maul"].." "..L["West"], "DireMaulWest", "Submenu" },
+		{ BZ["Dire Maul"].." "..L["North"], "DireMaulNorth", "Submenu" },
+	}, },
+	{ { BZ["Scholomance"], "Scholomance", "Submenu" }, },
+	{ { BZ["Stratholme"], "Stratholme", "Submenu" }, },
+	{ { BZ["Lower Blackrock Spire"], "LowerBlackrock", "Submenu" }, },
+	{ { BZ["Upper Blackrock Spire"], "UpperBlackrock", "Submenu" }, },
+	{ { BZ["Karazhan Crypt"], "KarazhanCrypt", "Submenu" }, },
+	{ { BZ["Caverns of Time: Black Morass"], "CavernsOfTimeBlackMorass", "Submenu" }, },
+	{ { BZ["Stormwind Vault"], "StormwindVault", "Submenu" }, },
+	{ { BZ["Zul'Gurub"], "ZulGurub", "Submenu" }, },
+	{ { BZ["Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" }, },
+	{ { BZ["Molten Core"], "MoltenCore", "Submenu" }, },
+	{ { BZ["Onyxia's Lair"], "Onyxia", "Submenu" }, },
+	{ { BZ["Lower Karazhan Halls"], "LowerKarazhan", "Submenu" }, },
+	{ { BZ["Blackwing Lair"], "BlackwingLair", "Submenu" }, },
+	{ { BZ["Emerald Sanctum"], "EmeraldSanctum", "Submenu" }, },
+	{ { BZ["Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" }, },
+	{ { BZ["Naxxramas"], "Naxxramas", "Submenu" }, },
+	{ { BZ["Tower of Karazhan"], "TowerofKarazhan", "Submenu" }, },
+}, },
+
+{ [L["World"]] = {
+	{ { BB["Azuregos"], "AAzuregos", "Table" }, },
+	{ { BB["Emeriss"], "DEmeriss", "Table" }, },
+	{ { BB["Lethon"], "DLethon", "Table" }, },
+	{ { BB["Taerar"], "DTaerar", "Table" }, },
+	{ { BB["Ysondre"], "DYsondre", "Table" }, },
+	{ { BB["Lord Kazzak"], "KKazzak", "Table" }, },
+	{ { BB["Nerubian Overseer"], "Nerubian", "Table" }, },
+	{ { BB["Dark Reaver of Karazhan"], "Reaver", "Table" }, },
+	{ { BB["Ostarius"], "Ostarius", "Table" }, },
+	{ { BB["Concavius"], "Concavius", "Table" }, },
+	{ { BB["Moo"], "CowKing", "Table" }, },
+	{ { BB["Cla'ckora"], "Clackora", "Table"}, },
+	{ { L["Rare Mobs"], "RareMobs", "Submenu" }, },
+}, },
+
+{ [L["PvP Rewards"]] = {
+	{ { L["PvP Armor Sets"], "PVPSET", "Table" }, },
+	{ { L["PvP Accessories"], "PvP60Accessories1", "Table" }, },
+	{ { L["Rank 14 Weapons"], "PVPWeapons1", "Table" }, },
+	{ { L["PvP Mounts"], "PvPMountsPvP", "Table" }, },
+	{ { BZ["Blood Ring"], "BRRepMenu", "Table" }, },
+	{ { BZ["Alterac Valley"], "AVRepMenu", "Table" }, },
+	{ { BZ["Arathi Basin"], "ABRepMenu", "Table" }, },
+	{ { BZ["Warsong Gulch"], "WSGRepMenu", "Table" }, },
+}, },
+
+{ [L["Collections"]] = {
+	{ { "|cffffffff"..L["Priest Sets"], "PriestSet", "Table" }, },
+	{ { "|cff68ccef"..L["Mage Sets"], "MageSet", "Table" }, },
+	{ { "|cff9382c9"..L["Warlock Sets"], "WarlockSet", "Table" }, },
+	{ { "|cfffff468"..L["Rogue Sets"], "RogueSet", "Table" }, },
+	{ { "|cffff7c0a"..L["Druid Sets"], "DruidSet", "Table" }, },
+	{ { "|cffaad372"..L["Hunter Sets"], "HunterSet", "Table" }, },
+	{ { "|cff2773ff"..L["Shaman Sets"], "ShamanSet", "Table" }, },
+	{ { "|cfff48cba"..L["Paladin Sets"], "PaladinSet", "Table" }, },
+	{ { "|cffc69b6d"..L["Warrior Sets"], "WarriorSet", "Table" }, },
+	{ { L["Pre 60 Sets"], "PRE60SET", "Table" }, },
+	{ { L["Tier 0/0.5 Sets"], "T0SET", "Table" }, },
+	{ { L["Ruins of Ahn'Qiraj Sets"], "AQ20SET", "Table" }, },
+	{ { L["Temple of Ahn'Qiraj Sets"], "AQ40SET", "Table" }, },
+	{ { L["Zul'Gurub Sets"], "ZGSET", "Table" }, },
+	{ { L["Tier 1 Sets"], "T1SET", "Table" }, },
+	{ { L["Tier 2 Sets"], "T2SET", "Table" }, },
+	{ { L["Tier 3 Sets"], "T3SET", "Table" }, },
+	{ { L["Tower of Karazhan Sets"], "K40SET", "Table" }, },
+	{ { L["Legendary Items"], "Legendaries", "Table" }, },
+	{ { L["World Blues"], "WORLDBLUES", "Table" }, },
+	{ { L["World Epics"], "WORLDEPICS", "Table" }, },
+	{ { L["Rare Mounts"], "RareMounts", "Table" }, },
+	{ { L["Rare Pets"], "RarePets1", "Table" }, },
+	{ { L["Tabards"], "Tabards", "Table" }, },
+	{ { L["Old Mounts"], "OldMounts", "Table" }, },
+	{ { L["Unobtainable Mounts"], "UnobMounts", "Table" }, },
+}, },
+
+{ [L["Factions"]] = {
+	{ { BF["Argent Dawn"], "Argent1" , "Table" }, },
+	{ { BF["Bloodsail Buccaneers"], "Bloodsail1", "Table" }, },
+	{ { BF["Brood of Nozdormu"], "AQBroodRings", "Table" }, },
+	{ { BF["Cenarion Circle"], "Cenarion1", "Table" }, },
+	{ { BZ["Dalaran"], "Dalaran", "Table" }, },
+	{ { BF["Darkmoon Faire"], "Darkmoon", "Table" }, },
+	{ { BF["Darkspear Trolls"], "DarkspearTrolls", "Table" }, },
+	{ { BZ["Darnassus"], "Darnassus", "Table" }, },
+	{ { BF["Durotar Labor Union"], "DurotarLaborUnion", "Table" }, },
+	{ { BF["Frostwolf Clan"], "Frostwolf1", "Table" }, },
+	{ { BF["Gelkis Clan Centaur"], "GelkisClan1", "Table" }, },
+	{ { BF["Gnomeregan Exiles"], "GnomereganExiles", "Table" }, },
+	{ { BF["Hydraxian Waterlords"], "WaterLords1", "Table" }, },
+	{ { BZ["Ironforge"], "Ironforge", "Table" }, },
+	{ { BF["Magram Clan Centaur"], "MagramClan1", "Table" }, },
+	{ { BZ["Orgrimmar"], "Orgrimmar", "Table" }, },
+	{ { BF["Revantusk Trolls"], "Revantusk", "Table" }, },
+	{ { BF["Silvermoon Remnant"], "Helf", "Table" }, },
+	{ { BF["Stormpike Guard"], "Stormpike1", "Table" }, },
+	{ { BF["Stormwind"], "Stormwind", "Table" }, },
+	{ { BF["Thorium Brotherhood"], "Thorium1", "Table" }, },
+	{ { BZ["Thunder Bluff"], "ThunderBluff", "Table" }, },
+	{ { BF["Timbermaw Hold"], "Timbermaw", "Table" }, },
+	{ { BZ["Undercity"], "Undercity", "Table" }, },
+	{ { BF["Wardens of Time"], "Wardens1", "Table" }, },
+	{ { BF["Wildhammer Clan"], "Wildhammer", "Table" }, },
+	{ { BF["Wintersaber Trainers"], "Wintersaber1", "Table" }, },
+	{ { BF["Zandalar Tribe"], "Zandalar1", "Table" }, },
+}, },
+
+{ [L["World Events"]] = {
+	{ { L["Abyssal Council"], "AbyssalTemplars", "Table" }, },
+	{ { L["Children's Week"], "ChildrensWeek", "Table" }, },
+	{ { L["Elemental Invasion"], "ElementalInvasion", "Table" }, },
+	{ { L["Feast of Winter Veil"], "Winterviel1", "Table" }, },
+	{ { L["Gurubashi Arena"], "GurubashiArena", "Table" }, },
+	{ { L["Hallow's End"], "Halloween1", "Table" }, },
+	{ { L["Harvest Festival"], "HarvestFestival", "Table" }, },
+	{ { L["Love is in the Air"], "Valentineday", "Table" }, },
+	{ { L["Lunar Festival"], "LunarFestival1", "Table" }, },
+	{ { L["Midsummer Fire Festival"], "MidsummerFestival", "Table" }, },
+	{ { L["Noblegarden"], "Noblegarden", "Table" }, },
+	{ { L["Scourge Invasion"], "ScourgeInvasionEvent1", "Table" }, },
+	{ { L["Stranglethorn Fishing Extravaganza"], "FishingExtravaganza", "Table" }, },
+}, },
+
+{ [L["Crafting"]] = {
+	{ { BS["Alchemy"], "ALCHEMYMENU", "Table" }, },
+	{ { BS["Blacksmithing"], "SMITHINGMENU", "Table" }, },
+	{ { BS["Enchanting"], "ENCHANTINGMENU", "Table" }, },
+	{ { BS["Engineering"], "ENGINEERINGMENU", "Table" }, },
+	{ { BS["Herbalism"], "Herbalism1", "Table" }, },
+	{ { BS["Leatherworking"], "LEATHERWORKINGMENU", "Table" }, },
+	{ { BS["Mining"], "MININGMENU", "Table" }, },
+	{ { BS["Tailoring"], "TAILORINGMENU", "Table" }, },
+	{ { BS["Jewelcrafting"], "JEWELCRAFTMENU", "Table" }, },
+	{ { BS["Cooking"], "COOKINGMENU", "Table" }, },
+	{ { BS["First Aid"], "FirstAid1", "Table" }, },
+	{ { BS["Survival"], "SURVIVALMENU", "Table" }, },
+	{ { BS["Poisons"], "Poisons1", "Table" }, },
+	{ { L["Crafted Sets"], "CRAFTSET", "Table" }, },
+	{ { L["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
+}, },
 }
 
 --This table defines all the subtables needed for the full menu
@@ -3092,7 +2896,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ L["Trash Mobs"], "LKHTrash" },
 		{ BZ["Lower Karazhan Halls"].." "..L["Enchants"], "LKHEnchants" },
 	},
-	["WorldBosses"] = {
+	["World"] = {
 		{ BB["Azuregos"], "AAzuregos" },
 		{ BB["Emeriss"], "DEmeriss" },
 		{ BB["Lethon"], "DLethon"},
@@ -3107,46 +2911,45 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ BB["Moo"], "CowKing" },
 		{ BB["Cla'ckora"], "Clackora" },
 	},
-	["Raremobs"] = {
-		{ "Shade Mage (17)", "ShadeMage" },
-		{ "Graypaw Alpha (18)", "GraypawAlpha" },
-		{ "Earthcaller Rezengal (18)", "EarthcallerRezengal" },
-		{ "Blazespark (24)", "Blazespark" },
-		{ "Witch Doctor Tan'zo (35)", "WitchDoctorTanzo" },
-		{ "Dawnhowl (40)", "Dawnhowl" },
-		{ "Widow of the Woods (40)", "WidowoftheWoods" },
-		{ "Maltimor's Prototype (43)", "MaltimorsPrototype" },
-		{ "Bonecruncher (44)", "Bonecruncher" },
-		{ "Duskskitterer (44)", "Duskskitterer" },
-		{ "Baron Perenolde (45)", "BaronPerenolde" },
-		{ "Kin'Tozo (45)", "KinTozo" },
-		{ "M0L1Y (47)", "M0L1Y" },
-		{ "Grug'thok the Seer (47)", "Grugthok" },
-		{ "Explorer Ashbeard (49)", "Ashbeard" },
-		{ "Jal'akar (50)", "Jalakar" },
-		{ "Ripjaw (51)", "Ripjaw" },
-		{ "Ruk'thok the Pyromancer (51)", "Rukthok" },
-		{ "Embereye (51)", "Embereye" },
-		{ "Xalvic Blackclaw (53)", "Xalvic" },
-		{ "Letashaz (55)", "Letashaz" },
-		{ "The Wandering Knight (55)", "WanderingKnight" },
-		{ "Firstborn of Arugal (55)", "FirstbornofArugal" },
-		{ "Margon the Mighty (55)", "MargontheMighty" },
-		{ "Aquitus (56)", "Aquitus" },
-		{ "Stoneshell (56)", "Stoneshell" },
-		{ "Tarangos (56)", "Tarangos" },
-		{ "Zareth Terrorblade (57)", "Zareth" },
-		{ "Mallon The Moontouched (58)", "Mallon" },
-		{ "Highvale Silverback (58)", "HighvaleSilverback" },
-		{ "Professor Lysander (59)", "ProfessorLysander" },
-		{ "Blademaster Kargron (59)", "Kargron" },
-		{ "Azurebeak (60)", "Azurebeak" },
-		{ "Barkskin Fisher (60)", "BarkskinFisher" },
-		{ "Admiral Barean Westwind (60)", "AdmiralBareanWestwind" },
-		{ "Shadeflayer Goliath (61)", "ShadeflayerGoliath" },
-		{ "Crusader Larsarius (61)", "CrusaderLarsarius" },
+	["RareMobs"] = {
+        { WHITE.."[17]"..DEFAULT.." "..L["Shade Mage"]             .." "..WHITE.."("..BZ["Tirisfal Glades"]     ..")", "ShadeMage" },
+        { WHITE.."[18]"..DEFAULT.." "..L["Graypaw Alpha"]          .." "..WHITE.."("..BZ["Tirisfal Glades"]     ..")", "GraypawAlpha" },
+        { WHITE.."[18]"..DEFAULT.." "..L["Earthcaller Rezengal"]   .." "..WHITE.."("..BZ["Stonetalon Mountains"]..")", "EarthcallerRezengal" },
+        { WHITE.."[24]"..DEFAULT.." "..L["Blazespark"]             .." "..WHITE.."("..BZ["Stonetalon Mountains"]..")", "Blazespark" },
+        { WHITE.."[35]"..DEFAULT.." "..L["Witch Doctor Tan'zo"]    .." "..WHITE.."("..BZ["Arathi Highlands"]    ..")", "WitchDoctorTanzo" },
+        { WHITE.."[40]"..DEFAULT.." "..L["Widow of the Woods"]     .." "..WHITE.."("..BZ["Gilneas"]             ..")", "WidowoftheWoods" },
+        { WHITE.."[40]"..DEFAULT.." "..L["Dawnhowl"]               .." "..WHITE.."("..BZ["Gilneas"]             ..")", "Dawnhowl" },
+        { WHITE.."[43]"..DEFAULT.." "..L["Maltimor's Prototype"]   .." "..WHITE.."("..BZ["Gilneas"]             ..")", "MaltimorsPrototype" },
+        { WHITE.."[44]"..DEFAULT.." "..L["Bonecruncher"]           .." "..WHITE.."("..BZ["Gilneas"]             ..")", "Bonecruncher" },
+        { WHITE.."[44]"..DEFAULT.." "..L["Duskskitter"]            .." "..WHITE.."("..BZ["Gilneas"]             ..")", "Duskskitter" },
+        { WHITE.."[45]"..DEFAULT.." "..L["Baron Perenolde"]        .." "..WHITE.."("..BZ["Gilneas"]             ..")", "BaronPerenolde" },
+        { WHITE.."[45]"..DEFAULT.." "..L["Kin'Tozo"]               .." "..WHITE.."("..BZ["Stranglethorn Vale"]  ..")", "KinTozo" },
+        { WHITE.."[47]"..DEFAULT.." "..L["Grug'thok the Seer"]     .." "..WHITE.."("..BZ["Feralas"]             ..")", "Grugthok" },
+        { WHITE.."[47]"..DEFAULT.." "..L["M-0L1Y"]                 .." "..WHITE.."("..BZ["Dun Morogh"]          ..")", "M0L1Y" },
+        { WHITE.."[49]"..DEFAULT.." "..L["Explorer Ashbeard"]      .." "..WHITE.."("..BZ["Searing Gorge"]       ..")", "Ashbeard" },
+        { WHITE.."[50]"..DEFAULT.." "..L["Jal'akar"]               .." "..WHITE.."("..BZ["The Hinterlands"]         ..")", "Jalakar" },
+        { WHITE.."[51]"..DEFAULT.." "..L["Embereye"]               .." "..WHITE.."("..BZ["Gillijim's Isle"]        ..")", "Embereye" },
+        { WHITE.."[51]"..DEFAULT.." "..L["Ruk'thok the Pyromancer"].." "..WHITE.."("..BZ["Lapidis Isle"]        ..")", "Rukthok" },
+        { WHITE.."[51]"..DEFAULT.." "..L["Tarangos"]               .." "..WHITE.."("..BZ["Azshara"]             ..")", "Tarangos" },
+        { WHITE.."[51]"..DEFAULT.." "..L["Ripjaw"]                 .." "..WHITE.."("..BZ["Lapidis Isle"]        ..")", "Ripjaw" },
+        { WHITE.."[53]"..DEFAULT.." "..L["Xalvic Blackclaw"]       .." "..WHITE.."("..BZ["Felwood"]             ..")", "Xalvic" },
+        { WHITE.."[54]"..DEFAULT.." "..L["Aquitus"]                .." "..WHITE.."("..BZ["Gillijim's Isle"]        ..")", "Aquitus" },
+        { WHITE.."[55]"..DEFAULT.." "..L["Firstborn of Arugal"]    .." "..WHITE.."("..BZ["Gilneas"]             ..")", "FirstbornofArugal" },
+        { WHITE.."[55]"..DEFAULT.." "..L["Letashaz"]               .." "..WHITE.."("..BZ["Gillijim's Isle"]        ..")", "Letashaz" },
+        { WHITE.."[55]"..DEFAULT.." "..L["Margon the Mighty"]      .." "..WHITE.."("..BZ["Lapidis Isle"]        ..")", "MargontheMighty" },
+        { WHITE.."[55]"..DEFAULT.." "..L["The Wandering Knight"]   .." "..WHITE.."("..BZ["Western Plaguelands"] ..")", "WanderingKnight" },
+        { WHITE.."[56]"..DEFAULT.." "..L["Stoneshell"]             .." "..WHITE.."("..BZ["Tel'Abim"]            ..")", "Stoneshell" },
+        { WHITE.."[57]"..DEFAULT.." "..L["Zareth Terrorblade"]     .." "..WHITE.."("..BZ["Blasted Lands"]       ..")", "Zareth" },
+        { WHITE.."[58]"..DEFAULT.." "..L["Highvale Silverback"]    .." "..WHITE.."("..BZ["Tel'Abim"]            ..")", "HighvaleSilverback" },
+        { WHITE.."[58]"..DEFAULT.." "..L["Mallon The Moontouched"] .." "..WHITE.."("..BZ["Winterspring"]        ..")", "Mallon" },
+        { WHITE.."[59]"..DEFAULT.." "..L["Blademaster Kargron"]    .." "..WHITE.."("..BZ["Burning Steppes"]     ..")", "Kargron" },
+        { WHITE.."[59]"..DEFAULT.." "..L["Professor Lysander"]     .." "..WHITE.."("..BZ["Eastern Plaguelands"] ..")", "ProfessorLysander" },
+        { WHITE.."[60]"..DEFAULT.." "..L["Admiral Barean Westwind"].." "..WHITE.."("..BZ["Eastern Plaguelands"]     ..")", "AdmiralBareanWestwind" },
+        { WHITE.."[60]"..DEFAULT.." "..L["Azurebeak"]              .." "..WHITE.."("..BZ["Hyjal"]               ..")", "Azurebeak" },
+        { WHITE.."[60]"..DEFAULT.." "..L["Barkskin Fisher"]        .." "..WHITE.."("..BZ["Hyjal"]               ..")", "BarkskinFisher" },
+        { WHITE.."[61]"..DEFAULT.." "..L["Crusader Larsarius"]     .." "..WHITE.."("..BZ["Eastern Plaguelands"] ..")", "CrusaderLarsarius" },
+        { WHITE.."[61]"..DEFAULT.." "..L["Shadeflayer Goliath"]    .." "..WHITE.."("..BZ["Hyjal"]               ..")", "ShadeflayerGoliath" },
 	},
-
 	["AbyssalCouncil1"] = {
 		{ L["Abyssal Council"].." - "..L["Templars"], "AbyssalTemplars" },
 		{ L["Abyssal Council"].." - "..L["Dukes"], "AbyssalDukes" },
