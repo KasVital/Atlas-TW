@@ -219,12 +219,6 @@ function AtlasLootSetMenu()
 	AtlasLootMenuItem_29_Icon:SetTexture("Interface\\Icons\\INV_Shirt_GuildTabard_01")
 	AtlasLootMenuItem_29.lootpage="Tabards"
 	AtlasLootMenuItem_29:Show()
-	-- Fashion
-	AtlasLootMenuItem_30_Name:SetText(L["Fashion"])
-	AtlasLootMenuItem_30_Extra:SetText("")
-	AtlasLootMenuItem_30_Icon:SetTexture("Interface\\Icons\\Ability_Hunter_Pet_Turtle")
-	AtlasLootMenuItem_30.lootpage = "DonationRewards2"
-	AtlasLootMenuItem_30:Show()
 	for i = 1, 30 do
 		local button = _G["AtlasLootMenuItem_" .. i]
 		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)

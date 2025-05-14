@@ -2861,7 +2861,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Page = "LKHBroodQueenAraxxna",
 		Next_Title = BB["Brood Queen Araxxna"],
 		Prev_Page = "LKHEnchants",
-		Prev_Title = L["LKH Enchants"],
+		Prev_Title = BZ["Lower Karazhan Halls"].." "..L["Enchants"],
 		Back_Page = "DUNGEONSMENU2",
 		Back_Title = L["Dungeons & Raids"],
 	},
@@ -2913,14 +2913,14 @@ AtlasLoot_ButtonRegistry = {
 	["LKHTrash"] = {
 		Title = L["Trash Mobs"],
 		Next_Page = "LKHEnchants",
-		Next_Title = L["LKH Enchants"],
+		Next_Title = BZ["Lower Karazhan Halls"].." "..L["Enchants"],
 		Prev_Page = "LKHMoroes",
 		Prev_Title = BB["Moroes"],
 		Back_Page = "DUNGEONSMENU2",
 		Back_Title = L["Dungeons & Raids"],
 	},
 	["LKHEnchants"] = {
-		Title = L["LKH Enchants"],
+		Title = BZ["Lower Karazhan Halls"].." "..L["Enchants"],
 		Next_Page = "LKHRolfen",
 		Next_Title = BB["Master Blacksmith Rolfen"],
 		Prev_Page = "LKHTrash",
@@ -4355,8 +4355,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = L["Tabards"],
 		Back_Page = "SETMENU",
 		Back_Title = L["Collections"],
-		Next_Page = "DonationRewards1",
-		Next_Title = L["Tabards"],
+		Next_Page = "Legendaries",
+		Next_Title = L["Legendary Items"],
 	},
 	["Legendaries"] = {
 		Title = L["Legendary Items"],
@@ -4401,38 +4401,6 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Title = L["Rare Pets"],
 		Back_Page = "SETMENU",
 		Back_Title = L["Collections"]
-	},
-	--donation tabards
-	["DonationRewards1"] = {
-		Title = L["Tabards"],
-		Back_Page = "SETMENU",
-		Back_Title = L["Collections"],
-		Prev_Page = "Tabards",
-		Prev_Title = L["Tabards"],
-	},
-	--fashion
-	["DonationRewards2"] = {
-		Title = L["Fashion"],
-		Back_Page = "SETMENU",
-		Back_Title = L["Collections"],
-		Next_Page = "DonationRewards3",
-		Next_Title = L["Fashion"],
-	},
-	["DonationRewards3"] = {
-		Title = L["Fashion"],
-		Back_Page = "SETMENU",
-		Back_Title = L["Collections"],
-		Prev_Page = "DonationRewards2",
-		Prev_Title = L["Fashion"],
-		Next_Page = "DonationRewards4",
-		Next_Title = L["Fashion"],
-	},
-	["DonationRewards4"] = {
-		Title = L["Fashion"],
-		Back_Page = "SETMENU",
-		Back_Title = L["Collections"],
-		Prev_Page = "DonationRewards3",
-		Prev_Title = L["Fashion"],
 	},
 	["WorldEpics1"] = {
 		Title = AtlasLoot_TableNames["WorldEpics1"][1],

@@ -1,6 +1,6 @@
 --[[
 	Name: Babble-Spell-2.2a
-	Revision: $Rev: 25189 $
+	Revision: $Rev: 25190 $
 	Author(s): ckknight (ckknight@gmail.com)
 	Website: http://ckknight.wowinterface.com/
 	Documentation: http://wiki.wowace.com/index.php/Babble-Spell-2.2a

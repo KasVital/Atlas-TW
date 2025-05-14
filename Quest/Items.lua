@@ -2142,6 +2142,9 @@ Inst13Quest10ITC1 = Itemc4;
 Inst13Quest10description1 = AQITEM_POLEARM
 Inst13Quest10ID1 = "40080"
 
+--Quest 11 Alliance
+Inst13Quest11Rewardtext = AQNoReward
+
 --Quest 1 Horde
 Inst13Quest1Rewardtext_HORDE = AQDiscription_REWARD..WHITE.."1"..AQDiscription_OR..WHITE.."2"
 --ITEM1
@@ -2222,7 +2225,8 @@ Inst13Quest7ID3_HORDE = "17753"
 --Quest 8 Horde
 Inst13Quest8Rewardtext_HORDE = AQNoReward
 
-
+--Quest 9 Horde
+Inst13Quest9Rewardtext_HORDE = AQNoReward
 
 --------------- INST14 - Molten Core (MC) ---------------
 

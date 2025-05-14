@@ -56,12 +56,12 @@ AtlasLoot_TableNames = {
 	["BRDGuzzler"] = { BZ["Blackrock Depths"].." - "..L["The Grim Guzzler"], "AtlasLootItems" },
 	["BRDFlamelash"] = { BZ["Blackrock Depths"].." - "..BB["Ambassador Flamelash"], "AtlasLootItems" },
 	["BRDPanzor"] = { BZ["Blackrock Depths"].." - "..BB["Panzor the Invincible"].." ("..L["Rare"]..")", "AtlasLootItems" },
-	["BRDTomb"] = { BZ["Blackrock Depths"].." - ".."Summoner's Tomb", "AtlasLootItems" },
+	["BRDTomb"] = { BZ["Blackrock Depths"].." - "..L["Summoner's Tomb"], "AtlasLootItems" },
 	["BRDLyceum"] = { BZ["Blackrock Depths"].." - "..L["Shadowforge Flame Keeper"], "AtlasLootItems" },
 	["BRDMagmus"] = { BZ["Blackrock Depths"].." - "..BB["Magmus"], "AtlasLootItems" },
 	["BRDPrincess"] = { BZ["Blackrock Depths"].." - "..BB["Princess Moira Bronzebeard"], "AtlasLootItems" },
 	["BRDEmperorDagranThaurissan"] = { BZ["Blackrock Depths"].." - "..BB["Emperor Dagran Thaurissan"], "AtlasLootItems" },
-	["BRDBSPlans"] = { "Blacksmith Plans".." ("..BZ["Blackrock Depths"]..")", "AtlasLootItems" },
+	["BRDBSPlans"] = { L["Blacksmithing Plans"].." ("..BZ["Blackrock Depths"]..")", "AtlasLootItems" },
 	["BRDTrash"] = { L["Trash Mobs"].." ("..BZ["Blackrock Depths"]..")", "AtlasLootItems" },
 	--Lower Blackrock Spire
 	["LBRSSpirestoneButcher"] = { BZ["Lower Blackrock Spire"].." - "..L["Spirestone Butcher"].." ("..L["Rare"]..")", "AtlasLootItems" },
@@ -134,7 +134,7 @@ AtlasLoot_TableNames = {
 	["DMETrash"] = { L["Trash Mobs"].." ("..BZ["Dire Maul (East)"]..")", "AtlasLootItems" },
 	["DMEShard"] = { BZ["Dire Maul (East)"].." - "..L["Felvine Shard"], "AtlasLootItems" },
 	["DMTome"] = { BZ["Dire Maul (East)"].." - "..L["A Dusty Tome"], "AtlasLootItems" },
-	["DMBooks"] = {"Dire Maul Books", "AtlasLootItems" },
+	["DMBooks"] = {L["Dire Maul Books"], "AtlasLootItems" },
 	--Dire Maul North
 	["DMNGuardMoldar"] = { BZ["Dire Maul (North)"].." - "..BB["Guard Mol'dar"], "AtlasLootItems" },
 	["DMNStomperKreeg"] = { BZ["Dire Maul (North)"].." - "..BB["Stomper Kreeg"], "AtlasLootItems" },
@@ -200,7 +200,7 @@ AtlasLoot_TableNames = {
 	["MCSulfuron"] = { BZ["Molten Core"].." - "..BB["Sulfuron Harbinger"], "AtlasLootItems" },
 	["MCMajordomo"] = { BZ["Molten Core"].." - "..BB["Majordomo Executus"], "AtlasLootItems" },
 	["MCRagnaros"] = { BZ["Molten Core"].." - "..BB["Ragnaros"], "AtlasLootItems" },
-	["MCRANDOMBOSSDROPS"] = { BZ["Molten Core"].." - ".."Random Boss Drops", "AtlasLootItems" },
+	["MCRANDOMBOSSDROPS"] = { BZ["Molten Core"].." - "..L["Random Boss Loot"], "AtlasLootItems" },
 	["MCTrashMobs"] = { L["Trash Mobs"].." ("..BZ["Molten Core"]..")", "AtlasLootItems" },
 	--Naxxramas
 	["NAXPatchwerk"] = { BZ["Naxxramas"].." - "..BB["Patchwerk"], "AtlasLootItems" },
@@ -258,8 +258,8 @@ AtlasLoot_TableNames = {
 	["AQ20Ayamiss"] = { BZ["Ruins of Ahn'Qiraj"].." - "..BB["Ayamiss the Hunter"], "AtlasLootItems" },
 	["AQ20Ossirian"] = { BZ["Ruins of Ahn'Qiraj"].." - "..BB["Ossirian the Unscarred"], "AtlasLootItems" },
 	["AQ20Trash"] = { L["Trash Mobs"].." (AQ20)", "AtlasLootItems" },
-	["AQ20ClassBooks"] = { "AQ20 Class Books", "AtlasLootItems" },
-	["AQEnchants"] = { "AQ20 Enchants", "AtlasLootItems" },
+	["AQ20ClassBooks"] = { L["Class Books"], "AtlasLootItems" },
+	["AQEnchants"] = { L["Enchants"], "AtlasLootItems" },
 	["AQ20SET"] = { L["Ruins of Ahn'Qiraj Sets"], "AtlasLootSetItems"},
 	--Scarlet Monastery - Armory
 	["SMHerod"] = { BZ["Scarlet Monastery (Armory)"].." - "..BB["Herod"], "AtlasLootItems" },
@@ -342,7 +342,7 @@ AtlasLoot_TableNames = {
     ["STRATMalor"] = { BZ["Stratholme"].." - "..BB["Malor the Zealous"], "AtlasLootItems" },
 	["STRATMalorsStrongbox"] = { BZ["Stratholme"].." - "..L["Malor's Strongbox"], "AtlasLootItems" },
 	["STRATCrimsonHammersmith"] = { BZ["Stratholme"].." - "..L["Crimson Hammersmith"].." ("..L["Summon"]..")", "AtlasLootItems" },
-	["STRATBSPlansSerenity"] = { BZ["Stratholme"].." - ".."Plans: Serenity", "AtlasLootItems" },
+	["STRATBSPlansSerenity"] = { BZ["Stratholme"].." - "..L["Plans: Serenity"], "AtlasLootItems" },
 	["STRATCannonMasterWilley"] = { BZ["Stratholme"].." - "..BB["Cannon Master Willey"], "AtlasLootItems" },
 	["STRATArchivistGalford"] = { BZ["Stratholme"].." - "..BB["Archivist Galford"], "AtlasLootItems" },
 	["STRATBalnazzar"] = { BZ["Stratholme"].." - "..BB["Balnazzar"], "AtlasLootItems" },
@@ -351,7 +351,7 @@ AtlasLoot_TableNames = {
 	["STRATNerubenkan"] = { BZ["Stratholme"].." - "..BB["Nerub'enkan"], "AtlasLootItems" },
 	["STRATBaronessAnastari"] = { BZ["Stratholme"].." - "..BB["Baroness Anastari"], "AtlasLootItems" },
 	["STRATBlackGuardSwordsmith"] = { BZ["Stratholme"].." - "..L["Black Guard Swordsmith"].." ("..L["Summon"]..")", "AtlasLootItems" },
-	["STRATBSPlansCorruption"] = { BZ["Stratholme"].." - ".."Plans: Corruption", "AtlasLootItems" },
+	["STRATBSPlansCorruption"] = { BZ["Stratholme"].." - "..L["Plans: Corruption"], "AtlasLootItems" },
 	["STRATMalekithePallid"] = { BZ["Stratholme"].." - "..BB["Maleki the Pallid"], "AtlasLootItems" },
 	["STRATMagistrateBarthilas"] = { BZ["Stratholme"].." - "..BB["Magistrate Barthilas"], "AtlasLootItems" },
 	["STRATRamsteintheGorger"] = { BZ["Stratholme"].." - "..BB["Ramstein the Gorger"], "AtlasLootItems" },
@@ -434,10 +434,10 @@ AtlasLoot_TableNames = {
 	["AQ40CThun"] = { BZ["Temple of Ahn'Qiraj"].." - "..BB["C'Thun"], "AtlasLootItems" },
 	["AQ40Trash1"] = { L["Trash Mobs"].." ("..BZ["Temple of Ahn'Qiraj"]..")", "AtlasLootItems" },
 	["AQ40Trash2"] = { L["Trash Mobs"].." ("..BZ["Temple of Ahn'Qiraj"]..")", "AtlasLootItems" },
-	["AQOpening"] = { "AQ Opening Quest Line", "AtlasLootItems" },
+	["AQOpening"] = { L["AQ Opening Quest Chain"], "AtlasLootItems" },
 	--Uldaman
 	["UldMagreganDeepshadow"] = { BZ["Uldaman"].." - "..L["Magregan Deepshadow"], "AtlasLootItems" },
-	["UldTabletofRyuneh"] = { BZ["Uldaman"].." - ".."Tablet of Ryun'eh", "AtlasLootItems" },
+	["UldTabletofRyuneh"] = { BZ["Uldaman"].." - "..L["Tablet of Ryun'eh"], "AtlasLootItems" },
 	["UldKromStoutarmChest"] = { BZ["Uldaman"].." - "..L["Krom Stoutarm's Chest"], "AtlasLootItems" },
 	["UldGarrettFamilyChest"] = { BZ["Uldaman"].." - "..L["Garrett Family Chest"], "AtlasLootItems" },
 	["UldShovelphlange"] = { BZ["Uldaman"].." - "..L["Digmaster Shovelphlange"].." ("..L["Rare"]..")", "AtlasLootItems" },
@@ -450,8 +450,8 @@ AtlasLoot_TableNames = {
 	["UldObsidianSentinel"] = { BZ["Uldaman"].." - "..BB["Obsidian Sentinel"], "AtlasLootItems" },
 	["UldAncientStoneKeeper"] = { BZ["Uldaman"].." - "..BB["Ancient Stone Keeper"], "AtlasLootItems" },
 	["UldGalgannFirehammer"] = { BZ["Uldaman"].." - "..BB["Galgann Firehammer"], "AtlasLootItems" },
-	["UldTabletofWill"] = { BZ["Uldaman"].." - ".."Tablet of Will", "AtlasLootItems" },
-	["UldShadowforgeCache"] = { BZ["Uldaman"].." - ".."Shadowforge Cache", "AtlasLootItems" },
+	["UldTabletofWill"] = { BZ["Uldaman"].." - "..L["Tablet of Will"], "AtlasLootItems" },
+	["UldShadowforgeCache"] = { BZ["Uldaman"].." - "..L["Shadowforge Cache"], "AtlasLootItems" },
 	["UldGrimlok"] = { BZ["Uldaman"].." - "..BB["Grimlok"], "AtlasLootItems" },
 	["UldArchaedas"] = { BZ["Uldaman"].." - "..BB["Archaedas"], "AtlasLootItems" },
 	["UldTrash"] = { L["Trash Mobs"].." ("..BZ["Uldaman"]..")", "AtlasLootItems" },
@@ -512,7 +512,7 @@ AtlasLoot_TableNames = {
 	["ZGHakkar"] = { BZ["Zul'Gurub"].." - "..BB["Hakkar"], "AtlasLootItems" },
 	["ZGMuddyChurningWaters"] = { BZ["Zul'Gurub"].." - "..L["Muddy Churning Waters"], "AtlasLootItems" },
 	["ZGJinxedHoodooPile"] = { BZ["Zul'Gurub"].." - "..L["Jinxed Hoodoo Pile"], "AtlasLootItems" },
-	["ZGShared"] = { "Shared Zul'Gurub Priest Drops", "AtlasLootItems" },
+	["ZGShared"] = { L["Shared Zul'Gurub Priest Drops"], "AtlasLootItems" },
 	["ZGTrash1"] = { L["Trash Mobs"].." ("..BZ["Zul'Gurub"]..")", "AtlasLootItems" },
 	["ZGTrash2"] = { L["Trash Mobs"].." ("..BZ["Zul'Gurub"]..")", "AtlasLootItems" },
 	["ZGSET"] = { L["Zul'Gurub Sets"], "AtlasLootSetItems"},
@@ -575,11 +575,6 @@ AtlasLoot_TableNames = {
 	["ShamanSet"] = {L["Shaman Sets"], "AtlasLootSetItems" },
 	["PaladinSet"] = {L["Paladin Sets"], "AtlasLootSetItems" },
 	["WarriorSet"] = {L["Warrior Sets"], "AtlasLootSetItems" },
-	--Turtle Wow
-	["DonationRewards1"] = {L["Donation Rewards"], "AtlasLootSetItems" },
-	["DonationRewards2"] = {L["Donation Rewards"], "AtlasLootSetItems" },
-	["DonationRewards3"] = {L["Donation Rewards"], "AtlasLootSetItems" },
-	["DonationRewards4"] = {L["Donation Rewards"], "AtlasLootSetItems" },
 	--Crafted Sets - Blacksmithing
 	["SteelPlate"] = { "Steel Plate", "AtlasLootCrafting" },
 	["ImperialPlate"] = { BIS["Imperial Plate"], "AtlasLootCrafting" },
@@ -828,7 +823,7 @@ AtlasLoot_TableNames = {
 	------------------------
 	
 	--Argent Dawn
-	["Argent1"] = { BF["Argent Dawn"]..": Token Hand-ins", "AtlasLootRepItems" },
+	["Argent1"] = { BF["Argent Dawn"]..": "..L["Token Hand-Ins"], "AtlasLootRepItems" },
 	["Argent2"] = { BF["Argent Dawn"], "AtlasLootRepItems" },
 	["Argent3"] = { BF["Argent Dawn"], "AtlasLootRepItems" },
 	--Bloodsail Buccaneers
@@ -1358,7 +1353,7 @@ AtlasLoot_TableNamesBoss = {
 		["DMETrash"] = { L["Trash Mobs"].." ("..BZ["Dire Maul (East)"]..")", "AtlasLootItems" },
 		["DMEShard"] = { L["Felvine Shard"], "AtlasLootItems" },
 		["DMTome"] = { L["A Dusty Tome"], "AtlasLootItems" },
-		["DMBooks"] = { "Dire Maul Books", "AtlasLootItems" },
+		["DMBooks"] = { L["Dire Maul Books"], "AtlasLootItems" },
 	},
 	[BZ["Dire Maul (North)"]] = {
 		["DMNGuardMoldar"] = { BB["Guard Mol'dar"], "AtlasLootItems" },
@@ -1432,7 +1427,7 @@ AtlasLoot_TableNamesBoss = {
 		["MCSulfuron"] = { BB["Sulfuron Harbinger"], "AtlasLootItems" },
 		["MCMajordomo"] = { BB["Majordomo Executus"], "AtlasLootItems" },
 		["MCRagnaros"] = { BB["Ragnaros"], "AtlasLootItems" },
-		["MCRANDOMBOSSDROPS"] = { "Random Boss Drops", "AtlasLootItems" },
+		["MCRANDOMBOSSDROPS"] = { L["Random Boss Loot"], "AtlasLootItems" },
 		["MCTrashMobs"] = { L["Trash Mobs"].." ("..BZ["Molten Core"]..")", "AtlasLootItems" },
 	},
 	[BZ["Naxxramas"]] = {
@@ -1496,8 +1491,8 @@ AtlasLoot_TableNamesBoss = {
 		["AQ20Ayamiss"] = { BB["Ayamiss the Hunter"], "AtlasLootItems" },
 		["AQ20Ossirian"] = { BB["Ossirian the Unscarred"], "AtlasLootItems" },
 		["AQ20Trash"] = { L["Trash Mobs"].." (AQ20)", "AtlasLootItems" },
-		["AQ20ClassBooks"] = { "AQ Class Books", "AtlasLootItems" },
-		["AQEnchants"] = { "AQ Enchants", "AtlasLootItems" },
+		["AQ20ClassBooks"] = { L["Class Books"], "AtlasLootItems" },
+		["AQEnchants"] = { L["Enchants"], "AtlasLootItems" },
 		["AQ20SET"] = { L["Ruins of Ahn'Qiraj Sets"], "AtlasLootSetItems"},
 	},
 	[BZ["Scarlet Monastery"]..L["Armory"]] = {
@@ -1588,7 +1583,7 @@ AtlasLoot_TableNamesBoss = {
 		["STRATMalor"] = { L["Malor the Zealous"], "AtlasLootItems" },
 		["STRATMalorsStrongbox"] = { L["Malor's Strongbox"], "AtlasLootItems" },
 		["STRATCrimsonHammersmith"] = { L["Crimson Hammersmith"].." ("..L["Summon"]..")", "AtlasLootItems" },
-		["STRATBSPlansSerenity"] = { "Plans: Serenity", "AtlasLootItems" },
+		["STRATBSPlansSerenity"] = { L["Plans: Serenity"], "AtlasLootItems" },
 		["STRATCannonMasterWilley"] = { BB["Cannon Master Willey"], "AtlasLootItems" },
 		["STRATArchivistGalford"] = { BB["Archivist Galford"], "AtlasLootItems" },
 		["STRATBalnazzar"] = { BB["Balnazzar"], "AtlasLootItems" },
@@ -1597,7 +1592,7 @@ AtlasLoot_TableNamesBoss = {
 		["STRATNerubenkan"] = { BB["Nerub'enkan"], "AtlasLootItems" },
 		["STRATBaronessAnastari"] = { BB["Baroness Anastari"], "AtlasLootItems" },
 		["STRATBlackGuardSwordsmith"] = { L["Black Guard Swordsmith"].." ("..L["Summon"]..")", "AtlasLootItems" },
-		["STRATBSPlansCorruption"] = { "Plans: Corruption", "AtlasLootItems" },
+		["STRATBSPlansCorruption"] = { L["Plans: Corruption"], "AtlasLootItems" },
 		["STRATMalekithePallid"] = { BB["Maleki the Pallid"], "AtlasLootItems" },
 		["STRATMagistrateBarthilas"] = { BB["Magistrate Barthilas"], "AtlasLootItems" },
 		["STRATRamsteintheGorger"] = { BB["Ramstein the Gorger"], "AtlasLootItems" },
@@ -1630,7 +1625,7 @@ AtlasLoot_TableNamesBoss = {
 		["AQ40CThun"] = { BB["C'Thun"], "AtlasLootItems" },
 		["AQ40Trash1"] = { L["Trash Mobs"].." (AQ40)", "AtlasLootItems" },
 		["AQ40Trash2"] = { L["Trash Mobs"].." (AQ40)", "AtlasLootItems" },
-		["AQOpening"] = { "AQ Opening Quest Line", "AtlasLootItems" },
+		["AQOpening"] = {  L["AQ Opening Quest Chain"], "AtlasLootItems" },
 	},
 	[BZ["Tower of Karazhan"]] = {
 		["K40Gnarlmoon"] = { BB["Keeper Gnarlmoon"], "AtlasLootItems" },
@@ -1646,7 +1641,7 @@ AtlasLoot_TableNamesBoss = {
 	},
 	[BZ["Uldaman"].." ("..L["Entrance"]..")"] = {
 		["UldMagreganDeepshadow"] = { L["Magregan Deepshadow"], "AtlasLootItems" },
-		["UldTabletofRyuneh"] = { "Tablet of Ryun'eh", "AtlasLootItems" },
+		["UldTabletofRyuneh"] = { L["Tablet of Ryun'eh"], "AtlasLootItems" },
 		["UldKromStoutarmChest"] = { L["Krom Stoutarm's Chest"], "AtlasLootItems" },
 		["UldGarrettFamilyChest"] = { L["Garrett Family Chest"], "AtlasLootItems" },
 		["UldShovelphlange"] = { L["Digmaster Shovelphlange"].." ("..L["Rare"]..")", "AtlasLootItems" },
@@ -1661,8 +1656,8 @@ AtlasLoot_TableNamesBoss = {
 		["UldObsidianSentinel"] = { BB["Obsidian Sentinel"], "AtlasLootItems" },
 		["UldAncientStoneKeeper"] = { BB["Ancient Stone Keeper"], "AtlasLootItems" },
 		["UldGalgannFirehammer"] = { BB["Galgann Firehammer"], "AtlasLootItems" },
-		["UldTabletofWill"] = { "Tablet of Will", "AtlasLootItems" },
-		["UldShadowforgeCache"] = { "Shadowforge Cache", "AtlasLootItems" },
+		["UldTabletofWill"] = { L["Tablet of Will"], "AtlasLootItems" },
+		["UldShadowforgeCache"] = { L["Shadowforge Cache"], "AtlasLootItems" },
 		["UldGrimlok"] = { BB["Grimlok"], "AtlasLootItems" },
 		["UldArchaedas"] = { BB["Archaedas"], "AtlasLootItems" },
 		["UldTrash"] = { L["Trash Mobs"].." ("..BZ["Uldaman"]..")", "AtlasLootItems" },
@@ -1729,11 +1724,11 @@ AtlasLoot_TableNamesBoss = {
 		["ZGHakkar"] = { BB["Hakkar"], "AtlasLootItems" },
 		["ZGMuddyChurningWaters"] = { L["Muddy Churning Waters"], "AtlasLootItems" },
 		["ZGJinxedHoodooPile"] = { L["Jinxed Hoodoo Pile"], "AtlasLootItems" },
-		["ZGShared"] = { "Shared Zul'Gurub Priest Drops", "AtlasLootItems" },
+		["ZGShared"] = { L["Shared Zul'Gurub Priest Drops"], "AtlasLootItems" },
 		["ZGTrash1"] = { L["Trash Mobs"].." ("..BZ["Zul'Gurub"]..")", "AtlasLootItems" },
 		["ZGTrash2"] = { L["Trash Mobs"].." ("..BZ["Zul'Gurub"]..")", "AtlasLootItems" },
-		["ZGEnchants"] = { "Zul'Gurub Enchants", "AtlasLootItems" },
-		["ZGSET"] = { L["Zul'Gurub Sets"], "AtlasLootSetItems"},
+		["ZGEnchants"] = { BZ["Zul'Gurub"].." "..L["Enchants"], "AtlasLootItems" },
+		["ZGSET"] = { BZ["Zul'Gurub"].." "..L["Sets"], "AtlasLootSetItems"},
 	},
 	[BZ["Emerald Sanctum"]] = {
 		["ESErennius"] = { BB["Erennius"], "AtlasLootItems" },
@@ -1749,7 +1744,7 @@ AtlasLoot_TableNamesBoss = {
 		["LKHGrizikil"] = { BB["Grizikil"], "AtlasLootItems" },
 		["LKHMoroes"] = { BB["Moroes"], "AtlasLootItems" },
 		["LKHTrash"] = { L["Trash Mobs"], "AtlasLootItems" },
-		["LKHEchants"] = { L["LKH Enchants"], "AtlasLootItems" },
+		["LKHEchants"] = { BZ["Lower Karazhan Halls"]..L["Enchants"], "AtlasLootItems" },
 	},
 	
 	------------
@@ -2030,9 +2025,9 @@ AtlasLoot_TableNamesBoss = {
 	--------------
 	
 	[L["World Events"]] = {
-		["AbyssalTemplars"] = { "Abyssal Council - Templars", "AtlasLootWorldEvents" },
-		["AbyssalDukes"] = { "Abyssal Council - Dukes", "AtlasLootWorldEvents" },
-		["AbyssalLords"] = { "Abyssal Council - High Council", "AtlasLootWorldEvents" },
+		["AbyssalTemplars"] = { L["Abyssal Council"].." - "..L["Templars"], "AtlasLootWorldEvents" },
+		["AbyssalDukes"] = { L["Abyssal Council"].." - "..L["Dukes"], "AtlasLootWorldEvents" },
+		["AbyssalLords"] = { L["Abyssal Council"].." - "..L["High Council"], "AtlasLootWorldEvents" },
 		--Seasonal
 		["ChildrensWeek"] = { L["Children's Week"], "AtlasLootWorldEvents" },
 		["Halloween1"] = { L["Hallow's End"], "AtlasLootWorldEvents" },
@@ -2059,7 +2054,7 @@ AtlasLoot_TableNamesBoss = {
 	------------------------
 	[L["Factions"]] = {
 		--Argent Dawn
-		["Argent1"] = { BF["Argent Dawn"]..": Token Hand-ins", "AtlasLootRepItems" },
+		["Argent1"] = { BF["Argent Dawn"]..": "..L["Token Hand-Ins"], "AtlasLootRepItems" },
 		["Argent2"] = { BF["Argent Dawn"], "AtlasLootRepItems" },
 		["Argent3"] = { BF["Argent Dawn"], "AtlasLootRepItems" },
 		--Bloodsail Buccaneers

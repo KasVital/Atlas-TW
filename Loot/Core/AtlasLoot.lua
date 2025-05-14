@@ -2401,9 +2401,6 @@ AtlasLoot_HewdropDown = {
 			[8] = {
 				{ L["World Blues"], "WORLDBLUES", "Table" },
 			},
-			[9] = {
-				{ L["Fashion"], "DonationRewards2", "Table" },
-			},
 		},
 	},
 	[7] = {
@@ -2923,7 +2920,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ L["Random Boss Loot"], "ZGShared" },
 		{ L["Trash Mobs"], "ZGTrash1" },
 		{ L["Zul'Gurub Sets"], "ZGSET" },
-		{ L["Zul'Gurub Enchants"], "ZGEnchants" },
+		{ BZ["Zul'Gurub"].." "..L["Enchants"], "ZGEnchants" },
 	},
 	["BlackfathomDeeps"] = {
 		{ BB["Ghamoo-ra"], "BFDGhamoora" },
@@ -3093,7 +3090,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ BB["Grizikil"], "LKHGrizikil" },
 		{ BB["Moroes"], "LKHMoroes" },
 		{ L["Trash Mobs"], "LKHTrash" },
-		{ L["LKH Enchants"], "LKHEnchants" },
+		{ BZ["Lower Karazhan Halls"].." "..L["Enchants"], "LKHEnchants" },
 	},
 	["WorldBosses"] = {
 		{ BB["Azuregos"], "AAzuregos" },

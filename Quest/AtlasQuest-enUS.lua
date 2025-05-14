@@ -3372,8 +3372,8 @@ Inst12Quest21name1_HORDE = Inst12Quest21name1
 --------------- INST13 - Maraudon (Mara) ---------------
 Inst13Story = "Protected by the fierce Maraudine centaur, Maraudon is one of the most sacred sites within Desolace. The great temple/cavern is the burial place of Zaetar, one of two immortal sons born to the demigod, Cenarius. Legend holds that Zaetar and the earth elemental princess, Theradras, sired the misbegotten centaur race. It is said that upon their emergence, the barbaric centaur turned on their father and killed him. Some believe that Theradras, in her grief, trapped Zaetar's spirit within the winding cavern - used its energies for some malign purpose. The subterranean tunnels are populated by the vicious, long-dead ghosts of the Centaur Khans, as well as Theradras' own raging, elemental minions."
 Inst13Caption = "Maraudon"
-Inst13QAA = "10 Quests"
-Inst13QAH = "8 Quests"
+Inst13QAA = "11 Quests"
+Inst13QAH = "9 Quests"
 
 --Quest 1 Alliance
 Inst13Quest1 = "1. Shadowshard Fragments" -- 7070
@@ -3502,6 +3502,17 @@ Inst13Quest10_Folgequest = "Thunderforge Mastery"
 --
 Inst13Quest10name1 = "Thunderforge Lance" -- 40080
 
+--Quest 11 Alliance
+Inst13Quest11 = "11. Preparation" -- 41281
+Inst13Quest11_Level = "48"
+Inst13Quest11_Attain = "34"
+Inst13Quest11_Aim = "Obtain a slab of Landslide's body from Maraudon and bring it to Thegren near the Ruins of Corthan in the Badlands."
+Inst13Quest11_Location = "Thegren <Artisan Gemologist> (Badlands - Ruins of Corthan; "..YELLOW.."[29, 27]"..WHITE..")."
+Inst13Quest11_Note = "Jewelcrafting only. Quest line for Gemologist specialization.\nLandslide is at "..YELLOW.."[8]"..WHITE.."."
+Inst13Quest11_Prequest = "Mastering Gemology -> The Lifeblood -> Demonstration" --41277or41278,41279,41280
+Inst13Quest11_Folgequest = "The Final Cut" --41282
+-- No Rewards for this quest
+
 --Quest 1 Horde
 Inst13Quest1_HORDE = "1. Shadowshard Fragments" -- 7068
 Inst13Quest1_HORDE_Level = "42"
@@ -3605,6 +3616,16 @@ Inst13Quest8_HORDE_Prequest = Inst13Quest8_Prequest -- 7064
 Inst13Quest8_HORDE_Folgequest = Inst13Quest8_Folgequest
 -- No Rewards for this quest
 
+--Quest 9 Horde (same as Quest 13 Alliance)
+Inst13Quest9_HORDE = Inst13Quest11
+Inst13Quest9_HORDE_Level = Inst13Quest11_Level
+Inst13Quest9_HORDE_Attain = Inst13Quest11_Attain
+Inst13Quest9_HORDE_Aim = Inst13Quest11_Aim
+Inst13Quest9_HORDE_Location = Inst13Quest11_Location
+Inst13Quest9_HORDE_Note = Inst13Quest11_Note
+Inst13Quest9_HORDE_Prequest = Inst13Quest11_Prequest
+Inst13Quest9_HORDE_Folgequest = Inst13Quest11_Folgequest
+-- No Rewards for this quest
 
 
 --------------- INST14 - Molten Core (MC) ---------------
@@ -7456,6 +7477,7 @@ Inst41Quest1_Folgequest = "No"
 Inst41Quest1name1 = "Arcane Charged Pendant" --60463
 Inst41Quest1name2 = "Orb of Kaladoon" --60464
 Inst41Quest1name3 = "Arcane Strengthened Band" --60465
+
 --Quest 1 Horde
 Inst41Quest1_HORDE = "1. The Depths of Karazhan VII" -- 40311
 Inst41Quest1_HORDE_Level = "60"
@@ -8006,7 +8028,7 @@ Inst62Quest3 = "3. Spectral Wine" -- 41085
 Inst62Quest3_Level = "60"
 Inst62Quest3_Attain = "55"
 Inst62Quest3_Aim = "Gather 3 Essence of Undeath, 5 Flask of Port, and a Ghost Mushroom for The Cook in Karazhan."
-Inst62Quest3_Location = "The Cook near ("..YELLOW.."[Karazhan - e]"..WHITE..")"
+Inst62Quest3_Location = "The Cook near ("..YELLOW.."[Lower Karazhan Halls- e]"..WHITE..")"
 Inst62Quest3_Note = "Flask of Port sold by alcohol vendors. All items can be bought from Auction House."
 Inst62Quest3_Prequest = "A Drink to Sleep" -- 41084
 Inst62Quest3_Folgequest = "Wine for Kyleson" -- 41086
@@ -8017,7 +8039,7 @@ Inst62Quest4 = "4. Wine for Kyleson" -- 41086
 Inst62Quest4_Level = "60"
 Inst62Quest4_Attain = "55"
 Inst62Quest4_Aim = " Deliver the Spectral Wine to Councilman Kyleson "..YELLOW.."[Karazhan - c]"..WHITE.." in Karazhan. "
-Inst62Quest4_Location = "The Cook ("..YELLOW.."[Karazhan - e]"..WHITE..")"
+Inst62Quest4_Location = "The Cook near ("..YELLOW.."[Lower Karazhan Halls- e]"..WHITE..")"
 Inst62Quest4_Note = ""
 Inst62Quest4_Prequest = "Spectral Wine" -- 41085
 Inst62Quest4_Folgequest = "No"
@@ -8050,7 +8072,7 @@ Inst62Quest7 = "7. The Key to Karazhan III" -- 40819
 Inst62Quest7_Level = "60"
 Inst62Quest7_Attain = "58"
 Inst62Quest7_Aim = "Find someone from the Kirin Tor who might know something about Vandol. Dalaran could be a good place to start your search."
-Inst62Quest7_Location = "The Cook ("..YELLOW.."[Karazhan - e]"..WHITE..")"
+Inst62Quest7_Location = "The Cook near ("..YELLOW.."[Lower Karazhan Halls- e]"..WHITE..")"
 Inst62Quest7_Note = "Turn in the quest to Archmage Ansirem Runeweaver <Kirin Tor> (Alterac Mountains - Dalaran "..YELLOW.."[18.9,78.5]"..WHITE..")"
 Inst62Quest7_Prequest = "The Key to Karazhan II" -- 40818
 Inst62Quest7_Folgequest = "The Key to Karazhan IV" -- 40820
@@ -8093,7 +8115,7 @@ Inst62Quest10_Folgequest = "The Secret Recipe" -- 41001
 Inst62Quest11 = "11. The Secret Recipe" -- 41001
 Inst62Quest11_Level = "60"
 Inst62Quest11_Attain = "55"
-Inst62Quest11_Aim = "Speak with 'The Cook' "..YELLOW.."[Karazhan - e]"..WHITE.." in Karazhan."
+Inst62Quest11_Aim = "Speak with 'The Cook' "..YELLOW.."[near e]"..WHITE.." in Lower Karazhan Halls."
 Inst62Quest11_Location = "Duke Rothlen (Karazhan; "..YELLOW.."[Karazhan - f]"..WHITE..")"
 Inst62Quest11_Note = ""
 Inst62Quest11_Prequest = "Rothlen Family Brooch" -- 41000
@@ -8105,7 +8127,7 @@ Inst62Quest12 = "12. The Doorman of Karazhan" -- 41002
 Inst62Quest12_Level = "60"
 Inst62Quest12_Attain = "55"
 Inst62Quest12_Aim = "Speak with Doorman Montigue in Karazhan"
-Inst62Quest12_Location = "The Cook near ("..YELLOW.."[Karazhan - e]"..WHITE..")"
+Inst62Quest12_Location = "The Cook near ("..YELLOW.."[Lower Karazhan Halls- e]"..WHITE..")"
 Inst62Quest12_Note = "Doorman Montigue"..BLUE.." "..WHITE.."at the beginning of the dungeon in front of the stairs."
 Inst62Quest12_Prequest = "The Secret Recipe" -- 41001
 Inst62Quest12_Folgequest = "Charge of Karazhan" -- 41003
@@ -8126,7 +8148,7 @@ Inst62Quest13_Folgequest = "Le Fishe Au Chocolat" -- 41004
 Inst62Quest14 = "14. Le Fishe Au Chocolat" -- 41004
 Inst62Quest14_Level = "60"
 Inst62Quest14_Attain = "55"
-Inst62Quest14_Aim = "Bring the Charge of Karazhan to The Cook near"..YELLOW.."[Karazhan - e]"..WHITE.." in Karazhan."
+Inst62Quest14_Aim = "Bring the Charge of Karazhan to The Cook near"..YELLOW.."[e]"..WHITE.." in Lower Karazhan Halls."
 Inst62Quest14_Location = "Doorman Montigue"..BLUE.." "..WHITE.."at the beginning of the dungeon in front of the stairs."
 Inst62Quest14_Note = ""
 Inst62Quest14_Prequest = "Charge of Karazhan" -- 41003
@@ -8178,7 +8200,7 @@ Inst62Quest18 = "18. No Honor Among Chefs" -- 41374
 Inst62Quest18_Level = "61"
 Inst62Quest18_Attain = "60"
 Inst62Quest18_Aim = "Slay the Ravenous Strigoi in Karazhan Crypts and return to The Cook in Lower Karazhan Halls."
-Inst62Quest18_Location = "The Cook near ("..YELLOW.."[Karazhan - e]"..WHITE..")"
+Inst62Quest18_Location = "The Cook near ("..YELLOW.."[Lower Karazhan Halls- e]"..WHITE..")"
 Inst62Quest18_Note = "Drop from [Ravenous Strigoi] in Karazhan Crypt.\nThe quest line starts [Recipes of Kezan] drop in "..YELLOW.."[Tower of Karazhan]"..WHITE.."."
 Inst62Quest18_Prequest = "A Chef's Majesty"  -- 41373
 Inst62Quest18_Folgequest = "No"
@@ -8256,7 +8278,7 @@ Inst62Quest7_HORDE = "7. The Key to Karazhan III" -- 40822
 Inst62Quest7_HORDE_Level = "60"
 Inst62Quest7_HORDE_Attain = "58"
 Inst62Quest7_HORDE_Aim = "Find someone from Kirin Tor who might know something about Vandol. Undercity could be a good place to start your search."
-Inst62Quest7_HORDE_Location = "The Cook near ("..YELLOW.."[Karazhan - e]"..WHITE..")"
+Inst62Quest7_HORDE_Location = "The Cook near ("..YELLOW.."[Lower Karazhan Halls- e]"..WHITE..")"
 Inst62Quest7_HORDE_Note = "Turn in the quest to Bethor Iceshard (Undercity - The Magic Quarter"..YELLOW.."[84.1,17.5]"..WHITE..", mage trainer zone.)"
 Inst62Quest7_HORDE_Prequest = "The Key to Karazhan II" -- 40818
 Inst62Quest7_HORDE_Folgequest = "The Key to Karazhan IV" -- 40823
