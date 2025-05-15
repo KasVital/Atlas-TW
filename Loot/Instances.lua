@@ -5881,7 +5881,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18295, "INV_Boots_06", "=q3=Phasing Boots", "=ds=#s12#, #a1# =q2=#e24#", "0.58%" },
 		{ 0, "", "", "" },
 		{ 18255, "INV_Misc_Food_55", "=q1=Runn Tum Tuber", "=ds=#e2#", "0.3%" },
-		{ 18297, "INV_Enchant_ShardGlimmeringSmall", "=q1=Thornling Seed", "=ds=#e15# =q7=#cb30#", "0.5%" },
+		{ 18297, "INV_Enchant_ShardGlimmeringSmall", "=q1=Thornling Seed", "=ds=#e15# =q7=#cb14#", "0.5%" },
 	},
 	DMNGuardMoldar = {
 		{ 18494, "INV_Shoulder_15", "=q3=Denwatcher's Shoulders", "=ds=#s3#, #a3#", "8%" },
