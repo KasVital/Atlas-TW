@@ -4463,6 +4463,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 83570, "inv_scroll_02", "=q3=Technique: Die by the Sword", "=ds=#c9#", "15%" },
 		{ 0, "", "", "" },
 		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "80%" },
+		{ 41406, "INV_Stone_02", "=q2=Core of Arc'Tiras", "=ds=#m3#", "100%" },
 	},
 	SWVTrash = {
 		{ 61592, "INV_Bracer_16", "=q3=Arcanic Bracers", "=ds=#s8#, #a3#", "0.0013%" },
@@ -8135,6 +8136,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 41485, "INV_Misc_Gem_Diamond_01", "=q3=Pristine Ley Crystal", "=ds=#e12#", "3.25%" },
 		{ 41373, "INV_Misc_EngGizmos_08", "=q4=Draconic Focus", "=ds=#m3#", "100%", },
+		{ 41403, "INV_Enchant_ShardGlowingSmall", "=q4=Enchanted Amethyst", "=ds=#m3#", "100%" },
 	},
 	K40Anomalus = {
 		{ 55092, "INV_Boots_Plate_06", "=q4=Manahide Slippers", "=ds=#s12#, #a2#", "25%" },

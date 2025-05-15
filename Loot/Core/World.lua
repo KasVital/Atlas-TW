@@ -83,7 +83,7 @@ function AtlasLoot_WorldMenu()
 	--Rare Mobs
 	AtlasLootMenuItem_15_Name:SetText(L["Rare Mobs"]);
 	AtlasLootMenuItem_15_Extra:SetText(WHITE..L["Various Locations"]);
-	AtlasLootMenuItem_15_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Dragon_Green");
+	AtlasLootMenuItem_15_Icon:SetTexture("Interface\\Icons\\INV_Misc_Head_Undead_01");
 	AtlasLootMenuItem_15.lootpage="ShadeMage";
 	AtlasLootMenuItem_15:Show();
 end

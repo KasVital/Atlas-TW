@@ -9,7 +9,7 @@
 ## Notes-ruRU: Обозреватель подземелий
 ## Version: 1.23
 ## Version-AtlasLoot: 4.15
-## Version-AtlasQuest: 4.65
+## Version-AtlasQuest: 4.66
 ## X-Date: May, 2025
 ## Author: Otwo, Dan Gilbert, Daviesh, Otari98, pepopo, etc
 ## X-Category: MYADDONS_CATEGORY_MAP
