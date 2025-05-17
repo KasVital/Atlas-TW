@@ -1475,9 +1475,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19376, "INV_Jewelry_Ring_40", "=q4=Archimtiros' Ring of Reckoning", "=ds=#s13#", "20%" },
 		{ 19382, "INV_Jewelry_Ring_42", "=q4=Pure Elementium Band", "=ds=#s13#", "20%" },
 		{ 19379, "INV_Stone_15", "=q4=Neltharion's Tear", "=ds=#s14#", "20%" },
-		{ 0, "", "", "" },
-		{ 36551, "Ability_Hunter_BeastCall", "=q4=Black Drake", "=ds=#e7#" },
-		{ 17962, "INV_Misc_Bag_10_Blue", "=q2=Blue Sack of Gems", "=ds=#m23# =q2=#e33#", "100%" },
+		{ 61760, "INV_Misc_Book_10", "=q2=Burnt Copy of 'Vorgendor'", "=ds=#m3#", "100%" },
+		{ 36551, "Ability_Hunter_BeastCall", "=q4=Black Drake", "=ds=#e7#", "1%" },
+		{ 17962, "INV_Misc_Bag_10_Blue", "=q2=Blue Sack of Gems", "=ds=#m23# =q2=#e25#", "100%" },
 	},
 	BWLTrashMobs = {
 		{ 19436, "INV_Misc_Cape_11", "=q4=Cloak of Draconic Might", "=ds=#s4#", "4%" },
@@ -4091,6 +4091,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61334, "INV_Misc_Cape_19", "=q3=Cloak of the Dark Veil", "=ds=#s4#", "5%" },
 		{ 0, "", "", "" },
 		{ 61626, "INV_Scroll_03", "=q1=Ebonmere Deed", "=ds=#m3#", "100%" },
+		{ 41357, "INV_Jewelry_Necklace_05", "=q2=Tarnished Citrine Choker", "=ds=#m3#", "100%" },
 	},
 	GCMarshalMagnusGreystone = {
 		{ 61313, "inv_helmet_02", "=q3=Greymane Helmet", "=ds=#s1#, #a4#", "25%" },
@@ -4146,6 +4147,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 61338, "INV_Staff_28", "=q3=Staff of Ushered Ruination", "=ds=#h2#, #w9#", "0.0125%, 0.0338%" },
 		{ 61596, "INV_Weapon_Halberd_09", "=q3=Defender's Glaive", "=ds=#h2#, #w7#", "0.0125%, 0.0338%" },
+		{ 0, "", "", "" },
+		{ 41421, "INV_Potion_11", "=q2=Darkpelt Blood", "=ds=#m3#", "10%" },
 	},
 	KCMarrowspike = {
 		{ 83441, "INV_chest_chain_15", "=q3=Splintercage Breastplate", "=ds=#s5#, #a4#", "18%" },
@@ -5805,6 +5808,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 3194, "INV_Mace_01", "=q3=Black Malice", "=ds=#h2#, #w6#", "0.02%" },
 		{ 2205, "INV_Sword_41", "=q3=Duskbringer", "=ds=#h2#, #w10#", "0.01%" },
 		{ 1484, "INV_Wand_04", "=q3=Witching Stave", "=ds=#w9#", "0.01%" },
+		{ 41420, "INV_Potion_08", "=q2=Shadowfang Blood", "=ds=#m3#", "10%" },
 	},
 	DMEPusillin = {
 		{ 18267, "INV_Scroll_03", "=q2=Recipe: Runn Tum Tuber Surprise", "=ds=#p3# #m16#", "100%" },

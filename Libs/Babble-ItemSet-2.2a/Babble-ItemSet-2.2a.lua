@@ -1,13 +1,13 @@
 --[[
 	Name: Babble-ItemSet-2.2a
-	Revision: $Rev: 1001 $
+	Revision: $Rev: 1002 $
 	Author(s): Lichery
 	Description: A library to provide localizations for factions.
 	Dependencies: AceLibrary, AceLocale-2.2
 ]]
 -- Проверить ЗГ, АК20, АК40, Т3, разобраться с сетами AB
 local MAJOR_VERSION = "Babble-ItemSet-2.2a"
-local MINOR_VERSION = tonumber(string.sub("$Revision: 1001 $", 12, -3))
+local MINOR_VERSION = tonumber(string.sub("$Revision: 1002 $", 12, -3))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 
@@ -25,6 +25,8 @@ local BabbleItemSet = AceLibrary("AceLocale-2.2"):new(MAJOR_VERSION)
 
 BabbleItemSet:RegisterTranslations("enUS", function()
 	return {
+		["Incendosaur Skin Armor"] = true,
+		["Greymane Armor"] = true,
 	-- Blacksmithing Crafted Sets
 		["Hateforge Armor"] = true,
 		["Towerforge Battlegear"] = true,

@@ -126,8 +126,8 @@
 						CloseDropDownMenus()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText("Atlas")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Atlas"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						this:Enable()
 					</OnShow>
@@ -147,8 +147,8 @@
 						CloseDropDownMenus()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Options"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Options"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -173,8 +173,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Select Loot Table"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Select Loot Table"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -199,8 +199,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Select Sub-Table"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Select Sub-Table"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -238,12 +238,12 @@
 				</Anchors>
 				<Scripts>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
 							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][1][3])
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"])
+							GameTooltip:AddLine(L["|cff9d9d9dALT+Click to clear|r"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -264,8 +264,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["QuickLook"].." 1")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["QuickLook"].." 1")
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						if ((not AtlasLootCharDB["QuickLooks"][1]) or (not AtlasLootCharDB["QuickLooks"][1][1])) or (AtlasLootCharDB["QuickLooks"][1][1]==nil) then
 							this:Disable()
@@ -283,12 +283,12 @@
 				</Anchors>
 				<Scripts>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
 							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][2][3])
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"])
+							GameTooltip:AddLine(L["|cff9d9d9dALT+Click to clear|r"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -309,8 +309,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["QuickLook"].." 2")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["QuickLook"].." 2")
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						if ((not AtlasLootCharDB["QuickLooks"][2]) or (not AtlasLootCharDB["QuickLooks"][2][1])) or (AtlasLootCharDB["QuickLooks"][2][1]==nil) then
 							this:Disable()
@@ -328,12 +328,12 @@
 				</Anchors>
 				<Scripts>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
 							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][3][3])
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"])
+							GameTooltip:AddLine(L["|cff9d9d9dALT+Click to clear|r"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -354,8 +354,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["QuickLook"].." 3")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["QuickLook"].." 3")
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						if ((not AtlasLootCharDB["QuickLooks"][3]) or (not AtlasLootCharDB["QuickLooks"][3][1])) or (AtlasLootCharDB["QuickLooks"][3][1]==nil) then
 							this:Disable()
@@ -373,12 +373,12 @@
 				</Anchors>
 				<Scripts>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
 							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][4][3])
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"])
+							GameTooltip:AddLine(L["|cff9d9d9dALT+Click to clear|r"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -399,8 +399,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["QuickLook"].." 4")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["QuickLook"].." 4")
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						if ((not AtlasLootCharDB["QuickLooks"][4]) or (not AtlasLootCharDB["QuickLooks"][4][1])) or (AtlasLootCharDB["QuickLooks"][4][1]==nil) then
 							this:Disable()
@@ -444,8 +444,8 @@
 				</Anchors>
 				<Scripts>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Search"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Search"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 					<OnClick>
@@ -492,8 +492,8 @@
 				</Anchors>
 				<Scripts>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Clear"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Clear"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 					<OnClick>
@@ -516,8 +516,8 @@
 				</Anchors>
 				<Scripts>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Last Result"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Last Result"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 					<OnClick>
@@ -547,17 +547,17 @@
 						AtlasLoot_QuickLooks:Hide()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["WishList"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["WishList"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
-							GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r")
-							GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"])
+							GameTooltip:AddLine("|cffFFFFFF"..L["WishList"].."|r")
+							GameTooltip:AddLine(L["ALT+Click on item to add or remove it from WishList"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -626,8 +626,8 @@
 				this:RegisterForDrag("LeftButton")
 				this:SetMovable(1)
 				this:SetBackdropColor(0.75, 0, 0.75)
-				local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
-				AtlasLootDefaultFrame_Notice:SetText(AL["NoticeFrame"]);
+				local L = AceLibrary("AceLocale-2.2"):new("Atlas");
+				AtlasLootDefaultFrame_Notice:SetText(L["NoticeFrame"]);
 			</OnLoad>
 			<OnMouseUp>
 				CloseDropDownMenus()
@@ -957,7 +957,7 @@
 				</Anchors>
 				<Scripts>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						this:SetText("AtlasLoot")
 					</OnShow>
@@ -1280,19 +1280,19 @@
 				</Anchors>
 				<Scripts>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Query Server"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Query Server"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						GameTooltip:ClearLines()
 						GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
-						GameTooltip:AddLine("|cffff0000"..AL["Query Server"])
-						GameTooltip:AddLine(AL["Queries the server for all items"])
-						GameTooltip:AddLine(AL["on this page. The items will be"])
-						GameTooltip:AddLine(AL["refreshed when you next mouse"])
-						GameTooltip:AddLine(AL["over them."])
+						GameTooltip:AddLine("|cffff0000"..L["Query Server"])
+						GameTooltip:AddLine(L["Queries the server for all items"])
+						GameTooltip:AddLine(L["on this page. The items will be"])
+						GameTooltip:AddLine(L["refreshed when you next mouse"])
+						GameTooltip:AddLine(L["over them."])
 						GameTooltip:Show()
 					</OnEnter>
 					<OnLeave>
@@ -1412,7 +1412,7 @@
 		<Scripts>
 			<OnLoad>
 				AtlasLoot_OnLoad()
-				local L = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+				local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 				getglobal("AtlasLootItemsFrame_BACK"):SetText(L["Back"])
 				getglobal("AtlasLootItemsFrame_BACK"):SetHeight(25)
 				getglobal("AtlasLootItemsFrame_BACK"):SetWidth(100) 
@@ -1486,8 +1486,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Safe Chat Links |cff1eff00(recommended)|r"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Safe Chat Links |cff1eff00(recommended)|r"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_SafeLinksToggle()
@@ -1504,8 +1504,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Enable all Chat Links |cffff0000(use at own risk)|r"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Enable all Chat Links |cffff0000(use at own risk)|r"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_AllLinksToggle()
@@ -1522,8 +1522,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Default Tooltips"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Default Tooltips"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_DefaultTTToggle()
@@ -1540,8 +1540,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Lootlink Tooltips"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Lootlink Tooltips"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_DefaultTTToggle()
@@ -1558,8 +1558,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["ItemSync Tooltips"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["ItemSync Tooltips"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_DefaultTTToggle()
@@ -1576,8 +1576,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Show Source on Tooltips"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Show Source on Tooltips"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_ShowSourceToggle()
@@ -1594,8 +1594,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Use EquipCompare"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Use EquipCompare"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_EquipCompareToggle()
@@ -1612,8 +1612,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Show IDs at all times"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Show IDs at all times"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_ItemIDToggle()
@@ -1630,8 +1630,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Show Minimap Button"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Show Minimap Button"])
 					</OnLoad>
 					<OnClick>
 						if AtlasLootCharDB.MinimapButton == true then
@@ -1653,8 +1653,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Hide AtlasLoot Panel"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Hide AtlasLoot Panel"])
 					</OnLoad>
 					<OnClick>
 						if AtlasLootCharDB.HidePanel == true then
@@ -1685,8 +1685,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Make Loot Table Opaque"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Make Loot Table Opaque"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_OpaqueToggle()
@@ -1703,8 +1703,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						getglobal(this:GetName().."Text"):SetText(AL["Suppress text spam when querying items"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						getglobal(this:GetName().."Text"):SetText(L["Suppress text spam when querying items"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_ItemSpam()
@@ -1724,12 +1724,12 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						AtlasLootOptions_SetupSlider(AL["Button Radius"], 0, 200, 1)
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						AtlasLootOptions_SetupSlider(L["Button Radius"], 0, 200, 1)
 					</OnLoad>
 					<OnValueChanged>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						AtlasLootOptions_UpdateSlider(AL["Button Radius"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						AtlasLootOptions_UpdateSlider(L["Button Radius"])
 						AtlasLootCharDB.MinimapButtonRadius = this:GetValue()
 						AtlasLootMinimapButton_UpdatePosition()
 					</OnValueChanged>
@@ -1748,12 +1748,12 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						AtlasLootOptions_SetupSlider(AL["Button Position"], 0, 360, 1)
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						AtlasLootOptions_SetupSlider(L["Button Position"], 0, 360, 1)
 					</OnLoad>
 					<OnValueChanged>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						AtlasLootOptions_UpdateSlider(AL["Button Position"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						AtlasLootOptions_UpdateSlider(L["Button Position"])
 						AtlasLootCharDB.MinimapButtonPosition = this:GetValue()
 						AtlasLootMinimapButton_UpdatePosition()
 					</OnValueChanged>
@@ -1772,8 +1772,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Done"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Done"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_Toggle()
@@ -1793,8 +1793,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Reset Position"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Reset Position"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_ResetPosition()
@@ -1814,8 +1814,8 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Default Settings"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Default Settings"])
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_DefaultSettings()
@@ -1827,8 +1827,8 @@
 			<OnLoad>
 				this:RegisterForDrag("LeftButton")
 				this:SetMovable(1)
-				local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-				getglobal("AtlasLootOptionsFrame_Title"):SetText(AL["Atlasloot Options"])
+				local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+				getglobal("AtlasLootOptionsFrame_Title"):SetText(L["Atlasloot Options"])
 			</OnLoad>
 			<OnDragStart>
 				this:StartMoving()
@@ -1895,8 +1895,8 @@
 						AtlasLootWorldEventMenu()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["World Events"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["World Events"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -1916,8 +1916,8 @@
 						AtlasLootSetMenu()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Collections"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Collections"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -1937,8 +1937,8 @@
 						AtlasLootRepMenu()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Factions"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Factions"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -1958,8 +1958,8 @@
 						AtlasLootPvPMenu()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["PvP Rewards"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["PvP Rewards"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -1979,8 +1979,8 @@
 						AtlasLoot_CraftingMenu()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Crafting"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Crafting"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -2000,17 +2000,17 @@
 						AtlasLoot_ShowWishList()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["WishList"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["WishList"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
-							GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r")
-							GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"])
+							GameTooltip:AddLine("|cffFFFFFF"..L["WishList"].."|r")
+							GameTooltip:AddLine(L["ALT+Click on item to add or remove it from WishList"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -2032,8 +2032,8 @@
 						AtlasLootOptions_Toggle()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Options"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Options"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -2055,8 +2055,8 @@
 						AtlasLoot_Toggle()
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["AtlasLoot"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["AtlasLoot"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 				</Scripts>
@@ -2071,12 +2071,12 @@
 				</Anchors>
 				<Scripts>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
 							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][1][3])
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"])
+							GameTooltip:AddLine(L["|cff9d9d9dALT+Click to clear|r"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -2103,8 +2103,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["QuickLook"].." 1")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["QuickLook"].." 1")
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						if ((not AtlasLootCharDB["QuickLooks"][1]) or (not AtlasLootCharDB["QuickLooks"][1][1])) or (AtlasLootCharDB["QuickLooks"][1][1]==nil) then
 							this:Disable()
@@ -2122,12 +2122,12 @@
 				</Anchors>
 				<Scripts>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
 							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][2][3])
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"])
+							GameTooltip:AddLine(L["|cff9d9d9dALT+Click to clear|r"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -2154,8 +2154,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["QuickLook"].." 2")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["QuickLook"].." 2")
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						if ((not AtlasLootCharDB["QuickLooks"][2]) or (not AtlasLootCharDB["QuickLooks"][2][1])) or (AtlasLootCharDB["QuickLooks"][2][1]==nil) then
 							this:Disable()
@@ -2173,12 +2173,12 @@
 				</Anchors>
 				<Scripts>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
 							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][3][3])
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"])
+							GameTooltip:AddLine(L["|cff9d9d9dALT+Click to clear|r"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -2205,8 +2205,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["QuickLook"].." 3")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["QuickLook"].." 3")
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						if ((not AtlasLootCharDB["QuickLooks"][3]) or (not AtlasLootCharDB["QuickLooks"][3][1])) or (AtlasLootCharDB["QuickLooks"][3][1]==nil) then
 							this:Disable()
@@ -2224,12 +2224,12 @@
 				</Anchors>
 				<Scripts>
 					<OnEnter>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 						if this:IsEnabled() then
 							GameTooltip:ClearLines()
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5)
 							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][4][3])
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"])
+							GameTooltip:AddLine(L["|cff9d9d9dALT+Click to clear|r"])
 							GameTooltip:Show()
 						end
 					</OnEnter>
@@ -2256,8 +2256,8 @@
 						end
 					</OnClick>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["QuickLook"].." 4")
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["QuickLook"].." 4")
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 						if ((not AtlasLootCharDB["QuickLooks"][4]) or (not AtlasLootCharDB["QuickLooks"][4][1])) or (AtlasLootCharDB["QuickLooks"][4][1]==nil) then
 							this:Disable()
@@ -2302,8 +2302,8 @@
 				</Anchors>
 				<Scripts>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Search"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Search"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 					<OnClick>
@@ -2349,8 +2349,8 @@
 				</Anchors>
 				<Scripts>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Clear"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Clear"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 					<OnClick>
@@ -2369,8 +2369,8 @@
 				</Anchors>
 				<Scripts>
 					<OnShow>
-						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-						this:SetText(AL["Last Result"])
+						local L = AceLibrary("AceLocale-2.2"):new("Atlas")
+						this:SetText(L["Last Result"])
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 )
 					</OnShow>
 					<OnClick>

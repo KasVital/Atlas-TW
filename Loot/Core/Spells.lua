@@ -1,4 +1,4 @@
-local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+local L = AceLibrary("AceLocale-2.2"):new("Atlas");
 
 GetSpellInfoAtlasLootDB = {
 	["enchants"] = {
@@ -1265,7 +1265,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2538] = {
 			["name"] = "Cooking: Charred Wolf Meat",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1278,7 +1278,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2539] = {
 			["name"] = "Cooking: Spiced Wolf Meat",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1292,7 +1292,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2540] = {
 			["name"] = "Cooking: Roasted Boar Meat",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1305,7 +1305,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2541] = {
 			["name"] = "Cooking: Coyote Steak",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1318,7 +1318,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2542] = {
 			["name"] = "Cooking: Goretusk Liver Pie",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1332,7 +1332,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2543] = {
 			["name"] = "Cooking: Westfall Stew",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1347,7 +1347,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2544] = {
 			["name"] = "Cooking: Crab Cake",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1361,7 +1361,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2545] = {
 			["name"] = "Cooking: Cooked Crab Claw",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1375,7 +1375,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2546] = {
 			["name"] = "Cooking: Dry Pork Ribs",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1389,7 +1389,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2547] = {
 			["name"] = "Cooking: Redridge Goulash",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1403,7 +1403,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2548] = {
 			["name"] = "Cooking: Succulent Pork Ribs",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1417,7 +1417,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2549] = {
 			["name"] = "Cooking: Seasoned Wolf Kabob",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -1431,7 +1431,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2657] = {
 			["name"] = "Smelting: Smelt Copper",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a chunk of copper ore into a copper bar. Smelting copper requires a forge.",
@@ -1444,7 +1444,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2658] = {
 			["name"] = "Smelting: Smelt Silver",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a chunk of silver ore into a silver bar. Smelting silver requires a forge.",
@@ -1457,7 +1457,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2659] = {
 			["name"] = "Smelting: Smelt Bronze",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a tin bar and a copper bar together into two bronze bars. Smelting bronze requires a forge.",
@@ -1484,7 +1484,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2661] = {
 			["name"] = "Blacksmithing: Copper Chain Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -1497,7 +1497,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2662] = {
 			["name"] = "Blacksmithing: Copper Chain Pants",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -1510,7 +1510,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2663] = {
 			["name"] = "Blacksmithing: Copper Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -1523,7 +1523,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2664] = {
 			["name"] = "Blacksmithing: Runed Copper Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -1550,7 +1550,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2666] = {
 			["name"] = "Blacksmithing: Runed Copper Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -1563,7 +1563,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2667] = {
 			["name"] = "Blacksmithing: Runed Copper Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -1578,7 +1578,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2668] = {
 			["name"] = "Blacksmithing: Rough Bronze Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -1591,7 +1591,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2670] = {
 			["name"] = "Blacksmithing: Rough Bronze Cuirass",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -1604,7 +1604,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2671] = {
 			["name"] = "Blacksmithing: Rough Bronze Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -1617,7 +1617,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2672] = {
 			["name"] = "Blacksmithing: Patterned Bronze Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -1631,7 +1631,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2673] = {
 			["name"] = "Blacksmithing: Silvered Bronze Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -1660,7 +1660,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2675] = {
 			["name"] = "Blacksmithing: Shining Silver Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -1677,7 +1677,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2737] = {
 			["name"] = "Blacksmithing: Copper Mace",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -1692,7 +1692,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2738] = {
 			["name"] = "Blacksmithing: Copper Axe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -1707,7 +1707,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2739] = {
 			["name"] = "Blacksmithing: Copper Shortsword",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -1722,7 +1722,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2740] = {
 			["name"] = "Blacksmithing: Bronze Mace",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -1737,7 +1737,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2741] = {
 			["name"] = "Blacksmithing: Bronze Axe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -1752,7 +1752,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2742] = {
 			["name"] = "Blacksmithing: Bronze Shortsword",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -1767,7 +1767,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[2795] = {
 			["name"] = "Cooking: Beer Basted Boar Ribs",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2092,7 +2092,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3292] = {
 			["name"] = "Blacksmithing: Heavy Copper Broadsword",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -2108,7 +2108,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3293] = {
 			["name"] = "Blacksmithing: Copper Battle Axe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -2125,7 +2125,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3294] = {
 			["name"] = "Blacksmithing: Thick War Axe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -2142,7 +2142,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3295] = {
 			["name"] = "Blacksmithing: Deadly Bronze Poniard",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2160,7 +2160,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3296] = {
 			["name"] = "Blacksmithing: Heavy Bronze Mace",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2178,7 +2178,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3297] = {
 			["name"] = "Blacksmithing: Mighty Iron Hammer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2196,7 +2196,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3304] = {
 			["name"] = "Smelting: Smelt Tin",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a chunk of tin ore into a tin bar. Smelting tin requires a forge.",
@@ -2209,7 +2209,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3307] = {
 			["name"] = "Smelting: Smelt Iron",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a chunk of iron ore into an iron bar. Smelting iron requires a forge.",
@@ -2222,7 +2222,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3308] = {
 			["name"] = "Smelting: Smelt Gold",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a chunk of gold ore into a gold bar. Smelting gold requires a forge.",
@@ -2235,7 +2235,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3319] = {
 			["name"] = "Blacksmithing: Copper Chain Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -2261,7 +2261,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3321] = {
 			["name"] = "Blacksmithing: Copper Chain Vest",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -2276,7 +2276,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3323] = {
 			["name"] = "Blacksmithing: Runed Copper Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -2290,7 +2290,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3324] = {
 			["name"] = "Blacksmithing: Runed Copper Pants",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -2305,7 +2305,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3325] = {
 			["name"] = "Blacksmithing: Gemmed Copper Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -2334,7 +2334,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3328] = {
 			["name"] = "Blacksmithing: Rough Bronze Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -2349,7 +2349,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3330] = {
 			["name"] = "Blacksmithing: Silvered Bronze Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2364,7 +2364,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3331] = {
 			["name"] = "Blacksmithing: Silvered Bronze Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2379,7 +2379,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3333] = {
 			["name"] = "Blacksmithing: Silvered Bronze Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2394,7 +2394,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3334] = {
 			["name"] = "Blacksmithing: Green Iron Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2410,7 +2410,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3336] = {
 			["name"] = "Blacksmithing: Green Iron Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2439,7 +2439,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3370] = {
 			["name"] = "Cooking: Crocolisk Steak",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2453,7 +2453,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3371] = {
 			["name"] = "Cooking: Blood Sausage",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2468,7 +2468,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3372] = {
 			["name"] = "Cooking: Murloc Fin Soup",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2482,7 +2482,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3373] = {
 			["name"] = "Cooking: Crocolisk Gumbo",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2496,7 +2496,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3376] = {
 			["name"] = "Cooking: Curiously Tasty Omelet",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2510,7 +2510,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3377] = {
 			["name"] = "Cooking: Gooey Spider Cake",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2524,7 +2524,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3397] = {
 			["name"] = "Cooking: Big Bear Steak",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2538,7 +2538,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3398] = {
 			["name"] = "Cooking: Hot Lion Chops",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2552,7 +2552,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3399] = {
 			["name"] = "Cooking: Tasty Lion Steak",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2566,7 +2566,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3400] = {
 			["name"] = "Cooking: Soothing Turtle Bisque",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -2728,7 +2728,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3491] = {
 			["name"] = "Blacksmithing: Big Bronze Knife",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2745,7 +2745,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3492] = {
 			["name"] = "Blacksmithing: Hardened Iron Shortsword",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2762,7 +2762,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3493] = {
 			["name"] = "Blacksmithing: Jade Serpentblade",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2779,7 +2779,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3494] = {
 			["name"] = "Blacksmithing: Solid Iron Maul",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2796,7 +2796,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3495] = {
 			["name"] = "Blacksmithing: Golden Iron Destroyer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2814,7 +2814,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3496] = {
 			["name"] = "Blacksmithing: Moonsteel Broadsword",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2831,7 +2831,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3497] = {
 			["name"] = "Blacksmithing: Frost Tiger Blade",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2849,7 +2849,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3498] = {
 			["name"] = "Blacksmithing: Massive Iron Axe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2866,7 +2866,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3500] = {
 			["name"] = "Blacksmithing: Shadow Crescent Axe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2884,7 +2884,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3501] = {
 			["name"] = "Blacksmithing: Green Iron Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2898,7 +2898,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3502] = {
 			["name"] = "Blacksmithing: Green Iron Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -2913,7 +2913,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3503] = {
 			["name"] = "Blacksmithing: Golden Scale Coif",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2928,7 +2928,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3504] = {
 			["name"] = "Blacksmithing: Green Iron Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2943,7 +2943,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3505] = {
 			["name"] = "Blacksmithing: Golden Scale Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2958,7 +2958,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3506] = {
 			["name"] = "Blacksmithing: Green Iron Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2973,7 +2973,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3507] = {
 			["name"] = "Blacksmithing: Golden Scale Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -2988,7 +2988,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3508] = {
 			["name"] = "Blacksmithing: Green Iron Hauberk",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -3005,7 +3005,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3511] = {
 			["name"] = "Blacksmithing: Golden Scale Cuirass",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -3021,7 +3021,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3513] = {
 			["name"] = "Blacksmithing: Polished Steel Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -3037,7 +3037,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3515] = {
 			["name"] = "Blacksmithing: Golden Scale Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -3053,7 +3053,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3569] = {
 			["name"] = "Smelting: Smelt Steel",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a chunk of iron ore and a lump of coal together into a steel bar. Smelting steel requires a forge.",
@@ -4083,7 +4083,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3922] = {
 			["name"] = "Engineering: Handful of Copper Bolts",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -4096,7 +4096,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3923] = {
 			["name"] = "Engineering: Rough Copper Bomb",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -4112,7 +4112,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3924] = {
 			["name"] = "Engineering: Copper Tube",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -4126,7 +4126,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3925] = {
 			["name"] = "Engineering: Rough Boomstick",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4141,7 +4141,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3926] = {
 			["name"] = "Engineering: Copper Modulator",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -4156,7 +4156,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3928] = {
 			["name"] = "Engineering: Mechanical Squirrel",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4213,7 +4213,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3932] = {
 			["name"] = "Engineering: Target Dummy",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4259,7 +4259,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3936] = {
 			["name"] = "Engineering: Deadly Blunderbuss",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -4275,7 +4275,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3937] = {
 			["name"] = "Engineering: Large Copper Bomb",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4290,7 +4290,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3938] = {
 			["name"] = "Engineering: Bronze Tube",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -4304,7 +4304,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3939] = {
 			["name"] = "Engineering: Lovingly Crafted Boomstick",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -4334,7 +4334,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3941] = {
 			["name"] = "Engineering: Small Bronze Bomb",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4350,7 +4350,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3942] = {
 			["name"] = "Engineering: Whirring Bronze Gizmo",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -4364,7 +4364,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3944] = {
 			["name"] = "Engineering: Flame Deflector",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -4420,7 +4420,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3949] = {
 			["name"] = "Engineering: Silver-plated Shotgun",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = "",
 			["castTime"] = 25,
 			["text"] = "",
@@ -4436,7 +4436,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3950] = {
 			["name"] = "Engineering: Big Bronze Bomb",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4483,7 +4483,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3954] = {
 			["name"] = "Engineering: Moonsight Rifle",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -4499,7 +4499,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3955] = {
 			["name"] = "Engineering: Explosive Sheep",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4530,7 +4530,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3957] = {
 			["name"] = "Engineering: Ice Deflector",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -4545,7 +4545,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3958] = {
 			["name"] = "Engineering: Iron Strut",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4558,7 +4558,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3959] = {
 			["name"] = "Engineering: Discombobulator Ray",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -4575,7 +4575,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3960] = {
 			["name"] = "Engineering: Portable Bronze Mortar",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -4592,7 +4592,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3961] = {
 			["name"] = "Engineering: Gyrochronatom",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4606,7 +4606,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3962] = {
 			["name"] = "Engineering: Iron Grenade",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -4621,7 +4621,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3963] = {
 			["name"] = "Engineering: Compact Harvest Reaper Kit",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -4637,7 +4637,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3965] = {
 			["name"] = "Engineering: Advanced Target Dummy",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -4667,7 +4667,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3967] = {
 			["name"] = "Engineering: Big Iron Bomb",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -4682,7 +4682,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3968] = {
 			["name"] = "Engineering: Goblin Land Mine",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -4697,7 +4697,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3969] = {
 			["name"] = "Engineering: Mechanical Dragonling",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -4714,7 +4714,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[3971] = {
 			["name"] = "Engineering: Gnomish Cloaking Device",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -4803,7 +4803,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[4094] = {
 			["name"] = "Cooking: Barbecued Buzzard Wing",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -4907,7 +4907,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6412] = {
 			["name"] = "Cooking: Kaldorei Spider Kabob",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -4920,7 +4920,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6413] = {
 			["name"] = "Cooking: Scorpid Surprise",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -4933,7 +4933,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6414] = {
 			["name"] = "Cooking: Roasted Kodo Meat",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -4947,7 +4947,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6415] = {
 			["name"] = "Cooking: Fillet of Frenzy",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -4961,7 +4961,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6416] = {
 			["name"] = "Cooking: Strider Stew",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -4975,7 +4975,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6417] = {
 			["name"] = "Cooking: Dig Rat Stew",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -4988,7 +4988,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6418] = {
 			["name"] = "Cooking: Crispy Lizard Tail",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5002,7 +5002,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6419] = {
 			["name"] = "Cooking: Lean Venison",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5032,7 +5032,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6499] = {
 			["name"] = "Cooking: Boiled Clams",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5046,7 +5046,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6500] = {
 			["name"] = "Cooking: Goblin Deviled Clams",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5060,7 +5060,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6501] = {
 			["name"] = "Cooking: Clam Chowder",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5088,7 +5088,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6517] = {
 			["name"] = "Blacksmithing: Pearl-handled Dagger",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -5104,7 +5104,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[6518] = {
 			["name"] = "Blacksmithing: Iridescent Hammer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -5513,7 +5513,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7213] = {
 			["name"] = "Cooking: Giant Clam Scorcho",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5527,7 +5527,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7221] = {
 			["name"] = "Blacksmithing: Iron Shield Spike",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -5541,7 +5541,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7222] = {
 			["name"] = "Blacksmithing: Iron Counterweight",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -5556,7 +5556,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7223] = {
 			["name"] = "Blacksmithing: Golden Scale Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -5570,7 +5570,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7224] = {
 			["name"] = "Blacksmithing: Steel Weapon Chain",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -5660,7 +5660,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7408] = {
 			["name"] = "Blacksmithing: Heavy Copper Maul",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -5675,7 +5675,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7430] = {
 			["name"] = "Engineering: Arclight Spanner",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -5792,7 +5792,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7751] = {
 			["name"] = "Cooking: Brilliant Smallfish",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5805,7 +5805,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7752] = {
 			["name"] = "Cooking: Slitherskin Mackerel",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5818,7 +5818,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7753] = {
 			["name"] = "Cooking: Longjaw Mud Snapper",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5831,7 +5831,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7754] = {
 			["name"] = "Cooking: Loch Frenzy Delight",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5845,7 +5845,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7755] = {
 			["name"] = "Cooking: Bristle Whisker Catfish",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5858,7 +5858,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7817] = {
 			["name"] = "Blacksmithing: Rough Bronze Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -5872,7 +5872,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7818] = {
 			["name"] = "Blacksmithing: Silver Rod",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -5886,7 +5886,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7827] = {
 			["name"] = "Cooking: Rainbow Fin Albacore",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -5899,7 +5899,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[7828] = {
 			["name"] = "Cooking: Rockscale Cod",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -6099,7 +6099,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[8238] = {
 			["name"] = "Cooking: Savory Deviate Delight",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -6159,7 +6159,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[8334] = {
 			["name"] = "Engineering: Practice Lock",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -6188,7 +6188,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[8367] = {
 			["name"] = "Blacksmithing: Ironforge Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -6264,7 +6264,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[8604] = {
 			["name"] = "Cooking: Herb Baked Egg",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -6278,7 +6278,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[8607] = {
 			["name"] = "Cooking: Smoked Bear Meat",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -6424,7 +6424,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[8768] = {
 			["name"] = "Blacksmithing: Iron Buckle",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -6707,7 +6707,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[8880] = {
 			["name"] = "Blacksmithing: Copper Dagger",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -6723,7 +6723,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[8895] = {
 			["name"] = "Engineering: Goblin Rocket Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -7127,7 +7127,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9269] = {
 			["name"] = "Engineering: Gnomish Universal Remote",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -7177,7 +7177,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9513] = {
 			["name"] = "Cooking: Thistle Tea",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -7191,7 +7191,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9811] = {
 			["name"] = "Blacksmithing: Barbaric Iron Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -7207,7 +7207,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9813] = {
 			["name"] = "Blacksmithing: Barbaric Iron Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -7221,7 +7221,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9814] = {
 			["name"] = "Blacksmithing: Barbaric Iron Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -7236,7 +7236,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9818] = {
 			["name"] = "Blacksmithing: Barbaric Iron Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -7252,7 +7252,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9820] = {
 			["name"] = "Blacksmithing: Barbaric Iron Gloves",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -7267,7 +7267,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9916] = {
 			["name"] = "Blacksmithing: Steel Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -7321,7 +7321,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9926] = {
 			["name"] = "Blacksmithing: Heavy Mithril Shoulder",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7335,7 +7335,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9928] = {
 			["name"] = "Blacksmithing: Heavy Mithril Gauntlet",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7349,7 +7349,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9931] = {
 			["name"] = "Blacksmithing: Mithril Scale Pants",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7362,7 +7362,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9933] = {
 			["name"] = "Blacksmithing: Heavy Mithril Pants",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7376,7 +7376,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9935] = {
 			["name"] = "Blacksmithing: Steel Plate Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -7390,7 +7390,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9937] = {
 			["name"] = "Blacksmithing: Mithril Scale Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7404,7 +7404,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9939] = {
 			["name"] = "Blacksmithing: Mithril Shield Spike",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -7419,7 +7419,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9942] = {
 			["name"] = "Blacksmithing: Mithril Scale Gloves",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7434,7 +7434,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9945] = {
 			["name"] = "Blacksmithing: Ornate Mithril Pants",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7450,7 +7450,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9950] = {
 			["name"] = "Blacksmithing: Ornate Mithril Gloves",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7466,7 +7466,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9952] = {
 			["name"] = "Blacksmithing: Ornate Mithril Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7481,7 +7481,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9954] = {
 			["name"] = "Blacksmithing: Truesilver Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7499,7 +7499,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9957] = {
 			["name"] = "Blacksmithing: Orcish War Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7513,7 +7513,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9959] = {
 			["name"] = "Blacksmithing: Heavy Mithril Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7526,7 +7526,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9961] = {
 			["name"] = "Blacksmithing: Mithril Coif",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7540,7 +7540,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9964] = {
 			["name"] = "Blacksmithing: Mithril Spurs",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7554,7 +7554,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9966] = {
 			["name"] = "Blacksmithing: Mithril Scale Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7569,7 +7569,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9968] = {
 			["name"] = "Blacksmithing: Heavy Mithril Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7583,7 +7583,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9970] = {
 			["name"] = "Blacksmithing: Heavy Mithril Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7597,7 +7597,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9972] = {
 			["name"] = "Blacksmithing: Ornate Mithril Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7613,7 +7613,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9974] = {
 			["name"] = "Blacksmithing: Truesilver Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7630,7 +7630,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9979] = {
 			["name"] = "Blacksmithing: Ornate Mithril Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7647,7 +7647,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9980] = {
 			["name"] = "Blacksmithing: Ornate Mithril Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7663,7 +7663,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9983] = {
 			["name"] = "Blacksmithing: Copper Claymore",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -7679,7 +7679,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9985] = {
 			["name"] = "Blacksmithing: Bronze Warhammer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -7694,7 +7694,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9986] = {
 			["name"] = "Blacksmithing: Bronze Greatsword",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -7709,7 +7709,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9987] = {
 			["name"] = "Blacksmithing: Bronze Battle Axe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -7724,7 +7724,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9993] = {
 			["name"] = "Blacksmithing: Heavy Mithril Axe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7740,7 +7740,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9995] = {
 			["name"] = "Blacksmithing: Blue Glittering Axe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7756,7 +7756,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[9997] = {
 			["name"] = "Blacksmithing: Wicked Mithril Blade",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7772,7 +7772,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10001] = {
 			["name"] = "Blacksmithing: Big Black Mace",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7789,7 +7789,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10003] = {
 			["name"] = "Blacksmithing: The Shatterer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7808,7 +7808,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10005] = {
 			["name"] = "Blacksmithing: Dazzling Mithril Rapier",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7826,7 +7826,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10007] = {
 			["name"] = "Blacksmithing: Phantom Blade",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7845,7 +7845,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10009] = {
 			["name"] = "Blacksmithing: Runed Mithril Hammer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7861,7 +7861,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10011] = {
 			["name"] = "Blacksmithing: Blight",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7878,7 +7878,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10013] = {
 			["name"] = "Blacksmithing: Ebon Shiv",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7895,7 +7895,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10015] = {
 			["name"] = "Blacksmithing: Truesilver Champion",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -7913,7 +7913,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10097] = {
 			["name"] = "Smelting: Smelt Mithril",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a chunk of mithril ore into a mithril bar. Smelting mithril requires a forge.",
@@ -7926,7 +7926,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[10098] = {
 			["name"] = "Smelting: Smelt Truesilver",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a chunk of truesilver ore into a truesilver bar. Smelting truesilver requires a forge.",
@@ -8719,7 +8719,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[11454] = {
 			["name"] = "Blacksmithing: Inlaid Mithril Cylinder",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 3,
 			["text"] = "",
@@ -8997,7 +8997,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[11643] = {
 			["name"] = "Blacksmithing: Golden Scale Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -9610,7 +9610,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12259] = {
 			["name"] = "Blacksmithing: Silvered Bronze Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -9625,7 +9625,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12260] = {
 			["name"] = "Blacksmithing: Rough Copper Vest",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -9638,7 +9638,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12584] = {
 			["name"] = "Engineering: Gold Power Core",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -9692,7 +9692,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12589] = {
 			["name"] = "Engineering: Mithril Tube",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -9705,7 +9705,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12590] = {
 			["name"] = "Engineering: Gyromatic Micro-Adjustor",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -9718,7 +9718,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12591] = {
 			["name"] = "Engineering: Unstable Trigger",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -9749,7 +9749,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12595] = {
 			["name"] = "Engineering: Mithril Blunderbuss",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -9766,7 +9766,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12596] = {
 			["name"] = "Engineering: Hi-Impact Mithril Slugs",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -9780,7 +9780,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12597] = {
 			["name"] = "Engineering: Deadly Scope",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -9795,7 +9795,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12599] = {
 			["name"] = "Engineering: Mithril Casing",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -9808,7 +9808,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12603] = {
 			["name"] = "Engineering: Mithril Frag Bomb",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -9853,7 +9853,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12614] = {
 			["name"] = "Engineering: Mithril Heavy-bore Rifle",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -9900,7 +9900,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12617] = {
 			["name"] = "Engineering: Deepdive Helmet",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -9931,7 +9931,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12619] = {
 			["name"] = "Engineering: Hi-Explosive Bomb",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -9946,7 +9946,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12620] = {
 			["name"] = "Engineering: Sniper Scope",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -9961,7 +9961,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12621] = {
 			["name"] = "Engineering: Mithril Gyro-Shot",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -9993,7 +9993,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12624] = {
 			["name"] = "Engineering: Mithril Mechanical Dragonling",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -10025,7 +10025,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12716] = {
 			["name"] = "Engineering: Goblin Mortar",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10043,7 +10043,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12717] = {
 			["name"] = "Engineering: Goblin Mining Helmet",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10058,7 +10058,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12718] = {
 			["name"] = "Engineering: Goblin Construction Helmet",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10073,7 +10073,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12754] = {
 			["name"] = "Engineering: The Big One",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -10089,7 +10089,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12755] = {
 			["name"] = "Engineering: Goblin Bomb Dispenser",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -10106,7 +10106,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12758] = {
 			["name"] = "Engineering: Goblin Rocket Helmet",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -10122,7 +10122,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12759] = {
 			["name"] = "Engineering: Gnomish Death Ray",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -10185,7 +10185,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12899] = {
 			["name"] = "Engineering: Gnomish Shrink Ray",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10202,7 +10202,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12902] = {
 			["name"] = "Engineering: Gnomish Net-o-Matic Projector",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10219,7 +10219,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12903] = {
 			["name"] = "Engineering: Gnomish Harm Prevention Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -10236,7 +10236,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12905] = {
 			["name"] = "Engineering: Gnomish Rocket Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -10253,7 +10253,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12906] = {
 			["name"] = "Engineering: Gnomish Battle Chicken",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10271,7 +10271,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12907] = {
 			["name"] = "Engineering: Gnomish Mind Control Cap",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10288,7 +10288,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[12908] = {
 			["name"] = "Engineering: Goblin Dragon Gun",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10305,7 +10305,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[13028] = {
 			["name"] = "Cooking: Goldthorn Tea",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10379,7 +10379,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[13240] = {
 			["name"] = "Engineering: The Mortar: Reloaded",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "Reloads an empty Goblin mortar.",
@@ -10395,7 +10395,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[14379] = {
 			["name"] = "Blacksmithing: Golden Rod",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -10409,7 +10409,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[14380] = {
 			["name"] = "Blacksmithing: Truesilver Rod",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10423,7 +10423,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[14891] = {
 			["name"] = "Smelting: Smelt Dark Iron",
-			["requires"] = AL["Black Forge"],
+			["requires"] = L["Black Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt chunks of dark iron ore into a dark iron bar. Smelting dark iron can only be done at the Black Forge in Blackrock Depths.",
@@ -10528,7 +10528,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15007] = {
 			["name"] = "Engineering: Jewelry Lens",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = "",
 			["castTime"] = 5,
 			["text"] = "",
@@ -10545,7 +10545,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15008] = {
 			["name"] = "Engineering: Precision Jewelers Kit",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = "",
 			["castTime"] = 5,
 			["text"] = "",
@@ -10562,7 +10562,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15009] = {
 			["name"] = "Engineering: Jewelry Scope",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = "",
 			["castTime"] = 5,
 			["text"] = "",
@@ -10579,7 +10579,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15255] = {
 			["name"] = "Engineering: Mechanical Repair Kit",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -10594,7 +10594,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15292] = {
 			["name"] = "Blacksmithing: Dark Iron Pulverizer",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -10608,7 +10608,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15293] = {
 			["name"] = "Blacksmithing: Dark Iron Mail",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -10622,7 +10622,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15294] = {
 			["name"] = "Blacksmithing: Dark Iron Sunderer",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -10636,7 +10636,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15295] = {
 			["name"] = "Blacksmithing: Dark Iron Shoulders",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -10650,7 +10650,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15296] = {
 			["name"] = "Blacksmithing: Dark Iron Plate",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -10664,7 +10664,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15628] = {
 			["name"] = "Engineering: Pet Bombling",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10680,7 +10680,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15633] = {
 			["name"] = "Engineering: Lil' Smoky",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10711,7 +10711,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15853] = {
 			["name"] = "Cooking: Lean Wolf Steak",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10725,7 +10725,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15855] = {
 			["name"] = "Cooking: Roast Raptor",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10739,7 +10739,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15856] = {
 			["name"] = "Cooking: Hot Wolf Ribs",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10753,7 +10753,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15861] = {
 			["name"] = "Cooking: Jungle Stew",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10768,7 +10768,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15863] = {
 			["name"] = "Cooking: Carrion Surprise",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10782,7 +10782,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15865] = {
 			["name"] = "Cooking: Mystery Stew",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10796,7 +10796,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15906] = {
 			["name"] = "Cooking: Dragonbreath Chili",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10811,7 +10811,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15910] = {
 			["name"] = "Cooking: Heavy Kodo Stew",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10826,7 +10826,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15915] = {
 			["name"] = "Cooking: Spiced Chili Crab",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10840,7 +10840,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15933] = {
 			["name"] = "Cooking: Monster Omelet",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10854,7 +10854,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15935] = {
 			["name"] = "Cooking: Crispy Bat Wing",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -10868,7 +10868,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15972] = {
 			["name"] = "Blacksmithing: Glinting Steel Dagger",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -10885,7 +10885,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[15973] = {
 			["name"] = "Blacksmithing: Searing Golden Blade",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -10901,7 +10901,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16153] = {
 			["name"] = "Smelting: Smelt Thorium",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "Allows the miner to smelt a chunk of thorium ore into a thorium bar. Smelting thorium requires a forge.",
@@ -10954,7 +10954,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16642] = {
 			["name"] = "Blacksmithing: Thorium Armor",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -10969,7 +10969,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16643] = {
 			["name"] = "Blacksmithing: Thorium Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -10983,7 +10983,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16644] = {
 			["name"] = "Blacksmithing: Thorium Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -10997,7 +10997,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16645] = {
 			["name"] = "Blacksmithing: Radiant Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11011,7 +11011,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16646] = {
 			["name"] = "Blacksmithing: Imperial Plate Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11026,7 +11026,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16647] = {
 			["name"] = "Blacksmithing: Imperial Plate Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11041,7 +11041,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16648] = {
 			["name"] = "Blacksmithing: Radiant Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11056,7 +11056,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16649] = {
 			["name"] = "Blacksmithing: Imperial Plate Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11070,7 +11070,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16650] = {
 			["name"] = "Blacksmithing: Wildthorn Mail",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11087,7 +11087,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16651] = {
 			["name"] = "Blacksmithing: Thorium Shield Spike",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11102,7 +11102,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16652] = {
 			["name"] = "Blacksmithing: Thorium Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11117,7 +11117,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16653] = {
 			["name"] = "Blacksmithing: Thorium Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11132,7 +11132,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16654] = {
 			["name"] = "Blacksmithing: Radiant Gloves",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11146,7 +11146,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16655] = {
 			["name"] = "Blacksmithing: Fiery Plate Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11162,7 +11162,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16656] = {
 			["name"] = "Blacksmithing: Radiant Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11176,7 +11176,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16657] = {
 			["name"] = "Blacksmithing: Imperial Plate Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11191,7 +11191,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16658] = {
 			["name"] = "Blacksmithing: Imperial Plate Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11205,7 +11205,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16659] = {
 			["name"] = "Blacksmithing: Radiant Circlet",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11219,7 +11219,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16660] = {
 			["name"] = "Blacksmithing: Dawnbringer Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11235,7 +11235,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16661] = {
 			["name"] = "Blacksmithing: Storm Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11251,7 +11251,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16662] = {
 			["name"] = "Blacksmithing: Thorium Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11265,7 +11265,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16663] = {
 			["name"] = "Blacksmithing: Imperial Plate Chest",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11279,7 +11279,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16664] = {
 			["name"] = "Blacksmithing: Runic Plate Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11294,7 +11294,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16665] = {
 			["name"] = "Blacksmithing: Runic Plate Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11309,7 +11309,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16667] = {
 			["name"] = "Blacksmithing: Demon Forged Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11325,7 +11325,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16724] = {
 			["name"] = "Blacksmithing: Whitesoul Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11342,7 +11342,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16725] = {
 			["name"] = "Blacksmithing: Radiant Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11356,7 +11356,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16726] = {
 			["name"] = "Blacksmithing: Runic Plate Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11372,7 +11372,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16728] = {
 			["name"] = "Blacksmithing: Helm of the Great Chief",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11389,7 +11389,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16729] = {
 			["name"] = "Blacksmithing: Lionheart Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11406,7 +11406,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16730] = {
 			["name"] = "Blacksmithing: Imperial Plate Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11420,7 +11420,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16731] = {
 			["name"] = "Blacksmithing: Runic Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11435,7 +11435,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16732] = {
 			["name"] = "Blacksmithing: Runic Plate Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11450,7 +11450,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16741] = {
 			["name"] = "Blacksmithing: Stronghold Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11467,7 +11467,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16742] = {
 			["name"] = "Blacksmithing: Enchanted Thorium Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11484,7 +11484,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16744] = {
 			["name"] = "Blacksmithing: Enchanted Thorium Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11501,7 +11501,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16745] = {
 			["name"] = "Blacksmithing: Enchanted Thorium Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11519,7 +11519,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16746] = {
 			["name"] = "Blacksmithing: Invulnerable Mail",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11535,7 +11535,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16965] = {
 			["name"] = "Blacksmithing: Bleakwood Hew",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11553,7 +11553,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16969] = {
 			["name"] = "Blacksmithing: Ornate Thorium Handaxe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11569,7 +11569,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16970] = {
 			["name"] = "Blacksmithing: Dawn's Edge",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11587,7 +11587,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16971] = {
 			["name"] = "Blacksmithing: Huge Thorium Battleaxe",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11602,7 +11602,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16973] = {
 			["name"] = "Blacksmithing: Enchanted Battlehammer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11619,7 +11619,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16978] = {
 			["name"] = "Blacksmithing: Blazing Rapier",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11636,7 +11636,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16983] = {
 			["name"] = "Blacksmithing: Serenity",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11654,7 +11654,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16984] = {
 			["name"] = "Blacksmithing: Volcanic Hammer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11670,7 +11670,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16985] = {
 			["name"] = "Blacksmithing: Corruption",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11689,7 +11689,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16986] = {
 			["name"] = "Blacksmithing: Blood Talon",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11707,7 +11707,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16987] = {
 			["name"] = "Blacksmithing: Darkspear",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11724,7 +11724,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16988] = {
 			["name"] = "Blacksmithing: Hammer of the Titans",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11741,7 +11741,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16990] = {
 			["name"] = "Blacksmithing: Arcanite Champion",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11759,7 +11759,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16991] = {
 			["name"] = "Blacksmithing: Annihilator",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11777,7 +11777,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16992] = {
 			["name"] = "Blacksmithing: Frostguard",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11795,7 +11795,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16993] = {
 			["name"] = "Blacksmithing: Masterwork Stormhammer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11812,7 +11812,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16994] = {
 			["name"] = "Blacksmithing: Arcanite Reaper",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -11827,7 +11827,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[16995] = {
 			["name"] = "Blacksmithing: Heartseeker",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -12232,7 +12232,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[17634] = {
 			["name"] = "Alchemy: Flask of Petrification",
-			["requires"] = AL["Alchemy Lab"],
+			["requires"] = L["Alchemy Lab"],
 			["tools"] = {9149},
 			["castTime"] = 25,
 			["text"] = "",
@@ -12248,7 +12248,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[17635] = {
 			["name"] = "Alchemy: Flask of the Titans",
-			["requires"] = AL["Alchemy Lab"],
+			["requires"] = L["Alchemy Lab"],
 			["tools"] = "",
 			["castTime"] = 25,
 			["text"] = "",
@@ -12264,7 +12264,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[17636] = {
 			["name"] = "Alchemy: Flask of Distilled Wisdom",
-			["requires"] = AL["Alchemy Lab"],
+			["requires"] = L["Alchemy Lab"],
 			["tools"] = "",
 			["castTime"] = 25,
 			["text"] = "",
@@ -12280,7 +12280,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[17637] = {
 			["name"] = "Alchemy: Flask of Supreme Power",
-			["requires"] = AL["Alchemy Lab"],
+			["requires"] = L["Alchemy Lab"],
 			["tools"] = "",
 			["castTime"] = 25,
 			["text"] = "",
@@ -12296,7 +12296,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[17638] = {
 			["name"] = "Alchemy: Flask of Chromatic Resistance",
-			["requires"] = AL["Alchemy Lab"],
+			["requires"] = L["Alchemy Lab"],
 			["tools"] = "",
 			["castTime"] = 25,
 			["text"] = "",
@@ -12331,7 +12331,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18238] = {
 			["name"] = "Cooking: Spotted Yellowtail",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -12344,7 +12344,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18239] = {
 			["name"] = "Cooking: Cooked Glossy Mightfish",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -12358,7 +12358,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18240] = {
 			["name"] = "Cooking: Grilled Squid",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -12372,7 +12372,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18241] = {
 			["name"] = "Cooking: Filet of Redgill",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -12385,7 +12385,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18242] = {
 			["name"] = "Cooking: Hot Smoked Bass",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -12399,7 +12399,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18243] = {
 			["name"] = "Cooking: Nightfin Soup",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -12413,7 +12413,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18244] = {
 			["name"] = "Cooking: Poached Sunscale Salmon",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -12426,7 +12426,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18245] = {
 			["name"] = "Cooking: Lobster Stew",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -12440,7 +12440,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18246] = {
 			["name"] = "Cooking: Mightfish Steak",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -12455,7 +12455,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18247] = {
 			["name"] = "Cooking: Baked Salmon",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -13203,7 +13203,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[18560] = {
 			["name"] = "Tailoring: Mooncloth",
-			["requires"] = AL["Moonwell"],
+			["requires"] = L["Moonwell"],
 			["tools"] = "",
 			["castTime"] = 60,
 			["text"] = "The purification of tainted Felcloth into Mooncloth can only be done at a moonwell, and only ocassionally will the waters permit themselves to be used in such a way.",
@@ -14100,7 +14100,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19567] = {
 			["name"] = "Engineering: Salt Shaker",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -14116,7 +14116,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19666] = {
 			["name"] = "Blacksmithing: Silver Skeleton Key",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14130,7 +14130,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19667] = {
 			["name"] = "Blacksmithing: Golden Skeleton Key",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14144,7 +14144,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19668] = {
 			["name"] = "Blacksmithing: Truesilver Skeleton Key",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 5.125,
 			["text"] = "",
@@ -14158,7 +14158,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19669] = {
 			["name"] = "Blacksmithing: Arcanite Skeleton Key",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14185,7 +14185,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19790] = {
 			["name"] = "Engineering: Thorium Grenade",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14201,7 +14201,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19791] = {
 			["name"] = "Engineering: Thorium Widget",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14215,7 +14215,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19792] = {
 			["name"] = "Engineering: Thorium Rifle",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -14232,7 +14232,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19793] = {
 			["name"] = "Engineering: Lifelike Mechanical Toad",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14264,7 +14264,7 @@ GetSpellInfoAtlasLootDB = {
 		},		
 		[19795] = {
 			["name"] = "Engineering: Thorium Tube",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14277,7 +14277,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19796] = {
 			["name"] = "Engineering: Dark Iron Rifle",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -14295,7 +14295,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19799] = {
 			["name"] = "Engineering: Dark Iron Bomb",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14311,7 +14311,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19800] = {
 			["name"] = "Engineering: Thorium Shells",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14325,7 +14325,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19814] = {
 			["name"] = "Engineering: Masterwork Target Dummy",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 12.5,
 			["text"] = "",
@@ -14343,7 +14343,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19815] = {
 			["name"] = "Engineering: Delicate Arcanite Converter",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14357,7 +14357,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19819] = {
 			["name"] = "Engineering: Voice Amplification Modulator",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14388,7 +14388,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19830] = {
 			["name"] = "Engineering: Arcanite Dragonling",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14406,7 +14406,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19831] = {
 			["name"] = "Engineering: Arcane Bomb",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -14421,7 +14421,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[19833] = {
 			["name"] = "Engineering: Flawless Arcanite Rifle",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14439,7 +14439,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[20201] = {
 			["name"] = "Blacksmithing: Arcanite Rod",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -14453,7 +14453,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[20626] = {
 			["name"] = "Cooking: Undermine Clam Chowder",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -14590,7 +14590,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[20872] = {
 			["name"] = "Blacksmithing: Fiery Chain Girdle",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14605,7 +14605,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[20873] = {
 			["name"] = "Blacksmithing: Fiery Chain Shoulders",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14620,7 +14620,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[20874] = {
 			["name"] = "Blacksmithing: Dark Iron Bracers",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14635,7 +14635,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[20876] = {
 			["name"] = "Blacksmithing: Dark Iron Leggings",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14650,7 +14650,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[20890] = {
 			["name"] = "Blacksmithing: Dark Iron Reaver",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14666,7 +14666,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[20897] = {
 			["name"] = "Blacksmithing: Dark Iron Destroyer",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14682,7 +14682,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[20916] = {
 			["name"] = "Cooking: Mithril Headed Trout",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -14695,7 +14695,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[21143] = {
 			["name"] = "Cooking: Gingerbread Cookie",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -14709,7 +14709,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[21144] = {
 			["name"] = "Cooking: Egg Nog",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -14725,7 +14725,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[21161] = {
 			["name"] = "Blacksmithing: Sulfuron Hammer",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14744,7 +14744,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[21175] = {
 			["name"] = "Cooking: Spider Sausage",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -14757,7 +14757,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[21913] = {
 			["name"] = "Blacksmithing: Edge of Winter",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -14789,7 +14789,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[21940] = {
 			["name"] = "Engineering: Snowmaster 9000",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -14848,7 +14848,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[22480] = {
 			["name"] = "Cooking: Tender Wolf Steak",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -14862,7 +14862,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[22704] = {
 			["name"] = "Engineering: Field Repair Bot 74A",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 60,
 			["text"] = "",
@@ -14958,7 +14958,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[22761] = {
 			["name"] = "Cooking: Runn Tum Tuber Surprise",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -14972,7 +14972,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[22793] = {
 			["name"] = "Engineering: Biznicks 247x128 Accurascope",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -14989,7 +14989,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[22795] = {
 			["name"] = "Engineering: Core Marksman Rifle",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15006,7 +15006,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[22797] = {
 			["name"] = "Engineering: Force Reactive Disk",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15274,7 +15274,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[22967] = {
 			["name"] = "Smelting: Smelt Elementium",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 10,
 			["text"] = "Allows the miner to smelt a chunk of elementium ore, ten arcanite bars, a fiery core and three elemental fluxes into an elementium bar. Smelting elementium requires a forge.",
@@ -15360,7 +15360,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23071] = {
 			["name"] = "Engineering: Truesilver Transformer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 8,
 			["text"] = "",
@@ -15375,7 +15375,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23077] = {
 			["name"] = "Engineering: Gyrofreeze Ice Reflector",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -15442,7 +15442,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23081] = {
 			["name"] = "Engineering: Hyper-Radiant Flame Reflector",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -15459,7 +15459,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23082] = {
 			["name"] = "Engineering: Ultra-Flash Shadow Reflector",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -15477,7 +15477,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23096] = {
 			["name"] = "Engineering: Alarm-O-Bot",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 25,
 			["text"] = "",
@@ -15494,7 +15494,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23129] = {
 			["name"] = "Engineering: World Enlarger",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 8,
 			["text"] = "",
@@ -15542,7 +15542,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23486] = {
 			["name"] = "Engineering: Dimensional Ripper - Everlook",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -15559,7 +15559,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23489] = {
 			["name"] = "Engineering: Ultrasafe Transporter - Gadgetzan",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 45,
 			["text"] = "",
@@ -15592,7 +15592,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23628] = {
 			["name"] = "Blacksmithing: Heavy Timbermaw Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15607,7 +15607,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23629] = {
 			["name"] = "Blacksmithing: Heavy Timbermaw Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15622,7 +15622,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23632] = {
 			["name"] = "Blacksmithing: Girdle of the Dawn",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15637,7 +15637,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23633] = {
 			["name"] = "Blacksmithing: Gloves of the Dawn",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15652,7 +15652,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23636] = {
 			["name"] = "Blacksmithing: Dark Iron Helm",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15667,7 +15667,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23637] = {
 			["name"] = "Blacksmithing: Dark Iron Gauntlets",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15684,7 +15684,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23638] = {
 			["name"] = "Blacksmithing: Black Amnesty",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15701,7 +15701,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23639] = {
 			["name"] = "Blacksmithing: Blackfury",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15717,7 +15717,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23650] = {
 			["name"] = "Blacksmithing: Ebon Hand",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15734,7 +15734,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23652] = {
 			["name"] = "Blacksmithing: Blackguard",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -15751,7 +15751,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[23653] = {
 			["name"] = "Blacksmithing: Nightfall",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16145,7 +16145,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24136] = {
 			["name"] = "Blacksmithing: Bloodsoul Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16161,7 +16161,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24137] = {
 			["name"] = "Blacksmithing: Bloodsoul Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16177,7 +16177,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24138] = {
 			["name"] = "Blacksmithing: Bloodsoul Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16193,7 +16193,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24139] = {
 			["name"] = "Blacksmithing: Darksoul Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16208,7 +16208,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24140] = {
 			["name"] = "Blacksmithing: Darksoul Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16223,7 +16223,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24141] = {
 			["name"] = "Blacksmithing: Darksoul Shoulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16349,7 +16349,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24399] = {
 			["name"] = "Blacksmithing: Dark Iron Boots",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16366,7 +16366,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24418] = {
 			["name"] = "Cooking: Heavy Crocolisk Stew",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -16429,7 +16429,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24801] = {
 			["name"] = "Cooking: Smoked Desert Dumplings",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -16587,7 +16587,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24912] = {
 			["name"] = "Blacksmithing: Darkrune Gauntlets",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16603,7 +16603,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24913] = {
 			["name"] = "Blacksmithing: Darkrune Helm",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16619,7 +16619,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[24914] = {
 			["name"] = "Blacksmithing: Darkrune Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -16677,7 +16677,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[25659] = {
 			["name"] = "Cooking: Dirge's Kickin' Chimaerok Chops",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -16693,7 +16693,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[25704] = {
 			["name"] = "Cooking: Smoked Sagefish",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -16707,7 +16707,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[25954] = {
 			["name"] = "Cooking: Sagefish Delight",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -16721,7 +16721,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[26011] = {
 			["name"] = "Engineering: Tranquil Mechanical Yeti",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17051,7 +17051,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[27585] = {
 			["name"] = "Blacksmithing: Heavy Obsidian Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17066,7 +17066,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[27586] = {
 			["name"] = "Blacksmithing: Jagged Obsidian Shield",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17082,7 +17082,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[27587] = {
 			["name"] = "Blacksmithing: Thick Obsidian Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17099,7 +17099,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[27588] = {
 			["name"] = "Blacksmithing: Light Obsidian Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17113,7 +17113,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[27589] = {
 			["name"] = "Blacksmithing: Black Grasp of the Destroyer",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17129,7 +17129,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[27590] = {
 			["name"] = "Blacksmithing: Obsidian Mail Tunic",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17224,7 +17224,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[27829] = {
 			["name"] = "Blacksmithing: Titanic Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17240,7 +17240,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[27830] = {
 			["name"] = "Blacksmithing: Persuader",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17258,7 +17258,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[27832] = {
 			["name"] = "Blacksmithing: Sageblade",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17456,7 +17456,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[28242] = {
 			["name"] = "Blacksmithing: Icebane Breastplate",
-			["requires"] = AL["Icebellow Anvil"],
+			["requires"] = L["Icebellow Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17472,7 +17472,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[28243] = {
 			["name"] = "Blacksmithing: Icebane Gauntlets",
-			["requires"] = AL["Icebellow Anvil"],
+			["requires"] = L["Icebellow Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17488,7 +17488,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[28244] = {
 			["name"] = "Blacksmithing: Icebane Bracers",
-			["requires"] = AL["Icebellow Anvil"],
+			["requires"] = L["Icebellow Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17504,7 +17504,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[28461] = {
 			["name"] = "Blacksmithing: Ironvine Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17520,7 +17520,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[28462] = {
 			["name"] = "Blacksmithing: Ironvine Gloves",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -17535,7 +17535,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[28463] = {
 			["name"] = "Blacksmithing: Ironvine Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -21099,7 +21099,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45054] = {
 			["name"] = "Cooking: Maritime Gumbo",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -21170,7 +21170,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45451] = {
 			["name"] = "Smelting: Smelt Dreamsteel",
-			["requires"] = AL["Forge"],
+			["requires"] = L["Forge"],
 			["tools"] = "",
 			["castTime"] = 5,
 			["text"] = "Allows the miner to smelt a bright dream shard into a dreamsteel bar. Smelting dreamsteel requires a forge.",
@@ -21284,7 +21284,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45465] = {
 			["name"] = "Blacksmithing: Dreamsteel Mantle",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -21302,7 +21302,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45467] = {
 			["name"] = "Blacksmithing: Dreamsteel Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -21318,7 +21318,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45469] = {
 			["name"] = "Blacksmithing: Dreamsteel Bracers",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -21334,7 +21334,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45471] = {
 			["name"] = "Blacksmithing: Dreamsteel Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -21417,7 +21417,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45481] = {
 			["name"] = "Engineering: Intricate Gyroscope Goggles",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 60,
 			["text"] = "",
@@ -21469,7 +21469,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45487] = {
 			["name"] = "Blacksmithing: Dawnstone Hammer",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 25,
 			["text"] = "",
@@ -21487,7 +21487,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45625] = {
 			["name"] = "Cooking: Le Fishe Au Chocolat",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -21503,7 +21503,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[45627] = {
 			["name"] = "Cooking: Gilneas Hot Stew",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -21534,7 +21534,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46064] = {
 			["name"] = "Survival: Dim Torch",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 2,
 			["text"] = "",
@@ -21655,7 +21655,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46085] = {
 			["name"] = "Cooking: Gurubashi Gumbo",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -21783,7 +21783,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46626] = {
 			["name"] = "Blacksmithing: Steel Plate Boots",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 10,
 			["text"] = "",
@@ -21797,7 +21797,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46627] = {
 			["name"] = "Blacksmithing: Steel Plate Gauntlets",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 10,
 			["text"] = "",
@@ -21811,7 +21811,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46628] = {
 			["name"] = "Blacksmithing: Steel Plate Legguards",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 10,
 			["text"] = "",
@@ -21826,7 +21826,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46629] = {
 			["name"] = "Blacksmithing: Steel Plate Armor",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 10,
 			["text"] = "",
@@ -21842,7 +21842,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46630] = {
 			["name"] = "Blacksmithing: Steel Plate Pauldrons",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 10,
 			["text"] = "",
@@ -21858,7 +21858,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46631] = {
 			["name"] = "Blacksmithing: Steel Plate Barbute",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 10,
 			["text"] = "",
@@ -21876,7 +21876,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46652] = {
 			["name"] = "Blacksmithing: Untempered Runeblade",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -21964,7 +21964,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46657] = {
 			["name"] = "Ornate Bloodstone Dagger",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22002,7 +22002,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[46661] = {
 			["name"] = "Blacksmithing: Dream's Herald",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22174,7 +22174,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47021] = {
 			["name"] = "Blacksmithing: Rune-Etched Greaves",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22191,7 +22191,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47022] = {
 			["name"] = "Blacksmithing: Rune-Etched Legplates",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22208,7 +22208,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47023] = {
 			["name"] = "Blacksmithing: Rune-Etched Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22226,7 +22226,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47024] = {
 			["name"] = "Blacksmithing: Rune-Etched Crown",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22242,7 +22242,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47025] = {
 			["name"] = "Blacksmithing: Rune-Etched Mantle",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22259,7 +22259,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47026] = {
 			["name"] = "Blacksmithing: Rune-Etched Grips",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22275,7 +22275,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47027] = {
 			["name"] = "Engineering: Portable Wormhole Generator - Stormwind",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 10,
 			["text"] = "",
@@ -22291,7 +22291,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47028] = {
 			["name"] = "Engineering: Portable Wormhole Generator - Orgrimmar",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956, 6219},
 			["castTime"] = 10,
 			["text"] = "",
@@ -22307,7 +22307,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47029] = {
 			["name"] = "Blacksmithing: Hateforge Helmet",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22323,7 +22323,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47030] = {
 			["name"] = "Blacksmithing: Hateforge Cuirass",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22341,7 +22341,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47031] = {
 			["name"] = "Blacksmithing: Hateforge Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22358,7 +22358,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47032] = {
 			["name"] = "Blacksmithing: Hateforge Belt",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22374,7 +22374,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47033] = {
 			["name"] = "Blacksmithing: Hateforge Grips",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22391,7 +22391,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[47034] = {
 			["name"] = "Blacksmithing: Hateforge Boots",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22426,7 +22426,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[49551] = {
 			["name"] = "Cooking: Empowering Herbal Salad",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 5,
 			["text"] = "",
@@ -22458,7 +22458,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[54003] = {
 			["name"] = "Blacksmithing: Fury of the Timbermaw",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22473,7 +22473,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[54005] = {
 			["name"] = "Blacksmithing: Pauldrons of the Timbermaw",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22507,7 +22507,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[54009] = {
 			["name"] = "Blacksmithing: Fiery Chain Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22703,7 +22703,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[55526] = {
 			["name"] = "Blacksmithing: Otherworldly Coif",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22719,7 +22719,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[55527] = {
 			["name"] = "Blacksmithing: Otherworldly Spaulders",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22735,7 +22735,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[55528] = {
 			["name"] = "Blacksmithing: Otherworldly Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22751,7 +22751,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[55529] = {
 			["name"] = "Blacksmithing: Otherworldly Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22767,7 +22767,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[55530] = {
 			["name"] = "Blacksmithing: Reflective Helmet",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22782,7 +22782,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[55531] = {
 			["name"] = "Blacksmithing: Reflective Pauldrons",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22797,7 +22797,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[55532] = {
 			["name"] = "Blacksmithing: Reflective Breastplate",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -22812,7 +22812,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[55533] = {
 			["name"] = "Blacksmithing: Reflective Leggings",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -23000,7 +23000,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57026] = {
 			["name"] = "Blacksmithing: Mantle of Centaur Authority",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -23017,7 +23017,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57031] = {
 			["name"] = "Cooking: Danonzo's Tel'Abim Surprise",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -23032,7 +23032,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57032] = {
 			["name"] = "Cooking: Danonzo's Tel'abim Medley",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -23047,7 +23047,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57033] = {
 			["name"] = "Cooking: Danonzo's Tel'abim Delight",
-			["requires"] = AL["Cooking Fire"],
+			["requires"] = L["Cooking Fire"],
 			["tools"] = "",
 			["castTime"] = 3,
 			["text"] = "",
@@ -23078,7 +23078,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57113] = {
 			["name"] = "Blacksmithing: Thorium Spurs",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -23140,7 +23140,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57163] = {
 			["name"] = "Blacksmithing: Copper Belt Buckle",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -23155,7 +23155,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57166] = {
 			["name"] = "Blacksmithing: Bronze Belt Buckle",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -23170,7 +23170,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57169] = {
 			["name"] = "Blacksmithing: Iron Belt Buckle",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -23185,7 +23185,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57172] = {
 			["name"] = "Blacksmithing: Mithril Belt Buckle",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -23201,7 +23201,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57175] = {
 			["name"] = "Blacksmithing: Thorium Belt Buckle",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -23217,7 +23217,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57178] = {
 			["name"] = "Blacksmithing: Arcanite Belt Buckle",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 45,
 			["text"] = "",
@@ -23234,7 +23234,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57181] = {
 			["name"] = "Blacksmithing: Dreamsteel Belt Buckle",
-			["requires"] = AL["Anvil"],
+			["requires"] = L["Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -23250,7 +23250,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57187] = {
 			["name"] = "Blacksmithing: Towerforge Crown",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -23267,7 +23267,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57189] = {
 			["name"] = "Blacksmithing: Towerforge Breastplate",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -23284,7 +23284,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57191] = {
 			["name"] = "Blacksmithing: Towerforge Pauldrons",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -23301,7 +23301,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57193] = {
 			["name"] = "Blacksmithing: Towerforge Demolisher",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",
@@ -23319,7 +23319,7 @@ GetSpellInfoAtlasLootDB = {
 		},
 		[57196] = {
 			["name"] = "Bloody Belt Buckle",
-			["requires"] = AL["Black Anvil"],
+			["requires"] = L["Black Anvil"],
 			["tools"] = {5956},
 			["castTime"] = 60,
 			["text"] = "",

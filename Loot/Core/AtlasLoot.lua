@@ -13,7 +13,7 @@ AtlasLoot = AceLibrary("AceAddon-2.0"):new("AceDBa-2.0")
 local _G = getfenv()
 
 --Instance required libraries
-local L = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 local BC = AceLibrary("Babble-Class-2.2")
 local BZ = AceLibrary("Babble-Zone-2.2a")
 local BS = AceLibrary("Babble-Spell-2.2a")

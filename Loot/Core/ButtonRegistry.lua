@@ -1,5 +1,4 @@
-﻿local L = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
-
+﻿local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 local BC = AceLibrary("Babble-Class-2.2")
 local BS = AceLibrary("Babble-Spell-2.2a")
 local BB = AceLibrary("Babble-Boss-2.2a")

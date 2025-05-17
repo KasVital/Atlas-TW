@@ -1,5 +1,5 @@
 local _G = getfenv()
-local L = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 local BF = AceLibrary("Babble-Faction-2.2a")
 local BZ = AceLibrary("Babble-Zone-2.2a")
 

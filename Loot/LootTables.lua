@@ -4,9 +4,8 @@
 	is in the search function, as when iterating through the loot tables there is no
 	inherant title to the loot table, given the origins of the mod as an Atlas plugin.
 ]]
-
 --Invoke libraries
-local L = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 local BC = AceLibrary("Babble-Class-2.2")
 local BS = AceLibrary("Babble-Spell-2.2a")
 local BZ = AceLibrary("Babble-Zone-2.2a")
@@ -696,7 +695,7 @@ AtlasLoot_TableNames = {
 	["WorldBluesHead"] = { L["World Blues"].." - "..L["Head"], "AtlasLootSetItems" },
 	["WorldBluesNeck"] = { L["World Blues"].." - "..L["Neck"], "AtlasLootSetItems" },
 	["WorldBluesShoulder"] = { L["World Blues"].." - "..L["Shoulder"], "AtlasLootSetItems" },
-	["WorldBluesBack"] = { L["World Blues"].." - "..L["Back1"], "AtlasLootSetItems" },
+	["WorldBluesBack"] = { L["World Blues"].." - "..L["Back"], "AtlasLootSetItems" },
 	["WorldBluesChest"] = { L["World Blues"].." - "..L["Chest"], "AtlasLootSetItems" },
 	["WorldBluesWrist"] = { L["World Blues"].." - "..L["Wrist"], "AtlasLootSetItems" },
 	["WorldBluesHands"] = { L["World Blues"].." - "..L["Hands"], "AtlasLootSetItems" },
@@ -1794,7 +1793,7 @@ AtlasLoot_TableNamesBoss = {
 		["WorldBluesHead"] = { L["World Blues"].." - "..L["Head"], "AtlasLootSetItems" },
 		["WorldBluesNeck"] = { L["World Blues"].." - "..L["Neck"], "AtlasLootSetItems" },
 		["WorldBluesShoulder"] = { L["World Blues"].." - "..L["Shoulder"], "AtlasLootSetItems" },
-		["WorldBluesBack"] = { L["World Blues"].." - "..L["Back1"], "AtlasLootSetItems" },
+		["WorldBluesBack"] = { L["World Blues"].." - "..L["Back"], "AtlasLootSetItems" },
 		["WorldBluesChest"] = { L["World Blues"].." - "..L["Chest"], "AtlasLootSetItems" },
 		["WorldBluesWrist"] = { L["World Blues"].." - "..L["Wrist"], "AtlasLootSetItems" },
 		["WorldBluesHands"] = { L["World Blues"].." - "..L["Hands"], "AtlasLootSetItems" },

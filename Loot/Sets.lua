@@ -1,3 +1,6 @@
+--Table for all data to be inserted into. Included here as it is the first file loaded
+AtlasLoot_Data = {}
+
 AtlasLoot_Data["AtlasLootSetItems"] = {
 	EmptyInstance = {},
 	DEADMINES = {

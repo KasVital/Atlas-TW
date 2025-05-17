@@ -1,5 +1,5 @@
 local _G = getfenv()
-local L = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 local BC = AceLibrary("Babble-Class-2.2")
 local BZ = AceLibrary("Babble-Zone-2.2a")
 local BIS = AceLibrary("Babble-ItemSet-2.2a")
@@ -271,7 +271,7 @@ function AtlasLootWorldBluesMenu()
 	AtlasLootMenuItem_4.lootpage="WorldBluesShoulder"
 	AtlasLootMenuItem_4:Show()
 	--Back
-	AtlasLootMenuItem_5_Name:SetText(L["Back1"])
+	AtlasLootMenuItem_5_Name:SetText(L["Back"])
 	AtlasLootMenuItem_5_Extra:SetText("")
 	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\INV_Misc_Cape_19")
 	AtlasLootMenuItem_5.lootpage="WorldBluesBack"

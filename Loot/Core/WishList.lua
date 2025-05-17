@@ -1,7 +1,6 @@
 --File containing functions related to the wish list.
 
-
-local L = AceLibrary("AceLocale-2.2"):new("AtlasLoot")
+local L = AceLibrary("AceLocale-2.2"):new("Atlas")
 
 AtlasLoot_WishList = nil
 local currentPage = 1
