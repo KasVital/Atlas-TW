@@ -5808,7 +5808,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 3194, "INV_Mace_01", "=q3=Black Malice", "=ds=#h2#, #w6#", "0.02%" },
 		{ 2205, "INV_Sword_41", "=q3=Duskbringer", "=ds=#h2#, #w10#", "0.01%" },
 		{ 1484, "INV_Wand_04", "=q3=Witching Stave", "=ds=#w9#", "0.01%" },
-		{ 41420, "INV_Potion_08", "=q2=Shadowfang Blood", "=ds=#m3#", "10%" },
+		{ 0, "", "", "" },
+		{ 41420, "INV_Potion_08", "=q1=Shadowfang Blood", "=ds=#m3#", "10%" },
 	},
 	DMEPusillin = {
 		{ 18267, "INV_Scroll_03", "=q2=Recipe: Runn Tum Tuber Surprise", "=ds=#p3# #m16#", "100%" },

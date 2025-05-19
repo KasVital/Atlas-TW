@@ -1,4 +1,3 @@
-
 --Bindings
 BINDING_HEADER_ATLASLOOT_TITLE = "AtlasLoot Bindings"
 BINDING_NAME_ATLASLOOT_TOGGLE = "Toggle AtlasLoot"
@@ -20,9 +19,6 @@ local BS = AceLibrary("Babble-Spell-2.2a")
 local BB = AceLibrary("Babble-Boss-2.2a")
 local BF = AceLibrary("Babble-Faction-2.2a")
 local BIS = AceLibrary("Babble-ItemSet-2.2a")
-
-ATLASLOOT_VERSION = GetAddOnMetadata("Atlas-TW", "Version-AtlasLoot")
-ATLASLOOT_VERSION_FULL = "|cffFF8400AtlasLoot TW v"..ATLASLOOT_VERSION.."|r"
 
 --Compatibility with old EquipCompare/EQCompare
 ATLASLOOT_OPTIONS_EQUIPCOMPARE = L["Use EquipCompare"]
@@ -327,8 +323,6 @@ function AtlasLootOptions_Fresh()
 	AtlasLootCharDB.HidePanel = false
 	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1"
 	AtlasLootCharDB.LastBossText = L["Dungeons & Raids"]
-	AtlasLootCharDB.AtlasLootVersion = ATLASLOOT_VERSION
---	AtlasLootCharDB.AutoQuery = false
 	AtlasLootCharDB.PartialMatching = true
 end
 
@@ -2060,8 +2054,6 @@ function AtlasLootOptions_DefaultSettings()
 	AtlasLootCharDB.ItemSpam = true
 	AtlasLootCharDB.MinimapButton = false
 	AtlasLootCharDB.HidePanel = false
-	AtlasLootCharDB.AtlasLootVersion = ATLASLOOT_VERSION
-	AtlasLootCharDB.AutoQuery = false
 	AtlasLootCharDB.PartialMatching = true
 	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1"
 	AtlasLootCharDB.LastBossText = L["Dungeons & Raids"]

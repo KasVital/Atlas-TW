@@ -7,9 +7,7 @@
 ## Notes-zhCN: 副本地图浏览器
 ## Notes-esES: Navegador de Mapas de Mazmorras
 ## Notes-ruRU: Обозреватель подземелий
-## Version: 1.24
-## Version-AtlasLoot: 4.15
-## Version-AtlasQuest: 4.66
+## Version: 1.30
 ## X-Date: May, 2025
 ## Author: Otwo, Dan Gilbert, Daviesh, Otari98, pepopo, etc
 ## X-Category: MYADDONS_CATEGORY_MAP
@@ -55,4 +53,4 @@ Loot\Core\AtlasLoot.xml
 
 Quest\AtlasQuest-enUS.lua
 Quest\InsideFrame.xml
-Quest\AtlasQuest.xml
+Quest\QuestInit.xml

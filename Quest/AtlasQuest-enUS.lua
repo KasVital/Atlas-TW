@@ -1,5 +1,4 @@
 --[[
-	
 	AtlasQuest, a World of Warcraft addon.
 	Email me at mystery8@gmail.com
 	
@@ -18,21 +17,18 @@
 	You should have received a copy of the GNU General Public License
 	along with AtlasQuest; if not, write to the Free Software
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-	
 --]]
 
 ---------------
 --- COLOURS ---
 ---------------
 
-local GREY = "|cff999999";
-local RED = "|cffff0000";
-local WHITE = "|cffFFFFFF";
-local GREEN = "|cff1eff00";
-local PURPLE = "|cff9F3FFF";
-local BLUE = "|cff0070dd";
-local ORANGE = "|cffFF8400";
-local YELLOW = "|cffFFd200";   -- Ingame Yellow
+local GREY = "|cff999999"
+local RED = "|cffff0000"
+local WHITE = "|cffFFFFFF"
+local GREEN = "|cff1eff00"
+local BLUE = "|cff0070dd"
+local YELLOW = "|cffFFd200"
 
 
 ---------------
@@ -41,7 +37,7 @@ local YELLOW = "|cffFFd200";   -- Ingame Yellow
 
 AQHelpText = "type /aq or atlasquest "..WHITE.."[command]"..YELLOW.."\ncommands: help; option/config; show/hide; left/right; colour; autoshow"..RED.."(only Atlas)"
 --
-AQOptionsCaptionTEXT = "AtlasQuest Options";
+AQOptionsCaptionTEXT = "AtlasQuest Options"
 AQ_OK = "Done"
 
 -- Autoshow
@@ -50,10 +46,8 @@ AQAtlasAutoON = "The AtlasQuest panel will be automatically displayed when atlas
 AQAtlasAutoOFF = "The AtlasQuest panel "..RED.."will not"..WHITE.." be displayed when you open atlas."
 
 -- Right/Left
-AQOptionsLEFTTEXT = "Show the AtlasQuest panel "..RED.."left.";
-AQOptionsRIGHTTEXT = "Show the AtlasQuest panel "..RED.."right.";
-AQShowRight = "Now shows the AtlasQuest Panel on the "..RED.."right"..WHITE.." side.";
-AQShowLeft = "Now shows the AtlasQuest Panel on the "..RED.."left"..WHITE.." side "..GREEN.."(default)";
+AQOptionsLEFTTEXT = "Show the AtlasQuest panel "..RED.."left."
+AQOptionsRIGHTTEXT = "Show the AtlasQuest panel "..RED.."right."
 
 -- Colour Check
 AQOptionsCCTEXT = "Recolour the quests depending on their levels."
@@ -4427,7 +4421,7 @@ Inst21Quest3_Level = "44"
 Inst21Quest3_Attain = "35"
 Inst21Quest3_Aim = "Discover the truth about the fate of High Inquisitor Fairbanks "..YELLOW.."[1]"..WHITE.." for Brother Elias at Shademore Tavern in Gilneas. Slain High Inquisitor Fairbanks"
 Inst21Quest3_Location = "Brother Elias <Scarlet Crusade Emissary> (Gilneas - Ruins of Greyshire - Shademore Tavern "..YELLOW.."[33.6,54.1]"..WHITE..", 2nd floor.)"
-Inst21Quest3_Note = ""
+Inst21Quest3_Note = "Allies Against Undeath start at same NPC."
 Inst21Quest3_Prequest = "Allies Against Undeath" --40934
 Inst21Quest3_Folgequest = "No"
 --
@@ -8667,56 +8661,56 @@ Inst64Quest9_HORDE_Prequest = Inst64Quest9_Prequest
 Inst64Quest9_HORDE_Folgequest = Inst64Quest9_Folgequest
 Inst64Quest9name1_HORDE = Inst64Quest9name1
 
+--[[
 ---------------------------
 --- AQ Instance Numbers ---
 ---------------------------
-
--- 1  = Deadmines (VC)
--- 2  = Wailing Caverns (WC)
--- 3  = Ragefire Chasm (RFC)
--- 4  = Uldaman (ULD)
--- 5  = Blackrock Depths (BRD)
--- 6  = Blackwing Lair (BWL)
--- 7  = Blackfathom Deeps (BFD)
--- 8  = Lower Blackrock Spire (LBRS)
--- 9  = Upper Blackrock Spire (UBRS)
--- 10 = Dire Maul East (DM)
--- 11 = Dire Maul North (DM)
--- 12 = Dire Maul West (DM)
--- 13 = Maraudon (Mara)
--- 14 = Molten Core (MC)
--- 15 = Naxxramas (Naxx)
--- 16 = Onyxia's Lair (Ony)
--- 17 = Razorfen Downs (RFD)
--- 18 = Razorfen Kraul (RFK)
--- 19 = SM: Library (SM Lib)
--- 20 = SM: Armory (SM Arm)
--- 21 = SM: Cathedral (SM Cath)
--- 22 = SM: Graveyard (SM GY)
--- 23 = Scholomance (Scholo)
--- 24 = Shadowfang Keep (SFK)
--- 25 = Stratholme (Strat)
--- 26 = The Ruins of Ahn'Qiraj (AQ20)
--- 27 = The Stockade (Stocks)
--- 28 = Sunken Temple (ST)
--- 29 = The Temple of Ahn'Qiraj (AQ40)
--- 30 = Zul'Farrak (ZF)
--- 31 = Zul'Gurub (ZG)
--- 32 = Gnomeregan (Gnomer)
--- 33 = Four Dragons
--- 34 = Azuregos
--- 35 = Lord Kazzak
--- 36 = Alterac Valley (AV)
--- 37 = Arathi Basin (AB)
--- 38 = Warsong Gulch (WSG)
--- 39 = The Crescent Grove (TCG)
--- 41 = Karazhan Crypt (KC)
--- 45 = CavernsOfTimeBlackMorass (BM)
--- 46 = Hateforge Quarry (HQ)
--- 57 = Stormwind Vault (SV)
--- 58 = Ostarius (OST)
--- 61 = Gilneas City (GC)
--- 62 = Lower Karazhan Hall (LKH)
--- 63 = Emerald Sanctum (ES)
--- 64 = Tower of Karazhan (K40)
--- 99 =  default "rest"
+ 1  = Deadmines (VC)
+ 2  = Wailing Caverns (WC)
+ 3  = Ragefire Chasm (RFC)
+ 4  = Uldaman (ULD)
+ 5  = Blackrock Depths (BRD)
+ 6  = Blackwing Lair (BWL)
+ 7  = Blackfathom Deeps (BFD)
+ 8  = Lower Blackrock Spire (LBRS)
+ 9  = Upper Blackrock Spire (UBRS)
+ 10 = Dire Maul East (DM)
+ 11 = Dire Maul North (DM)
+ 12 = Dire Maul West (DM)
+ 13 = Maraudon (Mara)
+ 14 = Molten Core (MC)
+ 15 = Naxxramas (Naxx)
+ 16 = Onyxia's Lair (Ony)
+ 17 = Razorfen Downs (RFD)
+ 18 = Razorfen Kraul (RFK)
+ 19 = SM: Library (SM Lib)
+ 20 = SM: Armory (SM Arm)
+ 21 = SM: Cathedral (SM Cath)
+ 22 = SM: Graveyard (SM GY)
+ 23 = Scholomance (Scholo)
+ 24 = Shadowfang Keep (SFK)
+ 25 = Stratholme (Strat)
+ 26 = The Ruins of Ahn'Qiraj (AQ20)
+ 27 = The Stockade (Stocks)
+ 28 = Sunken Temple (ST)
+ 29 = The Temple of Ahn'Qiraj (AQ40)
+ 30 = Zul'Farrak (ZF)
+ 31 = Zul'Gurub (ZG)
+ 32 = Gnomeregan (Gnomer)
+ 33 = Four Dragons
+ 34 = Azuregos
+ 35 = Lord Kazzak
+ 36 = Alterac Valley (AV)
+ 37 = Arathi Basin (AB)
+ 38 = Warsong Gulch (WSG)
+ 39 = The Crescent Grove (TCG)
+ 41 = Karazhan Crypt (KC)
+ 45 = CavernsOfTimeBlackMorass (BM)
+ 46 = Hateforge Quarry (HQ)
+ 57 = Stormwind Vault (SV)
+ 58 = Ostarius (OST)
+ 61 = Gilneas City (GC)
+ 62 = Lower Karazhan Hall (LKH)
+ 63 = Emerald Sanctum (ES)
+ 64 = Tower of Karazhan (K40)
+ 99 =  default "rest"]]

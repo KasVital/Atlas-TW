@@ -1,35 +1,3 @@
---[[
-
-	AtlasQuest, a World of Warcraft addon.
-	Email me at mystery8@gmail.com
-
-	This file is part of AtlasQuest.
-
-	AtlasQuest is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
-
-	AtlasQuest is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with AtlasQuest; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
---]]
-
-
---**********************************************************
---* Here i store every information about the Questrewards  *
---* (expect the name).                                     *
---* Informations stored: Rewards(Yes/NO)                   *
---* Itemcolor(grey, white, green, blue, purple, red),      *
---* and a link(translation issue) to the Item description  *
---**********************************************************
-
 --Color
 local WHITE = "|cffFFFFFF"
 
@@ -40,18 +8,11 @@ local Itemc3 = "|cff1eff00" --green
 local Itemc4 = "|cff0070dd" --blue
 local Itemc5 = "|cffa335ee" --purple
 
-
-
-
 ----------------------------------------------
 ---------------- DUNGEONS --------------------
 ----------------------------------------------
 
-
-
-
 --------------- INST1 - Deadmines (VC) ---------------
-
 --Quest 1 Alliance
 Inst1Quest1Rewardtext = AQDiscription_REWARD..WHITE.."1"..AQDiscription_OR..WHITE.."2"..AQDiscription_OR..WHITE.."3"
 --ITEM1

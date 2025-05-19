@@ -510,7 +510,7 @@
 						</Anchor>
 					</Anchors>
 				</Texture>
-				<FontString inherits="GameFontHighlight" text="Atlas">
+				<FontString inherits="GameFontHighlight" text="Atlas-TW">
 					<Anchors>
 						<Anchor point="TOP">
 							<Offset>

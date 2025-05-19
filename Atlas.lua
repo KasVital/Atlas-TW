@@ -29,8 +29,6 @@ local function debug(info)
 	end
 end
 
-
-
 ATLAS_VERSION = GetAddOnMetadata("Atlas-TW", "Version")
 
 --all in one place now

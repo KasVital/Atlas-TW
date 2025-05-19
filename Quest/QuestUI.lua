@@ -1,0 +1,298 @@
+-----------------------------------------------------------------------------
+-- Button handlers
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+-- Automatically show Horde or Alliance quests 
+-- based on player's faction when AtlasQuest is opened.
+-----------------------------------------------------------------------------
+function AQ_OnShow()
+	if UnitFactionGroup("player") == "Horde" then
+		Allianceorhorde = 2
+		AQHCB:SetChecked(true)
+		AQACB:SetChecked(false)
+	else
+		Allianceorhorde = 1
+		AQHCB:SetChecked(false)
+		AQACB:SetChecked(true)
+	end
+	AtlasQuestSetTextandButtons()
+end
+
+-- Close button
+function AQCLOSE1_OnClick()
+    HideUIPanel(AtlasQuestFrame)
+end
+
+-- Options button
+function AQOPTION1_OnClick()
+    if AtlasQuestOptionFrame:IsVisible() then
+        HideUIPanel(AtlasQuestOptionFrame)
+    else
+        AtlasQuestOptionFrame:Show()
+    end
+end
+
+-- Story button
+function AQSTORY1_OnClick()
+	AQHideAL()
+	if AtlasQuestInsideFrame:IsVisible() == nil then
+		ShowUIPanel(AtlasQuestInsideFrame)
+		WHICHBUTTON = STORY
+		AQButtonSTORY_SetText()
+	elseif WHICHBUTTON == STORY then
+		HideUIPanel(AtlasQuestInsideFrame)
+	else
+		WHICHBUTTON = STORY
+		AQButtonSTORY_SetText()
+	end
+end
+
+-- Alliance handler
+function Alliance_OnClick()
+    AQ_ShownSide = "Left"
+	Allianceorhorde = 1
+    AQACB:SetChecked(true)
+    AQHCB:SetChecked(false)
+    AtlasQuest_SaveData()
+    AQUpdateNOW = true
+end
+
+-- Horde handler
+function Horde_OnClick()
+    AQ_ShownSide = "Right"
+	Allianceorhorde = 2
+    AQACB:SetChecked(false)
+    AQHCB:SetChecked(true)
+    AtlasQuest_SaveData()
+    AQUpdateNOW = true
+end
+
+-- General button handler
+function AQGeneral_OnClick(button)
+	-- first clear display
+	AQClearALL()
+	AQHideAL()
+	if AtlasQuestInsideFrame:IsVisible() then
+		HideUIPanel(AtlasQuestInsideFrame)
+	else
+		ShowUIPanel(AtlasQuestInsideFrame)
+	end
+	if _G["Inst"..AQINSTANCE.."General"] ~= nil then
+		QuestName:SetText(BLUE.._G["Inst"..AQINSTANCE.."General"][1][1])
+		StoryTEXT:SetText(WHITE.._G["Inst"..AQINSTANCE.."General"][1][2].."\n \n".._G["Inst"..AQINSTANCE.."General"][1][3])
+		-- Show Next side button if next site is avaiable
+		AQ_NextPageCount = "Boss"
+		if _G["Inst"..AQINSTANCE.."General"][2] ~= nil then
+			ShowUIPanel(AQNextPageButton_Right)
+			AQ_CurrentSide = 1
+			-- shows total amount of pages
+			AQPageCount:SetText(AQ_CurrentSide.."/"..getn(_G["Inst"..AQINSTANCE.."General"]))
+		end
+	end
+end
+
+-- Quest buttons handler
+function Quest_OnClick(button)
+	if ChatFrameEditBox:IsVisible() and IsShiftKeyDown() then
+		AQInsertQuestInformation()
+	else
+		AQHideAL()
+		StoryTEXT:SetText("")
+		if AtlasQuestInsideFrame:IsVisible() == nil then
+			ShowUIPanel(AtlasQuestInsideFrame)
+			WHICHBUTTON = AQSHOWNQUEST
+			AQButton_SetText()
+		elseif WHICHBUTTON == AQSHOWNQUEST then
+			HideUIPanel(AtlasQuestInsideFrame)
+			WHICHBUTTON = 0
+		else
+			WHICHBUTTON = AQSHOWNQUEST
+			AQButton_SetText()
+		end
+	end
+end
+
+-----------------------------------------------------------------------------
+-- AtlasQuest Frame creation
+-----------------------------------------------------------------------------
+function CreateAtlasQuestFrame()
+    local frame = CreateFrame("Frame", "AtlasQuestFrame", AtlasFrame)
+    frame:EnableMouse(true)
+    frame:SetMovable(false)
+    frame:Hide()
+    frame:SetWidth(220)
+    frame:SetHeight(570)
+    frame:SetPoint("TOP", "AtlasFrame", -556, -30)
+    frame:SetBackdrop({
+        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
+        edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+        tile = true,
+        tileSize = 32,
+        edgeSize = 32,
+        insets = { left = 5, right = 5, top = 5, bottom = 5 }
+    })
+    -- Register events
+    frame:RegisterEvent("VARIABLES_LOADED")
+    frame:RegisterEvent("PLAYER_ENTERING_WORLD")
+    -- Set event handler
+    frame:SetScript("OnEvent", AtlasQuest_OnEvent)
+    frame:SetScript("OnShow", AQ_OnShow)
+    frame:SetScript("OnUpdate", AQ_OnUpdate)
+    
+    -- Function to create a button
+    local function CreateButton(name, width, height, point, relativePoint, relativeTo, xOffset, yOffset, text, onClick)
+        local button = CreateFrame("Button", name, frame, "OptionsButtonTemplate")
+        button:SetWidth(width)
+        button:SetHeight(height)
+        button:SetPoint(point, relativeTo or frame, relativePoint or point, xOffset, yOffset)
+        button:SetText(text)
+        button:SetScript("OnClick", onClick)
+        button:SetScript("OnShow", function()
+            this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+        end)
+        return button
+    end
+
+    -- Function to create a checkbox
+    local function CreateCheckbox(name, point, relativePoint, relativeTo, xOffset, yOffset, onClick)
+        local checkbox = CreateFrame("CheckButton", name, frame, "OptionsCheckButtonTemplate")
+        checkbox:SetWidth(30)
+        checkbox:SetHeight(30)
+        checkbox:SetPoint(point, relativeTo or frame, relativePoint or point, xOffset, yOffset)
+        checkbox:SetChecked(false)
+        checkbox:SetHitRectInsets(0, 0, 0, 0)
+        checkbox:SetScript("OnClick", onClick)
+        checkbox:SetScript("OnShow", function()
+            this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+        end)
+        return checkbox
+    end
+
+    -- Function to create an fraction texture
+    local function CreateFractionTexture(fraction)
+        local texture = frame:CreateTexture("AQ_"..fraction.."Texture", "OVERLAY")
+        texture:SetWidth(50)
+        texture:SetHeight(50)
+        if fraction == "Alliance" then
+            texture:SetPoint("TOPLEFT", frame, "TOPLEFT", 38, -30)
+        else
+            texture:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -26, -30)
+        end
+        texture:SetTexture("Interface\\TargetingFrame\\UI-PVP-"..fraction)
+        return texture
+    end
+
+    -- Function to create a quest button
+    local function CreateQuestButton(index, relativeTo, yOffset)
+        local button = CreateFrame("Button", "AQQuestbutton"..index, frame)
+        button:SetWidth(165)
+        button:SetHeight(20)
+        if index ~= 1 then
+            button:SetPoint("TOPLEFT", relativeTo, "TOPLEFT", 0, yOffset)
+        else
+            button:SetPoint("TOPLEFT", frame, "TOPLEFT", 15, -60)
+        end
+        button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+        button:SetText(index)
+        button:SetScript("OnClick", function()
+            AQSHOWNQUEST = index
+            Quest_OnClick(arg1)
+        end)
+        button:SetScript("OnShow", function()
+            this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+        end)
+        return button
+    end
+
+    -- Function to create an arrow
+    local function CreateArrow(index, relativeTo, yOffset)
+        local arrow = frame:CreateTexture("AQQuestlineArrow_"..index, "OVERLAY")
+        arrow:SetWidth(13)
+        arrow:SetHeight(15)
+        if index ~= 1 then
+            arrow:SetPoint("TOPLEFT", relativeTo, "TOPLEFT", 0, yOffset)
+        else
+            arrow:SetPoint("TOPLEFT", frame, "TOPLEFT", 16, -65)
+        end
+        arrow:SetTexture("Interface\\Glues\\Login\\UI-BackArrow")
+        return arrow
+    end
+
+    -- Function to create button text
+    local function CreateButtonText(index, relativeTo, yOffset)
+        local text = frame:CreateFontString("AQBUTTONTEXT"..index, "OVERLAY", "GameFontNormalSmall")
+        text:SetWidth(165)
+        text:SetHeight(20)
+        text:SetJustifyH("LEFT")
+        if index ~= 1 then
+            text:SetPoint("TOPLEFT", relativeTo, "TOPLEFT", 0, yOffset)
+        else
+            text:SetPoint("TOPLEFT", frame, "TOPLEFT", 30, -60)
+        end
+        text:SetText(index)
+        return text
+    end
+
+    -- Create close button
+    local closeButton = CreateFrame("Button", "CLOSEbutton", frame, "UIPanelCloseButton")
+    closeButton:SetWidth(27)
+    closeButton:SetHeight(27)
+    closeButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 10, -10)
+    closeButton:SetText("X")
+    closeButton:SetScript("OnClick", AQCLOSE1_OnClick)
+    closeButton:SetScript("OnShow", function()
+        this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+    end)
+
+    -- Create options button
+    local optionButton = CreateButton("OPTIONbutton", 80, 20, "BOTTOMRIGHT", nil, nil, -20, 15, "Options", AQOPTION1_OnClick)
+
+    -- Create story button
+    local storyButton = CreateButton("STORYbutton", 70, 20, "TOP", nil, nil, 0, -13, "Story", AQSTORY1_OnClick)
+
+    -- Create Alliance and Horde checkboxes
+    local allianceCheckbox = CreateCheckbox("AQACB", "TOPLEFT", nil, nil, 12, -30, Alliance_OnClick)
+    allianceCheckbox:SetChecked(true)
+    local hordeCheckbox = CreateCheckbox("AQHCB", "TOPRIGHT", nil, nil, -12, -30, Horde_OnClick)
+
+    -- Create Alliance and Horde textures
+    CreateFractionTexture("Alliance")
+    CreateFractionTexture("Horde")
+
+    -- Create general button
+    local generalButton = CreateFrame("Button", "AQGeneralButton", frame)
+    generalButton:SetWidth(165)
+    generalButton:SetHeight(20)
+    generalButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 15, -30)
+    generalButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    generalButton:SetText("G")
+    generalButton:SetScript("OnClick", function()
+        AQGeneral_OnClick(arg1)
+    end)
+    generalButton:SetScript("OnShow", function()
+        this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+    end)
+
+    -- Create quest count text field
+    local anzahl = frame:CreateFontString("AtlasQuestAnzahl", "ARTWORK", "GameFontNormal")
+    anzahl:SetWidth(60)
+    anzahl:SetHeight(40)
+    anzahl:SetPoint("TOP", frame, "TOP", 0, -25)
+    -- Create quest buttons, arrows and texts
+    local prevButton = nil
+    local prevArrow = nil
+    local prevText = nil
+    for i = 1, 23 do
+        if i ~=1 then
+            prevButton = CreateQuestButton(i, prevButton, -20)
+            prevArrow = CreateArrow(i, prevArrow, -20)
+            prevText = CreateButtonText(i, prevText, -20)
+        else
+            prevButton = CreateQuestButton(i, nil, 0)
+            prevArrow = CreateArrow(i, nil, 0)
+            prevText = CreateButtonText(i, nil, 0)
+        end
+    end
+    return frame
+end

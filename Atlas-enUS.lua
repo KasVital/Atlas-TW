@@ -835,6 +835,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Show Minimap Button"] = true,
 	["Suppress text spam when querying items"] = true,
 	["Done"] = true,
+	["Loot Panel"] = true,
 	["WishList"] = true,
 	["Search Result: %s"] = true,
 	["Last Result"] = true,
