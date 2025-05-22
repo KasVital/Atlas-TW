@@ -4,7 +4,6 @@
 	<Include file="QuestOptionUI.lua"/>
 	<Include file="QuestUI.lua"/>
 	<Include file="Instances.lua"/>
-	<Include file="Buttons.lua"/>
 	<Include file="Items.lua"/>
 	<Include file="AtlasQuest.lua"/>
 </Ui>

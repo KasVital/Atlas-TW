@@ -1,10 +1,9 @@
 -- Create Tooltip
-
-local tooltip = CreateFrame("GameTooltip", "AtlasOtwoTooltip", UIParent, "GameTooltipTemplate")
+local tooltip = CreateFrame("GameTooltip", "KAtlasTooltip", UIParent, "GameTooltipTemplate")
 tooltip:Hide()
 
 -- Register Tooltip
-function QuestOtwoRegisterTooltip()
+function KQuestRegisterTooltip()
     if IsAddOnLoaded("EquipCompare") then
         EquipCompare_RegisterTooltip(tooltip)
     end
@@ -14,7 +13,7 @@ function QuestOtwoRegisterTooltip()
 end
 
 -- Unregister Tooltip
-function QuestOtwoUnregisterTooltip()
+function KQuestUnRegisterTooltip()
     if IsAddOnLoaded("EquipCompare") then
         EquipCompare_UnregisterTooltip(tooltip)
     end

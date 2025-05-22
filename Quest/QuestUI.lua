@@ -5,7 +5,7 @@
 -- Automatically show Horde or Alliance quests 
 -- based on player's faction when AtlasQuest is opened.
 -----------------------------------------------------------------------------
-function AQ_OnShow()
+function KQ_OnShow()
 	if UnitFactionGroup("player") == "Horde" then
 		AtlasKTW.isHorde = true
 		AQHCB:SetChecked(AtlasKTW.isHorde)
@@ -18,19 +18,19 @@ function AQ_OnShow()
 	AtlasQuestSetTextandButtons()
 end
 -- Close button
-function AQCLOSE1_OnClick()
-    HideUIPanel(AtlasQuestFrame)
+function KQCLOSE1_OnClick()
+    HideUIPanel(KQuestFrame)
 end
 -- Options button
-function AQOPTION1_OnClick()
-    if AtlasQuestOptionFrame:IsVisible() then
-        HideUIPanel(AtlasQuestOptionFrame)
+function KQOPTION1_OnClick()
+    if KQuestOptionFrame:IsVisible() then
+        HideUIPanel(KQuestOptionFrame)
     else
-        AtlasQuestOptionFrame:Show()
+        KQuestOptionFrame:Show()
     end
 end
 -- Story button
-function AQSTORY1_OnClick()
+function KQSTORY1_OnClick()
 	AQHideAL()
 	if AtlasQuestInsideFrame:IsVisible() == nil then
 		ShowUIPanel(AtlasQuestInsideFrame)
@@ -45,21 +45,19 @@ function AQSTORY1_OnClick()
 end
 -- Alliance handler
 function Alliance_OnClick()
-    AQ_ShownSide = "Left"
 	AtlasKTW.isHorde = false
     AQACB:SetChecked(not AtlasKTW.isHorde)
     AQHCB:SetChecked(AtlasKTW.isHorde)
-    AtlasQuest_SaveData()
-    AQUpdateNOW = true
+    KQuest_SaveData()
+    AtlasKTW.QUpdateNOW = true
 end
 -- Horde handler
 function Horde_OnClick()
-    AQ_ShownSide = "Right"
 	AtlasKTW.isHorde = true
     AQACB:SetChecked(not AtlasKTW.isHorde)
     AQHCB:SetChecked(AtlasKTW.isHorde)
-    AtlasQuest_SaveData()
-    AQUpdateNOW = true
+    KQuest_SaveData()
+    AtlasKTW.QUpdateNOW = true
 end
 -- General button handler
 function AQGeneral_OnClick(button)
@@ -71,7 +69,7 @@ function AQGeneral_OnClick(button)
 	else
 		ShowUIPanel(AtlasQuestInsideFrame)
 	end
-    local instGeneral = _G["Inst"..AQINSTANCE.."General"]
+    local instGeneral = _G["Inst"..AtlasKTW.Instances.."General"]
 	if instGeneral ~= nil then
 			QuestName:SetText(BLUE..instGeneral[i][1])
 			StoryTEXT:SetText(WHITE..instGeneral[i][2].."\n \n"..instGeneral[i][3])
@@ -84,16 +82,16 @@ function AQGeneral_OnClick(button)
             AQPageCount:SetText(AQ_CurrentSide.."/"..getn(instGeneral))
         end
 	end
-	if _G["Inst"..AQINSTANCE.."General"] ~= nil then
-		QuestName:SetText(BLUE.._G["Inst"..AQINSTANCE.."General"][1][1])
-		StoryTEXT:SetText(WHITE.._G["Inst"..AQINSTANCE.."General"][1][2].."\n \n".._G["Inst"..AQINSTANCE.."General"][1][3])
+	if _G["Inst"..AtlasKTW.Instances.."General"] ~= nil then
+		QuestName:SetText(BLUE.._G["Inst"..AtlasKTW.Instances.."General"][1][1])
+		StoryTEXT:SetText(WHITE.._G["Inst"..AtlasKTW.Instances.."General"][1][2].."\n \n".._G["Inst"..AtlasKTW.Instances.."General"][1][3])
 		-- Show Next side button if next site is avaiable
 		AQ_NextPageCount = "Boss"
-		if _G["Inst"..AQINSTANCE.."General"][2] ~= nil then
+		if _G["Inst"..AtlasKTW.Instances.."General"][2] ~= nil then
 			ShowUIPanel(AQNextPageButton_Right)
 			AQ_CurrentSide = 1
 			-- shows total amount of pages
-			AQPageCount:SetText(AQ_CurrentSide.."/"..getn(_G["Inst"..AQINSTANCE.."General"]))
+			AQPageCount:SetText(AQ_CurrentSide.."/"..getn(_G["Inst"..AtlasKTW.Instances.."General"]))
 		end
 	end
 end
@@ -120,8 +118,8 @@ end
 -----------------------------------------------------------------------------
 -- AtlasQuest Frame creation
 -----------------------------------------------------------------------------
-function CreateAtlasQuestFrame()
-    local frame = CreateFrame("Frame", "AtlasQuestFrame", AtlasFrame)
+function CreateKQuestFrame()
+    local frame = CreateFrame("Frame", "KQuestFrame", AtlasFrame)
     frame:EnableMouse(true)
     frame:SetMovable(false)
     frame:Hide()
@@ -140,16 +138,16 @@ function CreateAtlasQuestFrame()
     frame:RegisterEvent("VARIABLES_LOADED")
     frame:RegisterEvent("PLAYER_ENTERING_WORLD")
     -- Set event handler
-    frame:SetScript("OnEvent", AtlasQuest_OnEvent)
-    frame:SetScript("OnShow", AQ_OnShow)
-    frame:SetScript("OnUpdate", AQ_OnUpdate)
+    frame:SetScript("OnEvent", KQuest_OnEvent)
+    frame:SetScript("OnShow", KQ_OnShow)
+    frame:SetScript("OnUpdate", KQ_OnUpdate)
     -- Create close button
     local closeButton = CreateFrame("Button", "CLOSEbutton", frame, "UIPanelCloseButton")
     closeButton:SetWidth(27)
     closeButton:SetHeight(27)
     closeButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 10, -10)
     closeButton:SetText("X")
-    closeButton:SetScript("OnClick", AQCLOSE1_OnClick)
+    closeButton:SetScript("OnClick", KQCLOSE1_OnClick)
     closeButton:SetScript("OnShow", function()
         this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
     end)
@@ -167,9 +165,9 @@ function CreateAtlasQuestFrame()
         return button
     end
     -- Create options button
-    local optionButton = CreateButton("OPTIONbutton", 80, 20, "BOTTOMRIGHT", nil, nil, -20, 15, "Options", AQOPTION1_OnClick)
+    local optionButton = CreateButton("OPTIONbutton", 80, 20, "BOTTOMRIGHT", nil, nil, -20, 15, "Options", KQOPTION1_OnClick)
     -- Create story button
-    local storyButton = CreateButton("STORYbutton", 70, 20, "TOP", nil, nil, 0, -13, "Story", AQSTORY1_OnClick)
+    local storyButton = CreateButton("STORYbutton", 70, 20, "TOP", nil, nil, 0, -13, "Story", KQSTORY1_OnClick)
     -- Function to create a checkbox
     local function CreateCheckbox(name, point, relativePoint, relativeTo, xOffset, yOffset, onClick)
         local checkbox = CreateFrame("CheckButton", name, frame, "OptionsCheckButtonTemplate")
