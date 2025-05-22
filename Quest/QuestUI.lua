@@ -1,29 +1,26 @@
 -----------------------------------------------------------------------------
 -- Button handlers
 -----------------------------------------------------------------------------
-
 -----------------------------------------------------------------------------
 -- Automatically show Horde or Alliance quests 
 -- based on player's faction when AtlasQuest is opened.
 -----------------------------------------------------------------------------
 function AQ_OnShow()
 	if UnitFactionGroup("player") == "Horde" then
-		Allianceorhorde = 2
-		AQHCB:SetChecked(true)
-		AQACB:SetChecked(false)
+		AtlasKTW.isHorde = true
+		AQHCB:SetChecked(AtlasKTW.isHorde)
+		AQACB:SetChecked(not AtlasKTW.isHorde)
 	else
-		Allianceorhorde = 1
-		AQHCB:SetChecked(false)
-		AQACB:SetChecked(true)
+		AtlasKTW.isHorde = false
+		AQHCB:SetChecked(AtlasKTW.isHorde)
+		AQACB:SetChecked(not AtlasKTW.isHorde)
 	end
 	AtlasQuestSetTextandButtons()
 end
-
 -- Close button
 function AQCLOSE1_OnClick()
     HideUIPanel(AtlasQuestFrame)
 end
-
 -- Options button
 function AQOPTION1_OnClick()
     if AtlasQuestOptionFrame:IsVisible() then
@@ -32,7 +29,6 @@ function AQOPTION1_OnClick()
         AtlasQuestOptionFrame:Show()
     end
 end
-
 -- Story button
 function AQSTORY1_OnClick()
 	AQHideAL()
@@ -47,27 +43,24 @@ function AQSTORY1_OnClick()
 		AQButtonSTORY_SetText()
 	end
 end
-
 -- Alliance handler
 function Alliance_OnClick()
     AQ_ShownSide = "Left"
-	Allianceorhorde = 1
-    AQACB:SetChecked(true)
-    AQHCB:SetChecked(false)
+	AtlasKTW.isHorde = false
+    AQACB:SetChecked(not AtlasKTW.isHorde)
+    AQHCB:SetChecked(AtlasKTW.isHorde)
     AtlasQuest_SaveData()
     AQUpdateNOW = true
 end
-
 -- Horde handler
 function Horde_OnClick()
     AQ_ShownSide = "Right"
-	Allianceorhorde = 2
-    AQACB:SetChecked(false)
-    AQHCB:SetChecked(true)
+	AtlasKTW.isHorde = true
+    AQACB:SetChecked(not AtlasKTW.isHorde)
+    AQHCB:SetChecked(AtlasKTW.isHorde)
     AtlasQuest_SaveData()
     AQUpdateNOW = true
 end
-
 -- General button handler
 function AQGeneral_OnClick(button)
 	-- first clear display
@@ -77,6 +70,19 @@ function AQGeneral_OnClick(button)
 		HideUIPanel(AtlasQuestInsideFrame)
 	else
 		ShowUIPanel(AtlasQuestInsideFrame)
+	end
+    local instGeneral = _G["Inst"..AQINSTANCE.."General"]
+	if instGeneral ~= nil then
+			QuestName:SetText(BLUE..instGeneral[i][1])
+			StoryTEXT:SetText(WHITE..instGeneral[i][2].."\n \n"..instGeneral[i][3])
+			-- Show Next side button if next site is avaiable
+        AQ_NextPageCount = "Boss"
+        if instGeneral[2] ~= nil then
+            ShowUIPanel(AQNextPageButton_Right)
+            AQ_CurrentSide = 1
+            -- shows total amount of pages
+            AQPageCount:SetText(AQ_CurrentSide.."/"..getn(instGeneral))
+        end
 	end
 	if _G["Inst"..AQINSTANCE.."General"] ~= nil then
 		QuestName:SetText(BLUE.._G["Inst"..AQINSTANCE.."General"][1][1])
@@ -91,7 +97,6 @@ function AQGeneral_OnClick(button)
 		end
 	end
 end
-
 -- Quest buttons handler
 function Quest_OnClick(button)
 	if ChatFrameEditBox:IsVisible() and IsShiftKeyDown() then
@@ -112,7 +117,6 @@ function Quest_OnClick(button)
 		end
 	end
 end
-
 -----------------------------------------------------------------------------
 -- AtlasQuest Frame creation
 -----------------------------------------------------------------------------
@@ -139,7 +143,16 @@ function CreateAtlasQuestFrame()
     frame:SetScript("OnEvent", AtlasQuest_OnEvent)
     frame:SetScript("OnShow", AQ_OnShow)
     frame:SetScript("OnUpdate", AQ_OnUpdate)
-    
+    -- Create close button
+    local closeButton = CreateFrame("Button", "CLOSEbutton", frame, "UIPanelCloseButton")
+    closeButton:SetWidth(27)
+    closeButton:SetHeight(27)
+    closeButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 10, -10)
+    closeButton:SetText("X")
+    closeButton:SetScript("OnClick", AQCLOSE1_OnClick)
+    closeButton:SetScript("OnShow", function()
+        this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+    end)
     -- Function to create a button
     local function CreateButton(name, width, height, point, relativePoint, relativeTo, xOffset, yOffset, text, onClick)
         local button = CreateFrame("Button", name, frame, "OptionsButtonTemplate")
@@ -153,7 +166,10 @@ function CreateAtlasQuestFrame()
         end)
         return button
     end
-
+    -- Create options button
+    local optionButton = CreateButton("OPTIONbutton", 80, 20, "BOTTOMRIGHT", nil, nil, -20, 15, "Options", AQOPTION1_OnClick)
+    -- Create story button
+    local storyButton = CreateButton("STORYbutton", 70, 20, "TOP", nil, nil, 0, -13, "Story", AQSTORY1_OnClick)
     -- Function to create a checkbox
     local function CreateCheckbox(name, point, relativePoint, relativeTo, xOffset, yOffset, onClick)
         local checkbox = CreateFrame("CheckButton", name, frame, "OptionsCheckButtonTemplate")
@@ -168,21 +184,19 @@ function CreateAtlasQuestFrame()
         end)
         return checkbox
     end
-
     -- Function to create an fraction texture
-    local function CreateFractionTexture(fraction)
-        local texture = frame:CreateTexture("AQ_"..fraction.."Texture", "OVERLAY")
+    local function CreateFactionTexture(faction)
+        local texture = frame:CreateTexture("AQ_"..faction.."Texture", "OVERLAY")
         texture:SetWidth(50)
         texture:SetHeight(50)
-        if fraction == "Alliance" then
+        if faction == "Alliance" then
             texture:SetPoint("TOPLEFT", frame, "TOPLEFT", 38, -30)
         else
             texture:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -26, -30)
         end
-        texture:SetTexture("Interface\\TargetingFrame\\UI-PVP-"..fraction)
+        texture:SetTexture("Interface\\TargetingFrame\\UI-PVP-"..faction)
         return texture
     end
-
     -- Function to create a quest button
     local function CreateQuestButton(index, relativeTo, yOffset)
         local button = CreateFrame("Button", "AQQuestbutton"..index, frame)
@@ -204,7 +218,6 @@ function CreateAtlasQuestFrame()
         end)
         return button
     end
-
     -- Function to create an arrow
     local function CreateArrow(index, relativeTo, yOffset)
         local arrow = frame:CreateTexture("AQQuestlineArrow_"..index, "OVERLAY")
@@ -218,7 +231,6 @@ function CreateAtlasQuestFrame()
         arrow:SetTexture("Interface\\Glues\\Login\\UI-BackArrow")
         return arrow
     end
-
     -- Function to create button text
     local function CreateButtonText(index, relativeTo, yOffset)
         local text = frame:CreateFontString("AQBUTTONTEXT"..index, "OVERLAY", "GameFontNormalSmall")
@@ -234,31 +246,14 @@ function CreateAtlasQuestFrame()
         return text
     end
 
-    -- Create close button
-    local closeButton = CreateFrame("Button", "CLOSEbutton", frame, "UIPanelCloseButton")
-    closeButton:SetWidth(27)
-    closeButton:SetHeight(27)
-    closeButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 10, -10)
-    closeButton:SetText("X")
-    closeButton:SetScript("OnClick", AQCLOSE1_OnClick)
-    closeButton:SetScript("OnShow", function()
-        this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
-    end)
-
-    -- Create options button
-    local optionButton = CreateButton("OPTIONbutton", 80, 20, "BOTTOMRIGHT", nil, nil, -20, 15, "Options", AQOPTION1_OnClick)
-
-    -- Create story button
-    local storyButton = CreateButton("STORYbutton", 70, 20, "TOP", nil, nil, 0, -13, "Story", AQSTORY1_OnClick)
-
     -- Create Alliance and Horde checkboxes
     local allianceCheckbox = CreateCheckbox("AQACB", "TOPLEFT", nil, nil, 12, -30, Alliance_OnClick)
     allianceCheckbox:SetChecked(true)
     local hordeCheckbox = CreateCheckbox("AQHCB", "TOPRIGHT", nil, nil, -12, -30, Horde_OnClick)
 
     -- Create Alliance and Horde textures
-    CreateFractionTexture("Alliance")
-    CreateFractionTexture("Horde")
+    CreateFactionTexture("Alliance")
+    CreateFactionTexture("Horde")
 
     -- Create general button
     local generalButton = CreateFrame("Button", "AQGeneralButton", frame)
@@ -294,5 +289,6 @@ function CreateAtlasQuestFrame()
             prevText = CreateButtonText(i, nil, 0)
         end
     end
+
     return frame
 end

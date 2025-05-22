@@ -1,12 +1,3 @@
---[[
-	Atlas-TW, a World of Warcraft addon.
-
-	Atlas-TW is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
---]]
-
 local _G = getfenv()
 -----------------------------------------------------------------------------
 -- Colours
@@ -31,7 +22,8 @@ local Blau = "|cff0070dd"
 
 local Initialized = nil -- the variables are not loaded yet
 local TooltipInitForPfUI = nil
-Allianceorhorde = 1 -- variable that configures whether horde or allians is shown
+AtlasKTW = AtlasKTW or {}
+AtlasKTW.isHorde = AtlasKTW.isHorde or false -- variable that configures whether horde or allians is shown
 AQINSTANCE = 1 -- currently shown instance-pic (see Instances.lua)
 AQINSTATM = "" -- variable to check whether AQINSTANCE has changed (see function AtlasQuestSetTextandButtons())
 --AQ_ShownSide = "Left" -- configures at which side the AQ panel is shown
@@ -39,9 +31,9 @@ AQINSTATM = "" -- variable to check whether AQINSTANCE has changed (see function
 -- Sets the max number of instances and quests to check for. 
 local AQMAXINSTANCES = "98"
 local AQMAXQUESTS = "23"
+local PlayerName = UnitName("player")
 
 -- Set title for AtlasQuest side panel
-
 AQ_ShownSide = "Left"
 AQAtlasAuto = 1
 AQNOColourCheck = nil
@@ -49,7 +41,7 @@ AtlasQuestHelp = {}
 AtlasQuestHelp[1] = "[/aq + available command: help, left/right, show/hide, autoshow\n]"
 
 local AtlasQuest_Defaults = {
-	[UnitName("player")] = {
+	[PlayerName] = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
 		["NOColourCheck"] = "yes",
@@ -91,11 +83,11 @@ function AtlasQuest_Initialize()
 	if not AtlasQuest_Options then
 		AtlasQuest_Options = AtlasQuest_Defaults
 		DEFAULT_CHAT_FRAME:AddMessage("AtlasQuest Options database not found. Generating...")
-	elseif not AtlasQuest_Options[UnitName("player")] then
+	elseif not AtlasQuest_Options[PlayerName] then
 		DEFAULT_CHAT_FRAME:AddMessage("Generate default database for this character")
-		AtlasQuest_Options[UnitName("player")] = AtlasQuest_Defaults[UnitName("player")]
+		AtlasQuest_Options[PlayerName] = AtlasQuest_Defaults[PlayerName]
 	end
-	if type(AtlasQuest_Options[UnitName("player")]) == "table" then
+	if type(AtlasQuest_Options[PlayerName]) == "table" then
 		AtlasQuest_LoadData()
 	end
 
@@ -113,30 +105,30 @@ end
 -----------------------------------------------------------------------------
 function AtlasQuest_LoadData()
 	-- Which side
-	if AtlasQuest_Options[UnitName("player")]["ShownSide"] ~= nil then
-		AQ_ShownSide = AtlasQuest_Options[UnitName("player")]["ShownSide"]
+	if AtlasQuest_Options[PlayerName]["ShownSide"] ~= nil then
+		AQ_ShownSide = AtlasQuest_Options[PlayerName]["ShownSide"]
 	end
 	-- atlas autoshow
-	if AtlasQuest_Options[UnitName("player")]["AtlasAutoShow"] ~= nil then
-		AQAtlasAuto = AtlasQuest_Options[UnitName("player")]["AtlasAutoShow"]
+	if AtlasQuest_Options[PlayerName]["AtlasAutoShow"] ~= nil then
+		AQAtlasAuto = AtlasQuest_Options[PlayerName]["AtlasAutoShow"]
 	end
 	-- Colour Check? if nil = no cc if true = cc
-	AQNOColourCheck = AtlasQuest_Options[UnitName("player")]["ColourCheck"]
+	AQNOColourCheck = AtlasQuest_Options[PlayerName]["ColourCheck"]
 	-- Finished? 
 	for i=1, AQMAXINSTANCES do
 		for b=1, AQMAXQUESTS do
-			AQ[ "AQFinishedQuest_Inst"..i.."Quest"..b ] = AtlasQuest_Options[UnitName("player")]["AQFinishedQuest_Inst"..i.."Quest"..b]
-			AQ[ "AQFinishedQuest_Inst"..i.."Quest"..b.."_HORDE" ] = AtlasQuest_Options[UnitName("player")]["AQFinishedQuest_Inst"..i.."Quest"..b.."_HORDE"]
+			AQ[ "AQFinishedQuest_Inst"..i.."Quest"..b ] = AtlasQuest_Options[PlayerName]["AQFinishedQuest_Inst"..i.."Quest"..b]
+			AQ[ "AQFinishedQuest_Inst"..i.."Quest"..b.."_HORDE" ] = AtlasQuest_Options[PlayerName]["AQFinishedQuest_Inst"..i.."Quest"..b.."_HORDE"]
 		end
 	end
 	--AQCheckQuestlog
-	AQCheckQuestlog = AtlasQuest_Options[UnitName("player")]["CheckQuestlog"]
+	AQCheckQuestlog = AtlasQuest_Options[PlayerName]["CheckQuestlog"]
 	-- AutoQuery option
-	AQAutoQuery = AtlasQuest_Options[UnitName("player")]["AutoQuery"]
+	AQAutoQuery = AtlasQuest_Options[PlayerName]["AutoQuery"]
 	-- Suppress Server Query Text option
-	AQNoQuerySpam = AtlasQuest_Options[UnitName("player")]["NoQuerySpam"]
+	AQNoQuerySpam = AtlasQuest_Options[PlayerName]["NoQuerySpam"]
 	-- Comparison Tooltips option
-	AQCompareTooltip = AtlasQuest_Options[UnitName("player")]["CompareTooltip"]
+	AQCompareTooltip = AtlasQuest_Options[PlayerName]["CompareTooltip"]
 	
 end
 
@@ -145,13 +137,13 @@ end
 -----------------------------------------------------------------------------
 function AtlasQuest_SaveData()
 	-- Save the variables
-	AtlasQuest_Options[UnitName("player")]["ShownSide"] = AQ_ShownSide
-	AtlasQuest_Options[UnitName("player")]["AtlasAutoShow"] = AQAtlasAuto
-	AtlasQuest_Options[UnitName("player")]["ColourCheck"] = AQNOColourCheck
-	AtlasQuest_Options[UnitName("player")]["CheckQuestlog"] = AQCheckQuestlog
-	AtlasQuest_Options[UnitName("player")]["AutoQuery"] = AQAutoQuery
-	AtlasQuest_Options[UnitName("player")]["NoQuerySpam"] = AQNoQuerySpam
-	AtlasQuest_Options[UnitName("player")]["CompareTooltip"] = AQCompareTooltip
+	AtlasQuest_Options[PlayerName]["ShownSide"] = AQ_ShownSide
+	AtlasQuest_Options[PlayerName]["AtlasAutoShow"] = AQAtlasAuto
+	AtlasQuest_Options[PlayerName]["ColourCheck"] = AQNOColourCheck
+	AtlasQuest_Options[PlayerName]["CheckQuestlog"] = AQCheckQuestlog
+	AtlasQuest_Options[PlayerName]["AutoQuery"] = AQAutoQuery
+	AtlasQuest_Options[PlayerName]["NoQuerySpam"] = AQNoQuerySpam
+	AtlasQuest_Options[PlayerName]["CompareTooltip"] = AQCompareTooltip
 end
 
 --******************************************
@@ -318,18 +310,22 @@ end
 -- hide panel if instance is 99 (nothing)
 -----------------------------------------------------------------------------
 function AQ_OnUpdate(arg1)
-	local previousValue = AQINSTANCE
+	local previousInstance = AQINSTANCE
 	AtlasQuest_Instances()
-	-- Hides the panel if the map which is shown no quests have (map = 99)
+	-- Cache UI panels for better performance
+	local questFrame = AtlasQuestFrame
+	local insideFrame = AtlasQuestInsideFrame
+	-- Check if we need to hide/update the quest panels
 	if AQINSTANCE == 99 then
-		HideUIPanel(AtlasQuestFrame)
-		HideUIPanel(AtlasQuestInsideFrame)
-	elseif AQINSTANCE ~= previousValue  or AQUpdateNOW ~= nil then
+		-- Hide both panels if no quests available
+		HideUIPanel(questFrame)
+		HideUIPanel(insideFrame)
+	elseif AQINSTANCE ~= previousInstance or AQUpdateNOW then
+		-- Update quest text and buttons if instance changed or update forced
 		AtlasQuestSetTextandButtons()
-		AQUpdateNOW = nil
+		AQUpdateNOW = false
 	end
 end
-
 -----------------------------------------------------------------------------
 -- Set the Buttontext and the buttons if available
 -- and check whether its a other inst or not -> works fine
@@ -340,122 +336,89 @@ end
 function AtlasQuestSetTextandButtons()
 	local AQQuestlevelf
 	local AQQuestfarbe
+	local playerLevel = UnitLevel("player")
+	local isHorde = AtlasKTW.isHorde
+	local suffix = isHorde and "_HORDE" or ""
+	local questName, questLevel, finishedQuest
+	-- Hide inner frame if instance changed
 	if AQINSTATM ~= AQINSTANCE then
 		HideUIPanel(AtlasQuestInsideFrame)
 	end
-	if _G["Inst"..AQINSTANCE.."General"] ~= nil then
-		AQGeneralButton:Enable()
-	else
-		AQGeneralButton:Disable()
-	end
-	if Allianceorhorde == 1 then
-		AQINSTATM = AQINSTANCE
-		if _G["Inst"..AQINSTANCE.."QAA"] ~= nil then
-			AtlasQuestAnzahl:SetText(_G["Inst"..AQINSTANCE.."QAA"])
+	-- Enable/disable general button based on instance info availability
+	AQGeneralButton[_G["Inst"..AQINSTANCE.."General"] and "Enable" or "Disable"](AQGeneralButton)
+	-- Update current instance
+	AQINSTATM = AQINSTANCE
+	-- Set quest count text
+	local questCountKey = isHorde and "QAH" or "QAA"
+	local questCount = _G["Inst"..AQINSTANCE..questCountKey]
+	AtlasQuestAnzahl:SetText(questCount or "")
+	-- Process quests
+	for b = 1, AQMAXQUESTS do
+		-- Define keys for current faction
+		local fquestKey = "Inst"..AQINSTANCE.."Quest"..b.."FQuest"..suffix
+		local preQuestKey = "Inst"..AQINSTANCE.."Quest"..b.."PreQuest"..suffix
+		local finishedKey = "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..b..suffix
+		local questKey = "Inst"..AQINSTANCE.."Quest"..b..suffix
+		local levelKey = questKey.."_Level"
+		-- Set quest line arrows
+		local arrowTexture = nil
+		if _G[fquestKey] then
+			arrowTexture = "Interface\\Glues\\Login\\UI-BackArrow"
+		elseif _G[preQuestKey] then
+			arrowTexture = "Interface\\GossipFrame\\PetitionGossipIcon"
+		end
+		-- Check for completed quests
+		if AQ[finishedKey] == 1 then
+			arrowTexture = "Interface\\GossipFrame\\BinderGossipIcon"
+		end
+		-- Apply arrow texture
+		local arrow = _G["AQQuestlineArrow_"..b]
+		if arrowTexture then
+			arrow:SetTexture(arrowTexture)
+			arrow:Show()
 		else
-			AtlasQuestAnzahl:SetText("")
+			arrow:Hide()
 		end
-		for b=1, AQMAXQUESTS do
-			if _G["Inst"..AQINSTANCE.."Quest"..b.."FQuest"] then
-				_G["AQQuestlineArrow_"..b]:SetTexture("Interface\\Glues\\Login\\UI-BackArrow")
-				_G["AQQuestlineArrow_"..b]:Show()
-			elseif _G["Inst"..AQINSTANCE.."Quest"..b.."PreQuest"] then
-				_G["AQQuestlineArrow_"..b]:SetTexture("Interface\\GossipFrame\\PetitionGossipIcon")
-				_G["AQQuestlineArrow_"..b]:Show()
-			else
-				_G["AQQuestlineArrow_"..b]:Hide()
-			end
-			if AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..b ] == 1 then
-				_G["AQQuestlineArrow_"..b]:SetTexture("Interface\\GossipFrame\\BinderGossipIcon")
-				_G["AQQuestlineArrow_"..b]:Show()
-			end
-			AQQuestlevelf = tonumber(_G["Inst"..AQINSTANCE.."Quest"..b.."_Level"])
-			if _G["Inst"..AQINSTANCE.."Quest"..b] ~= nil then
-				if AQQuestlevelf ~= nil or AQQuestlevelf ~= 0 or AQQuestlevelf ~= "" then
-					if AQQuestlevelf == UnitLevel("player") or AQQuestlevelf == UnitLevel("player") + 2 or AQQuestlevelf == UnitLevel("player") - 2 or AQQuestlevelf == UnitLevel("player") + 1 or AQQuestlevelf == UnitLevel("player") - 1 then
-						AQQuestfarbe = Gelb
-					elseif AQQuestlevelf > UnitLevel("player") + 2 and AQQuestlevelf <= UnitLevel("player") + 4 then
-						AQQuestfarbe = Orange
-					elseif AQQuestlevelf >= UnitLevel("player") + 5 and AQQuestlevelf ~= 100 then
-						AQQuestfarbe = Rot
-					elseif AQQuestlevelf < UnitLevel("player") - 7 then
-						AQQuestfarbe = Grau
-					elseif AQQuestlevelf >= UnitLevel("player") - 7 and AQQuestlevelf < UnitLevel("player") - 2 then
-						AQQuestfarbe = Gruen
-					end
-					if AQNOColourCheck then
-						AQQuestfarbe = Gelb
-					end
-					if AQQuestlevelf == 100 or AQCompareQLtoAQ(b) then
-						AQQuestfarbe = Blau
-					end
-					if AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..b ] == 1 then
-						AQQuestfarbe = WHITE
-					end
+		-- Get quest information
+		questName = _G[questKey]
+		-- If quest exists, configure button
+		if questName then
+			AQQuestlevelf = tonumber(_G[levelKey])
+			-- Determine quest color based on level
+			if AQQuestlevelf then
+				local levelDiff = AQQuestlevelf - playerLevel
+				if levelDiff >= -2 and levelDiff <= 2 then
+					AQQuestfarbe = Gelb
+				elseif levelDiff > 2 and levelDiff <= 4 then
+					AQQuestfarbe = Orange
+				elseif levelDiff > 4 and AQQuestlevelf ~= 100 then
+					AQQuestfarbe = Rot
+				elseif levelDiff < -7 then
+					AQQuestfarbe = Grau
+				elseif levelDiff >= -7 and levelDiff < -2 then
+					AQQuestfarbe = Gruen
 				end
-				_G["AQQuestbutton"..b]:Enable()
-				_G["AQBUTTONTEXT"..b]:SetText(AQQuestfarbe.._G["Inst"..AQINSTANCE.."Quest"..b])
-			else
-				_G["AQQuestbutton"..b]:Disable()
-				_G["AQBUTTONTEXT"..b]:SetText()
+				-- Apply color settings
+				if AQNOColourCheck then
+					AQQuestfarbe = Gelb
+				end
+				if AQQuestlevelf == 100 or AQCompareQLtoAQ(b) then
+					AQQuestfarbe = Blau
+				end
+				if AQ[finishedKey] == 1 then
+					AQQuestfarbe = WHITE
+				end
 			end
-		end
-	end
-	if Allianceorhorde == 2 then
-		AQINSTATM = AQINSTANCE
-		if _G["Inst"..AQINSTANCE.."QAH"] ~= nil then
-			AtlasQuestAnzahl:SetText(_G["Inst"..AQINSTANCE.."QAH"])
+			-- Activate button and set text
+			_G["AQQuestbutton"..b]:Enable()
+			_G["AQBUTTONTEXT"..b]:SetText(AQQuestfarbe..questName)
 		else
-			AtlasQuestAnzahl:SetText("")
-		end
-		for b=1, AQMAXQUESTS do
-			if _G["Inst"..AQINSTANCE.."Quest"..b.."FQuest_HORDE"] then
-				_G["AQQuestlineArrow_"..b]:SetTexture("Interface\\Glues\\Login\\UI-BackArrow")
-				_G["AQQuestlineArrow_"..b]:Show()
-			elseif _G["Inst"..AQINSTANCE.."Quest"..b.."PreQuest_HORDE"] then
-				_G["AQQuestlineArrow_"..b]:SetTexture("Interface\\GossipFrame\\PetitionGossipIcon")
-				_G["AQQuestlineArrow_"..b]:Show()
-			else
-				_G["AQQuestlineArrow_"..b]:Hide()
-			end
-			if AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..b.."_HORDE" ] == 1 then
-				_G["AQQuestlineArrow_"..b]:SetTexture("Interface\\GossipFrame\\BinderGossipIcon")
-				_G["AQQuestlineArrow_"..b]:Show()
-			end
-			if _G["Inst"..AQINSTANCE.."Quest"..b.."_HORDE"] ~= nil then
-				AQQuestlevelf = tonumber(_G["Inst"..AQINSTANCE.."Quest"..b.."_HORDE_Level"])
-				if AQQuestlevelf ~= nil or AQQuestlevelf ~= 0 or AQQuestlevelf ~= "" then
-					if AQQuestlevelf == UnitLevel("player") or AQQuestlevelf == UnitLevel("player") + 2 or AQQuestlevelf == UnitLevel("player") - 2 or AQQuestlevelf == UnitLevel("player") + 1 or AQQuestlevelf == UnitLevel("player") - 1 then
-						AQQuestfarbe = Gelb
-					elseif AQQuestlevelf > UnitLevel("player") + 2 and AQQuestlevelf <= UnitLevel("player") + 4 then
-						AQQuestfarbe = Orange
-					elseif AQQuestlevelf >= UnitLevel("player") + 5 and AQQuestlevelf ~= 100 then
-						AQQuestfarbe = Rot
-					elseif AQQuestlevelf < UnitLevel("player") - 7 then
-						AQQuestfarbe = Grau
-					elseif AQQuestlevelf >= UnitLevel("player") - 7 and AQQuestlevelf < UnitLevel("player") - 2 then
-						AQQuestfarbe = Gruen
-					end
-					if AQNOColourCheck then
-						AQQuestfarbe = Gelb
-					end
-					if AQQuestlevelf == 100 or AQCompareQLtoAQ(b) then
-						AQQuestfarbe = Blau
-					end
-					if AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..b.."_HORDE" ] == 1 then
-						AQQuestfarbe = WHITE
-					end
-				end
-				_G["AQQuestbutton"..b]:Enable()
-				_G["AQBUTTONTEXT"..b]:SetText(AQQuestfarbe.._G["Inst"..AQINSTANCE.."Quest"..b.."_HORDE"])
-			else
-				_G["AQQuestbutton"..b]:Disable()
-				_G["AQBUTTONTEXT"..b]:SetText()
-			end
+			-- Deactivate button if quest doesn't exist
+			_G["AQQuestbutton"..b]:Disable()
+			_G["AQBUTTONTEXT"..b]:SetText()
 		end
 	end
 end
-
 -----------------------------------------------------------------------------
 -- Colours quest blue if they are in your questlog
 -----------------------------------------------------------------------------
@@ -467,22 +430,21 @@ function AQCompareQLtoAQ(Quest)
 	local y
 	local z
 	local count
-
 	if AQCheckQuestlog == nil then -- Option to turn the check on or off
 		if Quest == nil then -- added for use in button text to change the caption dunno whether i add it or not
 			Quest = AQSHOWNQUEST
 		end
 		if Quest <= 9 then
-			if Allianceorhorde == 1 then
-				OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest], 4)
-			elseif Allianceorhorde == 2 then
+			if AtlasKTW.isHorde then
 				OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest.."_HORDE"], 4)
+			else
+				OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest], 4)
 			end
 		elseif Quest > 9 then
-			if Allianceorhorde == 1 then
-				OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest], 5)
-			elseif Allianceorhorde == 2 then
+			if AtlasKTW.isHorde then
 				OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest.."_HORDE"], 5)
+			else
+				OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest], 5)
 			end
 		end
 		--this checks should be done everytime when the questupdate event gets executed
@@ -602,14 +564,14 @@ end
 
 function AtlasQuestItem_OnEnter()
 	local SHOWNID
-	if Allianceorhorde == 1 then
-		SHOWNID = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..AQTHISISSHOWN]
-		colour = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ITC"..AQTHISISSHOWN]
-		nameDATA = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."name"..AQTHISISSHOWN]
-	else
+	if AtlasKTW.isHorde then
 		SHOWNID = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..AQTHISISSHOWN.."_HORDE"]
 		colour = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ITC"..AQTHISISSHOWN.."_HORDE"]
 		nameDATA = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."name"..AQTHISISSHOWN.."_HORDE"]
+	else
+		SHOWNID = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..AQTHISISSHOWN]
+		colour = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ITC"..AQTHISISSHOWN]
+		nameDATA = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."name"..AQTHISISSHOWN]
 	end
 	if SHOWNID ~= nil then
 		if GetItemInfo(SHOWNID) ~= nil then
@@ -637,14 +599,14 @@ function AtlasQuestItem_OnClick(arg1)
 	local nameDATA
 	local colour
 	local itemName, itemQuality
-	if Allianceorhorde == 1 then
-		SHOWNID = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..AQTHISISSHOWN]
-		colour = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ITC"..AQTHISISSHOWN]
-		nameDATA = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."name"..AQTHISISSHOWN]
-	else
+	if AtlasKTW.isHorde then
 		SHOWNID = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..AQTHISISSHOWN.."_HORDE"]
 		colour = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ITC"..AQTHISISSHOWN.."_HORDE"]
 		nameDATA = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."name"..AQTHISISSHOWN.."_HORDE"]
+	else
+		SHOWNID = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..AQTHISISSHOWN]
+		colour = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ITC"..AQTHISISSHOWN]
+		nameDATA = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."name"..AQTHISISSHOWN]
 	end
 	if arg1=="RightButton" then
 		AtlasOtwoTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24)

@@ -1,24 +1,3 @@
---[[
-	AtlasQuest, a World of Warcraft addon.
-	Email me at mystery8@gmail.com
-	
-	This file is part of AtlasQuest.
-	
-	AtlasQuest is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
-	
-	AtlasQuest is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with AtlasQuest; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
---]]
-
 local _G = getfenv()
 
 -- Colours
@@ -99,16 +78,16 @@ function AQInsertQuestInformation()
 	local Quest
 	Quest = AQSHOWNQUEST
 	if Quest <= 9 then
-		if Allianceorhorde == 1 then
-			OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest], 4)
-		elseif Allianceorhorde == 2 then
+		if AtlasKTW.isHorde then
 			OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest.."_HORDE"], 4)
+		else
+			OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest], 4)
 		end
 	elseif Quest > 9 then
-		if Allianceorhorde == 1 then
-			OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest], 5)
-		elseif Allianceorhorde == 2 then
+		if AtlasKTW.isHorde then
 			OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest.."_HORDE"], 5)
+		else
+			OnlyQuestNameRemovedNumber = strsub(_G["Inst"..AQINSTANCE.."Quest"..Quest], 5)
 		end
 	end
 	ChatFrameEditBox:Insert("["..OnlyQuestNameRemovedNumber.."]")
@@ -125,8 +104,42 @@ function AQButton_SetText()
 	-- Show the finished button
 	ShowUIPanel(AQFinishedQuest)
 	AQFQ_TEXT:SetText(BLUE..AQFinishedTEXT)
-	--
-	if Allianceorhorde == 1 then
+	if AtlasKTW.isHorde then
+		AQColourCheck(0) --CC swaped out (see below)
+		QuestName:SetText(AQQuestfarbe.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE"])
+		QuestLeveltext:SetText(BLUE..AQDiscription_LEVEL..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Level"])
+		QuestAttainLeveltext:SetText(BLUE..AQDiscription_ATTAIN..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Attain"]) 
+		Prequesttext:SetText(BLUE..AQDiscription_PREQUEST..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Prequest"].."\n \n"..BLUE..AQDiscription_FOLGEQUEST..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Folgequest"].."\n \n"..BLUE..AQDiscription_START..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Location"].."\n \n"..BLUE..AQDiscription_AIM..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Aim"].."\n \n"..BLUE..AQDiscription_NOTE..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Note"])
+		for b=1, 6 do
+			REWARDstext:SetText(_G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."Rewardtext_HORDE"])
+			if _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..b.."_HORDE"] ~= nil then
+				-----------------------------------------------------------------------------
+				-- Yay for AutoQuery. Boo for odd variable names.
+				-----------------------------------------------------------------------------
+				SHOWNID = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..b.."_HORDE"]
+				if AQAutoQuery ~= nil then
+					colour = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ITC"..b.."_HORDE"]
+					nameDATA = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."name"..b.."_HORDE"]
+					if GetItemInfo(SHOWNID) == nil then
+						GameTooltip:SetHyperlink("item:"..SHOWNID..":0:0:0")
+						if AQNoQuerySpam == nil then
+							DEFAULT_CHAT_FRAME:AddMessage(AQSERVERASK.."["..colour..nameDATA..WHITE.."]"..AQSERVERASKAuto)
+						end
+					end
+				end
+				local _, _, _, _, _, _, _, _, itemTexture = GetItemInfo(SHOWNID)
+				_G["AtlasQuestItemframe"..b.."_Icon"]:SetTexture(itemTexture)
+				_G["AtlasQuestItemframe"..b.."_Name"]:SetText(AQgetItemInformation(b,"name"))
+				_G["AtlasQuestItemframe"..b.."_Extra"]:SetText(AQgetItemInformation(b,"extra"))
+				_G["AtlasQuestItemframe"..b]:Enable()
+			else
+				_G["AtlasQuestItemframe"..b.."_Icon"]:SetTexture()
+				_G["AtlasQuestItemframe"..b.."_Name"]:SetText()
+				_G["AtlasQuestItemframe"..b.."_Extra"]:SetText()
+				_G["AtlasQuestItemframe"..b]:Disable()
+			end
+		end
+	else
 		AQColourCheck(1) --CC swaped out (see below)
 		AQCompareQLtoAQ(Quest)
 		QuestName:SetText(AQQuestfarbe.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST])
@@ -164,42 +177,6 @@ function AQButton_SetText()
 			end
 		end
 	end
-	if Allianceorhorde == 2 then
-		AQColourCheck(0) --CC swaped out (see below)
-		QuestName:SetText(AQQuestfarbe.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE"])
-		QuestLeveltext:SetText(BLUE..AQDiscription_LEVEL..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Level"])
-		QuestAttainLeveltext:SetText(BLUE..AQDiscription_ATTAIN..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Attain"]) 
-		Prequesttext:SetText(BLUE..AQDiscription_PREQUEST..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Prequest"].."\n \n"..BLUE..AQDiscription_FOLGEQUEST..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Folgequest"].."\n \n"..BLUE..AQDiscription_START..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Location"].."\n \n"..BLUE..AQDiscription_AIM..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Aim"].."\n \n"..BLUE..AQDiscription_NOTE..WHITE.._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Note"])
-		for b=1, 6 do
-			REWARDstext:SetText(_G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."Rewardtext_HORDE"])
-			if _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..b.."_HORDE"] ~= nil then
-				-----------------------------------------------------------------------------
-				-- Yay for AutoQuery. Boo for odd variable names.
-				-----------------------------------------------------------------------------
-				SHOWNID = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..b.."_HORDE"]
-				if AQAutoQuery ~= nil then
-					colour = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ITC"..b.."_HORDE"]
-					nameDATA = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."name"..b.."_HORDE"]
-					if GetItemInfo(SHOWNID) == nil then
-						GameTooltip:SetHyperlink("item:"..SHOWNID..":0:0:0")
-						if AQNoQuerySpam == nil then
-							DEFAULT_CHAT_FRAME:AddMessage(AQSERVERASK.."["..colour..nameDATA..WHITE.."]"..AQSERVERASKAuto)
-						end
-					end
-				end
-				local _, _, _, _, _, _, _, _, itemTexture = GetItemInfo(SHOWNID)
-				_G["AtlasQuestItemframe"..b.."_Icon"]:SetTexture(itemTexture)
-				_G["AtlasQuestItemframe"..b.."_Name"]:SetText(AQgetItemInformation(b,"name"))
-				_G["AtlasQuestItemframe"..b.."_Extra"]:SetText(AQgetItemInformation(b,"extra"))
-				_G["AtlasQuestItemframe"..b]:Enable()
-			else
-				_G["AtlasQuestItemframe"..b.."_Icon"]:SetTexture()
-				_G["AtlasQuestItemframe"..b.."_Name"]:SetText()
-				_G["AtlasQuestItemframe"..b.."_Extra"]:SetText()
-				_G["AtlasQuestItemframe"..b]:Disable()
-			end
-		end
-	end
 	AQQuestFinishedSetChecked()
 	AQExtendedPages()
 end
@@ -214,7 +191,7 @@ function AQgetItemInformation(count,what)
 	local itemtext
 	local itemdiscription
 	local itemName, itemQuality
-	if Allianceorhorde == 2 then
+	if AtlasKTW.isHorde then
 		itemId = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ID"..count.."_HORDE"]
 		itemdiscription = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."description"..count.."_HORDE"]
 		itemTEXTSAVED = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."ITC"..count.."_HORDE"].._G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."name"..count.."_HORDE"]
@@ -287,14 +264,14 @@ end
 -- swaped out to get the code clear
 -----------------------------------------------------------------------------
 function AQQuestFinishedSetChecked()
-	if Allianceorhorde == 1 then
-		if AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST ] == 1 then
+	if AtlasKTW.isHorde then
+		if AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE" ] == 1 then
 			AQFinishedQuest:SetChecked(true)
 		else
 			AQFinishedQuest:SetChecked(false)
 		end
 	else
-		if AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE" ] == 1 then
+		if AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST ] == 1 then
 			AQFinishedQuest:SetChecked(true)
 		else
 			AQFinishedQuest:SetChecked(false)
@@ -310,10 +287,10 @@ end
 function AQExtendedPages()
 	local SHIT
 	-- SHIT is added to make the code smaller it give back the right link for horde or alliance
-	if Allianceorhorde == 1 then --Alliance
-		SHIT = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_Page"]
-	else
+	if AtlasKTW.isHorde then
 		SHIT = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Page"]
+	else
+		SHIT = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_Page"]
 	end
 	
 	if type(SHIT) == "table" then
@@ -384,10 +361,10 @@ function AQNextPageR_OnClick()
 	-- it is a quest text
 	if AQ_NextPageCount == "Quest" then
 		-- SHIT is added to make the code smaller it give back the right link for horde or alliance
-		if Allianceorhorde == 1 then --Alliance
-			SHIT = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_Page"]
-		else
+		if AtlasKTW.isHorde then
 			SHIT = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Page"]
+		else
+			SHIT = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_Page"]
 		end
 		StoryTEXT:SetText(WHITE..SHIT[AQ_CurrentSide])
 		AQPageCount:SetText(AQ_CurrentSide.."/"..SHIT[1])
@@ -436,10 +413,10 @@ function AQNextPageL_OnClick()
 	-- it is a quest text 
 	if AQ_NextPageCount == "Quest" then
 		-- SHIT is added to make the code smaller it give back the right link for horde or alliance
-		if Allianceorhorde == 1 then --Alliance
-			SHIT = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_Page"]
-		else
+		if AtlasKTW.isHorde then
 			SHIT = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE_Page"]
+		else
+			SHIT = _G["Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_Page"]
 		end
 		if AQ_CurrentSide == 1 then
 			AQButton_SetText()
@@ -466,21 +443,21 @@ end
 -- Checkbox for the finished quest option
 -----------------------------------------------------------------------------
 function AQFinishedQuest_OnClick()
-	if AQFinishedQuest:GetChecked() and Allianceorhorde == 1 then
+	if AQFinishedQuest:GetChecked() and not AtlasKTW.isHorde then
 		AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST ] = 1
 		setglobal("AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST , 1);
-	elseif AQFinishedQuest:GetChecked() and Allianceorhorde == 2 then
+	elseif AQFinishedQuest:GetChecked() and AtlasKTW.isHorde then
 		AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE" ] = 1
-	elseif not AQFinishedQuest:GetChecked() and Allianceorhorde == 1 then
+	elseif not AQFinishedQuest:GetChecked() and not AtlasKTW.isHorde then
 		AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST ] = nil
-	elseif not AQFinishedQuest:GetChecked() and Allianceorhorde == 2 then
+	elseif not AQFinishedQuest:GetChecked() and AtlasKTW.isHorde then
 		AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE" ] = nil
 	end
 	--save everything
-	if Allianceorhorde == 1 then
-		AtlasQuest_Options[UnitName("player")]["AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST] = AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST ]
-	elseif Allianceorhorde == 2 then
+	if AtlasKTW.isHorde then
 		AtlasQuest_Options[UnitName("player")]["AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE"] = AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST.."_HORDE" ]
+	else
+		AtlasQuest_Options[UnitName("player")]["AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST] = AQ[ "AQFinishedQuest_Inst"..AQINSTANCE.."Quest"..AQSHOWNQUEST ]
 	end
 	AtlasQuestSetTextandButtons()
 	AQButton_SetText()

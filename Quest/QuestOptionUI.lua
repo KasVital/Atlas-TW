@@ -71,9 +71,13 @@ function AQCompareTooltipOption_OnClick()
 	AQCompareTooltip = AQCompareTooltip == nil and "yes" or nil
 	AQCompareTooltipOption:SetChecked(AQCompareTooltip ~= nil)
 	if AQCompareTooltip then
-		QuestOtwoRegisterTooltip()
+		if QuestOtwoRegisterTooltip then
+			QuestOtwoRegisterTooltip()
+		end
 	else
-		QuestOtwoUnregisterTooltip()
+		if QuestOtwoUnregisterTooltip then
+			QuestOtwoUnregisterTooltip()
+		end
 	end
 	AtlasQuest_SaveData()
 end
@@ -123,14 +127,42 @@ function CreateAtlasQuestOptionFrame()
 		edgeFile = "",
 		tile = false
 	})
+	-- Registration of events and handlers
 	frame:RegisterForDrag("LeftButton")
 	frame:SetScript("OnShow", AtlasQuestOptionFrame_OnShow)
-
+	frame:SetScript("OnKeyDown", function()
+		if arg1 == "ESCAPE" then
+			HideUIPanel(this)
+		end
+	end)
+	frame:SetScript("OnHide", function()
+		AtlasQuestOptionFrame:StopMovingOrSizing()
+	end)
+	frame:SetScript("OnDragStart", function()
+		this:StartMoving()
+		this.isMoving = true
+	end)
+	frame:SetScript("OnDragStop", function()
+		this:StopMovingOrSizing()
+		this.isMoving = false
+	end)
 	-- Title
 	local title = frame:CreateFontString("$parent_Title", "ARTWORK", "GameFontNormal")
 	title:SetPoint("TOP", 0, -15)
 	title:SetText(AQOptionsCaptionTEXT)
-
+	title:SetJustifyH("CENTER")
+	-- Close button
+	local closeButton = CreateFrame("Button", "AQOptionCloseButton", frame, "OptionsButtonTemplate")
+	closeButton:SetWidth(80)
+	closeButton:SetHeight(20)
+	closeButton:SetPoint("BOTTOM", 0, 15)
+	closeButton:SetScript("OnClick", function()
+		HideUIPanel(AtlasQuestOptionFrame)
+	end)
+	closeButton:SetScript("OnShow", function()
+		this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
+	end)
+	closeButton:SetText(CLOSE)
 	-- Function to create option text
 	local function CreateOptionText(name, yOffset, height)
 		local text = frame:CreateFontString(name, "ARTWORK", "GameFontNormalSmall")
@@ -140,7 +172,6 @@ function CreateAtlasQuestOptionFrame()
 		text:SetJustifyH("LEFT")
 		return text
 	end
-
 	-- Function to create checkbox
 	local function CreateCheckbox(name, yOffset, onClick)
 		local checkbox = CreateFrame("CheckButton", name, frame, "OptionsCheckButtonTemplate")
@@ -175,29 +206,6 @@ function CreateAtlasQuestOptionFrame()
 	CreateCheckbox("AQAutoQueryOption", -200, AQAutoQueryOption_OnClick)
 	CreateCheckbox("AQNoQuerySpamOption", -230, AQNoQuerySpamOption_OnClick)
 	CreateCheckbox("AQCompareTooltipOption", -260, AQCompareTooltipOption_OnClick)
-
-	-- Close button
-	local closeButton = CreateFrame("Button", "AQOptionCloseButton", frame, "OptionsButtonTemplate")
-	closeButton:SetWidth(80)
-	closeButton:SetHeight(20)
-	closeButton:SetPoint("BOTTOM", 0, 15)
-	closeButton:SetScript("OnClick", function()
-		HideUIPanel(AtlasQuestOptionFrame)
-	end)
-	closeButton:SetScript("OnShow", function()
-		this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
-	end)
-
-	-- Frame movement scripts
-	frame:SetScript("OnDragStart", function()
-		this:StartMoving()
-		this.isMoving = true
-	end)
-
-	frame:SetScript("OnDragStop", function()
-		this:StopMovingOrSizing()
-		this.isMoving = false
-	end)
 
 	return frame
 end

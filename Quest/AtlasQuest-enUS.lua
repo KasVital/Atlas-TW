@@ -1,24 +1,3 @@
---[[
-	AtlasQuest, a World of Warcraft addon.
-	Email me at mystery8@gmail.com
-	
-	This file is part of AtlasQuest.
-	
-	AtlasQuest is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
-	
-	AtlasQuest is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-	
-	You should have received a copy of the GNU General Public License
-	along with AtlasQuest; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
---]]
-
 ---------------
 --- COLOURS ---
 ---------------
@@ -30,42 +9,31 @@ local GREEN = "|cff1eff00"
 local BLUE = "|cff0070dd"
 local YELLOW = "|cffFFd200"
 
-
 ---------------
 --- OPTIONS ---
 ---------------
-
 AQHelpText = "type /aq or atlasquest "..WHITE.."[command]"..YELLOW.."\ncommands: help; option/config; show/hide; left/right; colour; autoshow"..RED.."(only Atlas)"
---
 AQOptionsCaptionTEXT = "AtlasQuest Options"
 AQ_OK = "Done"
-
 -- Autoshow
 AQOptionsAutoshowTEXT = "Show AtlasQuest panel with Atlas.";
 AQAtlasAutoON = "The AtlasQuest panel will be automatically displayed when atlas is opened."..GREEN.."(default)"
 AQAtlasAutoOFF = "The AtlasQuest panel "..RED.."will not"..WHITE.." be displayed when you open atlas."
-
 -- Right/Left
 AQOptionsLEFTTEXT = "Show the AtlasQuest panel "..RED.."left."
 AQOptionsRIGHTTEXT = "Show the AtlasQuest panel "..RED.."right."
-
 -- Colour Check
 AQOptionsCCTEXT = "Recolour the quests depending on their levels."
 AQCCON = "AtlasQuest will now recolour quests depending on their levels."
 AQCCOFF = "AtlasQuest will not recolour quests."
-
 -- QuestLog Colour Check
 AQQLColourChange = "Colours all quest, you have in your Questlog "..BLUE.."blue."
-
 -- AutoQuery Quest Rewards
 AQOptionsAutoQueryTEXT = "Automatically query the server for items you haven't seen."
-
 -- Suppress Server Query text
 AQOptionsNoQuerySpamTEXT = "Suppress Server Query spam."
-
 -- Use Comparison Tooltips
 AQOptionsCompareTooltipTEXT = "Compare rewards to currently equipped items (need /rl)."
-
 
 AQAbilities = BLUE .. "Abilities:" .. WHITE;
 AQSERVERASKInformation = " Please click right until you see the Item frame."
@@ -86,7 +54,7 @@ AQDiscription_AIM = "Objective: \n"
 AQDiscription_NOTE = "Note: \n"
 AQDiscription_PREQUEST= "Prequest: "
 AQDiscription_FOLGEQUEST = "Quest follows: "
-AQFinishedTEXT = "Quest finished: ";
+AQFinishedTEXT = "Quest finished: "
 
 
 ------------------
