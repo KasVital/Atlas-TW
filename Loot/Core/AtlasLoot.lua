@@ -432,7 +432,7 @@ end
 function AtlasLoot_AtlasScrollBar_Update()
 	local lineplusoffset
 	if _G["AtlasBossLine1_Text"] ~= nil then
-		local zoneID = ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]
+		local zoneID = ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]
 		--Update the contents of the Atlas scroll frame
 		FauxScrollFrame_Update(AtlasScrollBar,ATLAS_CUR_LINES,ATLAS_LOOT_BOSS_LINES,15)
 		--Make note of how far in the scroll frame we are
@@ -486,7 +486,7 @@ function AtlasLoot_Refresh()
 	--Reset which loot page is 'current'
 	AtlasLootItemsFrame.activeBoss = nil
 	--Get map selection info from Atlas
-	local zoneID = ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]
+	local zoneID = ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]
 	local data = AtlasMaps
 	local base = {}
 	--Get boss name information
@@ -509,7 +509,7 @@ function AtlasLoot_Refresh()
 	end
 	--Setup info panel above boss listing
 	local tName = base.ZoneName[1]
-	if AtlasOptions.AtlasAcronyms and base.Acronym ~= nil then
+	if AtlasTWOptions.AtlasAcronyms and base.Acronym ~= nil then
 		local _RED = "|cffcc6666"
 		tName = tName.._RED.." ["..base.Acronym.."]"
 	end
@@ -690,7 +690,7 @@ end
 	Shows a loot page if one is associated with the button
 ]]
 function AtlasLootBoss_OnClick(name)
-	local zoneID = ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]
+	local zoneID = ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]
 	local id = this.idnum
 	--If the loot table was already shown and boss clicked again, hide the loot table and fix boss list icons
 	if _G[name.."_Selected"]:IsVisible() then
@@ -742,8 +742,8 @@ function AtlasLootBoss_OnClick(name)
 	--This has been invoked from Atlas, so we remove any claim external mods have on the loot table
 	AtlasLootItemsFrame.externalBoss = nil
 	--Hide the AtlasQuest frame if present so that the AtlasLoot items frame is not stuck under it
-	if AtlasQuestInsideFrame then
-		HideUIPanel(AtlasQuestInsideFrame)
+	if KQuestInsideFrame then
+		HideUIPanel(KQuestInsideFrame)
 	end
 end
 
@@ -961,8 +961,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		end
 	end
 	--Get AtlasQuest out of the way
-	if AtlasQuestInsideFrame then
-		HideUIPanel(AtlasQuestInsideFrame)
+	if KQuestInsideFrame then
+		HideUIPanel(KQuestInsideFrame)
 	end
 	--Ditch the Quicklook selector
 	AtlasLoot_QuickLooks:Hide()

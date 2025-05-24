@@ -14,8 +14,8 @@ end
 function KQRIGHTOption_OnClick()
 	KQuestFrame:ClearAllPoints()
 	KQuestFrame:SetPoint("TOP", "AtlasFrame", 567, -36)
-	AQRIGHTOption:SetChecked(true)
-	AQLEFTOption:SetChecked(false)
+	KQRIGHTOption:SetChecked(true)
+	KQLEFTOption:SetChecked(false)
 	AtlasKTW.Q.ShownSide = "Right"
 	KQuest_SaveData()
 end
@@ -26,8 +26,8 @@ function KQLEFTOption_OnClick()
 		KQuestFrame:ClearAllPoints()
 		KQuestFrame:SetPoint("TOP", "AtlasFrame", -556, -36)
 	end
-	AQRIGHTOption:SetChecked(false)
-	AQLEFTOption:SetChecked(true)
+	KQRIGHTOption:SetChecked(false)
+	KQLEFTOption:SetChecked(true)
 	if AtlasKTW.Q.ShownSide ~= "Left" then
 		ChatFrame1:AddMessage(AQShowLeft)
 	end
@@ -37,39 +37,39 @@ end
 
 -- Color check
 function KQColourOption_OnClick()
-	AQNOColourCheck = not AQNOColourCheck
-	AQColourOption:SetChecked(not AQNOColourCheck)
-	ChatFrame1:AddMessage(AQNOColourCheck and AQCCOFF or AQCCON)
+	AtlasKTW.Q.ColourCheck = not AtlasKTW.Q.ColourCheck
+	KQColourOption:SetChecked(AtlasKTW.Q.ColourCheck)
+	ChatFrame1:AddMessage(AtlasKTW.Q.ColourCheck and AQCCON or AQCCOFF)
 	KQuest_SaveData()
 	AtlasKTW.QUpdateNOW = true
 end
 
 -- Questlog check
 function KQCheckQuestlogButton_OnClick()
-	AQCheckQuestlog = AQCheckQuestlog == nil and "no" or nil
-	AQCheckQuestlogButton:SetChecked(AQCheckQuestlog == nil)
+	AtlasKTW.Q.CheckQuestlog = not AtlasKTW.Q.CheckQuestlog
+	KQCheckQuestlogButton:SetChecked(AtlasKTW.Q.CheckQuestlog)
 	KQuest_SaveData()
 	AtlasKTW.QUpdateNOW = true
 end
 
 -- Auto query
 function KQAutoQueryOption_OnClick()
-	AQAutoQuery = AQAutoQuery == nil and "yes" or nil
-	AQAutoQueryOption:SetChecked(AQAutoQuery ~= nil)
+	AQAutoQuery = not AQAutoQuery
+	KQAutoQueryOption:SetChecked(AQAutoQuery)
 	KQuest_SaveData()
 end
 
 -- Query spam suppression
-function KQNoQuerySpamOption_OnClick()
-	AQNoQuerySpam = AQNoQuerySpam == nil and "yes" or nil
-	AQNoQuerySpamOption:SetChecked(AQNoQuerySpam ~= nil)
+function KQQuerySpamOption_OnClick()
+	AQNoQuerySpam = not AQNoQuerySpam
+	KQQuerySpamOption:SetChecked(AQNoQuerySpam)
 	KQuest_SaveData()
 end
 
 -- Tooltip comparison
 function KQCompareTooltipOption_OnClick()
-	AQCompareTooltip = AQCompareTooltip == nil and "yes" or nil
-	AQCompareTooltipOption:SetChecked(AQCompareTooltip ~= nil)
+	AQCompareTooltip = not AQCompareTooltip
+	KQCompareTooltipOption:SetChecked(AQCompareTooltip)
 	if AQCompareTooltip then
 		if KQuestRegisterTooltip then
 			KQuestRegisterTooltip()
@@ -89,23 +89,22 @@ function KQuestOptionFrame_OnShow()
 
 	-- Position (left/right)
 	local isLeft = AtlasKTW.Q.ShownSide == "Left"
-	AQLEFTOption:SetChecked(isLeft)
-	AQRIGHTOption:SetChecked(not isLeft)
+	KQLEFTOption:SetChecked(isLeft)
+	KQRIGHTOption:SetChecked(not isLeft)
 
 	-- Color check
-	AQColourOption:SetChecked(not AQNOColourCheck)
-
+	KQColourOption:SetChecked(AtlasKTW.Q.ColourCheck)
 	-- Questlog check
-	AQCheckQuestlogButton:SetChecked(AQCheckQuestlog == nil)
+	KQCheckQuestlogButton:SetChecked(AtlasKTW.Q.CheckQuestlog)
 
 	-- Auto query
-	AQAutoQueryOption:SetChecked(AQAutoQuery ~= nil)
+	KQAutoQueryOption:SetChecked(AQAutoQuery)
 
 	-- Query spam suppression
-	AQNoQuerySpamOption:SetChecked(AQNoQuerySpam ~= nil)
+	KQQuerySpamOption:SetChecked(AQNoQuerySpam)
 
 	-- Tooltip comparison
-	AQCompareTooltipOption:SetChecked(AQCompareTooltip ~= nil)
+	KQCompareTooltipOption:SetChecked(AQCompareTooltip)
 end
 
 -----------------------------------------------------------------------------
@@ -152,7 +151,7 @@ function CreateKQuestOptionFrame()
 	title:SetText(AQOptionsCaptionTEXT)
 	title:SetJustifyH("CENTER")
 	-- Close button
-	local closeButton = CreateFrame("Button", "AQOptionCloseButton", frame, "OptionsButtonTemplate")
+	local closeButton = CreateFrame("Button", "KQOptionCloseButton", frame, "OptionsButtonTemplate")
 	closeButton:SetWidth(80)
 	closeButton:SetHeight(20)
 	closeButton:SetPoint("BOTTOM", 0, 15)
@@ -162,7 +161,7 @@ function CreateKQuestOptionFrame()
 	closeButton:SetScript("OnShow", function()
 		this:SetFrameLevel(this:GetParent():GetFrameLevel() + 1)
 	end)
-	closeButton:SetText(CLOSE)
+	closeButton:SetText(AQ_OK)
 	-- Function to create option text
 	local function CreateOptionText(name, yOffset, height)
 		local text = frame:CreateFontString(name, "ARTWORK", "GameFontNormalSmall")
@@ -170,6 +169,7 @@ function CreateKQuestOptionFrame()
 		text:SetHeight(height or 25)
 		text:SetPoint("TOPLEFT", 45, yOffset)
 		text:SetJustifyH("LEFT")
+		text:SetText(getglobal(string.gsub(name, "TEXT", "Local")))
 		return text
 	end
 	-- Function to create checkbox
@@ -189,23 +189,23 @@ function CreateKQuestOptionFrame()
 
 	-- Create option texts
 	CreateOptionText("KQAutoshowOptionTEXT", -50)
-	CreateOptionText("AQLEFTOptionTEXT", -80)
-	CreateOptionText("AQRIGHTOptionTEXT", -110)
-	CreateOptionText("AQColourOptionTEXT", -140)
-	CreateOptionText("AQCheckQuestlogTEXT", -170)
-	CreateOptionText("AQAutoQueryTEXT", -200, 35)
-	CreateOptionText("AQNoQuerySpamTEXT", -230, 35)
-	CreateOptionText("AQCompareTooltipTEXT", -260, 35)
+	CreateOptionText("KQLEFTOptionTEXT", -80)
+	CreateOptionText("KQRIGHTOptionTEXT", -110)
+	CreateOptionText("KQColourOptionTEXT", -140)
+	CreateOptionText("KQCheckQuestlogTEXT", -170)
+	CreateOptionText("KQAutoQueryTEXT", -200, 35)
+	CreateOptionText("KQQuerySpamTEXT", -230, 35)
+	CreateOptionText("KQCompareTooltipTEXT", -260, 35)
 
 	-- Create checkboxes
 	CreateCheckbox("KQAutoshowOption", -50, KQAutoshowOption_OnClick)
-	CreateCheckbox("AQLEFTOption", -80, KQLEFTOption_OnClick)
-	CreateCheckbox("AQRIGHTOption", -110, KQRIGHTOption_OnClick)
-	CreateCheckbox("AQColourOption", -140, KQColourOption_OnClick)
-	CreateCheckbox("AQCheckQuestlogButton", -170, KQCheckQuestlogButton_OnClick)
-	CreateCheckbox("AQAutoQueryOption", -200, KQAutoQueryOption_OnClick)
-	CreateCheckbox("AQNoQuerySpamOption", -230, KQNoQuerySpamOption_OnClick)
-	CreateCheckbox("AQCompareTooltipOption", -260, KQCompareTooltipOption_OnClick)
+	CreateCheckbox("KQLEFTOption", -80, KQLEFTOption_OnClick)
+	CreateCheckbox("KQRIGHTOption", -110, KQRIGHTOption_OnClick)
+	CreateCheckbox("KQColourOption", -140, KQColourOption_OnClick)
+	CreateCheckbox("KQCheckQuestlogButton", -170, KQCheckQuestlogButton_OnClick)
+	CreateCheckbox("KQAutoQueryOption", -200, KQAutoQueryOption_OnClick)
+	CreateCheckbox("KQQuerySpamOption", -230, KQQuerySpamOption_OnClick)
+	CreateCheckbox("KQCompareTooltipOption", -260, KQCompareTooltipOption_OnClick)
 
 	return frame
 end

@@ -8,14 +8,14 @@
 function KQ_OnShow()
 	if UnitFactionGroup("player") == "Horde" then
 		AtlasKTW.isHorde = true
-		AQHCB:SetChecked(AtlasKTW.isHorde)
-		AQACB:SetChecked(not AtlasKTW.isHorde)
+		KQuestHordeCheckBox:SetChecked(AtlasKTW.isHorde)
+		KQuestAllianceCheckBox:SetChecked(not AtlasKTW.isHorde)
 	else
 		AtlasKTW.isHorde = false
-		AQHCB:SetChecked(AtlasKTW.isHorde)
-		AQACB:SetChecked(not AtlasKTW.isHorde)
+		KQuestHordeCheckBox:SetChecked(AtlasKTW.isHorde)
+		KQuestAllianceCheckBox:SetChecked(not AtlasKTW.isHorde)
 	end
-	AtlasQuestSetTextandButtons()
+	KQuestSetTextandButtons()
 end
 -- Close button
 function KQCLOSE1_OnClick()
@@ -32,12 +32,12 @@ end
 -- Story button
 function KQSTORY1_OnClick()
 	AQHideAL()
-	if AtlasQuestInsideFrame:IsVisible() == nil then
-		ShowUIPanel(AtlasQuestInsideFrame)
+	if KQuestInsideFrame:IsVisible() == nil then
+		ShowUIPanel(KQuestInsideFrame)
 		WHICHBUTTON = STORY
 		AQButtonSTORY_SetText()
 	elseif WHICHBUTTON == STORY then
-		HideUIPanel(AtlasQuestInsideFrame)
+		HideUIPanel(KQuestInsideFrame)
 	else
 		WHICHBUTTON = STORY
 		AQButtonSTORY_SetText()
@@ -46,16 +46,16 @@ end
 -- Alliance handler
 function Alliance_OnClick()
 	AtlasKTW.isHorde = false
-    AQACB:SetChecked(not AtlasKTW.isHorde)
-    AQHCB:SetChecked(AtlasKTW.isHorde)
+    KQuestAllianceCheckBox:SetChecked(not AtlasKTW.isHorde)
+    KQuestHordeCheckBox:SetChecked(AtlasKTW.isHorde)
     KQuest_SaveData()
     AtlasKTW.QUpdateNOW = true
 end
 -- Horde handler
 function Horde_OnClick()
 	AtlasKTW.isHorde = true
-    AQACB:SetChecked(not AtlasKTW.isHorde)
-    AQHCB:SetChecked(AtlasKTW.isHorde)
+    KQuestAllianceCheckBox:SetChecked(not AtlasKTW.isHorde)
+    KQuestHordeCheckBox:SetChecked(AtlasKTW.isHorde)
     KQuest_SaveData()
     AtlasKTW.QUpdateNOW = true
 end
@@ -64,10 +64,10 @@ function AQGeneral_OnClick(button)
 	-- first clear display
 	AQClearALL()
 	AQHideAL()
-	if AtlasQuestInsideFrame:IsVisible() then
-		HideUIPanel(AtlasQuestInsideFrame)
+	if KQuestInsideFrame:IsVisible() then
+		HideUIPanel(KQuestInsideFrame)
 	else
-		ShowUIPanel(AtlasQuestInsideFrame)
+		ShowUIPanel(KQuestInsideFrame)
 	end
     local instGeneral = _G["Inst"..AtlasKTW.Instances.."General"]
 	if instGeneral ~= nil then
@@ -76,10 +76,10 @@ function AQGeneral_OnClick(button)
 			-- Show Next side button if next site is avaiable
         AQ_NextPageCount = "Boss"
         if instGeneral[2] ~= nil then
-            ShowUIPanel(AQNextPageButton_Right)
-            AQ_CurrentSide = 1
+            ShowUIPanel(KQNextPageButton_Right)
+            AtlasKTW.Q.CurrentPage = 1
             -- shows total amount of pages
-            AQPageCount:SetText(AQ_CurrentSide.."/"..getn(instGeneral))
+            AQPageCount:SetText(AtlasKTW.Q.CurrentPage.."/"..getn(instGeneral))
         end
 	end
 	if _G["Inst"..AtlasKTW.Instances.."General"] ~= nil then
@@ -88,10 +88,10 @@ function AQGeneral_OnClick(button)
 		-- Show Next side button if next site is avaiable
 		AQ_NextPageCount = "Boss"
 		if _G["Inst"..AtlasKTW.Instances.."General"][2] ~= nil then
-			ShowUIPanel(AQNextPageButton_Right)
-			AQ_CurrentSide = 1
+			ShowUIPanel(KQNextPageButton_Right)
+			AtlasKTW.Q.CurrentPage = 1
 			-- shows total amount of pages
-			AQPageCount:SetText(AQ_CurrentSide.."/"..getn(_G["Inst"..AtlasKTW.Instances.."General"]))
+			AQPageCount:SetText(AtlasKTW.Q.CurrentPage.."/"..getn(_G["Inst"..AtlasKTW.Instances.."General"]))
 		end
 	end
 end
@@ -102,12 +102,12 @@ function Quest_OnClick(button)
 	else
 		AQHideAL()
 		StoryTEXT:SetText("")
-		if AtlasQuestInsideFrame:IsVisible() == nil then
-			ShowUIPanel(AtlasQuestInsideFrame)
+		if not KQuestInsideFrame:IsVisible() then
+			ShowUIPanel(KQuestInsideFrame)
 			WHICHBUTTON = AQSHOWNQUEST
 			AQButton_SetText()
 		elseif WHICHBUTTON == AQSHOWNQUEST then
-			HideUIPanel(AtlasQuestInsideFrame)
+			HideUIPanel(KQuestInsideFrame)
 			WHICHBUTTON = 0
 		else
 			WHICHBUTTON = AQSHOWNQUEST
@@ -165,9 +165,9 @@ function CreateKQuestFrame()
         return button
     end
     -- Create options button
-    local optionButton = CreateButton("OPTIONbutton", 80, 20, "BOTTOMRIGHT", nil, nil, -20, 15, "Options", KQOPTION1_OnClick)
+    CreateButton("OPTIONbutton", 80, 20, "BOTTOMRIGHT", nil, nil, -20, 15, AQOptionB, KQOPTION1_OnClick)
     -- Create story button
-    local storyButton = CreateButton("STORYbutton", 70, 20, "TOP", nil, nil, 0, -13, "Story", KQSTORY1_OnClick)
+    CreateButton("STORYbutton", 70, 20, "TOP", nil, nil, 0, -13, AQStoryB, KQSTORY1_OnClick)
     -- Function to create a checkbox
     local function CreateCheckbox(name, point, relativePoint, relativeTo, xOffset, yOffset, onClick)
         local checkbox = CreateFrame("CheckButton", name, frame, "OptionsCheckButtonTemplate")
@@ -245,9 +245,9 @@ function CreateKQuestFrame()
     end
 
     -- Create Alliance and Horde checkboxes
-    local allianceCheckbox = CreateCheckbox("AQACB", "TOPLEFT", nil, nil, 12, -30, Alliance_OnClick)
+    local allianceCheckbox = CreateCheckbox("KQuestAllianceCheckBox", "TOPLEFT", nil, nil, 12, -30, Alliance_OnClick)
     allianceCheckbox:SetChecked(true)
-    local hordeCheckbox = CreateCheckbox("AQHCB", "TOPRIGHT", nil, nil, -12, -30, Horde_OnClick)
+    CreateCheckbox("KQuestHordeCheckBox", "TOPRIGHT", nil, nil, -12, -30, Horde_OnClick)
 
     -- Create Alliance and Horde textures
     CreateFactionTexture("Alliance")

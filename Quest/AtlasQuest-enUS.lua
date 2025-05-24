@@ -15,27 +15,29 @@ local YELLOW = "|cffFFd200"
 AQHelpText = "type /aq or atlasquest "..WHITE.."[command]"..YELLOW.."\ncommands: help; option/config; show/hide; left/right; colour; autoshow"..RED.."(only Atlas)"
 AQOptionsCaptionTEXT = "AtlasQuest Options"
 AQ_OK = "Done"
+AQNotAvailable = "Not Available"
+AQQuestFinished = "Quest finished:"
 -- Autoshow
-AQOptionsAutoshowTEXT = "Show AtlasQuest panel with Atlas.";
+KQAutoshowOptionLocal = "Show AtlasQuest panel with Atlas.";
 AQAtlasAutoON = "The AtlasQuest panel will be automatically displayed when atlas is opened."..GREEN.."(default)"
 AQAtlasAutoOFF = "The AtlasQuest panel "..RED.."will not"..WHITE.." be displayed when you open atlas."
 -- Right/Left
-AQOptionsLEFTTEXT = "Show the AtlasQuest panel "..RED.."left."
-AQOptionsRIGHTTEXT = "Show the AtlasQuest panel "..RED.."right."
+KQLEFTOptionLocal = "Show the AtlasQuest panel "..RED.."left."
+KQRIGHTOptionLocal = "Show the AtlasQuest panel "..RED.."right."
 -- Colour Check
-AQOptionsCCTEXT = "Recolour the quests depending on their levels."
+KQColourOptionLocal = "Recolour the quests depending on their levels."
 AQCCON = "AtlasQuest will now recolour quests depending on their levels."
 AQCCOFF = "AtlasQuest will not recolour quests."
 -- QuestLog Colour Check
-AQQLColourChange = "Colours all quest, you have in your Questlog "..BLUE.."blue."
+KQCheckQuestlogLocal = "Colours all quest, you have in your Questlog "..BLUE.."blue."
 -- AutoQuery Quest Rewards
-AQOptionsAutoQueryTEXT = "Automatically query the server for items you haven't seen."
+KQAutoQueryLocal = "Automatically query the server for items you haven't seen."
 -- Suppress Server Query text
-AQOptionsNoQuerySpamTEXT = "Suppress Server Query spam."
+KQQuerySpamLocal = "Suppress Server Query spam."
 -- Use Comparison Tooltips
-AQOptionsCompareTooltipTEXT = "Compare rewards to currently equipped items (need /rl)."
+KQCompareTooltipLocal = "Compare rewards to currently equipped items (need /rl)."
 
-AQAbilities = BLUE .. "Abilities:" .. WHITE;
+AQAbilities = BLUE .. "Abilities:" .. WHITE
 AQSERVERASKInformation = " Please click right until you see the Item frame."
 AQSERVERASKAuto = " Try moving the cursor over the item in a second."
 AQSERVERASK = "AtlasQuest is querying the server for: "

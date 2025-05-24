@@ -991,6 +991,8 @@ Inst6Quest5Rewardtext = AQDiscription_REWARD..WHITE.."1"
 Inst6Quest5ITC1 = Itemc4
 Inst6Quest5description1 = AQITEM_KEY
 Inst6Quest5ID1 = "61234"
+--Quest 6 Alliance
+Inst6Quest6Rewardtext = AQNoReward
 
 --Quest 1 Horde
 Inst6Quest1Rewardtext_HORDE = AQNoReward
@@ -1027,6 +1029,8 @@ Inst6Quest5ITC1_HORDE = Itemc4
 Inst6Quest5description1_HORDE = AQITEM_KEY
 Inst6Quest5ID1_HORDE = "61234"
 
+--Quest 6 Horde
+Inst6Quest6Rewardtext_HORDE = AQNoReward
 
 --------------- INST7 - Blackfathom Deeps (BFD) ---------------
 

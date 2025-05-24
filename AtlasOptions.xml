@@ -149,7 +149,7 @@
 					</OnLoad>
 					<OnValueChanged>
 						AtlasOptions_UpdateSlider(ATLAS_OPTIONS_BUTPOS)
-						AtlasOptions.AtlasButtonPosition = this:GetValue()
+						AtlasTWOptions.AtlasButtonPosition = this:GetValue()
 						AtlasButton_UpdatePosition()
 					</OnValueChanged>
 				</Scripts>
@@ -171,7 +171,7 @@
 					</OnLoad>
 					<OnValueChanged>
 						AtlasOptions_UpdateSlider(ATLAS_OPTIONS_BUTRAD)
-						AtlasOptions.AtlasButtonRadius = this:GetValue()
+						AtlasTWOptions.AtlasButtonRadius = this:GetValue()
 						AtlasButton_UpdatePosition()
 					</OnValueChanged>
 				</Scripts>
@@ -193,7 +193,7 @@
 					</OnLoad>
 					<OnValueChanged>
 						AtlasOptions_UpdateSlider(ATLAS_OPTIONS_TRANS)
-						AtlasOptions.AtlasAlpha = this:GetValue()
+						AtlasTWOptions.AtlasAlpha = this:GetValue()
 						Atlas_UpdateAlpha()
 					</OnValueChanged>
 				</Scripts>
@@ -215,7 +215,7 @@
 					</OnLoad>
 					<OnValueChanged>
 						AtlasOptions_UpdateSlider(ATLAS_OPTIONS_SCALE)
-						AtlasOptions.AtlasScale = this:GetValue()
+						AtlasTWOptions.AtlasScale = this:GetValue()
 						Atlas_UpdateScale()
 					</OnValueChanged>
 				</Scripts>

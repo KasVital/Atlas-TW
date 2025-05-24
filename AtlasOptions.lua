@@ -32,49 +32,49 @@ function AtlasOptions_Toggle()
 end
 
 function AtlasOptions_AutoSelectToggle()
-	if AtlasOptions.AtlasAutoSelect then
-		AtlasOptions.AtlasAutoSelect = false
+	if AtlasTWOptions.AtlasAutoSelect then
+		AtlasTWOptions.AtlasAutoSelect = false
 	else
-		AtlasOptions.AtlasAutoSelect = true
+		AtlasTWOptions.AtlasAutoSelect = true
 	end
 	AtlasOptions_Init()
 end
 
 function AtlasOptions_RightClickToggle()
-	if AtlasOptions.AtlasRightClick then
-		AtlasOptions.AtlasRightClick = false
+	if AtlasTWOptions.AtlasRightClick then
+		AtlasTWOptions.AtlasRightClick = false
 	else
-		AtlasOptions.AtlasRightClick = true
+		AtlasTWOptions.AtlasRightClick = true
 	end
 	AtlasOptions_Init()
 end
 
 function AtlasOptions_AcronymsToggle()
-	if AtlasOptions.AtlasAcronyms then
-		AtlasOptions.AtlasAcronyms = false
+	if AtlasTWOptions.AtlasAcronyms then
+		AtlasTWOptions.AtlasAcronyms = false
 	else
-		AtlasOptions.AtlasAcronyms = true
+		AtlasTWOptions.AtlasAcronyms = true
 	end
 	AtlasOptions_Init()
 	Atlas_Refresh()
 end
 
 function AtlasOptions_ClampedToggle()
-	if AtlasOptions.AtlasClamped then
-		AtlasOptions.AtlasClamped = false
+	if AtlasTWOptions.AtlasClamped then
+		AtlasTWOptions.AtlasClamped = false
 	else
-	AtlasOptions.AtlasClamped = true
+	AtlasTWOptions.AtlasClamped = true
 	end
-	AtlasFrame:SetClampedToScreen(AtlasOptions.AtlasClamped)
+	AtlasFrame:SetClampedToScreen(AtlasTWOptions.AtlasClamped)
 	AtlasOptions_Init()
 	Atlas_Refresh()
 end
 
 function AtlasOptions_CtrlToggle()
-	if AtlasOptions.AtlasCtrl then
-		AtlasOptions.AtlasCtrl = false
+	if AtlasTWOptions.AtlasCtrl then
+		AtlasTWOptions.AtlasCtrl = false
 	else
-		AtlasOptions.AtlasCtrl = true
+		AtlasTWOptions.AtlasCtrl = true
 	end
 	AtlasOptions_Init()
 	Atlas_Refresh()
@@ -85,24 +85,24 @@ function AtlasOptions_OnLoad()
 end
 
 function AtlasOptions_Init()
-	AtlasOptionsFrameToggleButton:SetChecked(AtlasOptions.AtlasButtonShown)
-	AtlasOptionsFrameAutoSelect:SetChecked(AtlasOptions.AtlasAutoSelect)
-	AtlasOptionsFrameRightClick:SetChecked(AtlasOptions.AtlasRightClick)
-	AtlasOptionsFrameAcronyms:SetChecked(AtlasOptions.AtlasAcronyms)
-	AtlasOptionsFrameClamped:SetChecked(AtlasOptions.AtlasClamped)
-	AtlasOptionsFrameSliderButtonPos:SetValue(AtlasOptions.AtlasButtonPosition)
-	AtlasOptionsFrameSliderButtonRad:SetValue(AtlasOptions.AtlasButtonRadius)
-	AtlasOptionsFrameSliderAlpha:SetValue(AtlasOptions.AtlasAlpha)
-	AtlasOptionsFrameSliderScale:SetValue(AtlasOptions.AtlasScale)
+	AtlasOptionsFrameToggleButton:SetChecked(AtlasTWOptions.AtlasButtonShown)
+	AtlasOptionsFrameAutoSelect:SetChecked(AtlasTWOptions.AtlasAutoSelect)
+	AtlasOptionsFrameRightClick:SetChecked(AtlasTWOptions.AtlasRightClick)
+	AtlasOptionsFrameAcronyms:SetChecked(AtlasTWOptions.AtlasAcronyms)
+	AtlasOptionsFrameClamped:SetChecked(AtlasTWOptions.AtlasClamped)
+	AtlasOptionsFrameSliderButtonPos:SetValue(AtlasTWOptions.AtlasButtonPosition)
+	AtlasOptionsFrameSliderButtonRad:SetValue(AtlasTWOptions.AtlasButtonRadius)
+	AtlasOptionsFrameSliderAlpha:SetValue(AtlasTWOptions.AtlasAlpha)
+	AtlasOptionsFrameSliderScale:SetValue(AtlasTWOptions.AtlasScale)
 end
 
 function AtlasOptions_ResetPosition()
 	AtlasFrame:ClearAllPoints()
 	AtlasFrame:SetPoint("TOPLEFT", 0, -104)
-	AtlasOptions.AtlasButtonPosition = 336
-	AtlasOptions.AtlasButtonRadius = 78
-	AtlasOptions.AtlasAlpha = 1.0
-	AtlasOptions.AtlasScale = 1.0
+	AtlasTWOptions.AtlasButtonPosition = 336
+	AtlasTWOptions.AtlasButtonRadius = 78
+	AtlasTWOptions.AtlasAlpha = 1.0
+	AtlasTWOptions.AtlasScale = 1.0
 	AtlasOptions_Init()
 end
 
@@ -140,7 +140,7 @@ end
 
 function AtlasOptionsFrameDropDownCats_OnShow()
 	UIDropDownMenu_Initialize(AtlasOptionsFrameDropDownCats, AtlasOptionsFrameDropDownCats_Initialize)
-	UIDropDownMenu_SetSelectedID(AtlasOptionsFrameDropDownCats, AtlasOptions.AtlasSortBy)
+	UIDropDownMenu_SetSelectedID(AtlasOptionsFrameDropDownCats, AtlasTWOptions.AtlasSortBy)
 	UIDropDownMenu_SetWidth(100, AtlasOptionsFrameDropDownCats)
 end
 
@@ -148,9 +148,9 @@ end
 function AtlasOptionsFrameDropDownCats_OnClick()
 	local thisID = this:GetID()
 	UIDropDownMenu_SetSelectedID(AtlasOptionsFrameDropDownCats, thisID)
-	AtlasOptions.AtlasSortBy = thisID
-	AtlasOptions.AtlasZone = 1
-	AtlasOptions.AtlasType = 1
+	AtlasTWOptions.AtlasSortBy = thisID
+	AtlasTWOptions.AtlasZone = 1
+	AtlasTWOptions.AtlasType = 1
 	Atlas_PopulateDropdowns()
 	Atlas_Refresh()
 	AtlasFrameDropDownType_OnShow()

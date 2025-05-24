@@ -27,7 +27,7 @@ function AtlasButton_OnClick()
 end
 
 function AtlasButton_Init()
-	if AtlasOptions.AtlasButtonShown then
+	if AtlasTWOptions.AtlasButtonShown then
 		AtlasButtonFrame:Show()
 	else
 		AtlasButtonFrame:Hide()
@@ -37,10 +37,10 @@ end
 function AtlasButton_Toggle()
 	if AtlasButtonFrame:IsVisible() then
 		AtlasButtonFrame:Hide()
-		AtlasOptions.AtlasButtonShown = false
+		AtlasTWOptions.AtlasButtonShown = false
 	else
 		AtlasButtonFrame:Show()
-		AtlasOptions.AtlasButtonShown = true
+		AtlasTWOptions.AtlasButtonShown = true
 	end
 	AtlasOptions_Init()
 end
@@ -50,8 +50,8 @@ function AtlasButton_UpdatePosition()
 		"TOPLEFT",
 		"Minimap",
 		"TOPLEFT",
-		54 - (AtlasOptions.AtlasButtonRadius * cos(AtlasOptions.AtlasButtonPosition)),
-		(AtlasOptions.AtlasButtonRadius * sin(AtlasOptions.AtlasButtonPosition)) - 55
+		54 - (AtlasTWOptions.AtlasButtonRadius * cos(AtlasTWOptions.AtlasButtonPosition)),
+		(AtlasTWOptions.AtlasButtonRadius * sin(AtlasTWOptions.AtlasButtonPosition)) - 55
 	)
 	AtlasOptions_Init()
 end
@@ -73,7 +73,7 @@ function AtlasButton_SetPosition(v)
 		v = v + 360
 	end
 	
-	AtlasOptions.AtlasButtonPosition = v
+	AtlasTWOptions.AtlasButtonPosition = v
 	AtlasButton_UpdatePosition()
 end
 

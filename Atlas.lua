@@ -56,7 +56,14 @@ local DefaultAtlasOptions = {
 	["AtlasAcronyms"] = true,
 	["AtlasScale"] = 1.0,
 	["AtlasClamped"] = true,
-	["AtlasSortBy"] = 1
+	["AtlasSortBy"] = 1,
+	["QuestShownSide"] = "Left",
+	["QuestWithAtlas"] = true,
+	["QuestColourCheck"] = true,
+	["QuestCheckQuestlog"] = true,
+	["QuestAutoQuery"] = true,
+	["QuestQuerySpam"] = true,
+	["QuestCompareTooltip"] = true,
 }
 
 --yes, the following two tables are redundant, but they're both here in case there's ever more than one entrance map for an instance
@@ -197,7 +204,7 @@ Atlas_OutdoorZoneToAtlas = {
 }
 
 function Atlas_FreshOptions()
-	AtlasOptions = CloneTable(DefaultAtlasOptions)
+	AtlasTWOptions = CloneTable(DefaultAtlasOptions)
 end
 
 --Code by Grayhoof (SCT)
@@ -205,7 +212,7 @@ function CloneTable(t)				-- return a copy of the table t
 	local new = {}					-- create a new table
 	local i, v = next(t, nil)		-- i is an index of t, v = t[i]
 	while i do
-		if type(v)=="table" then 
+		if type(v)=="table" then
 			v=CloneTable(v)
 		end 
 		new[i] = v
@@ -232,8 +239,8 @@ function Atlas_RegisterPlugin(name, myCategory, myData)
 	table.insert(ATLAS_PLUGIN_DATA, myData)
 
 	if ATLAS_OLD_TYPE and ATLAS_OLD_TYPE <= getn(AtlasMaps) then
-		AtlasOptions.AtlasType = ATLAS_OLD_TYPE
-		AtlasOptions.AtlasZone = ATLAS_OLD_ZONE
+		AtlasTWOptions.AtlasType = ATLAS_OLD_TYPE
+		AtlasTWOptions.AtlasZone = ATLAS_OLD_ZONE
 	end
 	
 	Atlas_PopulateDropdowns()
@@ -322,7 +329,7 @@ end
 
 function Atlas_PopulateDropdowns()
 	local i = 1
-	local catName = Atlas_DropDownLayouts_Order[AtlasOptions.AtlasSortBy]
+	local catName = Atlas_DropDownLayouts_Order[AtlasTWOptions.AtlasSortBy]
 	local subcatOrder = Atlas_DropDownLayouts_Order[catName]
 	for n = 1, getn(subcatOrder), 1 do
 		local subcatItems = Atlas_DropDownLayouts[catName][subcatOrder[n]]
@@ -375,7 +382,7 @@ function Atlas_Init()
 	MainMenuBarOverlayFrame:SetFrameStrata("MEDIUM")
 
 	--clear saved vars for a new version (or a new install!)
-	if AtlasOptions == nil or AtlasOptions["AtlasVersion"] ~= ATLAS_VERSION then
+	if AtlasTWOptions == nil or AtlasTWOptions["AtlasVersion"] ~= ATLAS_VERSION then
 		Atlas_FreshOptions()
 	end
 
@@ -383,36 +390,36 @@ function Atlas_Init()
 	--populate the dropdown lists...yeeeah this is so much nicer!
 	Atlas_PopulateDropdowns()
 
-	if ATLAS_DROPDOWNS[AtlasOptions.AtlasType] == nil then
-		ATLAS_OLD_TYPE = AtlasOptions.AtlasType
-		ATLAS_OLD_ZONE = AtlasOptions.AtlasZone
-		AtlasOptions.AtlasType = 1
-		AtlasOptions.AtlasZone = 1
+	if ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType] == nil then
+		ATLAS_OLD_TYPE = AtlasTWOptions.AtlasType
+		ATLAS_OLD_ZONE = AtlasTWOptions.AtlasZone
+		AtlasTWOptions.AtlasType = 1
+		AtlasTWOptions.AtlasZone = 1
 	end
 
 	--Now that saved variables have been loaded, update everything accordingly
 	Atlas_Refresh()
 	Atlas_UpdateLock()
 	Atlas_UpdateAlpha()
-	AtlasFrame:SetClampedToScreen(AtlasOptions.AtlasClamped)
+	AtlasFrame:SetClampedToScreen(AtlasTWOptions.AtlasClamped)
 	AtlasButton_UpdatePosition()
 	AtlasOptions_Init()
 end
 
 --Simple function to toggle the Atlas frame's lock status and update it's appearance
 function Atlas_ToggleLock()
-	if(AtlasOptions.AtlasLocked) then
-		AtlasOptions.AtlasLocked = false
+	if(AtlasTWOptions.AtlasLocked) then
+		AtlasTWOptions.AtlasLocked = false
 		Atlas_UpdateLock()
 	else
-		AtlasOptions.AtlasLocked = true
+		AtlasTWOptions.AtlasLocked = true
 		Atlas_UpdateLock()
 	end
 end
 
 --Updates the appearance of the lock button based on the status of AtlasLocked
 function Atlas_UpdateLock()
-	if(AtlasOptions.AtlasLocked) then
+	if(AtlasTWOptions.AtlasLocked) then
 		AtlasLockNorm:SetTexture("Interface\\AddOns\\Atlas-TW\\Images\\LockButton-Locked-Up")
 		AtlasLockPush:SetTexture("Interface\\AddOns\\Atlas-TW\\Images\\LockButton-Locked-Down")
 	else
@@ -423,7 +430,7 @@ end
 
 --Begin moving the Atlas frame if it's unlocked
 function Atlas_StartMoving()
-	if(not AtlasOptions.AtlasLocked) then
+	if(not AtlasTWOptions.AtlasLocked) then
 		AtlasFrame:StartMoving()
 	end
 end
@@ -440,12 +447,12 @@ end
 
 --Sets the transparency of the Atlas frame based on AtlasAlpha
 function Atlas_UpdateAlpha()
-	AtlasFrame:SetAlpha(AtlasOptions.AtlasAlpha)
+	AtlasFrame:SetAlpha(AtlasTWOptions.AtlasAlpha)
 end
 
 --Sets the scale of the Atlas frame based on AtlasScale
 function Atlas_UpdateScale()
-	AtlasFrame:SetScale(AtlasOptions.AtlasScale)
+	AtlasFrame:SetScale(AtlasTWOptions.AtlasScale)
 end
 
 --Simple function to toggle the visibility of the Atlas frame
@@ -462,7 +469,7 @@ end
 --Also responsible for updating all the text when a map is changed
 function Atlas_Refresh()
 
-	local zoneID = ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]
+	local zoneID = ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]
 	local data = AtlasMaps
 	local base = data[zoneID]
 
@@ -482,7 +489,7 @@ function Atlas_Refresh()
 	end
 
 	local tName = base.ZoneName[1]
-	if AtlasOptions.AtlasAcronyms and base.Acronym ~= nil then
+	if AtlasTWOptions.AtlasAcronyms and base.Acronym ~= nil then
 		local _RED = "|cffcc6666"
 		tName = tName.._RED.." ["..base.Acronym.."]"
 	end
@@ -601,7 +608,7 @@ end
 --we can basically assume that there's a match
 --find it, set it, then update menus and the maps
 function AtlasSwitchButton_OnClick()
-	local zoneID = ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]
+	local zoneID = ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]
 	if getn(ATLAS_INST_ENT_DROPDOWN) == 1 then
 		--one link, so we can just go there right away
 		AtlasSwitchDD_Set(1)
@@ -630,8 +637,8 @@ function AtlasSwitchDD_Set(index)
 	for k,v in pairs(ATLAS_DROPDOWNS) do
 		for k2,v2 in pairs(v) do
 			if v2 == ATLAS_INST_ENT_DROPDOWN[index] then
-				AtlasOptions.AtlasType = k
-				AtlasOptions.AtlasZone = k2
+				AtlasTWOptions.AtlasType = k
+				AtlasTWOptions.AtlasZone = k2
 			end
 		end
 	end
@@ -652,7 +659,7 @@ end
 --Cycle through Atlas_MapTypes to populate the dropdown
 function AtlasFrameDropDownType_Initialize()
 	local info, i
-	local catName = Atlas_DropDownLayouts_Order[AtlasOptions.AtlasSortBy]
+	local catName = Atlas_DropDownLayouts_Order[AtlasTWOptions.AtlasSortBy]
 	local subcatOrder = Atlas_DropDownLayouts_Order[catName]
 	for i = 1, getn(subcatOrder), 1 do
 		info = {
@@ -673,7 +680,7 @@ end
 --Called whenever the map type dropdown menu is shown
 function AtlasFrameDropDownType_OnShow()
 	UIDropDownMenu_Initialize(AtlasFrameDropDownType, AtlasFrameDropDownType_Initialize)
-	UIDropDownMenu_SetSelectedID(AtlasFrameDropDownType, AtlasOptions.AtlasType)
+	UIDropDownMenu_SetSelectedID(AtlasFrameDropDownType, AtlasTWOptions.AtlasType)
 	UIDropDownMenu_SetWidth(190, AtlasFrameDropDownType)
 end
 
@@ -682,8 +689,8 @@ end
 function AtlasFrameDropDownType_OnClick()
 	local thisID = this:GetID()
 	UIDropDownMenu_SetSelectedID(AtlasFrameDropDownType, thisID)
-	AtlasOptions.AtlasType = thisID
-	AtlasOptions.AtlasZone = 1
+	AtlasTWOptions.AtlasType = thisID
+	AtlasTWOptions.AtlasZone = 1
 	AtlasFrameDropDown_OnShow()
 	Atlas_Refresh()
 end
@@ -692,7 +699,7 @@ end
 --Looks at the status of AtlasType to determine how to populate the list
 function AtlasFrameDropDown_Initialize()
 	local info
-	for k,v in pairs(ATLAS_DROPDOWNS[AtlasOptions.AtlasType]) do
+	for k,v in pairs(ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType]) do
 		info = {
 			text = AtlasMaps[v].ZoneName[1],
 			func = AtlasFrameDropDown_OnClick
@@ -704,7 +711,7 @@ end
 --Called whenever the main dropdown menu is shown
 function AtlasFrameDropDown_OnShow()
 	UIDropDownMenu_Initialize(AtlasFrameDropDown, AtlasFrameDropDown_Initialize)
-	UIDropDownMenu_SetSelectedID(AtlasFrameDropDown, AtlasOptions.AtlasZone)
+	UIDropDownMenu_SetSelectedID(AtlasFrameDropDown, AtlasTWOptions.AtlasZone)
 	UIDropDownMenu_SetWidth(190, AtlasFrameDropDown)
 end
 
@@ -713,7 +720,7 @@ end
 function AtlasFrameDropDown_OnClick()
 	local i = this:GetID()
 	UIDropDownMenu_SetSelectedID(AtlasFrameDropDown, i)
-	AtlasOptions.AtlasZone = i
+	AtlasTWOptions.AtlasZone = i
 	Atlas_Refresh()
 end
 
@@ -743,8 +750,8 @@ function Atlas_AutoSelect()
 			for ka,va in pairs(ATLAS_DROPDOWNS) do
 				for kb,vb in pairs(va) do
 					if Atlas_SubZoneData[currentSubZone] == vb then
-						AtlasOptions.AtlasType = ka
-						AtlasOptions.AtlasZone = kb
+						AtlasTWOptions.AtlasType = ka
+						AtlasTWOptions.AtlasZone = kb
 						Atlas_Refresh()
 						debug("Map changed directly based on SubZone data.")
 						return
@@ -753,15 +760,15 @@ function Atlas_AutoSelect()
 			end
 		else
 			debug("No applicable SubZone data exists.")
-			if currentZone == Atlas_SubZoneAssoc[ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]] then
+			if currentZone == Atlas_SubZoneAssoc[ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]] then
 				debug("You're in the same instance as the former map. Doing nothing.")
 				return
 			else
 				for ka,va in pairs(ATLAS_DROPDOWNS) do
 					for kb,vb in pairs(va) do
 						if Atlas_AssocDefaults[currentZone] == vb then
-							AtlasOptions.AtlasType = ka
-							AtlasOptions.AtlasZone = kb
+							AtlasTWOptions.AtlasType = ka
+							AtlasTWOptions.AtlasZone = kb
 							Atlas_Refresh()
 							debug("You just arrived here. Using the default map.")
 							return
@@ -777,23 +784,23 @@ function Atlas_AutoSelect()
 			for ka,va in pairs(ATLAS_DROPDOWNS) do
 				for kb,vb in pairs(va) do
 					if Atlas_OutdoorZoneToAtlas[currentZone] == vb then
-						AtlasOptions.AtlasType = ka
-						AtlasOptions.AtlasZone = kb
+						AtlasTWOptions.AtlasType = ka
+						AtlasTWOptions.AtlasZone = kb
 						Atlas_Refresh()
 						debug("Map changed to the associated map.")
 						return
 					end
 				end
 			end
-		elseif Atlas_InstToEntMatches[ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]] then
-			for ka,va in pairs(Atlas_InstToEntMatches[ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]]) do
+		elseif Atlas_InstToEntMatches[ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]] then
+			for ka,va in pairs(Atlas_InstToEntMatches[ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]]) do
 				if currentZone == AtlasMaps[va].ZoneName[1] then
 					debug("Instance/entrance pair found. Doing nothing.")
 					return
 				end
 			end
-		elseif Atlas_EntToInstMatches[ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]] then
-			for ka,va in pairs(Atlas_EntToInstMatches[ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone]]) do
+		elseif Atlas_EntToInstMatches[ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]] then
+			for ka,va in pairs(Atlas_EntToInstMatches[ATLAS_DROPDOWNS[AtlasTWOptions.AtlasType][AtlasTWOptions.AtlasZone]]) do
 				if currentZone == AtlasMaps[va].ZoneName[1] then
 					debug("Instance/entrance pair found. Doing nothing.")
 					return
@@ -805,8 +812,8 @@ function Atlas_AutoSelect()
 			for kb,vb in pairs(va) do 
 				-- Compare the currentZone to the new substr of ZoneName
 				if currentZone == strsub(AtlasMaps[vb].ZoneName[1], strlen(AtlasMaps[vb].ZoneName[1]) - strlen(currentZone) + 1) then
-					AtlasOptions.AtlasType = ka
-					AtlasOptions.AtlasZone = kb
+					AtlasTWOptions.AtlasType = ka
+					AtlasTWOptions.AtlasZone = kb
 					Atlas_Refresh()
 					debug("Found a match. Map has been changed.")
 					return
@@ -819,7 +826,7 @@ end
 
 --Called whenever the Atlas frame is displayed
 function Atlas_OnShow()
-	if(AtlasOptions.AtlasAutoSelect) then
+	if(AtlasTWOptions.AtlasAutoSelect) then
 		Atlas_AutoSelect()
 	end
 
@@ -834,7 +841,7 @@ end
 --RightButton closes Atlas and open the World Map if the RightClick option is turned on
 function Atlas_OnClick()
 	if arg1 == "RightButton" then
-		if AtlasOptions.AtlasRightClick then
+		if AtlasTWOptions.AtlasRightClick then
 			Atlas_Toggle()
 			ToggleWorldMap()
 		end
