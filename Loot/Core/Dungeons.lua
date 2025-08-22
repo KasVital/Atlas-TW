@@ -1,265 +1,220 @@
-local L = AceLibrary("AceLocale-2.2"):new("Atlas")
-local BZ = AceLibrary("Babble-Zone-2.2a")
-local BF = AceLibrary("Babble-Faction-2.2a")
+local L = AtlasTW.Local
+local title = L["Dungeons & Raids"]
+--table for create back navigation
+AtlasTW.Loot.BackTableRegistry = {}
 
-function AtlasLoot_DungeonsMenu1()
-	AtlasLoot_PrepMenu(nil, L["Dungeons & Raids"])
-	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1"
-	AtlasLootCharDB.LastBossText = L["Dungeons & Raids"]
-	AtlasLootItemsFrame_PREV:Show()
-	AtlasLootItemsFrame_NEXT:Show()
-    --RFC
-    AtlasLootMenuItem_1_Name:SetText(L["[13-18] Ragefire Chasm"]);
-	AtlasLootMenuItem_1_Extra:SetText(BZ["Orgrimmar"]);
-	AtlasLootMenuItem_1_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_1.lootpage="RFCTaragaman";
-	AtlasLootMenuItem_1:Show();
-    --WC
-    AtlasLootMenuItem_2_Name:SetText(L["[17-24] Wailing Caverns"]);
-	AtlasLootMenuItem_2_Extra:SetText(BZ["The Barrens"]);
-	AtlasLootMenuItem_2_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_2.lootpage="WCLordCobrahn";
-	AtlasLootMenuItem_2:Show();
-	--DM
-	AtlasLootMenuItem_3_Name:SetText(L["[17-24] The Deadmines"]);
-	AtlasLootMenuItem_3_Extra:SetText(BZ["Westfall"]);
-	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_3.lootpage="DMRhahkZor";
-	AtlasLootMenuItem_3:Show();
-	--SFK
-	AtlasLootMenuItem_4_Name:SetText(L["[22-30] Shadowfang Keep"]);
-	AtlasLootMenuItem_4_Extra:SetText(BZ["Silverpine Forest"]);
-	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_4.lootpage="SFKRethilgore";
-	AtlasLootMenuItem_4:Show();
-	--BFD
-	AtlasLootMenuItem_5_Name:SetText(L["[23-32] Blackfathom Deeps"]);
-	AtlasLootMenuItem_5_Extra:SetText(BZ["Ashenvale"]);
-	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_5.lootpage="BFDGhamoora";
-	AtlasLootMenuItem_5:Show();
-	--Stockades
-	AtlasLootMenuItem_6_Name:SetText(L["[22-30] The Stockade"]);
-	AtlasLootMenuItem_6_Extra:SetText(BF["Stormwind"]);
-	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_6.lootpage="SWStTargorr";
-	AtlasLootMenuItem_6:Show();
-	--Gnomer
-	AtlasLootMenuItem_7_Name:SetText(L["[29-38] Gnomeregan"]);
-	AtlasLootMenuItem_7_Extra:SetText(BZ["Dun Morogh"]);
-	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_7.lootpage="GnGrubbis";
-	AtlasLootMenuItem_7:Show();
-	--RFK
-	AtlasLootMenuItem_8_Name:SetText(L["[29-38] Razorfen Kraul"]);
-	AtlasLootMenuItem_8_Extra:SetText(BZ["The Barrens"]);
-	AtlasLootMenuItem_8_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_8.lootpage="RFKAggem";
-	AtlasLootMenuItem_8:Show();
-	--Crescent Grove
-	AtlasLootMenuItem_9_Name:SetText(L["[32-38] The Crescent Grove"]);
-	AtlasLootMenuItem_9_Extra:SetText(BZ["Ashenvale"]);
-	AtlasLootMenuItem_9_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_9.lootpage="TCGGrovetenderEngryss";
-	AtlasLootMenuItem_9:Show();
-	--SM GY
-	AtlasLootMenuItem_10_Name:SetText(L["[27-36] Scarlet Monastery (Graveyard)"]);
-	AtlasLootMenuItem_10_Extra:SetText(BZ["Tirisfal Glades"]);
-	AtlasLootMenuItem_10_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_10.lootpage="SMVishas";
-	AtlasLootMenuItem_10:Show();
-	--SM Library
-	AtlasLootMenuItem_11_Name:SetText(L["[28-39] Scarlet Monastery (Library)"]);
-	AtlasLootMenuItem_11_Extra:SetText(BZ["Tirisfal Glades"]);
-	AtlasLootMenuItem_11_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_11.lootpage="SMHoundmasterLoksey";
-	AtlasLootMenuItem_11:Show();
-	--SM Armory
-	AtlasLootMenuItem_12_Name:SetText(L["[32-41] Scarlet Monastery (Armory)"]);
-	AtlasLootMenuItem_12_Extra:SetText(BZ["Tirisfal Glades"]);
-	AtlasLootMenuItem_12_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_12.lootpage="SMHerod";
-	AtlasLootMenuItem_12:Show();
-	--SM Cathedral
-	AtlasLootMenuItem_13_Name:SetText(L["[35-45] Scarlet Monastery (Cathedral)"]);
-	AtlasLootMenuItem_13_Extra:SetText(BZ["Tirisfal Glades"]);
-	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_13.lootpage="SMFairbanks";
-	AtlasLootMenuItem_13:Show();
-	--RFD
-	AtlasLootMenuItem_14_Name:SetText(L["[36-46] Razorfen Downs"]);
-	AtlasLootMenuItem_14_Extra:SetText(BZ["The Barrens"]);
-	AtlasLootMenuItem_14_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_14.lootpage="RFDTutenkash";
-	AtlasLootMenuItem_14:Show();
-	--Uldaman
-	AtlasLootMenuItem_15_Name:SetText(L["[40-51] Uldaman"]);
-	AtlasLootMenuItem_15_Extra:SetText(BZ["Badlands"]);
-	AtlasLootMenuItem_15_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_15.lootpage="UldBaelog";
-	AtlasLootMenuItem_15:Show();
-	--Gilneas
-	AtlasLootMenuItem_16_Name:SetText(L["[42-50] Gilneas City"]);
-	AtlasLootMenuItem_16_Extra:SetText(BZ["Gilneas"]);
-	AtlasLootMenuItem_16_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_16.lootpage="GCMatthiasHoltz";
-	AtlasLootMenuItem_16:Show();
-	--Mara
-	AtlasLootMenuItem_17_Name:SetText(L["[45-55] Maraudon"]);
-	AtlasLootMenuItem_17_Extra:SetText(BZ["Desolace"]);
-	AtlasLootMenuItem_17_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_17.lootpage="MaraNoxxion";
-	AtlasLootMenuItem_17:Show();
-	--ZF
-	AtlasLootMenuItem_18_Name:SetText(L["[44-54] Zul'Farrak"]);
-	AtlasLootMenuItem_18_Extra:SetText(BZ["Tanaris"]);
-	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_18.lootpage="ZFAntusul";
-	AtlasLootMenuItem_18:Show();
-	--ST
-	AtlasLootMenuItem_19_Name:SetText(L["[50-60] The Sunken Temple"]);
-	AtlasLootMenuItem_19_Extra:SetText(BZ["Swamp of Sorrows"]);
-	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_19.lootpage="STBalconyMinibosses";
-	AtlasLootMenuItem_19:Show();
-	--HFQ
-	AtlasLootMenuItem_20_Name:SetText(L["[50-60] Hateforge Quarry"]);
-	AtlasLootMenuItem_20_Extra:SetText(BZ["Burning Steppes"]);
-	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_20.lootpage="HQHighForemanBargulBlackhammer";
-	AtlasLootMenuItem_20:Show();
-	--BRD
-	AtlasLootMenuItem_21_Name:SetText(L["[52-60] Blackrock Depths"]);
-	AtlasLootMenuItem_21_Extra:SetText(BZ["Burning Steppes"]);
-	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_21.lootpage="BRDLordRoccor";
-	AtlasLootMenuItem_21:Show();
-	--DME
-	AtlasLootMenuItem_22_Name:SetText(L["[55-60] Dire Maul (East)"]);
-	AtlasLootMenuItem_22_Extra:SetText(BZ["Feralas"]);
-	AtlasLootMenuItem_22_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_22.lootpage="DMEPusillin";
-	AtlasLootMenuItem_22:Show();
-	--DMW
-	AtlasLootMenuItem_23_Name:SetText(L["[57-60] Dire Maul (West)"]);
-	AtlasLootMenuItem_23_Extra:SetText(BZ["Feralas"]);
-	AtlasLootMenuItem_23_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_23.lootpage="DMWTendrisWarpwood";
-	AtlasLootMenuItem_23:Show();
-	--DMN
-	AtlasLootMenuItem_24_Name:SetText(L["[57-60] Dire Maul (North)"]);
-	AtlasLootMenuItem_24_Extra:SetText(BZ["Feralas"]);
-	AtlasLootMenuItem_24_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_24.lootpage="DMNGuardMoldar";
-	AtlasLootMenuItem_24:Show();
-	--Scholo
-	AtlasLootMenuItem_25_Name:SetText(L["[58-60] Scholomance"]);
-	AtlasLootMenuItem_25_Extra:SetText(BZ["Western Plaguelands"]);
-	AtlasLootMenuItem_25_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_25.lootpage="SCHOLOKirtonostheHerald";
-	AtlasLootMenuItem_25:Show();
-	--Strat
-	AtlasLootMenuItem_26_Name:SetText(L["[58-60] Stratholme"]);
-	AtlasLootMenuItem_26_Extra:SetText(BZ["Eastern Plaguelands"]);
-	AtlasLootMenuItem_26_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_26.lootpage="STRATSkull";
-	AtlasLootMenuItem_26:Show();
-	--LBRS
-	AtlasLootMenuItem_27_Name:SetText(L["[55-60] Lower Blackrock Spire"]);
-	AtlasLootMenuItem_27_Extra:SetText(BZ["Burning Steppes"]);
-	AtlasLootMenuItem_27_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_27.lootpage="LBRSSpirestoneButcher";
-	AtlasLootMenuItem_27:Show();
-	--UBRS
-	AtlasLootMenuItem_28_Name:SetText(L["[58-60] Upper Blackrock Spire"]);
-	AtlasLootMenuItem_28_Extra:SetText(BZ["Burning Steppes"]);
-	AtlasLootMenuItem_28_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_28.lootpage="UBRSEmberseer";
-	AtlasLootMenuItem_28:Show();
-	--Kara crypt
-	AtlasLootMenuItem_29_Name:SetText(L["[58-60] Karazhan Crypt"]);
-	AtlasLootMenuItem_29_Extra:SetText(BZ["Deadwind Pass"]);
-	AtlasLootMenuItem_29_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_29.lootpage="KCMarrowspike";
-	AtlasLootMenuItem_29:Show()
-	--CoT:BM
-	AtlasLootMenuItem_30_Name:SetText(L["[60] Caverns of Time: Black Morass"]);
-	AtlasLootMenuItem_30_Extra:SetText(BZ["Tanaris"]);
-	AtlasLootMenuItem_30_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_30.lootpage="COTBMChronar";
-	AtlasLootMenuItem_30:Show()
+-- Get the formatted string for the instance and make back navigation button
+local function getFormString(instanceType, mainString)
+    if instanceType == "[RAID]" then
+        AtlasTW.Loot.BackTableRegistry[mainString] = "DUNGEONSMENU2"
+        return "|cffff0000"..instanceType.." |cffffd200"..mainString
+    else
+        AtlasTW.Loot.BackTableRegistry[mainString] = AtlasTW.Loot.BackTableRegistry[mainString] or "AtlasLoot_DungeonsMenu1"
+        return "|cffffffff"..instanceType.." |cffffd200"..mainString
+    end
+end
+
+-- Function to generate menu data from AtlasTW.InstanceData
+local function GenerateMenuDataFromInstanceData()
+    local menu1Data = {}
+    local menu2Data = {}
+
+--[[     -- Mapping from AtlasTW.InstanceData keys to lootpage names
+    local lootpageMapping = {
+        ["RagefireChasm"] = "RFCTaragaman",
+        ["WailingCaverns"] = "WCLordCobrahn",
+        ["TheDeadmines"] = "DMRhahkZor",
+        ["ShadowfangKeep"] = "SFKRethilgore",
+        ["BlackfathomDeeps"] = 0,
+        ["TheStockade"] = "SWStTargorr",
+        ["Gnomeregan"] = "GnGrubbis",
+        ["RazorfenKraul"] = "RFKAggem",
+        ["RazorfenDowns"] = "RFDTutenkash",
+        ["Uldaman"] = "UldBaelog",
+        ["Maraudon"] = "MaraNoxxion",
+        ["ZulFarrak"] = "ZFAntusul",
+        ["TheSunkenTemple"] = "STBalconyMinibosses",
+        ["BlackrockDepths"] = "BRDLordRoccor",
+        ["Scholomance"] = "SCHOLOKirtonostheHerald",
+        ["Stratholme"] = "STRATSkull",
+        ["BlackrockSpireLower"] = "LBRSSpirestoneButcher",
+        ["BlackrockSpireUpper"] = "UBRSEmberseer",
+        ["ZulGurub"] = "ZGJeklik",
+        ["TheRuinsofAhnQiraj"] = "AQ20Kurinnaxx",
+        ["MoltenCore"] = "MCLucifron",
+        ["OnyxiasLair"] = "Onyxia",
+        ["BlackwingLair"] = "BWLRazorgore",
+        ["TheTempleofAhnQiraj"] = "AQ40Skeram",
+        ["Naxxramas"] = "NAXPatchwerk",
+        ["LowerKarazhan"] = "LKHRolfen",
+        ["TowerofKarazhan"] = "K40Gnarlmoon",
+        ["TheBlackMorass"] = "COTBMChronar",
+        ["TheStormwindVault"] = "SWVAszoshGrimflame",
+        ["EmeraldSanctum"] = "ESErennius",
+        ["KarazhanCrypt"] = "KCMarrowspike",
+        ["TheCrescentGrove"] = "TCGGrovetenderEngryss",
+        ["StormwroughtRuins"] = "RFCTaragaman", --TODO
+        ["GilneasCity"] = "GCMatthiasHoltz",
+        ["HateforgeQuarry"] = "HQHighForemanBargulBlackhammer",
+        ["ScarletMonasteryLibrary"] = "SMHoundmasterLoksey",
+        ["ScarletMonasteryArmory"] = "SMHerod",
+        ["ScarletMonasteryCathedral"] = "SMFairbanks",
+        ["ScarletMonasteryGraveyard"] = "SMVishas",
+        ["DireMaulWest"] = "DMWTendrisWarpwood",
+        ["DireMaulNorth"] = "DMNGuardMoldar",
+        ["DireMaulEast"] = "DMEPusillin",
+        ["CavernsOfTimeBlackMorass"] = "COTBMChronar",
+        ["StormwindVault"] = "SWVAszoshGrimflame",
+    } ]]
+    -- Skip these instances as they have special handling
+    local skipInstances = {
+        ["RareMobs"] = true,  -- should be in World menu
+    }
+
+    -- Iterate through InstanceData
+    local counter = 0
+    for instanceKey, instanceData in pairs(AtlasTW.InstanceData) do
+        if type(instanceData) == "table" and instanceData.Name and instanceData.Level and not skipInstances[instanceKey] then
+            if not string.find(instanceKey, "^BG") then
+                local name = instanceData.Name
+                local location = instanceData.Location or ""
+                local level = instanceData.Level
+                local maxPlayers = instanceData.MaxPlayers
+                local lootpage = ""
+                -- Get lootpage name
+                for _, boss in ipairs(instanceData.Bosses) do
+                    if boss.name then
+                        lootpage = boss.name
+                        break
+                    end
+                end
+
+                lootpage = lootpage or instanceKey
+
+                -- Determine instance type and target menu
+                local instanceType
+                local targetMenu
+
+                if maxPlayers == 40 or maxPlayers == 20 or maxPlayers == 10 then
+                    instanceType = "[RAID]"
+                    targetMenu = menu2Data
+                elseif counter > 29 then
+                    if type(level) == "table" then
+                       instanceType = "[" .. level[1].."-"..level[2] .. "]"
+                    else
+                        instanceType = "[".. level.. "]"
+                    end
+                    targetMenu = menu2Data
+                else
+                    counter = counter + 1
+                    if type(level) == "table" then
+                       instanceType = "[" .. level[1].."-"..level[2] .. "]"
+                    else
+                        instanceType = "[".. level.. "]"
+                    end
+                    targetMenu = menu1Data
+                end
+
+                -- Create menu entry
+                local menuEntry = {
+                    name = getFormString(instanceType, name),
+                    name_orig = name,
+                    Extra = location,
+                    lootpage = lootpage,
+                    playerLimit = tonumber(maxPlayers) or 5
+                }
+
+                -- Add icon for raids and level 60 instances
+                if instanceType == "[RAID]" then
+                    menuEntry.icon = "Interface\\Icons\\Spell_Arcane_PortalOrgrimmar"
+                else
+                    menuEntry.icon = "Interface\\Icons\\Spell_Arcane_PortalIronForge"
+                end
+
+                table.insert(targetMenu, menuEntry)
+            end
+        end
+    end
+
+    -- Sort menus by level range
+    local function sortByLevel(a, b)
+        -- Extract level from [XX] or [XX-XX] format
+        local aStart = string.find(a.name, "%[")
+        local aEnd = string.find(a.name, "%]")
+        local bStart = string.find(b.name, "%[")
+        local bEnd = string.find(b.name, "%]")
+
+        if aStart and aEnd and bStart and bEnd then
+            local aLevelStr = string.sub(a.name, aStart + 1, aEnd - 1)
+            local bLevelStr = string.sub(b.name, bStart + 1, bEnd - 1)
+
+            -- Handle RAID case
+            if aLevelStr == "RAID" then
+                return false
+            end
+            if bLevelStr == "RAID" then
+                return true
+            end
+
+            -- Extract first number from level range (e.g., "15-25" -> 15)
+            local aDash = string.find(aLevelStr, "-")
+            local bDash = string.find(bLevelStr, "-")
+
+            local aLevel = tonumber(aDash and string.sub(aLevelStr, 1, aDash - 1) or aLevelStr)
+            local bLevel = tonumber(bDash and string.sub(bLevelStr, 1, bDash - 1) or bLevelStr)
+
+            if aLevel and bLevel then
+                return aLevel < bLevel
+            end
+        end
+        return false
+    end
+
+    -- Sort second menu by player limit (raids first, then by level)
+    local function sortByPlayerLimit(a, b)
+        local aIsRaid = string.find(a.name, "%[RAID%]")
+        local bIsRaid = string.find(b.name, "%[RAID%]")
+        -- If both are raids, sort by player limit (40 > 20 > 10)
+        if aIsRaid and bIsRaid then
+            if a.playerLimit ~= b.playerLimit then
+                return a.playerLimit < b.playerLimit
+            end
+            -- If same player limit, sort by level
+            return sortByLevel(a, b)
+        end
+
+        -- If both are not raids, sort by level
+        if not aIsRaid and not bIsRaid then
+            return sortByLevel(a, b)
+        end
+
+        -- Raids come first
+        return aIsRaid and not bIsRaid
+    end
+
+    table.sort(menu1Data, sortByLevel)
+    table.sort(menu2Data, sortByPlayerLimit)
+
+    return menu1Data, menu2Data
+end
+
+-- Generate menu data from AtlasMAtlasTW.InstanceDataaps
+local generatedMenu1Data, generatedMenu2Data = GenerateMenuDataFromInstanceData()
+
+-- Data for Dungeons & Raids (Page 1) - Auto-generated from AtlasTW.InstanceData
+AtlasTW.Loot.DungeonsMenu1Data = generatedMenu1Data
+
+-- Data for Dungeons & Raids (Page 2) - Auto-generated from AtlasTW.InstanceData  
+AtlasTW.Loot.DungeonsMenu2Data = generatedMenu2Data
+
+ function AtlasLoot_DungeonsMenu1()
+    AtlasLootItemsFrame.StoredElement = { menuName = L["Dungeons & Raids"], defaultIcon = "Interface\\Icons\\Spell_Arcane_PortalIronForge" }
+    AtlasLootItemsFrame.StoredMenu = AtlasTW.Loot.DungeonsMenu1Data
+    AtlasTW.Loot.ScrollBarLootUpdate()
 end
 
 function AtlasLoot_DungeonsMenu2()
-	AtlasLoot_PrepMenu(nil, L["Dungeons & Raids"])
-	AtlasLootCharDB.LastBoss = "DUNGEONSMENU2"
-	AtlasLootCharDB.LastBossText = L["Dungeons & Raids"]
-	AtlasLootItemsFrame_PREV:Show()
-	AtlasLootItemsFrame_NEXT:Show()
-	--SWV
-    AtlasLootMenuItem_1_Name:SetText(L["[60] Stormwind Vault"]);
-	AtlasLootMenuItem_1_Extra:SetText(BF["Stormwind"]);
-	AtlasLootMenuItem_1_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	AtlasLootMenuItem_1.lootpage="SWVAszoshGrimflame";
-	AtlasLootMenuItem_1:Show();
-	--ZG
-    AtlasLootMenuItem_3_Name:SetText(L["[RAID] Zul'Gurub"]);
-	AtlasLootMenuItem_3_Extra:SetText(BZ["Stranglethorn Vale"]);
-	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_3.lootpage="ZGJeklik";
-	AtlasLootMenuItem_3:Show();
-	--AQ20
-	AtlasLootMenuItem_4_Name:SetText(L["[RAID] Ruins of Ahn'Qiraj"]);
-	AtlasLootMenuItem_4_Extra:SetText(BZ["Silithus"]);
-	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_4.lootpage="AQ20Kurinnaxx";
-	AtlasLootMenuItem_4:Show();
-	--MC
-	AtlasLootMenuItem_5_Name:SetText(L["[RAID] Molten Core"]);
-	AtlasLootMenuItem_5_Extra:SetText(BZ["Burning Steppes"]);
-	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_5.lootpage="MCLucifron";
-	AtlasLootMenuItem_5:Show();
-	--Ony
-	AtlasLootMenuItem_6_Name:SetText(L["[RAID] Onyxia's Lair"]);
-	AtlasLootMenuItem_6_Extra:SetText(BZ["Dustwallow Marsh"]);
-	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_6.lootpage="Onyxia";
-	AtlasLootMenuItem_6:Show();
-	--LKH
-	AtlasLootMenuItem_7_Name:SetText(L["[RAID] Lower Karazhan Halls"]);
-	AtlasLootMenuItem_7_Extra:SetText(BZ["Deadwind Pass"]);
-	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_7.lootpage="LKHRolfen";
-	AtlasLootMenuItem_7:Show();
-	--BWL
-	AtlasLootMenuItem_8_Name:SetText(L["[RAID] Blackwing Lair"]);
-	AtlasLootMenuItem_8_Extra:SetText(BZ["Burning Steppes"]);
-	AtlasLootMenuItem_8_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_8.lootpage="BWLRazorgore";
-	AtlasLootMenuItem_8:Show();
-	--ES
-	AtlasLootMenuItem_9_Name:SetText(L["[RAID] Emerald Sanctum"]);
-	AtlasLootMenuItem_9_Extra:SetText(BZ["Hyjal"]);
-	AtlasLootMenuItem_9_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_9.lootpage="ESErennius";
-	AtlasLootMenuItem_9:Show();
-	--AQ40
-	AtlasLootMenuItem_10_Name:SetText(L["[RAID] Temple of Ahn'Qiraj"]);
-	AtlasLootMenuItem_10_Extra:SetText(BZ["Silithus"]);
-	AtlasLootMenuItem_10_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_10.lootpage="AQ40Skeram";
-	AtlasLootMenuItem_10:Show();
-	--Naxx
-	AtlasLootMenuItem_11_Name:SetText(L["[RAID] Naxxramas"]);
-	AtlasLootMenuItem_11_Extra:SetText(BZ["Eastern Plaguelands"]);
-	AtlasLootMenuItem_11_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_11.lootpage="NAXPatchwerk";
-	AtlasLootMenuItem_11:Show();
-	--K40
-	AtlasLootMenuItem_12_Name:SetText(L["[RAID] Tower of Karazhan"]);
-	AtlasLootMenuItem_12_Extra:SetText(BZ["Deadwind Pass"]);
-	AtlasLootMenuItem_12_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
-	AtlasLootMenuItem_12.lootpage="K40Gnarlmoon";
-	AtlasLootMenuItem_12:Show();
+    AtlasLootItemsFrame.StoredElement = { menuName = L["Dungeons & Raids"], defaultIcon = "Interface\\Icons\\Spell_Arcane_PortalOrgrimmar" }
+    AtlasLootItemsFrame.StoredMenu = AtlasTW.Loot.DungeonsMenu2Data
+    AtlasTW.Loot.ScrollBarLootUpdate()
 end

@@ -1,35 +1,57 @@
-<!--
-
-	Atlas, a World of Warcraft instance map browser
-	Copyright 2005 - 2008 Dan Gilbert
-	Email me at loglow@gmail.com
-
-	This file is part of Atlas.
-
-	Atlas is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
-
-	Atlas is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with Atlas; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
--->
-
 <Bindings>
-	<Binding name="ATLAS_TOGGLE" header="ATLAS_TITLE">
-		Atlas_Toggle()
+	<Binding name="ATLASTW_TOGGLE" header="ATLASTW_TITLE">
+		AtlasTW = AtlasTW or {}
+		AtlasTW.ToggleAtlas()
 	</Binding>
-	<Binding name="ATLAS_OPTIONS">
-		AtlasOptions_Toggle()
+	<Binding name="ATLASTW_OPTIONS">
+		AtlasTW = AtlasTW or {}
+		AtlasTW.OptionsOnClick()
 	</Binding>
-	<Binding name="ATLAS_AUTOSEL">
-		Atlas_AutoSelect()
+	<Binding name="ATLASLOOT_QL1" header="ATLASLOOT_TITLE">
+		if AtlasTWCharDB["QuickLooks"][1] then
+			if AtlasFrame and AtlasFrame:IsVisible() then
+				AtlasLootPanel_Preset1:Click()
+			end
+		end
+	</Binding>
+	<Binding name="ATLASLOOT_QL2">
+		if AtlasTWCharDB["QuickLooks"][2] then
+			if AtlasFrame and AtlasFrame:IsVisible() then
+				AtlasLootPanel_Preset2:Click()
+			end
+		end
+	</Binding>
+	<Binding name="ATLASLOOT_QL3">
+		if AtlasTWCharDB["QuickLooks"][3] then
+			if AtlasFrame and AtlasFrame:IsVisible() then
+				AtlasLootPanel_Preset3:Click()
+			end
+		end
+	</Binding>
+	<Binding name="ATLASLOOT_QL4">
+		if AtlasTWCharDB["QuickLooks"][4] then
+			if AtlasFrame and AtlasFrame:IsVisible() then
+				AtlasLootPanel_Preset4:Click()
+			end
+		end
+	</Binding>
+	<Binding name="ATLASLOOT_QL5">
+		if AtlasTWCharDB["QuickLooks"][5] then
+			if AtlasFrame and AtlasFrame:IsVisible() then
+				AtlasLootPanel_Preset5:Click()
+			end
+		end
+	</Binding>
+	<Binding name="ATLASLOOT_QL6">
+		if AtlasTWCharDB["QuickLooks"][6] then
+			if AtlasFrame and AtlasFrame:IsVisible() then
+				AtlasLootPanel_Preset6:Click()
+			end
+		end
+	</Binding>
+	<Binding name="ATLASLOOT_WISHLIST">
+		if AtlasFrame and AtlasFrame:IsVisible() then
+			AtlasLootPanel_WishList:Click()
+		end
 	</Binding>
 </Bindings>

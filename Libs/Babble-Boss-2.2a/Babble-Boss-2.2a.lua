@@ -10,7 +10,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 ]]
 
 local MAJOR_VERSION = "Babble-Boss-2.2a"
-local MINOR_VERSION = tonumber(string.sub("$Revision: 20010 $", 12, -3))
+local MINOR_VERSION = tonumber(string.sub("$Revision: 20011 $", 12, -3))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 
@@ -28,6 +28,67 @@ local BabbleBoss = AceLibrary("AceLocale-2.2"):new(MAJOR_VERSION)
 
 BabbleBoss:RegisterTranslations("enUS", function()
 	return {
+		--1.18
+		["Incindis"] = true,
+		["Sorcerer-Thane Thaurissan"] = true,
+		["Smoldaris"] = true,
+		["Basalthar"] = true,
+		["Velthelaxx the Defiler"] = true,
+		["Juthza the Cunning"] = true,
+		["Kath'zen the Brutal"] = true,
+		["Champion Razjal the Quick"] = true,
+		["Zel'jeb the Ancient"] = true,
+		["Rotthorn"] = true,
+		["Death Prophet Rakameg"] = true,
+		["Gowlfang"] = true,
+		["Cavernweb Broodmother"] = true,
+		["Web Master Torkon"] = true,
+		["Halgan Redbrand"] = true,
+		["Slagfist Destroyer"] = true,
+		["Garlock Flamekeeper"] = true,
+		["Elder Hollowblood"] = true,
+		["Searistrasz"] = true,
+		["Zuluhed the Wracked"] = true,
+		["Bogpaw Truthsay"] = true,
+		["Oronok Torn-Heart"] = true,
+		["Dagar the Glutton"] = true,
+		["Librarian Theodorus"] = true,
+		["Duke Balor the IV"] = true,
+		["Chieftain Stormsong"] = true,
+		["Subjugator Halthas Shadecrest"] = true,
+		["Mycellakos"] = true,
+		["Eldermaw the Primordial"] = true,
+		["Lady Drazare"] = true,
+		["Ighal'for"] = true,
+		["Mergothid"] = true,
+		["Deathlord Tidebane"] = true,
+		["Remains of the Innocent"] = true,
+		--1.17.2
+		["Trigore the Lasher"] = true,
+		["Boahn"] = true,
+		["Mad Magglish"] = true,
+		["Ebru"] = true,
+		["Marisa du'Paige"] = true,
+		["Brainwashed Noble"] = true,
+		["Foreman Thistlenettle"] = true,
+		["Kazkaz the Unholy"] = true,
+		["Zekkis"] = true,
+		["Veyzhak the Cannibal"] = true,
+		["Hammertoe Grez"] = true,
+		["Magregan Deepshadow"] = true,
+		["Kolk"] = true,
+		["Gelk"] = true,
+		["Magra"] = true,
+		["Cavindra"] = true,
+		["Cursed Centaur"] = true,
+		["Sprok"] = true,
+		["Namdo Bizzfizzle"] = true,
+		["Techbot"] = true,
+		["The Behemoth"] = true,
+		["Scarshield Quartermaster"] = true,
+		["Franclorn Forgewright"] = true,
+		["Lothos Riftwaker"] = true,
+		["Overmaster Pyron"] = true,
 		["Mephistroth"] = true,
 		["Kruul"] = true,
 		["Rupturan the Broken"] = true,
@@ -73,7 +134,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Engineer Figgles"] = true,
 		["Corrosis"] = true,
 		["Hatereaver Annihilator"] = true,
-		["Hargesh Doomcaller"] = true,
+		["Har'gesh Doomcaller"] = true,
 		["Antnormi"] = true,
 		["Infinite Chromie"] = true,
 		["Stormwind Vault"] = true,
@@ -139,12 +200,10 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Sulfuron Harbinger"] = true,
 		["Shazzrah"] = true,
 		["Lucifron"] = true,
-		["Gehennas"] = true,
 		["Magmadar"] = true,
 		["Onyxia"] = true,
 		["Azuregos"] = true,
 		["Spirit of Azuregos"] = true,
-		["Nerubian Overseer"] = true,
 		["Commander Andreon"] = true,
 		["Archlich Enkhraz"] = true,
 		["Dark Reaver of Karazhan"] = true,
@@ -305,8 +364,6 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Zevrim Thornhoof"] = true,
 		["Zolo"] = true,
 		["Zul'Lor"] = true,
-		
-		-- From Mendeleev
 		["Cho'Rush the Observer"] = true,
 		["Lord Hel'nurath"] = true,
 		["Pimgib"] = true,
@@ -314,7 +371,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Cannonmaster Willey"] = true,
 		["Emperor Dagran Thaurissian"] = true,
 		["Archmage Arugal"] = true,
-		["Archmage Arugal's Voidwalker"] = true,
+		["Arugal's Voidwalker"] = true,
 		["Baron Silverlaine"] = true,
 		["Commander Springvale"] = true,
 		["Deathsworn Captain"] = true,
@@ -454,8 +511,6 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Stoneskin Gargoyle"] = true,
 		["Gargoyle"] = true,
 		["Master Craftsman Omarion"] = true,
-		["Alterac Valley"] = true,
-		["Arathi Basin"] = true
 	}
 end)
 
@@ -506,7 +561,6 @@ BabbleBoss:RegisterTranslations("esES", function()
 		["Sulfuron Harbinger"] = "Presagista Sulfuron",
 		["Shazzrah"] = "Shazzrah",
 		["Lucifron"] = "Lucifron",
-		["Gehennas"] = "Gehennas",
 		["Magmadar"] = "Magmadar",
 		["Onyxia"] = "Onyxia",
 		["Azuregos"] = "Azuregos",
@@ -653,7 +707,7 @@ BabbleBoss:RegisterTranslations("esES", function()
 		["Zevrim Thornhoof"] = "Zevrim Pezuñahendida",
 		["Zolo"] = "Zolo",
 		["Zul'Lor"] = "Zul'Lor",
-		
+
 		-- From Mendeleev
 		["Cho'Rush the Observer"] = "Cho'Rush el Observador",
 		["Lord Hel'nurath"] = "Lord Hel'nurath",
@@ -662,7 +716,7 @@ BabbleBoss:RegisterTranslations("esES", function()
 		["Cannonmaster Willey"] = "Cañonero Jefe Willey",
 		["Emperor Dagran Thaurissian"] = "Emperador Dagran Thaurissan",
 		["Archmage Arugal"] = "Archimago Arugal",
-		["Archmage Arugal's Voidwalker"] = "Abisario de Archimago Arugal",
+		["Arugal's Voidwalker"] = "Abisario de Archimago Arugal",
 		["Baron Silverlaine"] = "Barón Filargenta",
 		["Commander Springvale"] = "Comandante Vallefont",
 		["Deathsworn Captain"] = "Capitán Juramorte",
@@ -856,7 +910,6 @@ BabbleBoss:RegisterTranslations("ruRU", function()
 		["Sulfuron Harbinger"] = "Предвестник Сульфурон",
 		["Shazzrah"] = "Шаззрах",
 		["Lucifron"] = "Люцифрон",
-		["Gehennas"] = "Гееннас",
 		["Magmadar"] = "Магмадар",
 		["Onyxia"] = "Ониксия",
 		["Azuregos"] = "Азурегос",
@@ -1003,7 +1056,7 @@ BabbleBoss:RegisterTranslations("ruRU", function()
 		["Zevrim Thornhoof"] = "Зеврим Терновое Копыто",
 		["Zolo"] = "Золо",
 		["Zul'Lor"] = "Зул'Лор",
-		
+
 		-- From Mendeleev
 		["Cho'Rush the Observer"] = "Чо'Раш Наблюдатель",
 		["Lord Hel'nurath"] = "Лорд Хел'нурат",
@@ -1012,7 +1065,7 @@ BabbleBoss:RegisterTranslations("ruRU", function()
 		["Cannonmaster Willey"] = "Мастер-канонир Вилли",
 		["Emperor Dagran Thaurissian"] = "Император Дагран Тауриссан",
 		["Archmage Arugal"] = "Верховный маг Аругал",
-		["Archmage Arugal's Voidwalker"] = "Демон Бездны Аругала",
+		["Arugal's Voidwalker"] = "Демон Бездны Аругала",
 		["Baron Silverlaine"] = "Барон Сильверлейн",
 		["Commander Springvale"] = "Командир Ручьедол",
 		["Deathsworn Captain"] = "Капитан служителей Смерти",
@@ -1022,7 +1075,7 @@ BabbleBoss:RegisterTranslations("ruRU", function()
 		["Wolf Master Nandos"] = "Командир воргенов Нандос",
 		["Rend Blackhand"] = "Ренд Чернорук",
 		["Kurinnaxx"] = "Куриннакс",
-		
+
 		["Maur Grimtotem"] = "Маур Зловещий Тотем",
 		["Taragaman the Hungerer"] = "Тарагаман Ненасытный",
 		["Jergosh the Invoker"] = "Жергош Призыватель Духов",
@@ -1066,7 +1119,7 @@ BabbleBoss:RegisterTranslations("ruRU", function()
 		["Shadowpriest Sezz'ziz"] = "Темный жрец Шезз'зиз",
 		["Gahz'rilla"] = "Газ'рилла",
 		["Chief Ukorz Sandscalp"] = "Вождь Укорз Песчаная Плешь",
-		["Ruuzlu"] = "Руузлу",	
+		["Ruuzlu"] = "Руузлу",
 		["Isalien"] = "Изалиен",
 		["Revanchion"] = "Реваншион",
 		["Lord Roccor"] = "Лорд Роккор";
@@ -1087,7 +1140,7 @@ BabbleBoss:RegisterTranslations("ruRU", function()
 		["Urok Doomhowl"] = "Аррок Смертный Вопль",
 		["Quartermaster Zigris"] = "Интендант Зигрис",
 		["Gizrul the Slavener"] = "Гизрул Поработитель",
-		["Ghok Bashguud"] = "Гок Крепкобив",	
+		["Ghok Bashguud"] = "Гок Крепкобив",
 		["Jed Runewatcher"] = "Джед Руновед";
 		["Lord Valthalak"] = "Лорд Вальтхалак";
 		["Grubbis"] = "Грязнюк";
@@ -1202,7 +1255,6 @@ BabbleBoss:RegisterTranslations("deDE", function()
 		["Sulfuron Harbinger"] = "Sulfuronherold",
 		["Shazzrah"] = "Shazzrah",
 		["Lucifron"] = "Lucifron",
-		["Gehennas"] = "Gehennas",
 		["Magmadar"] = "Magmadar",
 		["Onyxia"] = "Onyxia",
 		["Azuregos"] = "Azuregos",
@@ -1357,7 +1409,7 @@ BabbleBoss:RegisterTranslations("deDE", function()
 		["Cannonmaster Willey"] = "Kanonnenmeister Willey",
 		["Emperor Dagran Thaurissian"] = "Imperator Dagran Thaurissian",
 		["Archmage Arugal"] = "Erzmagier Arugal",
-		["Archmage Arugal's Voidwalker"] = "Erzmagier Arugal's Leerwanderer",
+		["Arugal's Voidwalker"] = "Erzmagier Arugal's Leerwanderer",
 		["Baron Silverlaine"] = "Baron Silberleine",
 		["Commander Springvale"] = "Kommander Frühlingvale",
 		["Deathsworn Captain"] = "Todeswachen Captain",
@@ -1420,7 +1472,6 @@ BabbleBoss:RegisterTranslations("frFR", function()
 		["Sulfuron Harbinger"] = "Messager de Sulfuron",
 		["Shazzrah"] = "Shazzrah",
 		["Lucifron"] = "Lucifron",
-		["Gehennas"] = "Gehennas",
 		["Magmadar"] = "Magmadar",
 		["Onyxia"] = "Onyxia",
 		["Azuregos"] = "Azuregos",
@@ -1566,14 +1617,14 @@ BabbleBoss:RegisterTranslations("frFR", function()
 		["Zevrim Thornhoof"] = "Zevrim Thornhoof",
 		["Zolo"] = "Zolo",
 		["Zul'Lor"] = "Zul'Lor",
-		
+
 		-- From Mendeleev
 		["Cho'Rush the Observer"] = "Cho'Rush l'Observateur",
 		["Lord Hel'nurath"] = "Seigneur Hel'nurath",
 		["Pimgib"] = "Pimgib",
 		["Knot Thimblejack's Cache"] = "R\195\169serve de Knot Thimblejack",
 		["Archmage Arugal"] = "Archimage Arugal",
-		["Archmage Arugal's Voidwalker"] = "Marcheur du Vide d'Arugal",
+		["Arugal's Voidwalker"] = "Marcheur du Vide d'Arugal",
 		["Baron Silverlaine"] = "Baron d'Argelaine",
 		["Commander Springvale"] = "Commandant Springvale",
 		["Deathsworn Captain"] = "Capitaine Ligemort",
@@ -1631,7 +1682,6 @@ BabbleBoss:RegisterTranslations("zhCN", function()
 		["Sulfuron Harbinger"] = "萨弗隆先驱者",
 		["Shazzrah"] = "沙斯拉尔",
 		["Lucifron"] = "鲁西弗隆",
-		["Gehennas"] = "基赫纳斯",
 		["Magmadar"] = "玛格曼达",
 		["Onyxia"] = "奥妮克希亚",
 		["Azuregos"] = "艾索雷葛斯",
@@ -1777,24 +1827,24 @@ BabbleBoss:RegisterTranslations("zhCN", function()
 		["Zevrim Thornhoof"] = "塔罗·刺蹄",
 		["Zolo"] = "祖罗",
 		["Zul'Lor"] = "祖罗尔",
-		
+
 		-- From Mendeleev 
-		["Cho'Rush the Observer"] = "观察者克鲁什", 
-		["Lord Hel'nurath"] = "赫尔努拉斯", 
-		["Pimgib"] = "匹姆吉布", 
-		["Knot Thimblejack's Cache"] = "诺特·希姆加克的储物箱", 
-		["Cannonmaster Willey"] = "炮手威利", 
-		["Emperor Dagran Thaurissian"] = "达格兰·索瑞森大帝", 
-		["Archmage Arugal"] = "大法师阿鲁高", 
-		["Archmage Arugal's Voidwalker"] = "阿鲁高的虚空行者", 
-		["Baron Silverlaine"] = "席瓦莱恩男爵", 
-		["Commander Springvale"] = "指挥官斯普林瓦尔", 
-		["Deathsworn Captain"] = "死亡之誓", 
-		["Fenrus the Devourer"] = "吞噬者芬鲁斯", 
-		["Odo the Blindwatcher"] = "盲眼守卫奥杜", 
-		["Razorclaw the Butcher"] = "屠夫拉佐克劳", 
-		["Wolf Master Nandos"] = "狼王南杜斯", 
-		["Rend Blackhand"] = "雷德·黑手", 
+		["Cho'Rush the Observer"] = "观察者克鲁什",
+		["Lord Hel'nurath"] = "赫尔努拉斯",
+		["Pimgib"] = "匹姆吉布",
+		["Knot Thimblejack's Cache"] = "诺特·希姆加克的储物箱",
+		["Cannonmaster Willey"] = "炮手威利",
+		["Emperor Dagran Thaurissian"] = "达格兰·索瑞森大帝",
+		["Archmage Arugal"] = "大法师阿鲁高",
+		["Arugal's Voidwalker"] = "阿鲁高的虚空行者",
+		["Baron Silverlaine"] = "席瓦莱恩男爵",
+		["Commander Springvale"] = "指挥官斯普林瓦尔",
+		["Deathsworn Captain"] = "死亡之誓",
+		["Fenrus the Devourer"] = "吞噬者芬鲁斯",
+		["Odo the Blindwatcher"] = "盲眼守卫奥杜",
+		["Razorclaw the Butcher"] = "屠夫拉佐克劳",
+		["Wolf Master Nandos"] = "狼王南杜斯",
+		["Rend Blackhand"] = "雷德·黑手",
 		["Kurinnaxx"] = "库林纳克斯",
 	}
 end)
@@ -1845,7 +1895,6 @@ BabbleBoss:RegisterTranslations("zhTW", function()
 		["Sulfuron Harbinger"] = "薩弗隆先驅者",
 		["Shazzrah"] = "沙斯拉爾",
 		["Lucifron"] = "魯西弗隆",
-		["Gehennas"] = "基赫納斯",
 		["Magmadar"] = "瑪格曼達",
 		["Onyxia"] = "奧妮克希亞",
 		["Azuregos"] = "艾索雷葛斯",
@@ -1999,7 +2048,7 @@ BabbleBoss:RegisterTranslations("zhTW", function()
 		["Knot Thimblejack's Cache"] = "諾特‧希姆加克的箱子",
 		["Cannonmaster Willey"] = "炮手威利",
 		["Archmage Arugal"] = "大法師阿魯高",
-		["Archmage Arugal's Voidwalker"] = "大法師阿魯高的虛空行者",
+		["Arugal's Voidwalker"] = "大法師阿魯高的虛空行者",
 		["Baron Silverlaine"] = "席瓦萊恩男爵",
 		["Commander Springvale"] = "指揮官斯普林瓦爾",
 		["Deathsworn Captain"] = "Deathsworn Captain",
@@ -2058,7 +2107,6 @@ BabbleBoss:RegisterTranslations("koKR", function()
 		["Sulfuron Harbinger"] = "설퍼론 사자",
 		["Shazzrah"] = "샤즈라",
 		["Lucifron"] = "루시프론",
-		["Gehennas"] = "게헨나스",
 		["Magmadar"] = "마그마다르",
 		["Onyxia"] = "오닉시아",
 		["Azuregos"] = "아주어고스",
@@ -2204,7 +2252,7 @@ BabbleBoss:RegisterTranslations("koKR", function()
 		["Zevrim Thornhoof"] = "제브림 쏜후프",
 		["Zolo"] = "졸로",
 		["Zul'Lor"] = "줄로",
-		
+
 		-- From Mendeleev
 		["Cho'Rush the Observer"] = "정찰병 초루쉬",
 		["Lord Hel'nurath"] = "군주 헬누라스",
@@ -2213,7 +2261,7 @@ BabbleBoss:RegisterTranslations("koKR", function()
 		["Cannonmaster Willey"] = "포병대장 윌리",
 		["Emperor Dagran Thaurissian"] = "제왕 다그란 타우릿산",
 		["Archmage Arugal"] = "대마법사 아루갈",
-		["Archmage Arugal's Voidwalker"] = "아루갈의 보이드워커",
+		["Arugal's Voidwalker"] = "아루갈의 보이드워커",
 		["Baron Silverlaine"] = "남작 실버레인",
 		["Commander Springvale"] = "사령관 스프링베일",
 		["Deathsworn Captain"] = "Deathsworn Captain", -- check

@@ -5,9 +5,9 @@
 	Description: A library to provide localizations for factions.
 	Dependencies: AceLibrary, AceLocale-2.2
 ]]
--- Проверить ЗГ, АК20, АК40, Т3, разобраться с сетами AB
+-- Проверить ЗГ, АК20, АК40, Т3, разобраться с сетами AB T3.5
 local MAJOR_VERSION = "Babble-ItemSet-2.2a"
-local MINOR_VERSION = tonumber(string.sub("$Revision: 1002 $", 12, -3))
+local MINOR_VERSION = tonumber(string.sub("$Revision: 1003 $", 12, -3))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 
@@ -25,12 +25,17 @@ local BabbleItemSet = AceLibrary("AceLocale-2.2"):new(MAJOR_VERSION)
 
 BabbleItemSet:RegisterTranslations("enUS", function()
 	return {
+		--1.18
+		["Stormreaver Attire"] = true,
+		["Dragonmaw Battlegarb"] = true,
+		["Arms of Thaurissan"] = true,
+		--1.17
 		["Incendosaur Skin Armor"] = true,
 		["Greymane Armor"] = true,
 	-- Blacksmithing Crafted Sets
 		["Hateforge Armor"] = true,
 		["Towerforge Battlegear"] = true,
-		["Steel Plate"] = true,
+		["Steel Plate Armor"] = true,
 		["Rune-Etched Armor"] = true,
 		["Dreamsteel Armor"] = true,
 		["Bloodsoul Embrace"] = true,
@@ -137,34 +142,83 @@ BabbleItemSet:RegisterTranslations("enUS", function()
 		["Vestments of the Virtuous"] = true,
     --T1 Sets
 		["Arcanist Regalia"] = true,
+		["Arcanist Vestments"] = true,
 		["Battlegear of Might"] = true,
+		["Armor of Might"] = true,
 		["Cenarion Raiment"] = true,
+		["Cenarion Regalia"] = true,
+		["Cenarion Harness"] = true,
 		["Felheart Raiment"] = true,
+		["Felheart Attire"] = true,
 		["Giantstalker Armor"] = true,
 		["Lawbringer Armor"] = true,
+		["Lawbringer Battleplate"] = true,
+		["Lawbringer Battlegear"] = true,
 		["Nightslayer Armor"] = true,
 		["The Earthfury"] = true,
+		["Earthfury Battlegear"] = true,
+		["Earthfury Garb"] = true,
 		["Vestments of Prophecy"] = true,
+		["Regalia of Prophecy"] = true,
     --T2 Sets
 		["Battlegear of Wrath"] = true,
+		["Armor of Wrath"] = true,
 		["Bloodfang Armor"] = true,
 		["Dragonstalker Armor"] = true,
 		["Judgement Armor"] = true,
+		["Judgement Battleplate"] = true,
+		["Judgement Battlegear"] = true,
 		["Nemesis Raiment"] = true,
+		["Nemesis Attire"] = true,
 		["Netherwind Regalia"] = true,
+		["Netherwind Vestments"] = true,
 		["Stormrage Raiment"] = true,
+		["Stormrage Regalia"] = true,
+		["Stormrage Harness"] = true,
+		["Garb of the Ten Storms"] = true,
+		["Battlegear of the Ten Storms"] = true,
 		["The Ten Storms"] = true,
 		["Vestments of Transcendence"] = true,
+		["Regalia of Transcendence"] = true,
     --T3 Sets
 		["Bonescythe Armor"] = true,
 		["Cryptstalker Armor"] = true,
 		["Dreamwalker Raiment"] = true,
+		["Dreamwalker Regalia"] = true,
+		["Dreamwalker Harness"] = true,
 		["Frostfire Regalia"] = true,
+		["Frostfire Vestments"] = true,
 		["Plagueheart Raiment"] = true,
+		["Plagueheart Attire"] = true,
 		["Redemption Armor"] = true,
+		["Redemption Battleplate"] = true,
+		["Redemption Battlegear"] = true,
 		["The Earthshatterer"] = true,
+		["Earthshatterer's Battlegear"] = true,
+		["Earthshatterer's Garb"] = true,
 		["Vestments of Faith"] = true,
+		["Regalia of Faith"] = true,
 		["Dreadnaught's Battlegear"] = true,
+		["Armor of the Dreadnaught's"] = true,
+	--T3.5 Sets
+		["Vestments of Pestilence"] = true,
+		["Regalia of Pestilence"] = true,
+		["Regalia of the Guardian"] = true,
+		["Vestments of the Guardian"] = true,
+		["Nathrezim Attire"] = true,
+		["Nathrezim Raiment"] = true,
+		["Trickster's Armor"] = true,
+		["Raiments of the Talon"] = true,
+		["Regalia of the Talon"] = true,
+		["Harness of the Talon"] = true,
+		["Ravenstalker's Armor"] = true,
+		["Stormhowl Battlegear"] = true,
+		["Stormhowl Garb"] = true,
+		["The Stormhowl"] = true,
+		["Lionheart Armor"] = true,
+		["Lionheart Battleplate"] = true,
+		["Lionheart Battlegear"] = true,
+		["Battlegear of the Brotherhood"] = true,
 	--PvP Epic Horde Sets
 		["Warlord's Battlegear"] = true,
 		["Warlord's Earthshaker"] = true,
@@ -216,10 +270,7 @@ BabbleItemSet:RegisterTranslations("enUS", function()
 		["The Highlander's Resolution"] = true,
 		["The Highlander's Resolve"] = true,
 		["The Highlander's Will"] = true,
-		
 		["Twilight Trappings"] = true,
-		
-		
 		["Lieutenant Commander's Aegis"] = true,
 		["Lieutenant Commander's Battlegear"] = true,
 		["Lieutenant Commander's Pursuit"] = true,
@@ -227,8 +278,7 @@ BabbleItemSet:RegisterTranslations("enUS", function()
 		["Lieutenant Commander's Regalia"] = true,
 		["Lieutenant Commander's Sanctuary"] = true,
 		["Lieutenant Commander's Threads"] = true,
-		["Lieutenant Commander's Vestments"] = true,	
-		
+		["Lieutenant Commander's Vestments"] = true,
 		["Champion's Battlegear"] = true,
 		["Champion's Earthshaker"] = true,
 		["Champion's Pursuit"] = true,
@@ -414,10 +464,10 @@ BabbleItemSet:RegisterTranslations("ruRU", function()
 		["The Highlander's Resolution"] = "Решимость горца",
 		["The Highlander's Resolve"] = "Твердость горца",
 		["The Highlander's Will"] = "Воля горца",
-		
+
 		["Twilight Trappings"] = "Сумеречное облачение",
-		
-		
+
+
 		["Lieutenant Commander's Aegis"] = "Эгида лейтенанта-командора",
 		["Lieutenant Commander's Battlegear"] = "Броня лейтенанта-командора",
 		["Lieutenant Commander's Pursuit"] = "Облачение лейтенанта-командора",
@@ -426,7 +476,7 @@ BabbleItemSet:RegisterTranslations("ruRU", function()
 		["Lieutenant Commander's Sanctuary"] = "Снаряжение лейтенанта-командора",
 		["Lieutenant Commander's Threads"] = "Нити лейтенанта-командора",
 		["Lieutenant Commander's Vestments"] = "Облачение лейтенанта-командора",
-		
+
 		["Champion's Battlegear"] = "Броня защитника",
 		["Champion's Earthshaker"] = "Землекрушитель Защитника",
 		["Champion's Pursuit"] = "Облачение Защитника",
