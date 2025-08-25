@@ -12,7 +12,7 @@ AtlasLoot_Data = AtlasLoot_Data or {}
 
 local Sets = {}
 
-Sets = {
+Sets = { --TODO source for variable set items, boss etc
 	VanillaKeys = {
 		{ name = L["Key"] },
 		{ id = 16309}, -- Drakefire Amulet
@@ -149,6 +149,7 @@ Sets = {
 		{ id = 14638 }, -- Cadaverous Leggings
 		{ id = 14641 }, -- Cadaverous Walkers
 		{},
+		{},
 		{ name = BIS["Bloodmail Regalia"] },
 		{ id = 14611 }, -- Bloodmail Hauberk
 		{ id = 14615 }, -- Bloodmail Gauntlets
@@ -251,7 +252,7 @@ Sets = {
 		{ id = 47232 }, -- Boots of Pestilence
 		{ id = 47233 }, -- Amulet of Pestilence
 		{},
-		{ name = BIS["Regalia of Pestilence"], icon = "Spell_Holy_PowerWordShield" },
+		{ name = BIS["Regalia of Pestilence"], icon = "Spell_Shadow_Shadowform" },
 		{ id = 47234 }, -- Coronet of Pestilence
 		{ id = 47235 }, -- Shoulderpads of Pestilence
 		{ id = 47236 }, -- Raiments of Pestilence
@@ -268,7 +269,7 @@ Sets = {
 		{ id = 47112 }, -- Boots of the Guardian
 		{ id = 47113 }, -- Pendant of the Guardian
 		{},
-		{ name = BIS["Vestments of the Guardian"], icon = "Spell_Frost_IceStorm" },
+		{ name = BIS["Vestments of the Guardian"], icon = "Spell_Arcane_Blast" },
 		{ id = 47114 }, -- Circlet of the Guardian
 		{ id = 47115 }, -- Epaulets of the Guardian
 		{ id = 47116 }, -- Vestments of the Guardian
@@ -277,7 +278,7 @@ Sets = {
 		{ id = 47119 }, -- Amulet of the Guardian
 	},
 	T35Warlock = {
-		{ name = BIS["Nathrezim Attire"], icon = "Spell_Shadow_CurseOfTounges" },
+		{ name = BIS["Nathrezim Attire"], icon = "Spell_Shadow_Requiem" },
 		{ id = 47306 }, -- Nathrezim Crown
 		{ id = 47307 }, -- Nathrezim Mantle
 		{ id = 47308 }, -- Nathrezim Raiments
@@ -303,7 +304,7 @@ Sets = {
 		{ id = 47329 }, -- Trickster Choker
 	},
 	T35Druid = {
-		{ name = BIS["Raiments of the Talon"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Raiments of the Talon"], icon = "Ability_Druid_TreeofLife" }, --restoration
 		{ id = 47390 }, -- Helm of the Talon
 		{ id = 47391 }, -- Spaulders of the Talon
 		{ id = 47392 }, -- Vestments of the Talon
@@ -311,14 +312,14 @@ Sets = {
 		{ id = 47394 }, -- Boots of the Talon
 		{ id = 47395 }, -- Amulet of the Talon
 		{},
-		{ name = BIS["Regalia of the Talon"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Regalia of the Talon"], icon = "Spell_Nature_ForceOfNature" }, --balance
 		{ id = 47396 }, -- Circlet of the Talon
 		{ id = 47397 }, -- Mantle of the Talon
 		{ id = 47398 }, -- Vest of the Talon
 		{ id = 47399 }, -- Trousers of the Talon
 		{ id = 47400 }, -- Slippers of the Talon
 		{ id = 47401 }, -- Pendant of the Talon
-		{ name = BIS["Harness of the Talon"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Harness of the Talon"], icon = "Ability_Druid_CatForm" }, --cat
 		{ id = 47402 }, -- Helmet of the Talon
 		{ id = 47403 }, -- Shoulderpads of the Talon
 		{ id = 47404 }, -- Raiments of the Talon
@@ -336,7 +337,7 @@ Sets = {
 		{ id = 47323 }, -- Ravenstalker Choker
 	},
 	T35Shaman = {
-		{ name = BIS["Stormhowl Battlegear"], icon = "INV_Helmet_15" },
+		{ name = BIS["Stormhowl Battlegear"], icon = "Ability_Shaman_StormStrike" }, --enhancement
 		{ id = 47180 }, -- Stormhowl Crown
 		{ id = 47181 }, -- Stormhowl Pauldrons
 		{ id = 47182 }, -- Stormhowl Breastplate
@@ -344,14 +345,14 @@ Sets = {
 		{ id = 47184 }, -- Stormhowl Sabatons
 		{ id = 47185 }, -- Choker of the Stormhowl
 		{},
-		{ name = BIS["Stormhowl Garb"], icon = "INV_Helmet_15" },
+		{ name = BIS["Stormhowl Garb"], icon = "Spell_Nature_Earthquake" }, --elemental
 		{ id = 47186 }, -- Stormhowl Helmet
 		{ id = 47187 }, -- Stormhowl Epaulets
 		{ id = 47188 }, -- Stormhowl Raiments
 		{ id = 47189 }, -- Stormhowl Legplates
 		{ id = 47190 }, -- Stormhowl Greaves
 		{ id = 47191 }, -- Pendant of the Stormhowl
-		{ name = BIS["The Stormhowl"], icon = "INV_Helmet_15" },
+		{ name = BIS["The Stormhowl"], icon = "Spell_Shaman_SpiritLink" }, --restoration
 		{ id = 47192 }, -- Stormhowl Headpiece
 		{ id = 47193 }, -- Stormhowl Spaulders
 		{ id = 47194 }, -- Stormhowl Tunic
@@ -360,7 +361,7 @@ Sets = {
 		{ id = 47197 }, -- Amulet of the Stormhowl
 	},
 	T35Paladin = {
-		{ name = BIS["Lionheart Armor"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Lionheart Armor"], icon = "Spell_Holy_Power" }, --holy
 		{ id = 47060 }, -- Lionheart Headpiece
 		{ id = 47061 }, -- Lionheart Spaulders
 		{ id = 47062 }, -- Lionheart Breastplate
@@ -368,14 +369,14 @@ Sets = {
 		{ id = 47064 }, -- Lionheart Boots
 		{ id = 47065 }, -- Lionheart Amulet
 		{},
-		{ name = BIS["Lionheart Battleplate"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Lionheart Battleplate"], icon = "Ability_Defend" }, --protection
 		{ id = 47066 }, -- Lionheart Helmet
 		{ id = 47067 }, -- Lionheart Shoulderguards
 		{ id = 47068 }, -- Lionheart Chestguard
 		{ id = 47069 }, -- Lionheart Legguards
 		{ id = 47070 }, -- Lionheart Greaves
 		{ id = 47071 }, -- Lionheart Pendant
-		{ name = BIS["Lionheart Battlegear"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Lionheart Battlegear"], icon = "Ability_Racial_Avatar" }, --retribution
 		{ id = 47072 }, -- Lionheart Crown
 		{ id = 47073 }, -- Lionheart Pauldrons
 		{ id = 47074 }, -- Lionheart Chestplate
@@ -408,7 +409,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Frostfire Vestments"], icon = "Spell_Frost_IceStorm" },
+		{ name = BIS["Frostfire Vestments"], icon = "Spell_Arcane_Blast" },
 		{ id = 47099 }, -- Frostfire Crown
 		{ id = 47100 }, -- Frostfire Epaulets
 		{ id = 47101 }, -- Frostfire Vestments
@@ -435,7 +436,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Plagueheart Attire"], icon = "Spell_Shadow_CurseOfTounges" },
+		{ name = BIS["Plagueheart Attire"], icon = "Spell_Shadow_Requiem" },
 		{ id = 47297 }, -- Plagueheart Crown
 		{ id = 47298 }, -- Plagueheart Mantle
 		{ id = 47299 }, -- Plagueheart Raiments
@@ -462,7 +463,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Regalia of Faith"], icon = "Spell_Holy_PowerWordShield" },
+		{ name = BIS["Regalia of Faith"], icon = "Spell_Shadow_Shadowform" },
 		{ id = 47219 }, -- Coronet of Faith
 		{ id = 47220 }, -- Shoulderpads of Faith
 		{ id = 47221 }, -- Raiments of Faith
@@ -486,7 +487,7 @@ Sets = {
 		{ id = 23060 }, -- Bonescythe Ring
 	},
 	T3Druid = {
-		{ name = BIS["Dreamwalker Raiment"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Dreamwalker Raiment"], icon = "Ability_Druid_TreeofLife" },
 		{ id = 22490 }, -- Dreamwalker Headpiece
 		{ id = 22491 }, -- Dreamwalker Spaulders
 		{ id = 22488 }, -- Dreamwalker Tunic
@@ -497,11 +498,11 @@ Sets = {
 		{ id = 22492 }, -- Dreamwalker Boots
 		{ id = 23064 }, -- Ring of the Dreamwalker *10
 		{},
-		{ name = BIS["Dreamwalker Regalia"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Dreamwalker Regalia"], icon = "Spell_Nature_ForceOfNature" },
 		{ id = 47372 }, -- Dreamwalker Circlet
 		{ id = 47373 }, -- Dreamwalker Mantle
 		{ id = 47374 }, -- Dreamwalker Vest *15
-		{ name = BIS["Dreamwalker Harness"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Dreamwalker Harness"], icon = "Ability_Racial_BearForm" }, --bear
 		{ id = 47381 }, -- Dreamwalker Helmet
 		{ id = 47382 }, -- Dreamwalker Shoulderpads
 		{ id = 47383 }, -- Dreamwalker Raiments
@@ -536,7 +537,7 @@ Sets = {
 		{ id = 23067 }, -- Ring of the Cryptstalker
 	},
 	T3Shaman = {
-		{ name = BIS["The Earthshatterer"], icon = "INV_Helmet_15" },
+		{ name = BIS["The Earthshatterer"], icon = "Spell_Shaman_SpiritLink" },
 		{ id = 22466 }, -- Earthshatter Headpiece
 		{ id = 22467 }, -- Earthshatter Spaulders
 		{ id = 22464 }, -- Earthshatter Tunic
@@ -547,11 +548,11 @@ Sets = {
 		{ id = 22468 }, -- Earthshatter Boots
 		{ id = 23065 }, -- Ring of the Earthshatterer
 		{},
-		{ name = BIS["Earthshatterer's Battlegear"], icon = "INV_Helmet_15" },
+		{ name = BIS["Earthshatterer's Battlegear"], icon = "Ability_Shaman_StormStrike" },
 		{ id = 47162 }, -- Earthshatter Crown
 		{ id = 47163 }, -- Earthshatter Pauldrons
 		{ id = 47164 }, -- Earthshatter Breastplate *15
-		{ name = BIS["Earthshatterer's Garb"], icon = "INV_Helmet_15" },
+		{ name = BIS["Earthshatterer's Garb"], icon = "Spell_Nature_Earthquake" },
 		{ id = 47171 }, -- Earthshatter Helmet
 		{ id = 47172 }, -- Earthshatter Epaulets
 		{ id = 47173 }, -- Earthshatter Raiments
@@ -574,7 +575,7 @@ Sets = {
 		{ id = 47170 }, -- Signet of the Earthshatterer
 	},
 	T3Paladin = {
-		{ name = BIS["Redemption Armor"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Redemption Armor"], icon = "Spell_Holy_Power" },
 		{ id = 22428 }, -- Redemption Helm
 		{ id = 22429 }, -- Redemption Spaulders
 		{ id = 22425 }, -- Redemption Tunic
@@ -585,11 +586,11 @@ Sets = {
 		{ id = 22430 }, -- Redemption Boots
 		{ id = 23066 }, -- Ring of Redemption
 		{},
-		{ name = BIS["Redemption Battleplate"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Redemption Battleplate"], icon = "Ability_Defend" },
 		{ id = 47042 }, -- Redemption Helmet
 		{ id = 47043 }, -- Redemption Shoulderguards
 		{ id = 47044 }, -- Redemption Chestguard
-		{ name = BIS["Redemption Battlegear"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Redemption Battlegear"], icon = "Ability_Racial_Avatar" },
 		{ id = 47051 }, -- Redemption Crown
 		{ id = 47052 }, -- Redemption Pauldrons
 		{ id = 47053 }, -- Redemption Chestplate
@@ -612,7 +613,7 @@ Sets = {
 		{ id = 47050 }, -- Signet of Redemption
 	},
 	T3Warrior = {
-		{ name = BIS["Dreadnaught's Battlegear"], icon = "INV_Shield_05" },
+		{ name = BIS["Dreadnaught's Battlegear"], icon = "INV_Shield_05" }, --tank
 		{ id = 22418 }, -- Dreadnaught Helmet
 		{ id = 22419 }, -- Dreadnaught Pauldrons
 		{ id = 22416 }, -- Dreadnaught Breastplate
@@ -627,7 +628,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Armor of the Dreadnaught's"], icon = "INV_Shield_05" },
+		{ name = BIS["Armor of the Dreadnaught's"], icon = "Ability_Gouge" }, --dps
 		{ id = 47261 }, -- Dreadnaught Crown
 		{ id = 47262 }, -- Dreadnaught Pauldrons
 		{ id = 47263 }, -- Dreadnaught Chestplate
@@ -654,7 +655,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Netherwind Vestments"], icon = "Spell_Frost_IceStorm" },
+		{ name = BIS["Netherwind Vestments"], icon = "Spell_Arcane_Blast" },
 		{ id = 47086 }, -- Netherwind Circlet
 		{ id = 47087 }, -- Netherwind Epaulets
 		{ id = 47088 }, -- Netherwind Vestments
@@ -680,7 +681,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Regalia of Transcendence"], icon = "Spell_Holy_PowerWordShield" },
+		{ name = BIS["Regalia of Transcendence"], icon = "Spell_Shadow_Shadowform" },
 		{ id = 47206 }, -- Coronet of Transcendence
 		{ id = 47207 }, -- Shoulderpads of Transcendence
 		{ id = 47208 }, -- Raiments of Transcendence
@@ -706,7 +707,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Nemesis Attire"], icon = "Spell_Shadow_CurseOfTounges" },
+		{ name = BIS["Nemesis Attire"], icon = "Spell_Shadow_Requiem" },
 		{ id = 47284 }, -- Nemesis Crown
 		{ id = 47285 }, -- Nemesis Mantle
 		{ id = 47286 }, -- Nemesis Raiments
@@ -728,7 +729,7 @@ Sets = {
 		{ id = 16906 }, -- Bloodfang Boots
 	},
 	T2Druid = {
-		{ name = BIS["Stormrage Raiment"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Stormrage Raiment"], icon = "Ability_Druid_TreeofLife" },
 		{ id = 16900 }, -- Stormrage Cover
 		{ id = 16902 }, -- Stormrage Pauldrons
 		{ id = 16897 }, -- Stormrage Chestguard
@@ -738,12 +739,12 @@ Sets = {
 		{ id = 16901 }, -- Stormrage Legguards
 		{ id = 16898 }, -- Stormrage Boots
 		{},
-		{ name = BIS["Stormrage Regalia"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Stormrage Regalia"], icon = "Spell_Nature_ForceOfNature" },
 		{ id = 47346 }, -- Stormrage Circlet
 		{ id = 47347 }, -- Stormrage Mantle
 		{ id = 47348 }, -- Stormrage Vest
 		{ id = 47349 }, -- Stormrage Wristbands
-		{ name = BIS["Stormrage Harness"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Stormrage Harness"], icon = "Ability_Racial_BearForm" },
 		{ id = 47354 }, -- Stormrage Helmet
 		{ id = 47355 }, -- Stormrage Shoulderpads
 		{ id = 47356 }, -- Stormrage Raiments
@@ -764,7 +765,7 @@ Sets = {
 		{ id = 47353 }, -- Stormrage Slippers
 	},
 	T2Shaman = {
-		{ name = BIS["Garb of the Ten Storms"], icon = "Spell_FireResistanceTotem_01" },
+		{ name = BIS["Garb of the Ten Storms"], icon = "Spell_Nature_Earthquake" },
 		{ id = 16947 }, -- Helmet of Ten Storms
 		{ id = 16945 }, -- Epaulets of Ten Storms
 		{ id = 16950 }, -- Breastplate of Ten Storms
@@ -774,12 +775,12 @@ Sets = {
 		{ id = 16946 }, -- Legplates of Ten Storms
 		{ id = 16949 }, -- Greaves of Ten Storms
 		{},
-		{ name = BIS["Battlegear of the Ten Storms"], icon = "Spell_FireResistanceTotem_01" },
+		{ name = BIS["Battlegear of the Ten Storms"], icon = "Ability_Shaman_StormStrike" },
 		{ id = 47136 }, -- Crown of Ten Storms
 		{ id = 47137 }, -- Pauldrons of Ten Storms
 		{ id = 47138 }, -- Breastplate of Ten Storms
 		{ id = 47139 }, -- Bracelets of Ten Storms
-		{ name = BIS["The Ten Storms"], icon = "Spell_FireResistanceTotem_01" },
+		{ name = BIS["The Ten Storms"], icon = "Spell_Shaman_SpiritLink" },
 		{ id = 47144 }, -- Helmet of Ten Storms
 		{ id = 47145 }, -- Spaulders of Ten Storms
 		{ id = 47146 }, -- Chestpiece of Ten Storms
@@ -826,7 +827,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Armor of Wrath"], icon = "INV_Shield_05" },
+		{ name = BIS["Armor of Wrath"], icon = "Ability_Gouge" },
 		{ id = 47248 }, -- Crown of Wrath
 		{ id = 47249 }, -- Pauldrons of Wrath
 		{ id = 47250 }, -- Chestplate of Wrath
@@ -837,7 +838,7 @@ Sets = {
 		{ id = 47255 }, -- Sabatons of Wrath
 	},
 	T2Paladin = {
-		{ name = BIS["Judgement Armor"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Judgement Armor"], icon = "Spell_Holy_Power" },
 		{ id = 16955 }, -- Judgement Crown
 		{ id = 16953 }, -- Judgement Spaulders
 		{ id = 16958 }, -- Judgement Breastplate
@@ -847,12 +848,12 @@ Sets = {
 		{ id = 16954 }, -- Judgement Legplates
 		{ id = 16957 }, -- Judgement Sabatons
 		{},
-		{ name = BIS["Judgement Battleplate"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Judgement Battleplate"], icon = "Ability_Defend" },
 		{ id = 47016 }, -- Judgement Helmet
 		{ id = 47017 }, -- Judgement Shoulderguards
 		{ id = 47018 }, -- Judgement Chestguard
 		{ id = 47019 }, -- Judgement Wristguards
-		{ name = BIS["Judgement Battlegear"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Judgement Battlegear"], icon = "Ability_Racial_Avatar" },
 		{ id = 47024 }, -- Judgement Crown
 		{ id = 47025 }, -- Judgement Pauldrons
 		{ id = 47026 }, -- Judgement Chestplate
@@ -888,7 +889,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Arcanist Vestments"], icon = "Spell_Frost_IceStorm" },
+		{ name = BIS["Arcanist Vestments"], icon = "Spell_Arcane_Blast" },
 		{ id = 47078 }, -- Arcanist Circlet
 		{ id = 47079 }, -- Arcanist Epaulets
 		{ id = 47080 }, -- Arcanist Vestments
@@ -940,7 +941,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Felheart Attire"], icon = "Spell_Shadow_CurseOfTounges" },
+		{ name = BIS["Felheart Attire"], icon = "Spell_Shadow_Requiem" },
 		{ id = 47276 }, -- Felheart Crown
 		{ id = 47277 }, -- Felheart Mantle
 		{ id = 47278 }, -- Felheart Raiments
@@ -962,7 +963,7 @@ Sets = {
 		{ id = 16824 }, -- Nightslayer Boots
 	},
 	T1Druid = {
-		{ name = BIS["Cenarion Raiment"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Cenarion Raiment"], icon = "Ability_Druid_TreeofLife" }, --restoration
 		{ id = 16834 }, -- Cenarion Helm
 		{ id = 16836 }, -- Cenarion Spaulders
 		{ id = 16833 }, -- Cenarion Vestments
@@ -972,12 +973,12 @@ Sets = {
 		{ id = 16835 }, -- Cenarion Leggings
 		{ id = 16829 }, -- Cenarion Boots
 		{},
-		{ name = BIS["Cenarion Regalia"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Cenarion Regalia"], icon = "Spell_Nature_ForceOfNature" }, --balance
 		{ id = 47330 }, -- Cenarion Circlet
 		{ id = 47331 }, -- Cenarion Mantle
 		{ id = 47332 }, -- Cenarion Vest
 		{ id = 47333 }, -- Cenarion Wristbands
-		{ name = BIS["Cenarion Harness"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Cenarion Harness"], icon = "Ability_Druid_CatForm" }, --cat
 		{ id = 47338 }, -- Cenarion Helmet
 		{ id = 47339 }, -- Cenarion Shoulderpads
 		{ id = 47340 }, -- Cenarion Raiments
@@ -998,7 +999,7 @@ Sets = {
 		{ id = 47337 }, -- Cenarion Slippers
 	},
 	T1Shaman = {
-		{ name = BIS["The Earthfury"], icon = "Spell_FireResistanceTotem_01" },
+		{ name = BIS["The Earthfury"], icon = "Spell_Shaman_SpiritLink" },
 		{ id = 16842 }, -- Earthfury Helmet
 		{ id = 16844 }, -- Earthfury Epaulets
 		{ id = 16841 }, -- Earthfury Vestments
@@ -1008,12 +1009,12 @@ Sets = {
 		{ id = 16843 }, -- Earthfury Legguards
 		{ id = 16837 }, -- Earthfury Boots
 		{},
-		{ name = BIS["Earthfury Battlegear"], icon = "Spell_FireResistanceTotem_01" },
+		{ name = BIS["Earthfury Battlegear"], icon = "Ability_Shaman_StormStrike" },
 		{ id = 47120 }, -- Earthfury Crown
 		{ id = 47121 }, -- Earthfury Pauldrons
 		{ id = 47122 }, -- Earthfury Breastplate
 		{ id = 47123 }, -- Earthfury Bracelets
-		{ name = BIS["Earthfury Garb"], icon = "Spell_FireResistanceTotem_01" },
+		{ name = BIS["Earthfury Garb"], icon = "Spell_Nature_Earthquake" },
 		{ id = 47128 }, -- Earthfury Visor
 		{ id = 47129 }, -- Earthfury Epaulets
 		{ id = 47130 }, -- Earthfury Raiments
@@ -1060,7 +1061,7 @@ Sets = {
 		{},
 		{},
 		{},
-		{ name = BIS["Armor of Might"], icon = "INV_Shield_05" },
+		{ name = BIS["Armor of Might"], icon = "Ability_Gouge" },
 		{ id = 47240 }, -- Crown of Might
 		{ id = 47241 }, -- Pauldrons of Might
 		{ id = 47242 }, -- Chestplate of Might
@@ -1071,7 +1072,7 @@ Sets = {
 		{ id = 47247 }, -- Sabatons of Might
 	},
 	T1Paladin = {
-		{ name = BIS["Lawbringer Armor"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Lawbringer Armor"], icon = "Spell_Holy_Power" },
 		{ id = 16854 }, -- Lawbringer Helm
 		{ id = 16856 }, -- Lawbringer Spaulders
 		{ id = 16853 }, -- Lawbringer Chestguard
@@ -1081,12 +1082,12 @@ Sets = {
 		{ id = 16855 }, -- Lawbringer Legplates
 		{ id = 16859 }, -- Lawbringer Boots
 		{},
-		{ name = BIS["Lawbringer Battleplate"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Lawbringer Battleplate"], icon = "Ability_Defend" },
 		{ id = 47000 }, -- Lawbringer Helmet
 		{ id = 47001 }, -- Lawbringer Shoulderguards
 		{ id = 47002 }, -- Lawbringer Chestguard
 		{ id = 47003 }, -- Lawbringer Wristguards
-		{ name = BIS["Lawbringer Battlegear"], icon = "Spell_Holy_SealOfMight" },
+		{ name = BIS["Lawbringer Battlegear"], icon = "Ability_Racial_Avatar" },
 		{ id = 47008 }, -- Lawbringer Crown
 		{ id = 47009 }, -- Lawbringer Pauldrons
 		{ id = 47010 }, -- Lawbringer Chestplate
@@ -1341,7 +1342,7 @@ Sets = {
 		{ id = 22087 }, -- Soulforge Boots
 	},
 	ZGMage = {
-		{ name = BIS["Illusionist's Attire"], icon = "Spell_Frost_IceStorm" },
+		{ name = BIS["Illusionist's Attire"], icon = "Spell_Arcane_Blast" },
 		{ id = 19959 }, -- Hazza'rah's Charm of Magic
 		{ id = 19601 }, -- Jewel of Kajaro
 		{ id = 20034 }, -- Zandalar Illusionist's Robe
@@ -1425,7 +1426,7 @@ Sets = {
 		{ id = 21417 }, -- Ring of Unspoken Names
 	},
 	AQ20Priest = {
-		{ name = BIS["Finery of Infinite Wisdom"], icon = "Spell_Holy_PowerWordShield" },
+		{ name = BIS["Finery of Infinite Wisdom"], icon = "Spell_Shadow_Shadowform" },
 		{ id = 21410 }, -- Gavel of Infinite Wisdom
 		{ id = 21412 }, -- Shroud of Infinite Wisdom
 		{ id = 21411 }, -- Ring of Infinite Wisdom
@@ -1437,7 +1438,7 @@ Sets = {
 		{ id = 21405 }, -- Band of Veiled Shadows
 	},
 	AQ20Druid = {
-		{ name = BIS["Symbols of Unending Life"], icon = "Spell_Nature_Regeneration" },
+		{ name = BIS["Symbols of Unending Life"], icon = "Ability_Druid_Berserk" },
 		{ id = 21407 }, -- Mace of Unending Life
 		{ id = 21409 }, -- Cloak of Unending Life
 		{ id = 21408 }, -- Band of Unending Life
@@ -1449,45 +1450,32 @@ Sets = {
 		{ id = 21402 }, -- Signet of the Unseen Path
 	},
 	AQ20Paladin = {
-		{},
-		{ name = BIS["Battlegear of Eternal Justice"], icon = "Spell_Holy_SealOfMight" },
-		{},
+		{ name = BIS["Battlegear of Eternal Justice"], icon = "Ability_Racial_Avatar" },
 		{ id = 21395 }, -- Blade of Eternal Justice
 		{ id = 21397 }, -- Cape of Eternal Justice
 		{ id = 21396 }, -- Ring of Eternal Justice
 	},
 	AQ20Shaman = {
-		{ name = BIS["Gift of the Gathering Storm"], icon = "Spell_FireResistanceTotem_01" },
-		{},
+		{ name = BIS["Gift of the Gathering Storm"], icon = "Spell_Nature_Earthquake" },
 		{ id = 21398 }, -- Hammer of the Gathering Storm
 		{ id = 21400 }, -- Cloak of the Gathering Storm
 		{ id = 21399 }, -- Ring of the Gathering Storm
 	},
 	AQ20Warrior = {
 		{ name = BIS["Battlegear of Unyielding Strength"], icon = "INV_Shield_05" },
-		{},
 		{ id = 21392 }, -- Sickle of Unyielding Strength
 		{ id = 21394 }, -- Drape of Unyielding Strength
 		{ id = 21393 }, -- Signet of Unyielding Strength
 	},
 	AQ40Mage = {
-		{ name = BIS["Enigma Vestments"], icon = "Spell_Frost_IceStorm" }, --Mage
-		{},
-		{ id = 21343 }, -- Enigma Robes
+		{ name = BIS["Enigma Regalia"], icon = "Spell_Frost_IceStorm" }, --Mage
 		{ id = 21347 }, -- Enigma Circlet
-		{ id = 21346 }, -- Enigma Leggings
 		{ id = 21345 }, -- Enigma Shoulderpads
+		{ id = 21343 }, -- Enigma Robes
+		{ id = 21346 }, -- Enigma Leggings
 		{ id = 21344 }, -- Enigma Boots
 		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
+		{ name = BIS["Enigma Vestments"], icon = "Spell_Arcane_Blast" }, --Mage
 		{ id = 47094 }, -- Enigma Crown
 		{ id = 47095 }, -- Enigma Epaulets
 		{ id = 47096 }, -- Enigma Vestments
@@ -1495,49 +1483,35 @@ Sets = {
 		{ id = 47098 }, -- Enigma Slippers
 	},
 	AQ40Priest = {
-		{},
-		{ name = BIS["Garments of the Oracle"], icon = "Spell_Holy_PowerWordShield" },
-		{},
-		{ id = 21351 }, -- Vestments of the Oracle
+		{ name = BIS["Regalia of the Oracle"], icon = "Spell_Holy_PowerWordShield" },
 		{ id = 21348 }, -- Tiara of the Oracle
-		{ id = 21352 }, -- Trousers of the Oracle
 		{ id = 21350 }, -- Mantle of the Oracle
+		{ id = 21351 }, -- Vestments of the Oracle
+		{ id = 21352 }, -- Trousers of the Oracle
 		{ id = 21349 }, -- Footwraps of the Oracle
 		{},
+		{ name = BIS["Vestments of the Oracle"], icon = "Spell_Holy_HolyNova" },
 		{ id = 47214 }, -- Coronet of the Oracle
 		{ id = 47215 }, -- Spaulders of the Oracle
 		{ id = 47216 }, -- Vestments of the Oracle
 		{ id = 47217 }, -- Trousers of the Oracle
 		{ id = 47218 }, -- Treads of the Oracle
-		{},
-		{},
-		{},
-		{},
-		{ id = 70732 }, -- Coronet of the Oracle
+		--1.18 deleted
+		--[[ { id = 70732 }, -- Coronet of the Oracle
 		{ id = 70733 }, -- Shoulderpads of the Oracle
 		{ id = 70734 }, -- Raiments of the Oracle
 		{ id = 70735 }, -- Pants of the Oracle
-		{ id = 70736 }, -- Sandals of the Oracle
+		{ id = 70736 }, -- Sandals of the Oracle ]]
 	},
 	AQ40Warlock = {
-		{},
-		{ name = BIS["Doomcaller's Attire"], icon = "Spell_Shadow_CurseOfTounges" }, --Warlock
-		{},
-		{ id = 21334 }, -- Doomcaller's Robes
+		{ name = BIS["Doomcaller's Raiment"], icon = "Spell_Shadow_CurseOfTounges" }, --Warlock
 		{ id = 21337 }, -- Doomcaller's Circlet
-		{ id = 21336 }, -- Doomcaller's Trousers
 		{ id = 21335 }, -- Doomcaller's Mantle
+		{ id = 21334 }, -- Doomcaller's Robes
+		{ id = 21336 }, -- Doomcaller's Trousers
 		{ id = 21338 }, -- Doomcaller's Footwraps
 		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
+		{ name = BIS["Doomcaller's Attire"], icon = "Spell_Shadow_Requiem" }, --afflic
 		{ id = 47292 }, -- Doomcaller's Crown
 		{ id = 47293 }, -- Doomcaller's Spaulders
 		{ id = 47294 }, -- Doomcaller's Raiments
@@ -1553,15 +1527,14 @@ Sets = {
 		{ id = 21359 }, -- Deathdealer's Boots
 	},
 	AQ40Druid = {
-		{},
-		{ name = BIS["Genesis Raiment"], icon = "Spell_Nature_Regeneration" }, --Druid
-		{},
-		{ id = 21357 }, -- Genesis Vest
+		{ name = BIS["Genesis Regalia"], icon = "Spell_Nature_ForceOfNature" }, --balance
 		{ id = 21353 }, -- Genesis Helm
-		{ id = 21356 }, -- Genesis Trousers
 		{ id = 21354 }, -- Genesis Shoulderpads
+		{ id = 21357 }, -- Genesis Vest
+		{ id = 21356 }, -- Genesis Trousers
 		{ id = 21355 }, -- Genesis Slippers
 		{},
+		{ name = BIS["Genesis Raiment"], icon = "Ability_Druid_TreeofLife" }, --restoration
 		{ id = 47362 }, -- Genesis Helm
 		{ id = 47363 }, -- Genesis Spaulders
 		{ id = 47364 }, -- Genesis Vestments
@@ -1569,8 +1542,7 @@ Sets = {
 		{ id = 47366 }, -- Genesis Boots
 		{},
 		{},
-		{},
-		{},
+		{ name = BIS["Genesis Harness"], icon = "Ability_Druid_CatForm" }, --cat
 		{ id = 47367 }, -- Genesis Helmet
 		{ id = 47368 }, -- Genesis Shoulderpads
 		{ id = 47369 }, -- Genesis Raiments
@@ -1578,15 +1550,14 @@ Sets = {
 		{ id = 47371 }, -- Genesis Treads
 	},
 	AQ40Shaman = {
-		{},
-		{ name = BIS["Stormcaller's Garb"], icon = "Spell_FireResistanceTotem_01" }, --Shaman
-		{},
+		{ name = BIS["Stormcaller's Garb"], icon = "Spell_Nature_Earthquake" }, --elemental
 		{ id = 21374 }, -- Stormcaller's Hauberk
 		{ id = 21372 }, -- Stormcaller's Diadem
 		{ id = 21375 }, -- Stormcaller's Legplates
 		{ id = 21376 }, -- Stormcaller's Epaulets
 		{ id = 21373 }, -- Stormcaller's Greaves
 		{},
+		{ name = BIS["Stormcaller's Battlegear"], icon = "Spell_Nature_SpiritArmor" }, --tank
 		{ id = 47152 }, -- Stormcaller's Crown
 		{ id = 47153 }, -- Stormcaller's Pauldrons
 		{ id = 47154 }, -- Stormcaller's Breastplate
@@ -1594,8 +1565,7 @@ Sets = {
 		{ id = 47156 }, -- Stormcaller's Sabatons
 		{},
 		{},
-		{},
-		{},
+		{ name = BIS["The Stormcaller"], icon = "Spell_Shaman_SpiritLink" }, --restoration
 		{ id = 47157 }, -- Stormcaller's Helmet
 		{ id = 47158 }, -- Stormcaller's Spaulders
 		{ id = 47159 }, -- Stormcaller's Chestpiece
@@ -1603,9 +1573,7 @@ Sets = {
 		{ id = 47161 }, -- Stormcaller's Boots
 	},
 	AQ40Hunter = {
-		{},
 		{ name = BIS["Striker's Garb"], icon = "Ability_Hunter_RunningShot" }, --Hunter
-		{},
 		{ id = 21370 }, -- Striker's Hauberk
 		{ id = 21366 }, -- Striker's Diadem
 		{ id = 21368 }, -- Striker's Leggings
@@ -1613,40 +1581,30 @@ Sets = {
 		{ id = 21365 }, -- Striker's Footguards
 	},
 	AQ40Warrior = {
-		{},
 		{ name = BIS["Conqueror's Battlegear"], icon = "INV_Shield_05" }, --Warrior
-		{},
 		{ id = 21331 }, -- Conqueror's Breastplate
 		{ id = 21329 }, -- Conqueror's Crown
 		{ id = 21332 }, -- Conqueror's Legguards
 		{ id = 21330 }, -- Conqueror's Spaulders
 		{ id = 21333 }, -- Conqueror's Greaves
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
-		{},
+		--1.18 deleted
+		--[[
 		{ id = 47256 }, -- Conqueror's Crown
 		{ id = 47257 }, -- Conqueror's Pauldrons
 		{ id = 47258 }, -- Conqueror's Chestplate
 		{ id = 47259 }, -- Conqueror's Leggings
 		{ id = 47260 }, -- Conqueror's Sabatons
+		]]
 	},
 	AQ40Paladin = {
-		{},
-		{ name = BIS["Avenger's Battlegear"], icon = "Spell_Holy_SealOfMight" },
-		{},
+		{ name = BIS["Avenger's Battlegear"], icon = "Ability_Racial_Avatar" },
 		{ id = 21389 }, -- Avenger's Chestplate
 		{ id = 21387 }, -- Avenger's Crown
 		{ id = 21390 }, -- Avenger's Leggings
 		{ id = 21391 }, -- Avenger's Pauldrons
 		{ id = 21388 }, -- Avenger's Sabatons
 		{},
+		{ name = BIS["Avenger's Battleplate"], icon = "Ability_Defend" },
 		{ id = 47032 }, -- Avenger's Helmet
 		{ id = 47033 }, -- Avenger's Shoulderguards
 		{ id = 47034 }, -- Avenger's Chestguard
@@ -1654,8 +1612,7 @@ Sets = {
 		{ id = 47036 }, -- Avenger's Greaves
 		{},
 		{},
-		{},
-		{},
+		{ name = BIS["Avenger's Armor"], icon = "Spell_Holy_Power" },
 		{ id = 47037 }, -- Avenger's Helm
 		{ id = 47038 }, -- Avenger's Spaulders
 		{ id = 47039 }, -- Avenger's Breastplate
@@ -2324,9 +2281,7 @@ Sets = {
 		{ id = 12264 }, -- Worg Carrier
 	},
 	CraftedWeapons = {
-		{},
 		{ name = BS["Blacksmithing"], icon = "Trade_BlackSmithing" },
-		{},
 		{ id = 22384 }, -- Persuader
 		{ id = 22383 }, -- Sageblade
 		{ id = 19166 }, -- Black Amnesty
@@ -2338,17 +2293,28 @@ Sets = {
 		{ id = 22198 }, -- Jagged Obsidian Shield
 		{ id = 60010 }, -- Towerforge Demolisher
 		{ id = 61185 }, -- Dawnstone Hammer
-		{},
-		{},
+		{ id = 17015 }, -- Dark Iron Reaver
+		{ id = 17016 }, -- Dark Iron Destroyer
+		{ id = 65004 }, -- Ornate Bloodstone Dagger
 		{ name = BS["Engineering"], icon = "Trade_Engineering" },
-		{},
 		{ id = 18282 }, -- Core Marksman Rifle
 		{ id = 18168 }, -- Force Reactive Disk
+		{},
+		{ name = BS["Jewelcrafting"], icon = "INV_Jewelry_Necklace_01" },
+		{ id = 55361 }, -- Empowered Domination Rod
+		{ id = 55365 }, -- Rudeus' Focusing Cane
+		{ id = 55060 }, -- Grandstaff of the Shen'dralar Elder 1.18
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{ id = 65008 }, -- Dream's Herald
 	},
 	SteelPlate = {
-		{},
 		{ name = BIS["Steel Plate Armor"] },
-		{},
 		{ id = 83415 }, -- Steel Plate Barbute
 		{ id = 83414 }, -- Steel Plate Pauldrons
 		{ id = 83413 }, -- Steel Plate Armor
@@ -2357,9 +2323,7 @@ Sets = {
 		{ id = 83410 }, -- Steel Plate Boots
 	},
 	ImperialPlate = {
-		{},
 		{ name = BIS["Imperial Plate"] },
-		{},
 		{ id = 12427 }, -- Imperial Plate Helm
 		{ id = 12428 }, -- Imperial Plate Shoulders
 		{ id = 12422 }, -- Imperial Plate Chest
@@ -2369,9 +2333,7 @@ Sets = {
 		{ id = 12426 }, -- Imperial Plate Boots
 	},
 	RuneEtchedArmor = {
-		{},
 		{ name = BIS["Rune-Etched Armor"] },
-		{},
 		{ id = 60287 }, -- Rune-Etched Grips
 		{ id = 60288 }, -- Rune-Etched Greaves
 		{ id = 60289 }, -- Rune-Etched Legplates
@@ -2380,34 +2342,26 @@ Sets = {
 		{ id = 60292 }, -- Rune-Etched Mantle
 	},
 	TheDarksoul = {
-		{},
 		{ name = BIS["The Darksoul"] },
-		{},
 		{ id = 19695 }, -- Darksoul Shoulders
 		{ id = 19693 }, -- Darksoul Breastplate
 		{ id = 19694 }, -- Darksoul Leggings
 	},
 	DreamsteelArmor = {
-		{},
 		{ name = BIS["Dreamsteel Armor"] },
-		{},
 		{ id = 61364 }, -- Dreamsteel Mantle
 		{ id = 61365 }, -- Dreamsteel Leggings
 		{ id = 61366 }, -- Dreamsteel Bracers
 		{ id = 61367 }, -- Dreamsteel Boots
 	},
 	BloodsoulEmbrace = {
-		{},
 		{ name = BIS["Bloodsoul Embrace"] },
-		{},
 		{ id = 19691 }, -- Bloodsoul Shoulders
 		{ id = 19690 }, -- Bloodsoul Breastplate
 		{ id = 19692 }, -- Bloodsoul Gauntlets
 	},
 	HateforgeArmor = {
-		{},
 		{ name = BIS["Hateforge Armor"] },
-		{},
 		{ id = 60573 }, -- Hateforge Helmet
 		{ id = 60574 }, -- Hateforge Cuirass
 		{ id = 60575 }, -- Hateforge Leggings
@@ -2416,18 +2370,14 @@ Sets = {
 		{ id = 60578 }, -- Hateforge Boots
 	},
 	TowerforgeBattlegear = {
-		{},
 		{ name = BIS["Towerforge Battlegear"] },
-		{},
 		{ id = 60007 }, -- Towerforge Crown
 		{ id = 60008 }, -- Towerforge Breastplate
 		{ id = 60009 }, -- Towerforge Pauldrons
 		{ id = 60010 }, -- Towerforge Demolisher
 	},
 	AugerersAttire = {
-		{},
 		{ name = BIS["Augerer's Attire"] },
-		{},
 		{ id = 83288 }, -- Augerer's Boots
 		{ id = 83289 }, -- Augerer's Gloves
 		{ id = 83290 }, -- Augerer's Mantle
@@ -2436,9 +2386,7 @@ Sets = {
 		{ id = 83287 }, -- Augerer's Robe
 	},
 	ShadoweaveSet = {
-		{},
 		{ name = BIS["Shadoweave"] },
-		{},
 		{ id = 10002 }, -- Shadoweave Pants
 		{ id = 10004 }, -- Shadoweave Robe
 		{ id = 10023 }, -- Shadoweave Gloves
@@ -2447,9 +2395,7 @@ Sets = {
 		{ id = 10025 }, -- Shadoweave Mask
 	},
 	DivinersGarments = {
-		{},
 		{ name = BIS["Diviner's Garments"] },
-		{},
 		{ id = 83283 }, -- Diviner's Boots
 		{ id = 83284 }, -- Diviner's Mitts
 		{ id = 83285 }, -- Diviner's Epaulets
@@ -2458,9 +2404,7 @@ Sets = {
 		{ id = 83281 }, -- Diviner's Robes
 	},
 	PillagersGarb = {
-		{},
 		{ name = BIS["Pillager's Garb"] },
-		{},
 		{ id = 83296 }, -- Pillager's Shoes
 		{ id = 83295 }, -- Pillager's Grips
 		{ id = 83297 }, -- Pillager's Pantaloons
@@ -2469,9 +2413,7 @@ Sets = {
 		{ id = 83294 }, -- Pillager's Robe
 	},
 	MoonclothRegalia = {
-		{},
 		{ name = BIS["Mooncloth Regalia"] },
-		{},
 		{ id = 14140 }, -- Mooncloth Circlet
 		{ id = 14139 }, -- Mooncloth Shoulders
 		{ id = 14138 }, -- Mooncloth Vest
@@ -2481,17 +2423,13 @@ Sets = {
 		{ id = 15802 }, -- Mooncloth Boots
 	},
 	BloodvineG = {
-		{},
 		{ name = BIS["Bloodvine Garb"] },
-		{},
 		{ id = 19682 }, -- Bloodvine Vest
 		{ id = 19683 }, -- Bloodvine Leggings
 		{ id = 19684 }, -- Bloodvine Boots
 	},
 	FlarecoreRegalia = {
-		{},
 		{ name = BIS["Flarecore Regalia"] },
-		{},
 		{ id = 16979 }, -- Flarecore Gloves
 		{ id = 19165 }, -- Flarecore Leggings
 		{ id = 16980 }, -- Flarecore Mantle
@@ -2500,18 +2438,14 @@ Sets = {
 		{ id = 65035 }, -- Flarecore Boots
 	},
 	DreamthreadRegalia = {
-		{},
 		{ name = BIS["Dreamthread Regalia"] },
-		{},
 		{ id = 61360 }, -- Dreamthread Mantle
 		{ id = 61361 }, -- Dreamthread Kilt
 		{ id = 61362 }, -- Dreamthread Bracers
 		{ id = 61363 }, -- Dreamthread Gloves
 	},
 	GriftersArmor = {
-		{},
 		{ name = BIS["Grifter's Armor"] },
-		{},
 		{ id = 83405 }, -- Grifter's Boots
 		{ id = 83404 }, -- Grifter's Gauntlets
 		{ id = 83403 }, -- Grifter's Belt
@@ -2520,9 +2454,7 @@ Sets = {
 		{ id = 83400 }, -- Grifter's Cover
 	},
 	PrimalistsTrappings = {
-		{},
 		{ name = BIS["Primalist's Trappings"] },
-		{},
 		{ id = 81065 }, -- Primalist's Boots
 		{ id = 81061 }, -- Primalist's Gloves
 		{ id = 81063 }, -- Primalist's Headdress
@@ -2531,99 +2463,75 @@ Sets = {
 		{ id = 81066 }, -- Primalist's Vest
 	},
 	VolcanicArmor = {
-		{},
 		{ name = BIS["Volcanic Armor"] },
-		{},
 		{ id = 15055 }, -- Volcanic Shoulders
 		{ id = 15053 }, -- Volcanic Breastplate
 		{ id = 15054 }, -- Volcanic Leggings
 	},
 	IronfeatherArmor = {
-		{},
 		{ name = BIS["Ironfeather Armor"] },
-		{},
 		{ id = 15067 }, -- Ironfeather Shoulders
 		{ id = 15066 }, -- Ironfeather Breastplate
 	},
 	StormshroudArmor = {
-		{},
 		{ name = BIS["Stormshroud Armor"] },
-		{},
 		{ id = 15058 }, -- Stormshroud Shoulders
 		{ id = 15056 }, -- Stormshroud Armor
 		{ id = 21278 }, -- Stormshroud Gloves
 		{ id = 15057 }, -- Stormshroud Pants
 	},
 	DevilsaurArmor = {
-		{},
 		{ name = BIS["Devilsaur Armor"] },
-		{},
 		{ id = 15063 }, -- Devilsaur Gauntlets
 		{ id = 15062 }, -- Devilsaur Leggings
 	},
 	BloodTigerH = {
-		{},
 		{ name = BIS["Blood Tiger Harness"] },
-		{},
 		{ id = 19689 }, -- Blood Tiger Shoulders
 		{ id = 19688 }, -- Blood Tiger Breastplate
 	},
 	PrimalBatskin = {
-		{},
 		{ name = BIS["Primal Batskin"] },
-		{},
 		{ id = 19685 }, -- Primal Batskin Jerkin
 		{ id = 19687 }, -- Primal Batskin Bracers
 		{ id = 19686 }, -- Primal Batskin Gloves
 	},
 	DreamhideBattlegarb = {
-		{},
 		{ name = BIS["Dreamhide Battlegarb"] },
-		{},
 		{ id = 61356 }, -- Dreamhide Mantle
 		{ id = 61357 }, -- Dreamhide Bracers
 		{ id = 61358 }, -- Dreamhide Leggings
 		{ id = 61359 }, -- Dreamhide Belt
 	},
 	ConvergenceoftheElements = {
-		{},
 		{ name = BIS["Convergence of the Elements"] },
-		{},
 		{ id = 65024 }, -- Earthguard Tunic
 		{ id = 65025 }, -- Flamewrath Leggings
 		{ id = 65026 }, -- Depthstalker Helm
 		{ id = 65027 }, -- Windwalker Boots
 	},
 	RedDragonM = {
-		{},
 		{ name = BIS["Red Dragon Mail"] },
-		{},
 		{ id = 65001 }, -- Red Dragonscale Shoulders
 		{ id = 15047 }, -- Red Dragonscale Breastplate
 		{ id = 65000 }, -- Red Dragonscale Leggings
 		{ id = 65002 }, -- Red Dragonscale Boots
 	},
 	GreenDragonM = {
-		{},
 		{ name = BIS["Green Dragon Mail"] },
-		{},
 		{ id = 15045 }, -- Green Dragonscale Breastplate
 		{ id = 20296 }, -- Green Dragonscale Gauntlets
 		{ id = 15046 }, -- Green Dragonscale Leggings
 	},
 	BlueDragonM = {
-		{},
 		{ name = BIS["Blue Dragon Mail"] },
-		{},
 		{ id = 15049 }, -- Blue Dragonscale Shoulders
 		{ id = 15048 }, -- Blue Dragonscale Breastplate
 		{ id = 20295 }, -- Blue Dragonscale Leggings
 		{ id = 65015 }, -- Blue Dragonscale Boots
 	},
 	BlackDragonM = {
-		{},
 		{ name = BIS["Black Dragon Mail"] },
-		{},
 		{ id = 15051 }, -- Black Dragonscale Shoulders
 		{ id = 15050 }, -- Black Dragonscale Breastplate
 		{ id = 15052 }, -- Black Dragonscale Leggings
